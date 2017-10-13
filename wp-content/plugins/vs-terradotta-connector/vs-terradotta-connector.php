@@ -8,7 +8,7 @@ Author: Verified Studios
 Author URI: http://verifiedstudios.com
 */
 
-define("TERRADOTTA_URL", "http://ualbany.studioabroad.com/piapi/index.cfm", true);
+define("TERRADOTTA_URL", "http://ualbany.studioabroad.com/piapi/index.cfm", TRUE);
 
 // sync data
 function terradotta_sync() {
@@ -17,44 +17,135 @@ function terradotta_sync() {
    * programs
    */
 
-  sync_post('program','Unique Program Updated Name', 'program_id', '676');
-
   $get_programs = TERRADOTTA_URL . '?callName=getPrograms&ResponseEncoding=JSON';
   ?>
-  <script type="text/javascript">
-    function _cb_getPrograms(data) {
-      // mapping
-      mapPrograms = jQuery.noConflict();
-      mapPrograms(function($) {
-        $.each(data.PROGRAM, function() {
-          console.log(this);
+    <script type="text/javascript">
 
-          $.ajax({
-            method: "POST",
-            url: ajaxurl,
-            data: {
-              'action': actionFunction,
-              'import': v,
-              'code': syncID
-            }
-            success: function (output) {
-              console.log('bueno');
-            }
-          });
+      function getUniqueVals(data, uniqueKey) {
 
-          $.each(this, function(k, v) {
+        var lookup = {};
+        var items = data;
+        var result = [];
+
+        for (var item, i = 0; item = items[i++];) {
+
+          var name = item[uniqueKey];
+
+          if (!(name in lookup)) {
+            lookup[name] = 1;
+            result.push(name);
+          }
+        }
+        return result;
+      }
+
+      function _cb_getPrograms(td) {
+
+        var regions = getUniqueVals(td.PROGRAM, 'PROGRAM_REGION');
+        console.log(regions);
+
+        var countries = getUniqueVals(td.PROGRAM, 'PROGRAM_COUNTRY');
+        console.log(countries);
+
+//        var cities = getUniqueVals(td.PROGRAM,'PROGRAM_CITY');
+//        console.log(cities);
+
+        mapTerraDotta = jQuery.noConflict();
+        mapTerraDotta(function ($) {
+
+          $.each(td.PROGRAM, function () {
+            var program_data = this;
+
+            $.ajax({
+              url: ajaxurl,
+              method: "POST",
+              data: {
+                'action': 'sync_post_action',
+                'post_type': 'program',
+                'unique_key': 'program_id',
+                'unique_val': program_data.PROGRAM_ID,
+                'name': program_data.PROGRAM_NAME,
+                'data_chunk': program_data
+              },
+              beforeSend: function () {
+              }
+            }).done(function (data) {
+              console.log(data);
+            });
+            // end ajax
+
           });
+          // end each
+
+          $.each(regions, function (index, value) {
+
+            console.log(value);
+            var region_name = value;
+
+            $.ajax({
+              url: ajaxurl,
+              method: "POST",
+              data: {
+                'action': 'sync_post_action',
+                'post_type': 'region',
+                'unique_key': 'region_id',
+                'unique_val': region_name,
+                'name': region_name
+              },
+              beforeSend: function () {
+              }
+            }).done(function (data) {
+              console.log(data);
+            });
+            // end ajax
+
+          });
+          // end each
+
+          $.each(countries, function (index, value) {
+
+            console.log(value);
+            var country_name = value;
+
+            $.ajax({
+              url: ajaxurl,
+              method: "POST",
+              data: {
+                'action': 'sync_post_action',
+                'post_type': 'country',
+                'unique_key': 'country_id',
+                'unique_val': country_name,
+                'name': country_name
+              },
+              beforeSend: function () {
+              }
+            }).done(function (data) {
+              console.log(data);
+            });
+            // end ajax
+
+          });
+          // end each
+
         });
-      });
-    }
+        // end program mapping
 
-  </script>
-  <script src="<?php echo $get_programs; ?>" type="text/javascript"></script>
+      }
+
+    </script>
+    <script src="<?php echo $get_programs; ?>" type="text/javascript"></script>
   <?php
 
 }
 
-function sync_post($type, $name, $key, $val) {
+add_action('wp_ajax_sync_post_action', 'sync_post_handler');
+
+function sync_post_handler() {
+
+  $type = $_POST['post_type'];
+  $name = $_POST['name'];
+  $key  = $_POST['unique_key'];
+  $val  = $_POST['unique_val'];
 
   $args  = [
     'meta_query'     => [
@@ -75,8 +166,8 @@ function sync_post($type, $name, $key, $val) {
     // run update
 
     $update_post = [
-      'ID'           => $p->ID,
-      'post_title'   => $name
+      'ID'         => $p->ID,
+      'post_title' => $name,
     ];
 
     // Update the post into the database
@@ -97,6 +188,7 @@ function sync_post($type, $name, $key, $val) {
     update_field($key, $val, $post_id);
   }
 
+  wp_die(); // just to be safe
 }
 
 
@@ -109,7 +201,7 @@ register_activation_hook(__FILE__, 'vs_activation');
 
 function vs_activation() {
   terradotta_init();
-  if (! wp_next_scheduled ( 'vs_hourly_event' )) {
+  if (!wp_next_scheduled('vs_hourly_event')) {
     wp_schedule_event(time(), 'hourly', 'vs_hourly_event');
   }
 }
@@ -123,20 +215,20 @@ function vs_deactivation() {
 add_action('vs_hourly_event', 'terradotta_hourly');
 
 // init insert of sync time
-function terradotta_init () {
+function terradotta_init() {
 
   global $wpdb;
   $stamp = time();
   $wpdb->insert(
     'wp_options',
-    array(
-      'option_name' => 'vs_terradotta_sync',
-      'option_value' => $stamp
-    ),
-    array(
+    [
+      'option_name'  => 'vs_terradotta_sync',
+      'option_value' => $stamp,
+    ],
+    [
       '%s',
-      '%s'
-    )
+      '%s',
+    ]
   );
 
   terradotta_sync();
@@ -144,34 +236,35 @@ function terradotta_init () {
 }
 
 // update sync time
-function terradotta_hourly () {
+function terradotta_hourly() {
 
   global $wpdb;
   $stamp = time();
   $wpdb->update(
     'wp_options',
-    array(
-      'option_name' => 'vs_terradotta_sync',
-      'option_value' => $stamp
-    ),
-    array(
+    [
+      'option_name'  => 'vs_terradotta_sync',
+      'option_value' => $stamp,
+    ],
+    [
       '%s',
-      '%s'
-    )
+      '%s',
+    ]
   );
 
   // run sync and update
   terradotta_sync();
 
 }
+
 /*
  * Admin page
  */
 
 add_action('admin_menu', 'vs_terradotta_connector_plugin_setup_menu');
 
-function vs_terradotta_connector_plugin_setup_menu(){
-  add_menu_page( 'Terra Dotta Connector', 'Terra Dotta', 'manage_options', 'terradotta', 'terradotta_admin' );
+function vs_terradotta_connector_plugin_setup_menu() {
+  add_menu_page('Terra Dotta Connector', 'Terra Dotta', 'manage_options', 'terradotta', 'terradotta_admin');
 }
 
 function terradotta_admin() {

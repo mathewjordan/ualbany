@@ -1,7 +1,27 @@
 {
     "key": "group_59e0e233dfb72",
     "title": "Region - General Settings",
-    "fields": false,
+    "fields": [
+        {
+            "key": "field_59e13077b8f8c",
+            "label": "Region ID",
+            "name": "region_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
     "location": [
         [
             {
@@ -19,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1507921108
+    "modified": 1507930236
 }
