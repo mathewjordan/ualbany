@@ -7,6 +7,13 @@ function sync_post_handler() {
   $key  = $_POST['unique_key'];
   $val  = $_POST['unique_val'];
 
+  $region  = $_POST['data_chunk']['PROGRAM_REGION'];
+  $country  = $_POST['data_chunk']['PROGRAM_COUNTRY'];
+
+  $region_list  = $_POST['data_chunk']['REGION_LIST'];
+  $country_list  = $_POST['data_chunk']['COUNTRY_LIST'];
+
+  // query for post to see if exists
   $args  = [
     'meta_query'     => [
       [
@@ -19,12 +26,12 @@ function sync_post_handler() {
   ];
   $posts = get_posts($args);
 
+  // if exists, update
   if ($posts) {
 
     $p = $posts[0];
 
     // run update
-
     $update_post = [
       'ID'         => $p->ID,
       'post_title' => $name,
@@ -36,10 +43,11 @@ function sync_post_handler() {
     $wp_post_id = $p->ID;
 
   }
+
+  // if NOT exists, create
   else {
 
     // create new
-
     $new_post = [
       'post_type'   => $type,
       'post_title'  => $name,
@@ -47,12 +55,26 @@ function sync_post_handler() {
     ];
 
     $post_id = wp_insert_post($new_post);
+
+    // set unique val for new program post
     update_field($key, $val, $post_id);
 
     $wp_post_id = $post_id;
   }
 
-  print $wp_post_id;
+  // set region relationship
+  foreach ($region_list as $k => $f) {
+    if (in_array($region, $f)) {
+      update_post_meta($wp_post_id, 'program_region', $region_list[$k][0]);
+    }
+  }
+
+  // set country relationship
+  foreach ($country_list as $k => $f) {
+    if (in_array($country, $f)) {
+      update_post_meta($wp_post_id, 'program_country', $country_list[$k][0]);
+    }
+  }
 
   wp_die(); // just to be safe
 }

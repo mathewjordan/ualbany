@@ -5,6 +5,17 @@ function terradotta_sync() {
 
   $get_programs = TERRADOTTA_URL . '?callName=getPrograms&ResponseEncoding=JSON';
 
+  global $wpdb;
+
+  // build region & country comparison lists for post_ids
+  $regions = $wpdb->get_results(
+    $wpdb->prepare("SELECT id, post_title FROM {$wpdb->prefix}posts WHERE post_type=%s AND post_status=%s", array('region','publish'))
+  ,ARRAY_N);
+
+  $countries = $wpdb->get_results(
+    $wpdb->prepare("SELECT id, post_title FROM {$wpdb->prefix}posts WHERE post_type=%s AND post_status=%s", array('country','publish'))
+    ,ARRAY_N);
+
   /*
    * programs
    */
@@ -40,6 +51,9 @@ function terradotta_sync() {
 //        var cities = getUniqueVals(td.PROGRAM,'PROGRAM_CITY');
 //        console.log(cities);
 
+      var wp_region_list = <?php echo json_encode($regions); ?>;
+      var wp_country_list = <?php echo json_encode($countries); ?>;
+
       mapTerraDotta = jQuery.noConflict();
       mapTerraDotta(function ($) {
 
@@ -48,6 +62,9 @@ function terradotta_sync() {
         $.each(td.PROGRAM, function () {
 
           var program_data = this;
+
+          program_data.REGION_LIST = wp_region_list;
+          program_data.COUNTRY_LIST = wp_country_list;
 
           $.ajax({
             url: ajaxurl,
@@ -63,6 +80,7 @@ function terradotta_sync() {
             beforeSend: function () {
             }
           }).done(function (data) {
+            console.log(data);
 
             var wp_post_id = data;
 
@@ -78,7 +96,6 @@ function terradotta_sync() {
 //                console.log('start' + program_data.PROGRAM_ID + ' map to ' + wp_post_id);
               }
             }).done(function (data) {
-              console.log(data);
             });
 
 

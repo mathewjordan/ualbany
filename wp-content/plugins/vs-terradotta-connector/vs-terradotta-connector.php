@@ -9,7 +9,7 @@ Author URI: http://verifiedstudios.com
 */
 
 define("TERRADOTTA_URL", "http://ualbany.studioabroad.com/piapi/index.cfm", TRUE);
-define("TERRADOTTA_SYNC_INTERVAL", 30, TRUE);
+define("TERRADOTTA_SYNC_INTERVAL", 600, TRUE);
 define("TERRADOTTA_DATE_FORMAT", 'm/d/Y g:i:s A', TRUE);
 
 date_default_timezone_set('America/New_York');
