@@ -19,15 +19,13 @@ function terradotta_init() {
     'wp_options',
     [
       'option_name'  => 'vs_terradotta_sync',
-      'option_value' => $stamp,
+      'option_value' => $stamp
     ],
     [
       '%s',
-      '%s',
+      '%s'
     ]
   );
-
-  terradotta_sync();
 
 }
 
