@@ -102,9 +102,9 @@ add_action( 'pre_get_posts', function ($query){
   endif;
 });
 
+
+// admin filters
 add_action('admin_head', function() {
-
-
 
   ?>
   <script>
@@ -132,7 +132,7 @@ add_action('admin_head', function() {
       display: none !important;
     }
     #acf-program_location {
-      background-color: rgba(255,255,255, 0.65);
+      background-color: rgba(255,255,255, 0.5);
     }
     #acf-program_location .hndle {
        background-color: rgba(255,255,255, 1);
