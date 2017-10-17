@@ -1,9 +1,9 @@
 {
-    "key": "group_59e58ba1e708d",
+    "key": "program_location",
     "title": "Program - Location",
     "fields": [
         {
-            "key": "field_59e58bd911a0a",
+            "key": "program_region",
             "label": "Program Region",
             "name": "program_region",
             "type": "post_object",
@@ -26,7 +26,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e58bbd11a09",
+            "key": "program_country",
             "label": "Program Country",
             "name": "program_country",
             "type": "post_object",

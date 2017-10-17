@@ -1,9 +1,9 @@
 {
-    "key": "group_59e0e227baf5c",
+    "key": "country_general_settings",
     "title": "Country - General Settings",
     "fields": [
         {
-            "key": "field_59e1305051ada",
+            "key": "country_id",
             "label": "Country ID",
             "name": "country_id",
             "type": "text",
@@ -19,7 +19,8 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "readonly": 1
         }
     ],
     "location": [

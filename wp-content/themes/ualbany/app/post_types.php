@@ -101,3 +101,47 @@ add_action( 'pre_get_posts', function ($query){
     $query->set( 'posts_per_page', '-1' );
   endif;
 });
+
+add_action('admin_head', function() {
+
+
+
+  ?>
+  <script>
+    jQuery(document).ready(function ($) {
+      $('.post-type-program #title').attr('disabled','disabled');
+      $('.post-type-region #title').attr('disabled','disabled');
+      $('.post-type-country #title').attr('disabled','disabled');
+      $('.post-type-program .inline-edit-row fieldset').hide();
+      $('.post-type-region .inline-edit-row fieldset').hide();
+      $('.post-type-country .inline-edit-row fieldset').hide();
+    });
+  </script>
+  <style>
+    .acf-field-program-td-format,
+    .acf-field-program-description,
+    .acf-field-program-accommodations,
+    .acf-field-program-costs,
+    .acf-field-program-selection,
+    .acf-field-program-excursions,
+    .acf-field-program-testimonials,
+    .acf-field-program-location,
+    .acf-field-program-duration,
+    .acf-field-program-overview
+    {
+      display: none !important;
+    }
+    #acf-program_location {
+      background-color: rgba(255,255,255, 0.65);
+    }
+    #acf-program_location .hndle {
+       background-color: rgba(255,255,255, 1);
+    }
+    .acf-field-program-region .acf-input,
+    .acf-field-program-country .acf-input {
+      z-index: -1;
+     }
+  </style>
+  <?php
+
+});

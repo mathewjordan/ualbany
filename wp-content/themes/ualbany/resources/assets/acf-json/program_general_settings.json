@@ -1,9 +1,9 @@
 {
-    "key": "group_59e0e23e9f0df",
+    "key": "program_general_settings",
     "title": "Program - General Settings",
     "fields": [
         {
-            "key": "field_59e10ba241e0c",
+            "key": "program_id",
             "label": "Program ID",
             "name": "program_id",
             "type": "number",
@@ -25,7 +25,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e583d399a8c",
+            "key": "program_td_format",
             "label": "Terra Dotta Format",
             "name": "program_td_format",
             "type": "true_false",
@@ -45,7 +45,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e5111553a77",
+            "key": "program_description",
             "label": "Description",
             "name": "program_description",
             "type": "wysiwyg",
@@ -64,7 +64,7 @@
             "delay": 0
         },
         {
-            "key": "field_59e5146653cbe",
+            "key": "program_accommodations",
             "label": "Accommodations",
             "name": "program_accommodations",
             "type": "wysiwyg",
@@ -83,7 +83,7 @@
             "delay": 0
         },
         {
-            "key": "field_59e514c33014a",
+            "key": "program_costs",
             "label": "Costs",
             "name": "program_costs",
             "type": "wysiwyg",
@@ -103,7 +103,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e514cf4b90d",
+            "key": "program_selection",
             "label": "Selection",
             "name": "program_selection",
             "type": "wysiwyg",
@@ -123,7 +123,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e514edd3564",
+            "key": "program_excursions",
             "label": "Excursions",
             "name": "program_excursions",
             "type": "wysiwyg",
@@ -143,7 +143,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e51a7484bb4",
+            "key": "program_testimonials",
             "label": "Testimonials",
             "name": "program_testimonials",
             "type": "wysiwyg",
@@ -163,7 +163,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e519f799443",
+            "key": "program_location",
             "label": "Location",
             "name": "program_location",
             "type": "wysiwyg",
@@ -183,7 +183,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e51afbfba41",
+            "key": "program_duration",
             "label": "Duration",
             "name": "program_duration",
             "type": "wysiwyg",
@@ -203,7 +203,7 @@
             "readonly": 1
         },
         {
-            "key": "field_59e51501ead97",
+            "key": "program_overview",
             "label": "Overview",
             "name": "program_overview",
             "type": "wysiwyg",

@@ -1,9 +1,9 @@
 {
-    "key": "group_59e0e233dfb72",
+    "key": "region_general_settings",
     "title": "Region - General Settings",
     "fields": [
         {
-            "key": "field_59e13077b8f8c",
+            "key": "region_id",
             "label": "Region ID",
             "name": "region_id",
             "type": "text",
@@ -19,7 +19,8 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "readonly": 1
         }
     ],
     "location": [
