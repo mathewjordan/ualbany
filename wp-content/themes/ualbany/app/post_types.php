@@ -93,3 +93,11 @@ function register_posts($post_types) {
   }
 
 }
+
+add_action( 'pre_get_posts', function ($query){
+  if(is_archive()):
+    $query->set( 'order', 'ASC' );
+    $query->set( 'orderby', 'title' );
+    $query->set( 'posts_per_page', '-1' );
+  endif;
+});

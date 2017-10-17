@@ -31,8 +31,6 @@ function terradotta_sync() {
 
     function _cb_getPrograms(td) {
 
-
-
       var regions = getUniqueVals(td.PROGRAM, 'PROGRAM_REGION');
       // console.log(regions);
 
@@ -77,10 +75,10 @@ function terradotta_sync() {
                 'program_id' : program_data.PROGRAM_ID
               },
               beforeSend: function () {
-                console.log('start' + program_data.PROGRAM_ID + ' map to ' + wp_post_id);
+//                console.log('start' + program_data.PROGRAM_ID + ' map to ' + wp_post_id);
               }
             }).done(function (data) {
-              console.log(program_data.PROGRAM_ID + ' map to ' + wp_post_id + ' brochure is done');
+              console.log(data);
             });
 
 

@@ -24,6 +24,25 @@
             "step": ""
         },
         {
+            "key": "field_59e583d399a8c",
+            "label": "Terra Dotta Format",
+            "name": "program_td_format",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_59e5111553a77",
             "label": "Description",
             "name": "program_description",
@@ -212,5 +231,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1508201292
+    "modified": 1508228161
 }
