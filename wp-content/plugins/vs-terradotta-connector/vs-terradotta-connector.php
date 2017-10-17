@@ -3,7 +3,7 @@
 Plugin Name: Terra Dotta Connector by Verified Studios
 Plugin URI: http://verifiedstudios.com
 Description: Connects to a Terra Dotta instance and syncs content hourly.
-Version: 0.3.0
+Version: 0.3.2
 Author: Verified Studios
 Author URI: http://verifiedstudios.com
 */

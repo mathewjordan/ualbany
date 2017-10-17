@@ -96,6 +96,7 @@ function terradotta_sync() {
 //                console.log('start' + program_data.PROGRAM_ID + ' map to ' + wp_post_id);
               }
             }).done(function (data) {
+              console.log(data)
             });
 
 

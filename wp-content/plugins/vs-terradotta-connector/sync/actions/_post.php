@@ -7,11 +7,12 @@ function sync_post_handler() {
   $key  = $_POST['unique_key'];
   $val  = $_POST['unique_val'];
 
-  $region  = $_POST['data_chunk']['PROGRAM_REGION'];
-  $country  = $_POST['data_chunk']['PROGRAM_COUNTRY'];
-
-  $region_list  = $_POST['data_chunk']['REGION_LIST'];
-  $country_list  = $_POST['data_chunk']['COUNTRY_LIST'];
+  // sanitize titles for query
+  if ($type != 'program') {
+    $val = sanitize_title_for_query($val);
+  } else {
+    // nada
+  }
 
   // query for post to see if exists
   $args  = [
@@ -62,19 +63,32 @@ function sync_post_handler() {
     $wp_post_id = $post_id;
   }
 
-  // set region relationship
-  foreach ($region_list as $k => $f) {
-    if (in_array($region, $f)) {
-      update_post_meta($wp_post_id, 'program_region', $region_list[$k][0]);
+
+  if ($_POST['data_chunk']) {
+
+    $region  = $_POST['data_chunk']['PROGRAM_REGION'];
+    $country  = $_POST['data_chunk']['PROGRAM_COUNTRY'];
+
+    $region_list  = $_POST['data_chunk']['REGION_LIST'];
+    $country_list  = $_POST['data_chunk']['COUNTRY_LIST'];
+
+    // set region relationship
+    foreach ($region_list as $k => $f) {
+      if (in_array($region, $f)) {
+        update_post_meta($wp_post_id, 'program_region', $region_list[$k][0]);
+      }
     }
+
+    // set country relationship
+    foreach ($country_list as $k => $f) {
+      if (in_array($country, $f)) {
+        update_post_meta($wp_post_id, 'program_country', $country_list[$k][0]);
+      }
+    }
+
   }
 
-  // set country relationship
-  foreach ($country_list as $k => $f) {
-    if (in_array($country, $f)) {
-      update_post_meta($wp_post_id, 'program_country', $country_list[$k][0]);
-    }
-  }
+  print $wp_post_id;
 
   wp_die(); // just to be safe
 }

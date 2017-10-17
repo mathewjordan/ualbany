@@ -28,6 +28,10 @@ function sync_program_brochure_handler() {
     'program_overview'       => 'tdp11',
   ];
 
+  if ($program_id == '10372') {
+    print_r ($wp_post_id);
+  }
+
 
   preg_match("'<td id=\"tdbrochure\">(.*?)</td>'si", $brochure_data, $td_match);
   if ($td_match[1]) {
