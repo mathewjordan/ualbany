@@ -20,13 +20,13 @@ $render = [
     </header>
     <div class="entry-content">
 
-        <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=ProgramAdmin.BrochureEdit&Program_ID={{get_field('program_id')}}" target="_blank">Edit in Terra Dotta</a>
+        <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=ProgramAdmin.BrochureEdit&Program_ID={{get_field('program_id')}}" target="_blank"><span class="fa fa-edit"></span> Edit in Terra Dotta</a>
 
         <!-- Tabs -->
         <ul class="nav nav-tabs" role="tablist">
             @php($cnt = 0)
                 @foreach($render as $title => $selector)
-                    @if (get_field($selector))
+                    @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
                     @php
                         if ($cnt == 0) {
                           $first = 1;
@@ -47,7 +47,7 @@ $render = [
         <div class="tab-content">
             @php($cnt = 0)
                 @foreach($render as $title => $selector)
-                    @if (get_field($selector))
+                    @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
                     @php
                         if ($cnt == 0) {
                           $first = 1;
