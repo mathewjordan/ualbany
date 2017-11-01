@@ -45,9 +45,28 @@
             "readonly": 1
         },
         {
-            "key": "program_description",
-            "label": "Description",
-            "name": "program_description",
+            "key": "program_academics",
+            "label": "Academics",
+            "name": "program_academics",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "program_faculty",
+            "label": "Faculty",
+            "name": "program_faculty",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -103,11 +122,11 @@
             "readonly": 1
         },
         {
-            "key": "program_selection",
-            "label": "Selection",
-            "name": "program_selection",
+            "key": "program_eligibility",
+            "label": "Eligibility",
+            "name": "program_eligibility",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Also known as Eligibility",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -143,9 +162,49 @@
             "readonly": 1
         },
         {
+            "key": "program_scholarships",
+            "label": "Scholarships",
+            "name": "program_scholarships",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "readonly": 1
+        },
+        {
             "key": "program_testimonials",
             "label": "Testimonials",
             "name": "program_testimonials",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "readonly": 1
+        },
+        {
+            "key": "program_contact",
+            "label": "Contact",
+            "name": "program_contact",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,

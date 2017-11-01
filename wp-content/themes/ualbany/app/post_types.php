@@ -129,7 +129,7 @@ add_action('admin_head', function() {
     .acf-field-program-duration,
     .acf-field-program-overview
     {
-      display: none !important;
+      /*display: none !important;*/
     }
     #acf-program_location {
       background-color: rgba(255,255,255, 0.5);

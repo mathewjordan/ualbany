@@ -1,15 +1,18 @@
 <?php
 
 $render = [
-  'Overview'       => 'program_overview',
-  'Location'       => 'program_location',
-  'Costs'          => 'program_costs',
-  'Excursions'     => 'program_excursions',
-  'Duration'       => 'program_duration',
-  'Testimonials'   => 'program_testimonials',
+  'Academics'      => 'program_academics',      // updated
+  'Faculty'        => 'program_faculty',        // new
   'Accommodations' => 'program_accommodations',
-  'Selection'      => 'program_selection',
-  'Description'    => 'program_description',
+  'Cost'           => 'program_costs',
+  'Eligibility'    => 'program_eligibility',
+  'Excursions'     => 'program_excursions',     // updated
+  'Scholarships'   => 'program_scholarships',   // new
+  'Testimonials'   => 'program_testimonials',
+  'Contact'        => 'program_contact',        // new
+  'Location'       => 'program_location',
+  'Duration'       => 'program_duration',
+  'Overview'       => 'program_overview',
 ];
 
 ?>

@@ -7,8 +7,6 @@ function sync_program_brochure_handler() {
 
   $brochure_endpoint = TERRADOTTA_URL . '?callName=getProgramBrochure&Program_ID=' . $program_id . '&ResponseEncoding=XML';
 
-  print $brochure_endpoint;
-
   $brochure_curl = terrdotta_curl($brochure_endpoint);
   $brochure_xml  = simplexml_load_string($brochure_curl);
   $brochure_json = json_encode($brochure_xml);
@@ -17,15 +15,18 @@ function sync_program_brochure_handler() {
   $brochure_data = $brochure->details->program_brochure;
 
   $mapping = [
-    'program_description'    => 'tdp0',
-    'program_accommodations' => 'tdp2',
-    'program_costs'          => 'tdp3',
-    'program_selection'      => 'tdp4',
-    'program_excursions'     => 'tdp5',
-    'program_testimonials'   => 'tdp7',
-    'program_location'       => 'tdp9',
-    'program_duration'       => 'tdp10',
-    'program_overview'       => 'tdp11',
+    'program_academics'      => 'program_academics',
+    'program_faculty'        => 'program_faculty',
+    'program_accommodations' => 'program_accommodations',
+    'program_costs'          => 'program_costs',
+    'program_eligibility'    => 'program_eligibility',
+    'program_excursions'     => 'program_excursions',
+    'program_scholarships'   => 'program_scholarships',
+    'program_testimonials'   => 'program_testimonials',
+    'program_contact'        => 'program_contact',
+    'program_location'       => 'program_location',
+    'program_duration'       => 'program_duration',
+    'program_overview'       => 'program_overview',
   ];
 
   if ($program_id == '10372') {
