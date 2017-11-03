@@ -25,6 +25,31 @@
             "readonly": 1
         },
         {
+            "key": "program_photos",
+            "label": "Photos",
+            "name": "program_photos",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "program_td_format",
             "label": "Terra Dotta Format",
             "name": "program_td_format",
@@ -43,6 +68,25 @@
             "ui_on_text": "",
             "ui_off_text": "",
             "readonly": 1
+        },
+        {
+            "key": "program_introduction",
+            "label": "Introduction",
+            "name": "program_introduction",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "program_academics",

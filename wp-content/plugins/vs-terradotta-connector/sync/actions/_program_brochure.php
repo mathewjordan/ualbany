@@ -33,6 +33,10 @@ function sync_program_brochure_handler() {
     print_r ($wp_post_id);
   }
 
+  preg_match("'<td id=\"tdintro\">(.*?)</td>'si", $brochure_data, $td_intro);
+  if ($td_intro[1]) {
+    update_field('program_introduction', $td_intro[1], $wp_post_id);
+  }
 
   preg_match("'<td id=\"tdbrochure\">(.*?)</td>'si", $brochure_data, $td_match);
   if ($td_match[1]) {
@@ -44,7 +48,7 @@ function sync_program_brochure_handler() {
     }
     update_field('program_td_format', 1, $wp_post_id);
   } else {
-    update_field('program_description', $brochure_data, $wp_post_id);
+    update_field('program_overview', $brochure_data, $wp_post_id);
   }
 
   wp_die();

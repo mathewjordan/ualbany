@@ -21,6 +21,9 @@ $render = [
     <header>
         <h1 class="entry-title">{{ get_the_title() }}</h1>
     </header>
+    <section>
+        @php the_field('program_introduction') @endphp
+    </section>
     <div class="entry-content">
 
         <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=ProgramAdmin.BrochureEdit&Program_ID={{get_field('program_id')}}" target="_blank"><span class="fa fa-edit"></span> Edit in Terra Dotta</a>
