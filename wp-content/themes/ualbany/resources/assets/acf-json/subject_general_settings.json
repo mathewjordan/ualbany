@@ -1,14 +1,14 @@
 {
-    "key": "region_general_settings",
-    "title": "Region - General Settings",
+    "key": "subject_general_settings",
+    "title": "Subject - General Settings",
     "fields": [
         {
-            "key": "region_id",
-            "label": "Region ID",
-            "name": "region_id",
+            "key": "subject_id",
+            "label": "Subject ID",
+            "name": "subject_id",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -28,7 +28,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "region"
+                "value": "subject"
             }
         ]
     ],
@@ -40,5 +40,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1507930236
+    "modified": 1507930260
 }
