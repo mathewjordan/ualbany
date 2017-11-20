@@ -15368,6 +15368,8 @@ h4 {
 header {
   -webkit-box-shadow: 0.2rem 0 1rem rgba(151, 164, 175, 0.25);
           box-shadow: 0.2rem 0 1rem rgba(151, 164, 175, 0.25);
+  z-index: 1;
+  position: relative;
 }
 
 body#tinymce {

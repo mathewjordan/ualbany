@@ -65,4 +65,6 @@
 
 header {
   box-shadow: 0.2rem 0 1rem rgba($gray, 0.25);
+  z-index: 1;
+  position: relative;
 }

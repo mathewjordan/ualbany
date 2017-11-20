@@ -88,7 +88,7 @@ function register_posts($post_types) {
         'thumbnail',
         'excerpt',
         'editor',
-        'revisions',
+        'revisions'
       ],
       'menu_position'      => 20,
       'menu_icon'          => $type['icon'],
