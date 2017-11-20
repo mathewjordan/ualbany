@@ -1,0 +1,17 @@
+.video-ratio {
+  &--wrapper {
+    min-height: 100%;
+    position: initial;
+
+    .content {
+      height: 100%;
+      position: absolute;
+
+      div,
+      iframe {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.component-image-blocks-wrap {
+  h3 {
+    text-align: center;
+  }
+
+  .image-block {
+    margin-bottom: 40px;
+
+    figure {
+      margin: $spacing-extra-large 0;
+
+      img {
+        border: 1px solid $white;
+        transition: all 200ms ease;
+      }
+    }
+
+    h4 {
+      color: $brand-primary;
+      font-size: 20px;
+      font-weight: normal;
+      margin: 0 0 $spacing-large;
+      text-transform: uppercase;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+
+    p {
+      color: $font-dark-body-color;
+      font-size: 15px;
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+
+      img {
+        transform: scale(1.025);
+        transition: all 200ms ease;
+      }
+    }
+  }
+}

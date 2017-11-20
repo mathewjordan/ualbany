@@ -1,0 +1,90 @@
+//Button specific variables
+$button-primary-color:    $brand-primary;
+$button-seconary-color:   $brand-secondary;
+
+//Button Utility
+.btn--hover-and-active-state {
+  box-shadow: none;
+}
+
+// All Buttons
+.btn {
+  border: none;
+  font-family: $font-buttons;
+  outline-color: $brand-secondary;
+  font-weight: 400;
+  padding: 0.85em 1.2em;
+  border-radius: 2px;
+  box-shadow: 2px 2px 8px rgba($black, 0.1);
+  text-shadow: -1px -1px 1px rgba($white, 0.35);
+}
+
+//Button Colors
+.btn-xl {
+  font-size: 1.5rem;
+}
+
+.btn-lg {
+  font-size: 1.35rem;
+}
+
+.btn-md {
+  font-size: 1.15rem;
+}
+
+.btn-sm {
+  font-size: 1rem;
+}
+
+.btn-xs {
+  font-size: 0.85rem;
+}
+
+.btn-tiny {
+  font-size: 0.85rem;
+  padding: 0.5em 0.75em;
+}
+
+//Button Styles
+.btn-primary {
+  background: $brand-primary;
+  color: $white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @extend .btn--hover-and-active-state;
+
+    background: $brand-primary;
+    color: $brand-secondary;
+  }
+}
+
+.btn-secondary {
+  background: $brand-secondary;
+  color: darken($brand-secondary, 35);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    @extend .btn--hover-and-active-state;
+
+    color: $black;
+    background: darken($brand-secondary, 15);
+    outline-color: $brand-secondary;
+    text-shadow: 0 0 1px $brand-secondary;
+  }
+}
+
+.btn-gray {
+  background: $lightgray;
+  color: $font-dark-body-color;
+}
+
+.btn-font-body {
+  font-family: $font-body;
+}

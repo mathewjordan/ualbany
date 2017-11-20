@@ -1,0 +1,65 @@
+.card--program {
+  background: $white;
+  border-radius: 1px;
+  display: block;
+  margin-bottom: $spacing-extra-large;
+  box-shadow: 2px 2px 2rem rgba($black, 0.1);
+  padding: $spacing-large;
+  position: relative;
+
+  @include respondto(xs) {
+    margin-bottom: $spacing-large;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    padding: 0;
+    padding-right: 100px;
+  }
+
+  h4 {
+    font-family: $font-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $black;
+    font-style: italic;
+    margin-top: -3px;
+    margin-bottom: $spacing-large;
+    padding-right: 100px;
+
+    strong {
+      display: inline-block;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      margin-right: $spacing-medium;
+    }
+  }
+
+  h4.card--program--undergrad {
+    padding: 0.85em 1.2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: $spacing-large;
+    background-color: $altteal;
+    font-style: normal;
+    font-family: $font-body;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: $offwhite;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+
+  h5 {
+    font-family: $font-body;
+    font-weight: 700;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $altgray;
+    margin-bottom: $spacing-medium;
+  }
+}

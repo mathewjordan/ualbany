@@ -1,0 +1,7 @@
+[class^='component-'][class$='-wrap'] {
+  padding: 0 $spacing-large $spacing-large;
+
+  @include respondto(xs) {
+    padding: 0 0 $spacing-large;
+  }
+}

@@ -1,0 +1,54 @@
+//Styles for the different row style types
+
+.component-wrap,
+.component-wysiwyg-wrap {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    &:first-child {
+      margin-top: 0 !important;
+    }
+  }
+
+  h3 {
+    &:first-child {
+      margin-top: -5px !important;
+    }
+  }
+
+  h3 {
+    @extend .h3--primary;
+  }
+
+  h4 {
+    @extend .h4--primary;
+  }
+
+  h5 {
+    @extend .h5--primary;
+  }
+
+  p.lead {
+    @extend .p--primary;
+
+    font-size: 1.25em;
+  }
+
+  p,
+  li {
+    @extend .p--primary;
+  }
+
+  img.img-thumbnail {
+    border-radius: 2px;
+    border-color: $offwhite;
+    padding: 0;
+  }
+
+  .btn {
+    margin-right: $spacing-large;
+    margin-bottom: $spacing-large;
+  }
+}

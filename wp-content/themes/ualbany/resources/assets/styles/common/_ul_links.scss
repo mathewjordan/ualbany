@@ -1,0 +1,40 @@
+h3 {
+  margin-bottom: $spacing-extra-large;
+}
+
+h4 {
+  margin-bottom: $spacing-extra-large;
+}
+
+ul.ul-link {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-family: $font-headings;
+    font-weight: bold;
+    margin-bottom: $spacing-large;
+    padding-left: 30px;
+
+    a,
+    span {
+      &::before {
+        content: "\e801";
+        font-family: "fontello";
+        color: $brand-secondary;
+        position: absolute;
+        display: inline-block;
+        height: 0;
+        margin-left: -20px;
+        margin-top: 0.35em;
+        width: 0;
+        font-size: 0.65em;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

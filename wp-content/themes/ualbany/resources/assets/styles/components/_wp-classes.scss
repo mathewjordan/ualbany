@@ -1,9 +1,7 @@
-/**
- * WordPress Generated Classes
- * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
- */
+// WordPress Generated Classes
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
-/** Media alignment */
+// Media alignment
 .alignnone {
   margin-left: 0;
   margin-right: 0;
@@ -24,6 +22,7 @@
 }
 
 @include media-breakpoint-up(sm) {
+  // Only float if not on an extra small device
   .alignleft {
     float: left;
     margin-right: ($spacer / 2);
@@ -35,7 +34,7 @@
   }
 }
 
-/** Captions */
+// Captions
 .wp-caption {
   @extend .figure;
 }
@@ -49,7 +48,7 @@
   @extend .figure-caption;
 }
 
-/** Text meant only for screen readers */
+// Text meant only for screen readers
 .screen-reader-text {
   @extend .sr-only;
   @extend .sr-only-focusable;

@@ -1,4 +1,4 @@
-/** Search form */
+// Search form
 .search-form {
   @extend .form-inline;
 }
@@ -16,4 +16,21 @@
 .search-form .search-submit {
   @extend .btn;
   @extend .btn-secondary;
+}
+
+// Gravity Forms
+.gform_wrapper form {
+  .gform_button.button {
+    @extend .btn;
+    @extend .btn-secondary;
+  }
+
+  .gfield {
+    input,
+    button,
+    select,
+    textarea {
+      border: 1px solid $lightgray;
+    }
+  }
 }

@@ -1,3 +1,7 @@
+/*
+  constants
+ */
+
 // variables
 $enable-flex: false; // requested by VC for outdated browser support
 
@@ -11,19 +15,31 @@ $white: #fff;
 $black: #000;
 
 // grays
-$lightgray: lighten($gray, 10);
-$darkgray: darken($gray, 10);
+$lightgray: lighten($gray, 16);
+$darkgray: darken($gray, 16);
 $offwhite: lighten($gray, 33);
 
 //alts
 $altpurple: darken($purple, 5);
+$altgray: darken($gray, 8);
+$altteal: desaturate($teal, 33);
+
+// tertiary
+$deep-brown: darken($gold, 15);
 
 //fonts
 $font-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-serif: 'Trajan Pro', 'Times New Roman', Times, serif;
 $font-headings: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
+$font-buttons: $font-sans;
 
 // bootstrap
 $brand-primary: $purple;
+$brand-secondary: $gray;
+
+/*
+  treatments
+ */
 
 // container width
 $container-max-widths: (
@@ -32,3 +48,13 @@ $container-max-widths: (
   lg: 960px,
   xl: 1300px
 ) !default;
+
+// font colors
+$font-dark-body-color: $gray;
+$font-body: $gray;
+
+//Spacing
+$spacing-small:         5px;
+$spacing-medium:        10px;
+$spacing-large:         20px;
+$spacing-extra-large:   40px;

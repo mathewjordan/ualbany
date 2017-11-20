@@ -1,0 +1,52 @@
+.component-stats-wrap {
+  h3 {
+    margin-bottom: $spacing-large;
+    text-align: center;
+  }
+
+  figure {
+    color: $brand-primary;
+    text-align: center;
+
+    span {
+      font-family: $font-headings;
+      font-size: 80px;
+    }
+
+    figcaption {
+      font-family: $font-headings;
+      font-size: 24px;
+    }
+  }
+
+  .wysiwyg-content {
+    &-main {
+      margin: auto auto $spacing-extra-large;
+      max-width: 700px;
+    }
+
+    p {
+      color: $font-dark-body-color;
+    }
+  }
+}
+
+//Styles for the different row style types
+.row-blue,
+.row-dark {
+  .component-stats-wrap {
+    h3 {
+      color: $white;
+    }
+
+    figure {
+      color: $white;
+    }
+
+    .wysiwyg-content {
+      p {
+        color: $lightgray;
+      }
+    }
+  }
+}

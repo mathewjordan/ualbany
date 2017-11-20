@@ -1,0 +1,27 @@
+.component-link-list-wrap {
+  @import "../common/ul_links";
+}
+
+// responsive adjustments
+.col-sm-12 ul.ul-link {
+  column-count: 4;
+  padding: 0 3%;
+
+  li {
+    font-size: 1.25rem;
+  }
+
+  @include respondto(md) {
+    column-count: 3;
+  }
+
+  @include respondto(sm) {
+    column-count: 2;
+    padding: 0;
+  }
+
+  @include respondto(xs) {
+    column-count: 1;
+    padding: 0;
+  }
+}

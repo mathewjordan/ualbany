@@ -1,0 +1,232 @@
+.component-hero-wrap {
+  height: 80vh;
+  padding: 0 !important;
+  position: relative;
+  max-height: 600px;
+
+  @include respondto(sm, xs) {
+    height: auto;
+  }
+
+  .placeholder-image {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -3;
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  .video-background {
+    display: none;
+    height: 100%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    width: 100%;
+    z-index: -2;
+
+    &.pre-active {
+      display: block;
+      opacity: 0;
+    }
+
+    &.active {
+      display: block;
+      opacity: 1;
+      transition: opacity 300ms ease-in;
+    }
+  }
+
+  .video-foreground {
+    color: $white;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    background-color: rgba($black, 0.15);
+
+    &::before {
+      background: -moz-linear-gradient(top, rgba(darken($brand-primary, 10), 0.75) 0%, rgba($brand-primary, 0.5) 50%, rgba(lighten($brand-primary, 10), 0.35) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(darken($brand-primary, 10), 0.75) 0%, rgba($brand-primary, 0.5) 50%, rgba(lighten($brand-primary, 10), 0.35) 100%); /* Chrome10-25, Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(darken($brand-primary, 10), 0.75) 0%, rgba($brand-primary, 0.5) 50%, rgba(lighten($brand-primary, 10), 0.35) 100%); /* W3C,  IE10+,  FF16+,  Chrome26+,  Opera12+,  Safari7+ */
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr='#6e1a2632', endColorstr='#6e25254b', GradientType=0); /* IE6-9 */
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .slogan-and-seal-wrap {
+      margin: auto;
+      max-width: 540px;
+      padding-top: 10vh;
+
+      @include respondto(sm,xs) {
+        padding: 1rem;
+      }
+
+      svg {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      max-width: 1000px;
+      line-height: 1.25em;
+      margin: 0 auto;
+      padding: 10.5vh 0 70px;
+      text-align: center;
+      text-shadow: 2px 2px 10px rgba($black, 0.25);
+      text-transform: uppercase;
+      color: $lightgray;
+
+      strong {
+        display: block;
+        color: $white;
+        font-size: 1.25em;
+        margin-top: 0.1em;
+      }
+
+      @include respondto(md) {
+        font-size: 2.5rem;
+        padding: 70px 0 40px;
+      }
+
+      @include respondto(sm) {
+        font-size: 2rem;
+        padding: 50px 0 25px;
+      }
+
+      @include respondto(xs) {
+        font-size: 1.5rem;
+        padding: 40px 0 20px;
+      }
+    }
+
+    .external-user-menu {
+      margin: auto;
+      max-width: 1300px;
+
+      @include respondto(lg,md) {
+        width: 90%;
+      }
+
+      @include respondto(sm) {
+        width: 50%;
+      }
+
+      @include respondto(xs) {
+        width: 75%;
+      }
+
+      h3 {
+        color: $white;
+        display: flex;
+        font-size: 1.15rem;
+        line-height: 28px;
+        font-weight: 600;
+        position: relative;
+        padding: 0 15px;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 10px rgba($black, 0.25);
+        font-family: $font-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+
+        @include respondto(sm,xs) {
+          padding: 1rem 15px;
+        }
+
+        @include respondto(md,sm,xs) {
+          margin-bottom: 1rem;
+        }
+
+        span {
+          flex: 1;
+          font-family: $font-serif;
+
+          &:nth-child(1),
+          &:nth-child(3) {
+            position: relative;
+            opacity: 0.5;
+
+            &::after {
+              background: $white;
+              content: '';
+              display: block;
+              height: 2px;
+              position: absolute;
+              box-shadow: -1px -1px 0 rgba($black, 0.15);
+              top: 14px;
+              width: 100%;
+            }
+          }
+
+          &:nth-child(2) {
+            min-width: 180px;
+            max-width: 180px;
+          }
+        }
+      }
+
+      .sub-menu {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0 1rem;
+
+        @include respondto(sm,xs) {
+          display: block;
+          padding-bottom: 4rem;
+        }
+
+        li {
+          display: inline-block;
+          flex: 1;
+
+          &:not(:first-child) {
+            margin-left: 2rem;
+          }
+
+          @include respondto(sm, xs) {
+            display: block;
+            margin-bottom: 1rem;
+            margin-left: 0 !important;
+          }
+
+          a {
+            @extend .btn;
+            @extend .btn-md;
+            @extend .btn-secondary;
+
+            @include respondto(sm) {
+              font-size: 1rem;
+            }
+
+            @include respondto(xs) {
+              font-size: 0.85rem;
+            }
+
+            font-weight: 400 !important;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

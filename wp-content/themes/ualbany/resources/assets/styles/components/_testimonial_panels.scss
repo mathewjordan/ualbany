@@ -1,0 +1,48 @@
+.row-default.row-testimonial-panels {
+  background: $altteal;
+  margin-bottom: 57px;
+
+  &:last-child {
+    padding-bottom: 107px;
+    margin-bottom: 0;
+  }
+}
+
+//Styles from Design
+.component-testimonial-panels-wrap {
+  .top-title {
+    color: $white;
+  }
+
+  .top-subtitle {
+    color: $lightgray;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $white;
+  }
+
+  .bottom-title {
+    .bottom-subtitle {
+      color: $lightgray;
+      font-size: 90%;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+
+  figure {
+    display: block;
+    margin: 0;
+    max-height: 550px;
+    cursor: pointer;
+
+    img {
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+    }
+  }
+}

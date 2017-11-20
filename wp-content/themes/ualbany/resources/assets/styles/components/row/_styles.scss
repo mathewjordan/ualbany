@@ -1,0 +1,121 @@
+//
+
+.row-default {
+  position: relative;
+  padding: $spacing-extra-large 0 $spacing-large;
+
+  @include respondto(xs) {
+    padding: $spacing-large 0 0;
+  }
+
+  &.text-center .component-wrap {
+    padding: 0 15%;
+  }
+
+  &.row-light {
+    background: $white;
+
+    &.row-image {
+      @include background-opacity($white, 0.75);
+    }
+  }
+
+  &.row-dark {
+    background: $font-dark-body-color;
+    color: $offwhite;
+
+    &.row-image {
+      @include background-opacity($font-dark-body-color, 0.75);
+    }
+
+    //Catchalls for certain content
+    h3 {
+      color: $white;
+    }
+
+    h4 {
+      color: $lightgray;
+    }
+  }
+
+  &.row-yellow {
+    background: $brand-secondary;
+    color: $deep-brown;
+
+    a:not(.btn),
+    a:not(.btn):visited {
+      color: $black;
+    }
+
+    p,
+    li {
+      color: inherit;
+    }
+
+    &.row-image {
+      @include background-opacity(#efbb1d, 0.75);
+    }
+  }
+
+  &.row-blue {
+    background: $brand-primary;
+    color: $offwhite;
+
+    &.row-image {
+      @include background-opacity($brand-primary, 0.75);
+    }
+
+    //Catchalls for certain content
+    h1,
+    h2 {
+      color: $offwhite;
+    }
+
+    h3 {
+      color: $white;
+    }
+
+    h4 {
+      color: $lightgray;
+    }
+
+    h5 {
+      color: $offwhite;
+    }
+
+    a,
+    a:visited {
+      color: $white;
+    }
+
+    a.btn.btn-primary,
+    a.btn.btn-primary:visited {
+      color: $white;
+    }
+
+    a.btn.btn-secondary,
+    a.btn.btn-secondary:visited {
+      color: $deep-brown;
+    }
+
+    p,
+    li,
+    blockquote {
+      color: $offwhite;
+    }
+  }
+
+  &.row-light_2 {
+    background: $offwhite;
+    border-top: 1px solid $offwhite;
+
+    &:first-child {
+      border-top: none;
+      border-bottom: 1px solid $offwhite;
+    }
+
+    &.row-image {
+      @include background-opacity($offwhite, 0.75);
+    }
+  }
+}

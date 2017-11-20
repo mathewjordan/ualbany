@@ -1,0 +1,34 @@
+// event block component
+
+.component-event-block-wrap {
+  h3 {
+    @extend .h4--primary;
+  }
+
+  ul {
+    padding: 0;
+    margin: $spacing-large 0 0;
+
+    li.event-block-single {
+      list-style: none;
+      padding: 0;
+      margin: $spacing-medium 0 0;
+      font-size: 1.25rem;
+
+      a {
+        line-height: 1.3em;
+        display: block;
+      }
+
+      h4 {
+        color: $brand-primary;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}

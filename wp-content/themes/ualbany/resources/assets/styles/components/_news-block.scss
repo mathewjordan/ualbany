@@ -1,0 +1,33 @@
+// news block component
+
+.component-news-block-wrap {
+  h3 {
+    @extend .h4--primary;
+  }
+
+  .news-block-results {
+    padding: 0;
+    margin: $spacing-large 0 $spacing-large !important;
+
+    .news-block-single {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 1.25rem;
+      margin-top: $spacing-medium;
+      padding-left: 30px;
+      position: relative;
+
+      span {
+        left: 0;
+        position: absolute;
+        opacity: 0.5;
+        margin-top: 1px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
