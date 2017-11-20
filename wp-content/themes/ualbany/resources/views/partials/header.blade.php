@@ -16,7 +16,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-9 col-sm-3">
-                    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+                    <a class="brand" href="{{ home_url('/') }}">
+                        @include('partials.svg.ualbany-horizontal')
+                    </a>
                 </div>
                 <div class="col-xs-3 col-sm-9">
                     <nav class="nav-primary">

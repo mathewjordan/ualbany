@@ -5,3 +5,13 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+.banner_utility {
+  background-color: $purple;
+
+  a,
+  a:visited {
+    color: $white;
+    margin: 15px;
+  }
+}

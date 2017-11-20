@@ -19,6 +19,13 @@ $post_types = [
     'slug'       => 'countries',
     'icon'       => 'dashicons-location-alt'
   ],
+  'Sample Post Type' => [
+    'machine_name' => 'sample',
+    'singlular'    => 'Sample',
+    'plural'       => 'Samples',
+    'slug'       => 'samples',
+    'icon'       => 'dashicons-admin-site'
+  ],
   'Region' => [
     'machine_name' => 'region',
     'singlular'    => 'Region',

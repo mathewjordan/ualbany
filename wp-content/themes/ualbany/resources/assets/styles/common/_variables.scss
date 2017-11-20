@@ -1,1 +1,15 @@
+// variables
+$enable-flex: false; // requested by VC for outdated browser support
 
+// brand colors
+$purple: #46166b;
+$gold: #eeb211;
+$white: #fff;
+$gray: #97a4af;
+
+// grays
+$lightgray: lighten($gray, 10);
+$darkgray: darken($gray, 10);
+
+// bootstrap
+$brand-primary: $purple;
