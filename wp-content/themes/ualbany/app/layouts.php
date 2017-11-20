@@ -2,8 +2,8 @@
 
 namespace App;
 
-add_image_size( 'sf_thumb', '200', '250', true);
-add_image_size( 'sf_main', '480', '600', true);
+add_image_size( 'banner', '1600', '1000', true);
+add_image_size( 'banner_slim', '1600', '400', true);
 
 function block_size_class($count)
 {

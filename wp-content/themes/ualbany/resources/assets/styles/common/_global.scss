@@ -41,3 +41,15 @@ a:hover {
   font-size: 1.1rem;
 }
 
+h1.single-title {
+  font-family: $font-headings;
+}
+
+h2.single-subtitle {
+  font-family: $font-serif;
+  font-weight: 300 !important;
+  font-size: 1.35rem;
+  margin: 1rem 0 0.5rem;
+  opacity: 0.85;
+}
+

@@ -13618,6 +13618,18 @@ a:hover {
   font-size: 1.1rem;
 }
 
+h1.single-title {
+  font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
+}
+
+h2.single-subtitle {
+  font-family: "Trajan Pro", "Times New Roman", Times, serif;
+  font-weight: 300 !important;
+  font-size: 1.35rem;
+  margin: 1rem 0 0.5rem;
+  opacity: 0.85;
+}
+
 @font-face {
   font-family: 'Trade Gothic LT Com Bold Cn';
   src: url(/wp-content/themes/ualbany/dist/fonts/TradeGothicLTCom-BdCn20.eot);
@@ -15370,6 +15382,37 @@ header {
           box-shadow: 0.2rem 0 1rem rgba(151, 164, 175, 0.25);
   z-index: 1;
   position: relative;
+}
+
+.single-header {
+  padding: 10rem 0 20px;
+  color: #fff;
+  position: relative;
+  background-color: #97a4af;
+  overflow: hidden;
+}
+
+.single-header .single-photo {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.75;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.single-header .single-header-content {
+  background-color: #353e45;
+  width: auto;
+  display: inline-block;
+  padding: 20px 40px;
+  margin-bottom: -20px;
+  position: relative;
+  z-index: 5;
+  text-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 body#tinymce {
