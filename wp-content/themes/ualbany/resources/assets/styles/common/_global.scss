@@ -1,4 +1,26 @@
+body {
+  font-size: 15px;
+  background: $offwhite;
+}
+
 a,
 a:visited {
   color: $purple;
+
+  @include transition();
 }
+
+a:hover {
+  color: $altpurple;
+}
+
+.nav > li {
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+
+  a,
+  a:visited {
+    padding: 0.5rem 0.85rem;
+  }
+}
+

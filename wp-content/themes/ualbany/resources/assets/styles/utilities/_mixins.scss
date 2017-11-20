@@ -1,0 +1,50 @@
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+@mixin transition() {
+  transition: all ease-in-out 350ms;
+}
+
+// Named Breakpoints are phone, tablet-portrait, tablet-landscape-desktop, large-desktop, non-retina, retina
+@mixin respond-to($media) {
+  /* Mobile Devices for Mice */
+  @if $media == xxs {
+    @media (max-width: 360px) { @content; }
+  }
+
+  /* Landscape phones and down */
+  @if $media == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  /* Landscape phone to portrait tablet */
+  @if $media == sm {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+
+  /* Portrait tablet to landscape and desktop */
+  @if $media == md {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+
+  /* desktop and large desktop */
+  @if $media == lg {
+    @media (min-width: 1200px) and (max-width: 1439px) { @content; }
+  }
+
+  @if $media == xl {
+    @media (min-width: 1439px) and (max-width: 4200px) { @content; }
+  }
+}
+
+@mixin respondto($media...) {
+  @each $mediatype in $media {
+    @include respond-to($mediatype) { @content; }
+  }
+}

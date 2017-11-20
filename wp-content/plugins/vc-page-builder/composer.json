@@ -1,0 +1,25 @@
+{
+    "name": "verified-studios/vc-page-builder",
+    "description": "WordPress Plugin built on top of ACF. Used for building dynamic layouts in the WordPress admin.",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Verified Studios",
+            "email": "services@verifiedstudios.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "VC\\PageBuilder\\": "src/"
+        },
+        "files": [
+            "src/helper/buttons.php",
+            "src/helper/columns.php",
+            "src/helper/content.php",
+            "src/helper/load.php",
+            "src/helper/row.php",
+            "src/helper/stats.php"
+        ]
+    },
+    "require": {}
+}

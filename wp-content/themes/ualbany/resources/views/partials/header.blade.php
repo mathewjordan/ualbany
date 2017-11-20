@@ -1,19 +1,17 @@
 <header class="banner">
     <section class="banner_utility">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12">
-                    <nav class="nav-utility">
-                        @if (has_nav_menu('utility_navigation'))
-                            {!! wp_nav_menu(['theme_location' => 'utility_navigation', 'menu_class' => 'nav']) !!}
-                        @endif
-                    </nav>
-                </div>
+                <nav class="nav-utility">
+                    @if (has_nav_menu('utility_navigation'))
+                        {!! wp_nav_menu(['theme_location' => 'utility_navigation', 'menu_class' => 'nav']) !!}
+                    @endif
+                </nav>
             </div>
         </div>
     </section>
     <section class="banner_primary">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-9 col-sm-3">
                     <a class="brand" href="{{ home_url('/') }}">

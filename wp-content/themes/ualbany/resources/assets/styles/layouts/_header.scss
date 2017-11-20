@@ -6,12 +6,63 @@
   @extend .nav-link;
 }
 
+.nav-utility,
+.menu-utility-container {
+  width: 100%;
+}
+
 .banner_utility {
   background-color: $purple;
+  padding: 0.5rem;
 
-  a,
-  a:visited {
-    color: $white;
-    margin: 15px;
+  .nav {
+    float: right;
   }
+
+  .nav > li {
+    font-size: 0.85rem;
+
+    a,
+    a:visited {
+      opacity: 0.75;
+      color: $white;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.banner_primary {
+  background-color: $white;
+  padding: 2rem;
+
+  .nav {
+    float: right;
+  }
+
+  .nav > li {
+    font-size: 1.35rem;
+    font-weight: 700;
+    font-family: $font-headings;
+
+    a::after {
+      display: block;
+      content: ' ';
+      width: 0%;
+      height: 3px;
+      background-color: $gold;
+
+      @include transition();
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+header {
+  box-shadow: 0.2rem 0 1rem rgba($gray, 0.25);
 }

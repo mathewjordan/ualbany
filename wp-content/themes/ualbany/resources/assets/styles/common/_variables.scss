@@ -4,12 +4,31 @@ $enable-flex: false; // requested by VC for outdated browser support
 // brand colors
 $purple: #46166b;
 $gold: #eeb211;
-$white: #fff;
 $gray: #97a4af;
+$teal: #006c68;
+
+$white: #fff;
+$black: #000;
 
 // grays
 $lightgray: lighten($gray, 10);
 $darkgray: darken($gray, 10);
+$offwhite: lighten($gray, 33);
+
+//alts
+$altpurple: darken($purple, 5);
+
+//fonts
+$font-sans: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-headings: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
 
 // bootstrap
 $brand-primary: $purple;
+
+// container width
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1300px
+) !default;
