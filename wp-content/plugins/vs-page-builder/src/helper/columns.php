@@ -1,18 +1,18 @@
 <?php
 
-namespace VC\PageBuilder\Core;
+namespace VS\PageBuilder\Core;
 
-if( ! defined( 'VC_PAGE_BUILDER_COLUMN_ONE' ) )
-    define( 'VC_PAGE_BUILDER_COLUMN_ONE', 'column_one_key' );
+if( ! defined( 'VS_PAGE_BUILDER_COLUMN_ONE' ) )
+    define( 'VS_PAGE_BUILDER_COLUMN_ONE', 'column_one_key' );
 
-if( ! defined( 'VC_PAGE_BUILDER_COLUMN_TWO' ) )
-    define( 'VC_PAGE_BUILDER_COLUMN_TWO', 'column_two_key' );
+if( ! defined( 'VS_PAGE_BUILDER_COLUMN_TWO' ) )
+    define( 'VS_PAGE_BUILDER_COLUMN_TWO', 'column_two_key' );
 
-if( ! defined( 'VC_PAGE_BUILDER_COLUMN_THREE' ) )
-    define( 'VC_PAGE_BUILDER_COLUMN_THREE', 'column_three_key' );
+if( ! defined( 'VS_PAGE_BUILDER_COLUMN_THREE' ) )
+    define( 'VS_PAGE_BUILDER_COLUMN_THREE', 'column_three_key' );
 
-if( ! defined( 'VC_PAGE_BUILDER_COLUMN_FOUR' ) )
-    define( 'VC_PAGE_BUILDER_COLUMN_FOUR', 'column_four_key' );
+if( ! defined( 'VS_PAGE_BUILDER_COLUMN_FOUR' ) )
+    define( 'VS_PAGE_BUILDER_COLUMN_FOUR', 'column_four_key' );
 
 /**
  * Dynamic Columns
@@ -26,28 +26,28 @@ function columns_names($number_of_columns)
     {
         case 1;
             return [
-                'key' => VC_PAGE_BUILDER_COLUMN_ONE,
+                'key' => VS_PAGE_BUILDER_COLUMN_ONE,
                 'name' => 'columns_one',
                 'label' => 'Add One Column',
             ];
             break;
         case 2;
             return [
-                'key' => VC_PAGE_BUILDER_COLUMN_TWO,
+                'key' => VS_PAGE_BUILDER_COLUMN_TWO,
                 'name' => 'columns_two',
                 'label' => 'Add Two Columns',
             ];
             break;
         case 3;
             return [
-                'key' => VC_PAGE_BUILDER_COLUMN_THREE,
+                'key' => VS_PAGE_BUILDER_COLUMN_THREE,
                 'name' => 'columns_three',
                 'label' => 'Add Three Columns',
             ];
             break;
         case 4;
             return [
-                'key' => VC_PAGE_BUILDER_COLUMN_FOUR,
+                'key' => VS_PAGE_BUILDER_COLUMN_FOUR,
                 'name' => 'columns_four',
                 'label' => 'Add Four Columns',
             ];

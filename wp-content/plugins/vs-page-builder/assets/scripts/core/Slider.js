@@ -20,7 +20,7 @@ export default class Slider {
             ,customOptions = {};
 
         if( ! parent ) {
-            this.error( "Parent element is required when creating a new VC Page Builder Slider.", options );
+            this.error( "Parent element is required when creating a new VS Page Builder Slider.", options );
         }
 
         if( typeof parent == 'string' )

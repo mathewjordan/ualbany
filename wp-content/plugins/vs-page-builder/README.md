@@ -1,4 +1,4 @@
-# VC Page Builder
+# VS Page Builder
 
 Page builder utilizing the Advanced Custom Fields 'flexible content' layout. The page build consist of three major parts.
  
@@ -32,7 +32,7 @@ Using the php `extract` function content types and element types are loaded with
 Each content type requires a variable called '$temp_key'.
 
 ```$xslt
-use VC\PageBuilder\Core;
+use VS\PageBuilder\Core;
 
 //Example of loading the content type stats
 Core\load_content( 'stats', [ 'temp_key' => $temp_key ])

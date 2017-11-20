@@ -45,7 +45,7 @@ if( file_exists( $file_path ) ) {
     }
 }
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_FACULTY_AND_STAFF', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_FACULTY_AND_STAFF', [
     'key' => $temp_key . 'faculty_and_staff_group',
     'name' => 'faculty_and_staff',
     'label' => 'Faculty and Staff',

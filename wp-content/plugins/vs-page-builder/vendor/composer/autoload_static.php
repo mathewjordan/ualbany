@@ -21,7 +21,7 @@ class ComposerStaticInit509eed88fa08600b5f9d10da58084461
     );
 
     public static $prefixDirsPsr4 = array (
-        'VC\\PageBuilder\\' => 
+        'VS\\PageBuilder\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

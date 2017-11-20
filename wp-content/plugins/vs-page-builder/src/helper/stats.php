@@ -1,6 +1,6 @@
 <?php
 
-namespace VC\PageBuilder\Core;
+namespace VS\PageBuilder\Core;
 
 function stats_column_sizes($stat_count)
 {

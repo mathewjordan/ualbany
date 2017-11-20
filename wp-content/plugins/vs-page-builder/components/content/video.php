@@ -3,7 +3,7 @@
  * @var string $temp_key
  */
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_VIDEO', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_VIDEO', [
     'key' => $temp_key . 'video_group',
     'name' => 'video',
     'label' => 'Video',

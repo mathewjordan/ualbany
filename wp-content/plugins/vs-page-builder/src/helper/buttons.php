@@ -1,6 +1,6 @@
 <?php
 
-namespace VC\PageBuilder\Core;
+namespace VS\PageBuilder\Core;
 
 /**
  * @param string $style

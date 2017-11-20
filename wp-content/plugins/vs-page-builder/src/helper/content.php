@@ -1,6 +1,6 @@
 <?php
 
-namespace VC\PageBuilder\Core;
+namespace VS\PageBuilder\Core;
 
 function content_allowed_in_column($filename, $column)
 {
@@ -8,15 +8,15 @@ function content_allowed_in_column($filename, $column)
 
     switch( $column )
     {
-        case VC_PAGE_BUILDER_COLUMN_ONE:
+        case VS_PAGE_BUILDER_COLUMN_ONE:
             return true;
             break;
         //Certain content can only be rendered in one full column
-        case VC_PAGE_BUILDER_COLUMN_TWO:
-        case VC_PAGE_BUILDER_COLUMN_THREE:
-        case VC_PAGE_BUILDER_COLUMN_FOUR:
+        case VS_PAGE_BUILDER_COLUMN_TWO:
+        case VS_PAGE_BUILDER_COLUMN_THREE:
+        case VS_PAGE_BUILDER_COLUMN_FOUR:
 
-            $required_full_column = apply_filters( 'VC_PAGE_BUILDER_FILTER_CONTENT_ALLOWED_IN_COLUMNS', [
+            $required_full_column = apply_filters( 'VS_PAGE_BUILDER_FILTER_CONTENT_ALLOWED_IN_COLUMNS', [
                 'testimonial_panels',
             ] );
 

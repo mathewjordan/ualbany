@@ -1,8 +1,8 @@
 <?php
 
-use VC\PageBuilder\Core;
+use VS\PageBuilder\Core;
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_ROWS', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_ROWS', [
     'key' => 'group_596e4350841bb', //@todo in the next project rename key :)
     'title' => 'Page Builder',
     'fields' => [

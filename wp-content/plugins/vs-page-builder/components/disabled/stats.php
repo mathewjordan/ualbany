@@ -5,11 +5,11 @@
  * Pull in wysiwyg fields, keep it dry.
  */
 
-$wysiwyg = \VC\PageBuilder\Core\load_content( 'wysiwyg', [
+$wysiwyg = \VS\PageBuilder\Core\load_content( 'wysiwyg', [
     'temp_key' => $temp_key . '_stat_'
 ] );
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_STATS', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_STATS', [
     'key' => $temp_key . '_stats_group',
     'name' => 'stats',
     'label' => 'Stats',

@@ -774,4 +774,4 @@ $export($export.S + $export.F * !__webpack_require__(1), 'Object', { definePrope
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=vc-page-builder-bundle.js.map
+//# sourceMappingURL=vs-page-builder-bundle.js.map

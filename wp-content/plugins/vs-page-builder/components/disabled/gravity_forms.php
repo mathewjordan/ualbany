@@ -16,7 +16,7 @@ if( class_exists( 'GFAPI' ) ) {
     }
 }
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_GRAVITY_FORMS', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_GRAVITY_FORMS', [
     'key' => $temp_key . 'gravity_forms_group',
     'name' => 'gravity_forms',
     'label' => 'Gravity Form',

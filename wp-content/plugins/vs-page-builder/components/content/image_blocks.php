@@ -3,7 +3,7 @@
  * @var string $temp_key
  */
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_IMAGE_BLOCKS', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_IMAGE_BLOCKS', [
     'key' => $temp_key . 'img_blocks_group',
     'name' => 'image_block',
     'label' => 'Image Blocks',
@@ -44,7 +44,7 @@ return apply_filters( 'VC_PAGE_BUILDER_FILTER_IMAGE_BLOCKS', [
             'collapsed' => '',
             'min' => 1,
             //One column layouts allow for a max of 4 images. Other columns can only have 1.
-            'max' => strpos( $temp_key, VC_PAGE_BUILDER_COLUMN_ONE ) === false ? 1 : 4,
+            'max' => strpos( $temp_key, VS_PAGE_BUILDER_COLUMN_ONE ) === false ? 1 : 4,
             'layout' => 'block',
             'button_label' => 'Add Image Block',
             'sub_fields' => [

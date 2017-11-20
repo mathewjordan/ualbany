@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "VC\\PageBuilder\\": "src/"
+            "VS\\PageBuilder\\": "src/"
         },
         "files": [
             "src/helper/buttons.php",

@@ -1,6 +1,6 @@
 <?php
 
-namespace VC\PageBuilder\Core;
+namespace VS\PageBuilder\Core;
 
 /**
  * @param $style
@@ -62,7 +62,7 @@ function row_forced_classes_based_on_content($row_content)
 {
     if( ! empty( $row_content ) ) {
 
-        $class_map = apply_filters( 'VC_PAGE_BUILDER_FILTER_ROW_CLASS_MAPS', [
+        $class_map = apply_filters( 'VS_PAGE_BUILDER_FILTER_ROW_CLASS_MAPS', [
             'testimonial_panels' => 'row-testimonial-panels'
         ] );
 

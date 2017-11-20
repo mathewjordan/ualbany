@@ -3,9 +3,9 @@
  * @var string $temp_key
  */
 
-use \VC\PageBuilder\Core;
+use \VS\PageBuilder\Core;
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_SHORTCODE', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_SHORTCODE', [
     'key' => $temp_key . '_shortcode_group',
     'name' => 'shortcode',
     'label' => 'Shortcode',

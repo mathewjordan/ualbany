@@ -1,6 +1,6 @@
 <?php
 
-namespace VC\PageBuilder\Core;
+namespace VS\PageBuilder\Core;
 
 /**
  * @param $file
@@ -21,7 +21,7 @@ function load( $file, $data = [] )
  */
 function load_element( $name, $data = [] )
 {
-    return load( VC_PAGE_BUILDER_PLUGIN_PATH . "components/element/$name", $data );
+    return load( VS_PAGE_BUILDER_PLUGIN_PATH . "components/element/$name", $data );
 }
 
 /**
@@ -31,7 +31,7 @@ function load_element( $name, $data = [] )
  */
 function load_content( $name, $data = [] )
 {
-    return load( VC_PAGE_BUILDER_PLUGIN_PATH . "components/content/$name", $data );
+    return load( VS_PAGE_BUILDER_PLUGIN_PATH . "components/content/$name", $data );
 }
 
 /**
@@ -41,5 +41,5 @@ function load_content( $name, $data = [] )
  */
 function load_layout( $name, $data = [] )
 {
-    return load( VC_PAGE_BUILDER_PLUGIN_PATH . "components/layout/$name", $data );
+    return load( VS_PAGE_BUILDER_PLUGIN_PATH . "components/layout/$name", $data );
 }

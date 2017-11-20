@@ -13,7 +13,7 @@ $relationships = get_posts([
 foreach( $relationships as $relationship )
     $relationship_values[ $relationship->ID ] = $relationship->post_title;
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_FAQ', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_FAQ', [
     'key' => $temp_key . 'faq_group',
     'name' => 'frequently_asked_questions',
     'label' => 'Frequently Asked Questions',

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace VC\PageBuilder;
+namespace VS\PageBuilder;
 
 
 class Admin
@@ -15,7 +15,7 @@ class Admin
     {
         wp_enqueue_script(
             'vc-page-builder-bundle',
-            VC_PAGE_BUILDER_PLUGIN_URL . '/dist/vc-page-builder-bundle.js',
+            VS_PAGE_BUILDER_PLUGIN_URL . '/dist/vs-page-builder-bundle.js',
             [ 'jquery' ],
             '0.0.1',
             true
@@ -23,7 +23,7 @@ class Admin
 
         wp_enqueue_script(
             'vc-page-builder/modules/acf/submenu-blocks',
-            VC_PAGE_BUILDER_PLUGIN_URL . '/src/Modules/ACF/dist/module-build-submenu-blocks.js',
+            VS_PAGE_BUILDER_PLUGIN_URL . '/src/Modules/ACF/dist/module-build-submenu-blocks.js',
             [ 'vc-page-builder-bundle' ],
             '0.0.1',
             true

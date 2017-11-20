@@ -3,9 +3,9 @@
  * @var string $temp_key
  */
 
-use \VC\PageBuilder\Core;
+use \VS\PageBuilder\Core;
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_WYSIWYG', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_WYSIWYG', [
     'key' => $temp_key . '_wysiwyg_group',
     'name' => 'wysiwyg',
     'label' => 'Wysiwyg',

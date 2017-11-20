@@ -3,7 +3,7 @@
  * @var string $temp_key
  */
 
-$nav_menus      = \VC\PageBuilder\Modules\ACF\SubmenuNav::get_nav_menus();
+$nav_menus      = \VS\PageBuilder\Modules\ACF\SubmenuNav::get_nav_menus();
 $select_options = [
     '' => 'Select Menu'
 ];
@@ -12,7 +12,7 @@ foreach( $nav_menus as $nav_menu_id => $nav_menu_name ){
     $select_options[ $nav_menu_id ] = $nav_menu_name;
 }
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_SUBMENU_BLOCK', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_SUBMENU_BLOCK', [
     'key' => $temp_key . 'submenu_block_group',
     'name' => 'submenu_block',
     'label' => 'Submenu Block',

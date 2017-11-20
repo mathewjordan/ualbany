@@ -3,7 +3,7 @@
  * @var string $temp_key
  */
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_EVENT', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_EVENT', [
     'key' => $temp_key . 'event_block',
     'name' => 'event_block',
     'label' => 'Event Block',
@@ -71,7 +71,7 @@ return apply_filters( 'VC_PAGE_BUILDER_FILTER_EVENT', [
             'max' => 10,
             'min' => 1
         ],
-        4 => \VC\PageBuilder\Core\load_element( 'button', [
+        4 => \VS\PageBuilder\Core\load_element( 'button', [
             'temp_key' => $temp_key,
             'exclude_fields' => [
                 'link'

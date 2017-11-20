@@ -3,9 +3,9 @@
  * @var string $temp_key
  */
 
-use \VC\PageBuilder\Core;
+use \VS\PageBuilder\Core;
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_TESTIMONIAL_PANELS', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_TESTIMONIAL_PANELS', [
     'key' => $temp_key . '_tpg',
     'name' => 'testimonial_panels',
     'label' => 'Testimonial Panels',

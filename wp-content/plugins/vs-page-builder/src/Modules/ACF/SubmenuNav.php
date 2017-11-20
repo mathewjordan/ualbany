@@ -1,6 +1,6 @@
 <?php
 
-namespace VC\PageBuilder\Modules\ACF;
+namespace VS\PageBuilder\Modules\ACF;
 
 
 class SubmenuNav

@@ -266,4 +266,4 @@ exports.default = Slider;
 /***/ })
 
 },[16]);
-//# sourceMappingURL=vc-page-builder-content.js.map
+//# sourceMappingURL=vs-page-builder-content.js.map

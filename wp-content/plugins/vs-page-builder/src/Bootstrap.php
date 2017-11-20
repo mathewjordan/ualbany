@@ -1,9 +1,9 @@
 <?php
 
 
-namespace VC\PageBuilder;
+namespace VS\PageBuilder;
 
-use VC\PageBuilder\Core;
+use VS\PageBuilder\Core;
 
 class Bootstrap
 {
@@ -40,7 +40,7 @@ class Bootstrap
              */
             add_action( 'admin_notices', function () {
                 $class = 'notice notice-error';
-                $message = __( 'Advanced Custom Fields is Required to run the VC Page Builder! Please Activate ACF or disable VC Page Builder.', 'vc-page-builder' );
+                $message = __( 'Advanced Custom Fields is Required to run the VS Page Builder! Please Activate ACF or disable VS Page Builder.', 'vc-page-builder' );
 
                 printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
             } );
@@ -64,7 +64,7 @@ class Bootstrap
     {
         wp_enqueue_script(
             'vc-page-builder-bundle',
-            VC_PAGE_BUILDER_PLUGIN_URL . '/dist/vc-page-builder-bundle.js',
+            VS_PAGE_BUILDER_PLUGIN_URL . '/dist/vs-page-builder-bundle.js',
             [ 'jquery' ],
             '0.0.1',
             true
@@ -72,7 +72,7 @@ class Bootstrap
 
         wp_enqueue_script(
             'vc-page-builder-content',
-            VC_PAGE_BUILDER_PLUGIN_URL . '/dist/vc-page-builder-content.js',
+            VS_PAGE_BUILDER_PLUGIN_URL . '/dist/vs-page-builder-content.js',
             [ 'vc-page-builder-bundle' ],
             '0.0.1',
             true

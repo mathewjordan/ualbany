@@ -1,6 +1,6 @@
 <?php
 
-use VC\PageBuilder\Core;
+use VS\PageBuilder\Core;
 
 $max_columns = 4;
 $columns = [];
@@ -54,7 +54,7 @@ for($i = 1; $i <= $max_columns; $i++) {
                     ],
                     'choices' => [
                         'light'     => 'White',
-                        'light_2'   => 'Offwhite',
+                        'light_2'   => 'Transparent',
                         'dark'      => 'Gray',
                         'dark_2'    => 'Dark Gray',
                         'yellow'    => 'Gold',
@@ -145,4 +145,4 @@ for($i = 1; $i <= $max_columns; $i++) {
     }
 }
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_COLUMNS', $columns );
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_COLUMNS', $columns );

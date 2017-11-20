@@ -3,7 +3,7 @@
  * @var string $temp_key
  */
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_LINK_LIST', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_LINK_LIST', [
     'key' => $temp_key . 'link_list_group',
     'name' => 'link_list',
     'label' => 'Link List',

@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'VC\\PageBuilder\\' => array($baseDir . '/src'),
+    'VS\\PageBuilder\\' => array($baseDir . '/src'),
 );

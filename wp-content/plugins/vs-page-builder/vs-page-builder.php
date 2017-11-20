@@ -11,10 +11,10 @@
  * @package           VS\PageBuilder
  *
  * @wordpress-plugin
- * Plugin Name:       Verified Content Page Builder
+ * Plugin Name:       Content Page Builder by Verified Studios
  * Plugin URI:        http://verifiedstudios.com
  * Description:       Plugin provides the responsive page building functionality based on Bootstrap 4.
- * Version:           1.0.2
+ * Version:           1.0.5
  * Author:            Verified Studios
  * Author URI:        http://www.verifiedstudios.com/
  * Text Domain:       vs

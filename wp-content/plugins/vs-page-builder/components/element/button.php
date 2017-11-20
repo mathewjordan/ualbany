@@ -208,7 +208,7 @@ if( empty( $exclude_types ) || ! in_array( 'internal', $exclude_types ) ) {
 /**
  * Button Element is used with multiple content types.
  */
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_BUTTON_' . $temp_key, [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_BUTTON_' . $temp_key, [
     'key' => $temp_key . '_wysiwyg_button_group',
     'label' => 'Button',
     'name' => 'button',

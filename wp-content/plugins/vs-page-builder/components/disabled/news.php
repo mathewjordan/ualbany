@@ -3,7 +3,7 @@
  * @var string $temp_key
  */
 
-return apply_filters( 'VC_PAGE_BUILDER_FILTER_NEWS', [
+return apply_filters( 'VS_PAGE_BUILDER_FILTER_NEWS', [
     'key' => $temp_key . 'news_block',
     'name' => 'news_block',
     'label' => 'News Block',
@@ -71,7 +71,7 @@ return apply_filters( 'VC_PAGE_BUILDER_FILTER_NEWS', [
             'max' => 10,
             'min' => 1
         ],
-        4 => \VC\PageBuilder\Core\load_element( 'button', [
+        4 => \VS\PageBuilder\Core\load_element( 'button', [
             'temp_key' => $temp_key,
             'exclude_fields' => [
                 'link'
