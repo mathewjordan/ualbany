@@ -1,0 +1,474 @@
+{
+    "key": "group_5a14906003af0",
+    "title": "Homepage Settings",
+    "fields": [
+        {
+            "key": "field_5a1492867e10f",
+            "label": "Hero",
+            "name": "homepage_hero",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "ID": 1123,
+                    "key": "field_5a1492b8ba475",
+                    "label": "Headline",
+                    "name": "homepage_hero__headline",
+                    "prefix": "acf",
+                    "type": "text",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1122,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "homepage_hero__headline",
+                    "_prepare": 0,
+                    "_valid": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "ID": 1124,
+                    "key": "field_5a149305a5429",
+                    "label": "Call To Action",
+                    "name": "homepage_hero__cta",
+                    "prefix": "acf",
+                    "type": "text",
+                    "value": null,
+                    "menu_order": 1,
+                    "instructions": "",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1122,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "homepage_hero__cta",
+                    "_prepare": 0,
+                    "_valid": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "ID": 1126,
+                    "key": "field_5a14932ca0012",
+                    "label": "Photo",
+                    "name": "homepage_hero__photo",
+                    "prefix": "acf",
+                    "type": "gallery",
+                    "value": null,
+                    "menu_order": 2,
+                    "instructions": "Site will randomly select one on load.",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1122,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "homepage_hero__photo",
+                    "_prepare": 0,
+                    "_valid": 1,
+                    "min": "",
+                    "max": "",
+                    "insert": "append",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5a149386b6619",
+            "label": "Call To Action",
+            "name": "homepage_cta",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "ID": 1128,
+                    "key": "field_5a1493b968d57",
+                    "label": "Button",
+                    "name": "homepage_cta__button",
+                    "prefix": "acf",
+                    "type": "flexible_content",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1127,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "homepage_cta__button",
+                    "_prepare": 0,
+                    "_valid": 1,
+                    "layouts": {
+                        "5a1493c323bda": {
+                            "key": "5a1493c323bda",
+                            "name": "button",
+                            "label": "Button",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "ID": 1130,
+                                    "key": "field_5a1493e668d59",
+                                    "label": "Link Details",
+                                    "name": "homepage_cta__button__link",
+                                    "prefix": "acf",
+                                    "type": "link",
+                                    "value": null,
+                                    "menu_order": 0,
+                                    "instructions": "",
+                                    "required": 1,
+                                    "id": "",
+                                    "class": "",
+                                    "conditional_logic": 0,
+                                    "parent": 1128,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "_name": "homepage_cta__button__link",
+                                    "_prepare": 0,
+                                    "_valid": 1,
+                                    "parent_layout": "5a1493c323bda",
+                                    "return_format": "array"
+                                },
+                                {
+                                    "ID": 1131,
+                                    "key": "field_5a14944360e97",
+                                    "label": "External Link?",
+                                    "name": "homepage_cta__button__external",
+                                    "prefix": "acf",
+                                    "type": "checkbox",
+                                    "value": null,
+                                    "menu_order": 1,
+                                    "instructions": "",
+                                    "required": 0,
+                                    "id": "",
+                                    "class": "",
+                                    "conditional_logic": 0,
+                                    "parent": 1128,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "_name": "homepage_cta__button__external",
+                                    "_prepare": 0,
+                                    "_valid": 1,
+                                    "parent_layout": "5a1493c323bda",
+                                    "choices": {
+                                        "yes": "Yes"
+                                    },
+                                    "allow_custom": 0,
+                                    "save_custom": 0,
+                                    "default_value": [],
+                                    "layout": "vertical",
+                                    "toggle": 0,
+                                    "return_format": "value"
+                                },
+                                {
+                                    "ID": 1132,
+                                    "key": "field_5a1494db1632d",
+                                    "label": "Icon",
+                                    "name": "homepage_cta__button__icon",
+                                    "prefix": "acf",
+                                    "type": "text",
+                                    "value": null,
+                                    "menu_order": 2,
+                                    "instructions": "Select an Icon from http:\/\/fontawesome.io\/icons\/. For example if using http:\/\/fontawesome.io\/icon\/globe\/ input <strong>fa-globe<\/strong>",
+                                    "required": 0,
+                                    "id": "",
+                                    "class": "",
+                                    "conditional_logic": 0,
+                                    "parent": 1128,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "_name": "homepage_cta__button__icon",
+                                    "_prepare": 0,
+                                    "_valid": 1,
+                                    "parent_layout": "5a1493c323bda",
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "3"
+                        }
+                    },
+                    "button_label": "Add Row",
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5a1495ab2b510",
+            "label": "Scholarships and Financial Aid",
+            "name": "homepage_info",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "ID": 1134,
+                    "key": "field_5a1495ab2b511",
+                    "label": "Button",
+                    "name": "homepage_info__button",
+                    "prefix": "acf",
+                    "type": "flexible_content",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1133,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "homepage_info__button",
+                    "_prepare": 0,
+                    "_valid": 1,
+                    "layouts": {
+                        "5a1493c323bda": {
+                            "key": "5a1493c323bda",
+                            "name": "button",
+                            "label": "Button",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "ID": 1135,
+                                    "key": "field_5a1495ab2b512",
+                                    "label": "Link Details",
+                                    "name": "homepage_info__button__link",
+                                    "prefix": "acf",
+                                    "type": "link",
+                                    "value": null,
+                                    "menu_order": 0,
+                                    "instructions": "",
+                                    "required": 1,
+                                    "id": "",
+                                    "class": "",
+                                    "conditional_logic": 0,
+                                    "parent": 1134,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "_name": "homepage_info__button__link",
+                                    "_prepare": 0,
+                                    "_valid": 1,
+                                    "parent_layout": "5a1493c323bda",
+                                    "return_format": "array"
+                                },
+                                {
+                                    "ID": 1136,
+                                    "key": "field_5a1495ab2b513",
+                                    "label": "External Link?",
+                                    "name": "homepage_info__button__external",
+                                    "prefix": "acf",
+                                    "type": "checkbox",
+                                    "value": null,
+                                    "menu_order": 1,
+                                    "instructions": "",
+                                    "required": 0,
+                                    "id": "",
+                                    "class": "",
+                                    "conditional_logic": 0,
+                                    "parent": 1134,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "_name": "homepage_info__button__external",
+                                    "_prepare": 0,
+                                    "_valid": 1,
+                                    "parent_layout": "5a1493c323bda",
+                                    "choices": {
+                                        "yes": "Yes"
+                                    },
+                                    "allow_custom": 0,
+                                    "save_custom": 0,
+                                    "default_value": [],
+                                    "layout": "vertical",
+                                    "toggle": 0,
+                                    "return_format": "value"
+                                },
+                                {
+                                    "ID": 1137,
+                                    "key": "field_5a1495ab2b514",
+                                    "label": "Icon",
+                                    "name": "homepage_info__button__icon",
+                                    "prefix": "acf",
+                                    "type": "text",
+                                    "value": null,
+                                    "menu_order": 2,
+                                    "instructions": "Select an Icon from http:\/\/fontawesome.io\/icons\/. For example if using http:\/\/fontawesome.io\/icon\/globe\/ input <strong>fa-globe<\/strong>",
+                                    "required": 0,
+                                    "id": "",
+                                    "class": "",
+                                    "conditional_logic": 0,
+                                    "parent": 1134,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "_name": "homepage_info__button__icon",
+                                    "_prepare": 0,
+                                    "_valid": 1,
+                                    "parent_layout": "5a1493c323bda",
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "3"
+                        }
+                    },
+                    "button_label": "Add Row",
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5a149606480ef",
+            "label": "Country Listing",
+            "name": "homepage_discover",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "ID": 1139,
+                    "key": "field_5a149625480f0",
+                    "label": "Title",
+                    "name": "homepage_discover__title",
+                    "prefix": "acf",
+                    "type": "text",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1138,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "homepage_discover__title",
+                    "_prepare": 0,
+                    "_valid": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1511316615
+}
