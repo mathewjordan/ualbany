@@ -32,19 +32,10 @@ return apply_filters( 'VS_PAGE_BUILDER_FILTER_ROWS', [
                 'operator' => '==',
                 'value' => 'page',
             ],
-        ],
-        [
             [
-                'param' => 'post_type',
-                'operator' => '==',
-                'value' => 'department',
-            ],
-        ],
-        [
-            [
-                'param' => 'post_type',
-                'operator' => '==',
-                'value' => 'program',
+                "param" => "page_type",
+                "operator" => "!=",
+                "value" => "front_page"
             ],
         ],
     ],
