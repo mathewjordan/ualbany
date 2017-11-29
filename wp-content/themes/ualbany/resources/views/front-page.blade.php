@@ -105,7 +105,7 @@
     <section id="homepage-info" class="page-section page-section--buttons">
         <div class="text-center">
             <h2>Find Scholarships and Financial Aid</h2>
-            @if($homepage_cta['homepage_info__button'])
+            @if($homepage_info['homepage_info__button'])
                 @foreach($homepage_info['homepage_info__button'] as $button)
                     @php
                         $button_link = $button['homepage_info__button__link'];
