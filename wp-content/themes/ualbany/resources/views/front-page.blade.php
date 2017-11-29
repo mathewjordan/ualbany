@@ -9,12 +9,14 @@
     $homepage_discover = ! empty ( $homepage_discover ) ? $homepage_discover : get_field('homepage_discover');
 
     // hero image
-    $general_hero_image = get_field('general_hero_image');
+    $general_hero_gallery = $hero['homepage_hero__photo'];
     $size = 'banner_slim'; // hero image size
+    
 
     // if acf value exists for specific page, else get customizer default
-    if ($general_hero_image) {
-        $hero_image_url = $general_hero_image[ 'sizes' ][ $size ];
+    if ($general_hero_gallery) {
+        $random_index = array_rand($general_hero_gallery, 1);
+        $hero_image_url = $general_hero_gallery[$random_index][ 'sizes' ][ $size ];
     } else {
         $default_image_url = get_theme_mod('default_settings__hero_image'); // get default hero image theme_mod from customizer
         $default_image_id  = attachment_url_to_postid($default_image_url); // recursively get ID by default url to get scalable image
@@ -72,6 +74,9 @@
       </div>
     </div>
 
+    <section id="homepage-danes-abroad" class="page-section">
+    </section>
+
     <section id="homepage-cta" class="page-section page-section--buttons">
       <div class="text-center">
       @foreach($homepage_cta['homepage_cta__button'] as $button)
@@ -86,6 +91,9 @@
         </a>
       @endforeach
       </div>
+    </section>
+
+    <section id="homepage-myths" class="page-section">
     </section>
 
     <section id="homepage-info" class="page-section page-section--buttons">
@@ -127,7 +135,7 @@
         </div>
       </div>
     </section>
-    
+
     @while(have_posts()) @php(the_post())
     <article @php(post_class())>
         @include('partials.page-builder')
