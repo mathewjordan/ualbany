@@ -9,8 +9,6 @@
     $homepage_discover = ! empty ( $homepage_discover ) ? $homepage_discover : get_field('homepage_discover');
 
     // hero image
-
-
     $homepage_hero_image = get_field('homepage_hero_photos');
     $size = 'banner_slim'; // hero image size]
 
@@ -90,6 +88,12 @@
         </div>
     </section>
 
+    <section id="homepage-social" class="page-section page-section--tall">
+        <div class="container">
+            <h3>[Social Media Integration Here]</h3>
+        </div>
+    </section>
+
     <section id="homepage-info" class="page-section page-section--buttons">
         <div class="text-center">
             <h2>Find Scholarships and Financial Aid</h2>
@@ -110,8 +114,8 @@
     </section>
 
     <section id="homepage-discover" class="page-section discover-regions">
-        <h2 class="section-title">{{$homepage_discover['homepage_discover__title']}}</h2>
         <div class="container">
+            <h2 class="section-title">{{$homepage_discover['homepage_discover__title']}}</h2>
             <div class="row">
                 @php
                     $args = [ 'post_type'   => 'region',

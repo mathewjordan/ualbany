@@ -1,5 +1,5 @@
 .front-header {
-  padding: 10rem 0 $spacing-large;
+  padding: 20vh 0 $spacing-large;
   color: $white;
   position: relative;
   background-color: $gray;
@@ -22,11 +22,11 @@
     background-color: $darkgray;
     width: auto;
     display: inline-block;
-    padding: $spacing-large $spacing-extra-large;
-    margin-bottom: -$spacing-large;
+    padding: $spacing-extra-large;
     position: relative;
     z-index: 5;
     text-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.25);
+    margin-bottom: $spacing-small;
   }
 
   h2.front-title {
@@ -37,17 +37,40 @@
     font-family: $font-sans;
     font-weight: 300 !important;
     font-size: 1.35rem;
-    margin: 1rem 0;
+    margin: 2rem 0 1rem;
     opacity: 0.85;
-    text-align: center;
     color: $white;
   }
 
   &__form {
-    text-align: center;
+    select {
+      margin-right: 1rem;
+    }
   }
 }
 
 .discover-regions h3 {
   font-size: 1.35rem;
+}
+
+body.home {
+  section {
+    width: 100%;
+
+    &.page-section--tall {
+      min-height: 40vh;
+    }
+  }
+}
+
+#homepage-social {
+  background-color: $purple;
+  color: $white;
+
+  h3 {
+    color: $white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
 }
