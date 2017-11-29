@@ -94,6 +94,14 @@
         </div>
     </section>
 
+    {{--<section id="homepage-danes-abroad" class="page-section">--}}
+
+    {{--</section>--}}
+
+    {{--<section id="homepage-myths" class="page-section">--}}
+
+    {{--</section>--}}
+
     <section id="homepage-info" class="page-section page-section--buttons">
         <div class="text-center">
             <h2>Find Scholarships and Financial Aid</h2>
