@@ -74,43 +74,33 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "ID": 1126,
-                    "key": "field_5a14932ca0012",
-                    "label": "Photo",
-                    "name": "homepage_hero__photo",
-                    "prefix": "acf",
-                    "type": "gallery",
-                    "value": null,
-                    "menu_order": 2,
-                    "instructions": "Site will randomly select one on load.",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": 1122,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "_name": "homepage_hero__photo",
-                    "_prepare": 0,
-                    "_valid": 1,
-                    "min": "",
-                    "max": "",
-                    "insert": "append",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5a1ee0fa36215",
+            "label": "Hero Photos",
+            "name": "homepage_hero_photos",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_5a149386b6619",
@@ -470,5 +460,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1511316615
+    "modified": 1511991133
 }
