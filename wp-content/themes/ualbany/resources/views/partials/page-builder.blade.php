@@ -21,6 +21,13 @@ if( ! empty( $fields ) && ! empty( $fields[ 'columns' ] ) ){
                 <figure class="row-background">{!! $row_image !!}</figure>
             @endif
             <div class='container'>
+
+                @if ($row[ 'header_wysiwyg' ])
+                    <div class="row">
+                        <div class="col-12">@php echo $row[ 'header_wysiwyg' ]; @endphp</div>
+                    </div>
+                @endif
+
                 <div class='row'>
 
                     @if( ! empty( $row['content'] ) )
@@ -37,6 +44,13 @@ if( ! empty( $fields ) && ! empty( $fields[ 'columns' ] ) ){
 
                     @endif
                 </div>
+
+                @if ($row[ 'footer_wysiwyg' ])
+                    <div class="row">
+                        <div class="col-12">@php echo $row[ 'footer_wysiwyg' ]; @endphp</div>
+                    </div>
+                @endif
+
             </div>
         </div>
 <?php }
