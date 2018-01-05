@@ -15530,6 +15530,30 @@ body.home section.page-section--tall {
   transition: all 300ms ease;
 }
 
+.myths-slick .slick-slide .myth--title .fa {
+  font-size: 0.5em;
+  opacity: 0.5;
+  line-height: 1em;
+}
+
+.myths-slick .slick-slide .myth--title .fa:first-of-type {
+  margin-bottom: -0.5em;
+  line-height: 0.5em;
+}
+
+.myths-slick .slick-slide .myth--busted {
+  font-size: 1.25rem;
+  color: #000;
+  margin-top: 1rem;
+}
+
+.myths-slick .slick-slide .myth--reference {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #97a4af;
+  text-transform: uppercase;
+}
+
 .myths-slick .slick-slide.slick-current {
   background-color: #fff;
   -webkit-transform: scale(1);

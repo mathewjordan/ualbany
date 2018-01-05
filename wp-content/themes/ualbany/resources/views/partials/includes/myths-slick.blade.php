@@ -19,8 +19,15 @@
             @endphp
 
                <div>
-                   <h4>{{get_field('myth_myth')}}</h4>
-                   @php echo get_field('myth_myth_busted') @endphp
+                   <div class="article myth">
+                       <h4 class="myth--title">
+                           <span class="fa fa-quote-left"></span>
+                           {{get_field('myth')}}
+                           <span class="fa fa-quote-right"></span>
+                       </h4>
+                       <blockquote class="myth--busted">@php echo get_field('myth_busted') @endphp</blockquote>
+                       <em class="myth--reference">@php echo get_field('myth_reference') @endphp</em>
+                   </div>
                </div>
 
             @php
