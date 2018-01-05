@@ -16,16 +16,16 @@ if( ! empty( $fields ) && ! empty( $fields[ 'columns' ] ) ){
         $row_alignment  = Core\row_alignment( $row[ 'alignment' ] );
 
         ?>
-        <div class='{{$row_class}} {{$row_alignment}} {{$row_image ? 'row-image' : 'row-no-image'}} {{$row_extra_class}}'>
+        <section class='{{$row_class}} {{$row_alignment}} {{$row_image ? 'row-image' : 'row-no-image'}} {{$row_extra_class}}'>
             @if($row_image)
                 <figure class="row-background">{!! $row_image !!}</figure>
             @endif
             <div class='container'>
 
                 @if ($row[ 'header_wysiwyg' ])
-                    <div class="row">
+                    <header class="row">
                         <div class="col-12">@php echo $row[ 'header_wysiwyg' ]; @endphp</div>
-                    </div>
+                    </header>
                 @endif
 
                 <div class='row'>
@@ -46,12 +46,12 @@ if( ! empty( $fields ) && ! empty( $fields[ 'columns' ] ) ){
                 </div>
 
                 @if ($row[ 'footer_wysiwyg' ])
-                    <div class="row">
+                    <footer class="row">
                         <div class="col-12">@php echo $row[ 'footer_wysiwyg' ]; @endphp</div>
-                    </div>
+                    </footer>
                 @endif
 
             </div>
-        </div>
+        </section>
 <?php }
 }
