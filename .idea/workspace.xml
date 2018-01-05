@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c09c7b-e4af-4bc4-99f6-8216e5ded83a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/page-builder.blade.php" afterPath="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/page-builder.blade.php" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/columns.php" afterPath="$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/columns.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,61 +13,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="front-page.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/front-page.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="74" column="31" lean-forward="false" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
-              <folding>
-                <marker date="1515154670548" expanded="true" signature="10:814" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="834:855" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="867:876" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="940:955" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="1191:1223" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="1251:1278" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="1329:1356" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="1531:1757" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="1540:1696" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="1819:1839" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="2005:2025" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="2032:2050" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="2110:2121" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="2219:2238" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="2366:2592" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="2375:2531" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="3626:3663" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="3690:3738" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="3789:3842" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="3902:3921" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="3935:3957" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="4002:4039" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="4087:4124" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="4193:4214" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="4877:4916" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="4943:4993" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5044:5098" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5158:5177" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5191:5213" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5258:5296" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5344:5382" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5451:5472" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5725:5771" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5850:6051" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="5859:5998" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6097:6117" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6146:6166" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6173:6191" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6277:6288" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6389:6408" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6506:6518" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6525:6535" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6559:6571" ph="..." />
-                <marker date="1515154670548" expanded="true" signature="6595:6618" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/footer.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -100,11 +45,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="columns.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="myth_general_settings.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/myth_general_settings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rows.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/rows.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-456">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="columns.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/columns.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="818">
-              <caret line="161" column="45" lean-forward="false" selection-start-line="161" selection-start-column="31" selection-end-line="161" selection-end-column="45" />
+            <state relative-caret-position="1187">
+              <caret line="173" column="38" lean-forward="false" selection-start-line="173" selection-start-column="38" selection-end-line="173" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -128,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-builder.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page-builder.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/page-builder.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -176,16 +141,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -203,8 +158,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/layouts/_myths.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/layouts/_page-home.scss" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/columns.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/page-builder.blade.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/columns.php" />
       </list>
     </option>
   </component>
@@ -359,6 +314,16 @@
               <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="acf-json" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -467,12 +432,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515151914385</updated>
-      <workItem from="1515151915626" duration="3943000" />
+      <workItem from="1515151915626" duration="4192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3943000" />
+    <option name="totallyTimeSpent" value="4192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1442" y="-515" width="1277" height="1413" extended-state="0" />
@@ -529,14 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="618">
           <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/myth_general_settings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -630,14 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/layouts/_page-home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="59" column="23" lean-forward="true" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/content/wysiwyg.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -646,42 +595,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/rows.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/single-page-builder.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1515151693392" expanded="true" signature="9:22" ph="..." />
-            <marker date="1515151693392" expanded="true" signature="34:43" ph="..." />
-            <marker date="1515151693392" expanded="true" signature="56:68" ph="..." />
-            <marker date="1515151693392" expanded="true" signature="75:85" ph="..." />
-            <marker date="1515151693392" expanded="true" signature="105:117" ph="..." />
-            <marker date="1515151693392" expanded="true" signature="175:189" ph="..." />
-            <marker date="1515151693392" expanded="true" signature="212:235" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/columns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="818">
-          <caret line="161" column="45" lean-forward="false" selection-start-line="161" selection-start-column="31" selection-end-line="161" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -709,6 +626,54 @@
             <marker date="1515160979515" expanded="true" signature="1750:1774" ph="..." />
             <marker date="1515160979515" expanded="true" signature="1863:1893" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/single-page-builder.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515151693392" expanded="true" signature="9:22" ph="..." />
+            <marker date="1515151693392" expanded="true" signature="34:43" ph="..." />
+            <marker date="1515151693392" expanded="true" signature="56:68" ph="..." />
+            <marker date="1515151693392" expanded="true" signature="75:85" ph="..." />
+            <marker date="1515151693392" expanded="true" signature="105:117" ph="..." />
+            <marker date="1515151693392" expanded="true" signature="175:189" ph="..." />
+            <marker date="1515151693392" expanded="true" signature="212:235" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/layouts/_page-home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="59" column="23" lean-forward="true" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/myth_general_settings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="43" column="25" lean-forward="false" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/rows.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/columns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1187">
+          <caret line="173" column="38" lean-forward="false" selection-start-line="173" selection-start-column="38" selection-end-line="173" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
