@@ -73,13 +73,7 @@
 
     <section id="homepage-myths" class="page-section page-section--tall">
         <div class="container">
-            <div class="myths-slick">
-                <div><h3>Myth 1</h3></div>
-                <div><h3>Myth 2</h3></div>
-                <div><h3>Myth 3</h3></div>
-                <div><h3>Myth 4</h3></div>
-                <div><h3>Myth 5</h3></div>
-            </div>
+            @include('partials.includes.myths-slick')
         </div>
     </section>
 
