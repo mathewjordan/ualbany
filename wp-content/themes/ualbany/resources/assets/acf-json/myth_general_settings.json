@@ -1,0 +1,83 @@
+{
+    "key": "myth_general_settings",
+    "title": "Myths",
+    "fields": [
+        {
+            "key": "myth_myth",
+            "label": "Myth",
+            "name": "myth",
+            "type": "text",
+            "instructions": "Could be same as title but may not be so this here for greater versatility.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "myth_myth_busted",
+            "label": "Myth Busted",
+            "name": "myth_busted",
+            "type": "wysiwyg",
+            "instructions": "Quote or other content central to debunking myth.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "myth_myth_reference",
+            "label": "Myth Reference",
+            "name": "myth_reference",
+            "type": "text",
+            "instructions": "Author or other reference that helps give context to debunking of the myth.\r\n\r\nEx: Mat Williams, Sophomore, Program Name",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "myth"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1515171304
+}

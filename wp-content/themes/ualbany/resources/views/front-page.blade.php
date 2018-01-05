@@ -64,6 +64,7 @@
                         <select name="semester" id="semester">
                             <option>Semester</option>
                         </select>
+                        <button class="btn-sm btn-primary">Go</button>
                     </form>
                 </div>
             </div>
@@ -72,7 +73,13 @@
 
     <section id="homepage-myths" class="page-section page-section--tall">
         <div class="container">
-            <h3>Myths</h3>
+            <div class="myths-slick">
+                <div><h3>Myth 1</h3></div>
+                <div><h3>Myth 2</h3></div>
+                <div><h3>Myth 3</h3></div>
+                <div><h3>Myth 4</h3></div>
+                <div><h3>Myth 5</h3></div>
+            </div>
         </div>
     </section>
 

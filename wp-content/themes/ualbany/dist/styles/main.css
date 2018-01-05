@@ -15499,6 +15499,11 @@ body.home section.page-section--tall {
   min-height: 40vh;
 }
 
+#homepage-myths {
+  background-color: #97a4af;
+  color: #46166b;
+}
+
 #homepage-social {
   background-color: #46166b;
   color: #fff;
@@ -15509,6 +15514,26 @@ body.home section.page-section--tall {
   font-size: 1rem;
   text-transform: uppercase;
   opacity: 0.5;
+}
+
+.myths-slick .slick-slide {
+  padding: 2rem;
+  background-color: #f6f7f8;
+  text-align: center;
+  margin: 0 0.5rem;
+  -webkit-transform: scale(0.95);
+       -o-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.myths-slick .slick-slide.slick-current {
+  background-color: #fff;
+  -webkit-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
 }
 
 body#tinymce {

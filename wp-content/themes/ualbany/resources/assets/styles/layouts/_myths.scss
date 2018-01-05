@@ -1,0 +1,15 @@
+.myths-slick {
+  .slick-slide {
+    padding: 2rem;
+    background-color: $offwhite;
+    text-align: center;
+    margin: 0 0.5rem;
+    transform: scale(0.95);
+    transition: all 300ms ease;
+
+    &.slick-current {
+      background-color: $white;
+      transform: scale(1);
+    }
+  }
+}
