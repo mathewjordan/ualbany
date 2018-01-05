@@ -44,7 +44,7 @@
                         @endphp
                         @if ($query->have_posts())
                             <select name="location" id="location">
-                                <option disabled>Location</option>
+                                <option>Location</option>
                                 @while($query->have_posts()) @php($query->the_post())
                                     <option value="">@php(the_title())</option>
                                     @endwhile
@@ -59,16 +59,22 @@
                             $query = new WP_Query($args);
                         @endphp
                         <select name="area" id="area">
-                            <option disabled>Area of Study</option>
+                            <option>Area of Study</option>
                         </select>
                         <select name="semester" id="semester">
-                            <option disabled>Semester</option>
+                            <option>Semester</option>
                         </select>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <section id="homepage-myths" class="page-section page-section--tall">
+        <div class="container">
+            <h3>Myths</h3>
+        </div>
+    </section>
 
     <section id="homepage-cta" class="page-section page-section--buttons">
         <div class="text-center">
