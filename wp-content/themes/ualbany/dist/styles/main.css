@@ -14231,13 +14231,63 @@ h2.single-subtitle {
 .search-form .search-submit,
 .gform_wrapper form .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li a {
-  border: 2px solid #46166b;
+  border: 2px solid #97a4af;
+  color: #97a4af;
+  background-color: transparent;
   font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
   outline-color: #46166b;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.5rem;
   padding: 0.85em 1.2em;
+  border-radius: 0;
+  line-height: 1em;
+}
+
+.btn:hover,
+.comment-form input[type="submit"]:hover,
+.search-form .search-submit:hover,
+.gform_wrapper form .gform_button.button:hover,
+.component-hero-wrap .video-foreground .external-user-menu ul li a:hover,
+.btn:active,
+.comment-form input[type="submit"]:active,
+.search-form .search-submit:active,
+.gform_wrapper form .gform_button.button:active,
+.component-hero-wrap .video-foreground .external-user-menu ul li a:active,
+.btn:focus,
+.comment-form input[type="submit"]:focus,
+.search-form .search-submit:focus,
+.gform_wrapper form .gform_button.button:focus,
+.component-hero-wrap .video-foreground .external-user-menu ul li a:focus {
+  color: #46166b;
+  border: 2px solid #46166b;
+}
+
+.btn .fa,
+.comment-form input[type="submit"] .fa,
+.search-form .search-submit .fa,
+.gform_wrapper form .gform_button.button .fa,
+.component-hero-wrap .video-foreground .external-user-menu ul li a .fa {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.btn-xl,
+.btn-lg,
+.btn-group-lg > .btn,
+.comment-form .btn-group-lg > input[type="submit"],
+.search-form .btn-group-lg > .search-submit,
+.gform_wrapper form .btn-group-lg > .gform_button.button,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-lg > a,
+.btn-md,
+.component-hero-wrap .video-foreground .external-user-menu ul li a,
+.btn-sm,
+.btn-group-sm > .btn,
+.comment-form .btn-group-sm > input[type="submit"],
+.search-form .btn-group-sm > .search-submit,
+.gform_wrapper form .btn-group-sm > .gform_button.button,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-sm > a,
+.btn-xs {
   border-radius: 0;
 }
 
@@ -14279,14 +14329,16 @@ h2.single-subtitle {
 
 .btn-primary {
   background: #46166b;
+  border: 2px solid #46166b;
   color: #fff;
 }
 
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
-  background: #46166b;
-  color: #97a4af;
+  background: #fff;
+  color: #46166b;
+  border: 2px solid #46166b;
 }
 
 .btn-secondary,
@@ -14334,6 +14386,11 @@ h2.single-subtitle {
 
 .btn-font-body {
   font-family: #97a4af;
+}
+
+button {
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .card--faculty-and-staff {
@@ -14733,6 +14790,8 @@ h5 {
 
 h2 {
   text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 0.75em;
 }
 
 h3 {
@@ -15984,7 +16043,7 @@ header {
 }
 
 .page-section--buttons {
-  background-color: #f6f7f8;
+  background-color: #fff;
 }
 
 .page-section--buttons .btn,
@@ -15997,9 +16056,6 @@ header {
 .page-section--buttons .component-hero-wrap .video-foreground .external-user-menu ul li a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .page-section--buttons a {
   margin: 0 20px;
-  background-color: transparent;
-  border: 2px solid #353e45;
-  color: #353e45;
 }
 
 .section-title {
@@ -16070,7 +16126,9 @@ body.home section.page-section--tall {
 }
 
 #homepage-myths {
-  background-color: #97a4af;
+  background-color: #f6f7f8;
+  background-image: url(/wp-content/themes/ualbany/dist/images/newbackgroundimg.jpg);
+  background-repeat: repeat;
   color: #46166b;
   min-height: auto;
 }

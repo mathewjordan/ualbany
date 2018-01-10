@@ -67,7 +67,9 @@ body.home {
 }
 
 #homepage-myths {
-  background-color: $gray;
+  background-color: $offwhite;
+  background-image: url(../images/newbackgroundimg.jpg);
+  background-repeat: repeat;
   color: $purple;
   min-height: auto;
 }

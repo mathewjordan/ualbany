@@ -9,7 +9,9 @@ $button-seconary-color:   $brand-secondary;
 
 // All Buttons
 .btn {
-  border: 2px solid $brand-primary;
+  border: 2px solid $gray;
+  color: $gray;
+  background-color: transparent;
   font-family: $font-buttons;
   outline-color: $brand-primary;
   text-transform: uppercase;
@@ -17,11 +19,29 @@ $button-seconary-color:   $brand-secondary;
   font-size: 1.5rem;
   padding: 0.85em 1.2em;
   border-radius: 0;
-  //box-shadow: 2px 2px 8px rgba($black, 0.1);
-  //text-shadow: -1px -1px 1px rgba($white, 0.35);
+  line-height: 1em;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $brand-primary;
+    border: 2px solid $brand-primary;
+  }
+
+  .fa {
+    display: inline-block;
+    margin-right: 8px;
+  }
 }
 
-//Button Colors
+.btn-xl,
+.btn-lg,
+.btn-md,
+.btn-sm,
+.btn-xs {
+  border-radius: 0;
+}
+
 .btn-xl {
   font-size: 1.5rem;
 }
@@ -50,6 +70,7 @@ $button-seconary-color:   $brand-secondary;
 //Button Styles
 .btn-primary {
   background: $brand-primary;
+  border: 2px solid $brand-primary;
   color: $white;
 
   &:hover,
@@ -57,8 +78,9 @@ $button-seconary-color:   $brand-secondary;
   &:focus {
     @extend .btn--hover-and-active-state;
 
-    background: $brand-primary;
-    color: $brand-secondary;
+    background: $white;
+    color: $brand-primary;
+    border: 2px solid $brand-primary;
   }
 }
 
@@ -89,4 +111,9 @@ $button-seconary-color:   $brand-secondary;
 
 .btn-font-body {
   font-family: $font-body;
+}
+
+button {
+  text-transform: uppercase;
+  cursor: pointer;
 }

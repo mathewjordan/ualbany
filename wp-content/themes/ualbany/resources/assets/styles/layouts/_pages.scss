@@ -34,13 +34,10 @@
   padding: 30px;
 
   &--buttons {
-    background-color: $offwhite;
+    background-color: $white;
 
     .btn {
       margin: 0 20px;
-      background-color: transparent;
-      border: 2px solid $darkgray;
-      color: $darkgray;
     }
   }
 }
