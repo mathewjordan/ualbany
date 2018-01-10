@@ -12,7 +12,7 @@
 }
 
 .banner_utility {
-  background-color: $purple;
+  background-color: $white;
   padding: 0.5rem;
 
   .nav {
@@ -25,7 +25,7 @@
     a,
     a:visited {
       opacity: 0.75;
-      color: $white;
+      color: $purple;
     }
 
     a:hover {
@@ -35,7 +35,7 @@
 }
 
 .banner_primary {
-  background-color: $white;
+  background-color: $purple;
   padding: 2rem;
 
   .nav {
@@ -47,18 +47,13 @@
     font-weight: 700;
     font-family: $font-headings;
 
-    a::after {
-      display: block;
-      content: ' ';
-      width: 0%;
-      height: 3px;
-      background-color: $gold;
-
-      @include transition();
+    a,
+    a:visited {
+      color: $white;
     }
 
-    a:hover::after {
-      width: 100%;
+    a:hover {
+      color: $gold;
     }
   }
 }
