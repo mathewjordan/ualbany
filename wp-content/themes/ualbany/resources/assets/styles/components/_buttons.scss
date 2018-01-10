@@ -21,6 +21,10 @@ $button-seconary-color:   $brand-secondary;
   border-radius: 0;
   line-height: 1em;
 
+  &:visited {
+    color: $gray;
+  }
+
   &:hover,
   &:active,
   &:focus {
@@ -73,6 +77,10 @@ $button-seconary-color:   $brand-secondary;
   border: 2px solid $brand-primary;
   color: $white;
 
+  &:visited {
+    color: $white;
+  }
+
   &:hover,
   &:active,
   &:focus {
@@ -88,6 +96,10 @@ $button-seconary-color:   $brand-secondary;
   background: $brand-secondary;
   color: darken($brand-secondary, 35);
 
+  &:visited {
+    color: darken($brand-secondary, 35);
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -102,11 +114,6 @@ $button-seconary-color:   $brand-secondary;
     outline-color: $brand-secondary;
     text-shadow: 0 0 1px $brand-secondary;
   }
-}
-
-.btn-gray {
-  background: $lightgray;
-  color: $font-dark-body-color;
 }
 
 .btn-font-body {

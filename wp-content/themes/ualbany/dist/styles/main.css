@@ -14244,6 +14244,14 @@ h2.single-subtitle {
   line-height: 1em;
 }
 
+.btn:visited,
+.comment-form input[type="submit"]:visited,
+.search-form .search-submit:visited,
+.gform_wrapper form .gform_button.button:visited,
+.component-hero-wrap .video-foreground .external-user-menu ul li a:visited {
+  color: #97a4af;
+}
+
 .btn:hover,
 .comment-form input[type="submit"]:hover,
 .search-form .search-submit:hover,
@@ -14333,6 +14341,10 @@ h2.single-subtitle {
   color: #fff;
 }
 
+.btn-primary:visited {
+  color: #fff;
+}
+
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
@@ -14347,6 +14359,14 @@ h2.single-subtitle {
 .gform_wrapper form .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li a {
   background: #97a4af;
+  color: #404b53;
+}
+
+.btn-secondary:visited,
+.comment-form input[type="submit"]:visited,
+.search-form .search-submit:visited,
+.gform_wrapper form .gform_button.button:visited,
+.component-hero-wrap .video-foreground .external-user-menu ul li a:visited {
   color: #404b53;
 }
 
@@ -14377,11 +14397,6 @@ h2.single-subtitle {
   background: #6c7e8d;
   outline-color: #97a4af;
   text-shadow: 0 0 1px #97a4af;
-}
-
-.btn-gray {
-  background: #c5ccd2;
-  color: #97a4af;
 }
 
 .btn-font-body {
