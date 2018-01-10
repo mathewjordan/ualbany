@@ -9,14 +9,16 @@ $button-seconary-color:   $brand-secondary;
 
 // All Buttons
 .btn {
-  border: none;
+  border: 2px solid $brand-primary;
   font-family: $font-buttons;
-  outline-color: $brand-secondary;
-  font-weight: 400;
+  outline-color: $brand-primary;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
   padding: 0.85em 1.2em;
-  border-radius: 2px;
-  box-shadow: 2px 2px 8px rgba($black, 0.1);
-  text-shadow: -1px -1px 1px rgba($white, 0.35);
+  border-radius: 0;
+  //box-shadow: 2px 2px 8px rgba($black, 0.1);
+  //text-shadow: -1px -1px 1px rgba($white, 0.35);
 }
 
 //Button Colors

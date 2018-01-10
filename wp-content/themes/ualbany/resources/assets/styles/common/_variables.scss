@@ -13,7 +13,7 @@ $teal: #006c68;
 
 $white: #fff;
 $black: #000;
-$black-transparent-50: rgba(0, 0, 0, 0.25);
+$black-transparent-50: rgba(0, 0, 0, 0.5);
 
 // grays
 $lightgray: lighten($gray, 16);
@@ -32,7 +32,7 @@ $deep-brown: darken($gold, 15);
 $font-sans: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $font-serif: 'Trajan Pro', 'Times New Roman', Times, serif;
 $font-headings: 'Trade Gothic LT Com Bold Cn', Arial, Sans-serif;
-$font-buttons: $font-sans;
+$font-buttons: $font-headings;
 
 // bootstrap
 $brand-primary: $purple;

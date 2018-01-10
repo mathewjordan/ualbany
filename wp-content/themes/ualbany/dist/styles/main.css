@@ -14231,15 +14231,14 @@ h2.single-subtitle {
 .search-form .search-submit,
 .gform_wrapper form .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li a {
-  border: none;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  outline-color: #97a4af;
-  font-weight: 400;
+  border: 2px solid #46166b;
+  font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
+  outline-color: #46166b;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
   padding: 0.85em 1.2em;
-  border-radius: 2px;
-  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.35);
+  border-radius: 0;
 }
 
 .btn-xl {
@@ -14730,6 +14729,10 @@ h3,
 h4,
 h5 {
   font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
 }
 
 h3 {
@@ -15981,7 +15984,7 @@ header {
 }
 
 .page-section--buttons {
-  background-color: #c5ccd2;
+  background-color: #f6f7f8;
 }
 
 .page-section--buttons .btn,
@@ -15994,7 +15997,9 @@ header {
 .page-section--buttons .component-hero-wrap .video-foreground .external-user-menu ul li a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .page-section--buttons a {
   margin: 0 20px;
-  background-color: #fff;
+  background-color: transparent;
+  border: 2px solid #353e45;
+  color: #353e45;
 }
 
 .section-title {
@@ -16022,7 +16027,7 @@ header {
 
 .front-header .front-header-content {
   background-color: #353e45;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
   width: auto;
   max-width: 50%;
   display: inline-block;
@@ -16041,8 +16046,7 @@ header {
 }
 
 .front-header h3.front-subtitle {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 300 !important;
+  font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
   font-size: 1.8rem;
   margin: 2rem 0 1rem;
   opacity: 0.85;
