@@ -16022,7 +16022,9 @@ header {
 
 .front-header .front-header-content {
   background-color: #353e45;
+  background-color: rgba(0, 0, 0, 0.25);
   width: auto;
+  max-width: 50%;
   display: inline-block;
   padding: 40px;
   position: relative;
@@ -16033,12 +16035,15 @@ header {
 
 .front-header h2.front-title {
   font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 1.2em;
 }
 
 .front-header h3.front-subtitle {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 300 !important;
-  font-size: 1.35rem;
+  font-size: 1.8rem;
   margin: 2rem 0 1rem;
   opacity: 0.85;
   color: #fff;
