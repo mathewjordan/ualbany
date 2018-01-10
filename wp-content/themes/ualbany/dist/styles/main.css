@@ -14185,6 +14185,9 @@ a:hover {
 
 h1.single-title {
   font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 1.2em;
 }
 
 h2.single-subtitle {
@@ -14811,11 +14814,13 @@ h2 {
 
 h3 {
   color: #46166b;
+  text-transform: uppercase;
   font-size: 50px;
 }
 
 h4 {
   color: #46166b;
+  text-transform: uppercase;
   font-size: 25px;
 }
 
@@ -15663,7 +15668,8 @@ h4 {
 
 .row-default.row-dark {
   background: #97a4af;
-  color: #f6f7f8;
+  background-image: url(/wp-content/themes/ualbany/dist/images/newbackgroundimg.jpg);
+  color: #353e45;
 }
 
 .row-default.row-dark.row-image {

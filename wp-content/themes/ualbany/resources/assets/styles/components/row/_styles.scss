@@ -22,7 +22,8 @@
 
   &.row-dark {
     background: $font-dark-body-color;
-    color: $offwhite;
+    background-image: url(../images/newbackgroundimg.jpg);
+    color: $darkgray;
 
     &.row-image {
       @include background-opacity($font-dark-body-color, 0.75);
