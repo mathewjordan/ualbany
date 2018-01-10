@@ -15922,7 +15922,7 @@ h4 {
 }
 
 .banner_primary .nav > li {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
   font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
 }
@@ -15930,6 +15930,8 @@ h4 {
 .banner_primary .nav > li a,
 .banner_primary .nav > li a:visited {
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .banner_primary .nav > li a:hover {

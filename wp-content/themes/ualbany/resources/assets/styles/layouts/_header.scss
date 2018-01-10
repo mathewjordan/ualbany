@@ -43,13 +43,15 @@
   }
 
   .nav > li {
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     font-weight: 700;
     font-family: $font-headings;
 
     a,
     a:visited {
       color: $white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     a:hover {
