@@ -93,11 +93,12 @@ $button-seconary-color:   $brand-secondary;
 }
 
 .btn-secondary {
-  background: $brand-secondary;
-  color: darken($brand-secondary, 35);
+  background: transparent;
+  color: darken($brand-secondary, 10);
+  border: 2px solid darken($brand-secondary, 10);
 
   &:visited {
-    color: darken($brand-secondary, 35);
+    color: darken($brand-secondary, 10);
   }
 
   &:hover {
@@ -110,9 +111,10 @@ $button-seconary-color:   $brand-secondary;
     @extend .btn--hover-and-active-state;
 
     color: $black;
-    background: darken($brand-secondary, 15);
+    background: $brand-secondary;
     outline-color: $brand-secondary;
-    text-shadow: 0 0 1px $brand-secondary;
+    border: 2px solid $brand-secondary;
+    //text-shadow: 0 0 1px $brand-secondary;
   }
 }
 
