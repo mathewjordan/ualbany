@@ -21,9 +21,9 @@
   }
 
   &.row-dark {
-    background: $font-dark-body-color;
+    background: $purple;
     background-image: url(../images/newbackgroundimg.jpg);
-    color: $darkgray;
+    color: $offwhite;
 
     &.row-image {
       @include background-opacity($font-dark-body-color, 0.75);
@@ -35,7 +35,7 @@
     }
 
     h4 {
-      color: $lightgray;
+      color: $offwhite;
     }
   }
 
@@ -108,6 +108,7 @@
 
   &.row-light_2 {
     background: $offwhite;
+    background-image: url(../images/newbackgroundimg.jpg);
     border-top: 1px solid $offwhite;
 
     &:first-child {

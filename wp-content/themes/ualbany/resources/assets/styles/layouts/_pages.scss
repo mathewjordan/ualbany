@@ -19,8 +19,10 @@
   }
 
   .single-header-content {
-    background-color: $darkgray;
+    background-color: $darkgray; // Fallback
+    background-color: $black-transparent-50;
     width: auto;
+    max-width: 50%;
     display: inline-block;
     padding: $spacing-large $spacing-extra-large;
     margin-bottom: -$spacing-large;
