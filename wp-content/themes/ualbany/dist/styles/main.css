@@ -14208,22 +14208,7 @@ h2.single-subtitle {
 .btn--hover-and-active-state,
 .btn-primary:hover,
 .btn-primary:active,
-.btn-primary:focus,
-.btn-secondary:hover,
-.comment-form input[type="submit"]:hover,
-.search-form .search-submit:hover,
-.gform_wrapper form .gform_button.button:hover,
-.component-hero-wrap .video-foreground .external-user-menu ul li a:hover,
-.btn-secondary:active,
-.comment-form input[type="submit"]:active,
-.search-form .search-submit:active,
-.gform_wrapper form .gform_button.button:active,
-.component-hero-wrap .video-foreground .external-user-menu ul li a:active,
-.btn-secondary:focus,
-.comment-form input[type="submit"]:focus,
-.search-form .search-submit:focus,
-.gform_wrapper form .gform_button.button:focus,
-.component-hero-wrap .video-foreground .external-user-menu ul li a:focus {
+.btn-primary:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -14361,8 +14346,8 @@ h2.single-subtitle {
 .gform_wrapper form .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li a {
   background: transparent;
-  color: #7a8b99;
-  border: 2px solid #7a8b99;
+  color: #97a4af;
+  border: 2px solid #97a4af;
 }
 
 .btn-secondary:visited,
@@ -14370,7 +14355,7 @@ h2.single-subtitle {
 .search-form .search-submit:visited,
 .gform_wrapper form .gform_button.button:visited,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:visited {
-  color: #7a8b99;
+  color: #97a4af;
 }
 
 .btn-secondary:hover,
@@ -14396,10 +14381,29 @@ h2.single-subtitle {
 .search-form .search-submit:focus,
 .gform_wrapper form .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:focus {
-  color: #000;
-  background: #97a4af;
-  outline-color: #97a4af;
+  color: #46166b;
+  border: 2px solid #46166b;
+}
+
+.btn-inverse {
+  background: transparent;
+  color: #97a4af;
   border: 2px solid #97a4af;
+}
+
+.btn-inverse:visited {
+  color: #97a4af;
+}
+
+.btn-inverse:hover {
+  cursor: pointer;
+}
+
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse:focus {
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 .btn-font-body {
