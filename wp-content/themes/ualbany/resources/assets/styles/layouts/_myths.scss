@@ -1,11 +1,20 @@
 .myths-slick {
+  padding: 2rem 0;
+
   .slick-slide {
     padding: 2rem;
     background-color: $offwhite;
     text-align: center;
-    margin: 0 0.5rem;
-    transform: scale(0.85);
+    margin: 2rem 0.5rem;
+    transform: scale(0.9);
     transition: all 300ms ease;
+    border: 2px solid lighten($gray, 20);
+    opacity: 0;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid $gray !important;
+    }
 
     .myth {
       &--title {
@@ -38,6 +47,11 @@
     &.slick-current {
       background-color: $white;
       transform: scale(1);
+      border: 2px solid $gray;
+    }
+
+    &.slick-active {
+      opacity: 1;
     }
   }
 }

@@ -72,9 +72,7 @@
     </div>
 
     <section id="homepage-myths" class="page-section page-section--tall">
-        <div class="container">
-            @include('partials.includes.myths-slick')
-        </div>
+        @include('partials.includes.myths-slick')
     </section>
 
     <section id="homepage-cta" class="page-section page-section--buttons">

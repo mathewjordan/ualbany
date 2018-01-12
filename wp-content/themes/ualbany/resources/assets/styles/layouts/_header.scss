@@ -12,9 +12,8 @@
 }
 
 .banner_utility {
-  padding: 0.5rem;
-
-  @extend .row-light_2;
+  padding: 0.5rem 3rem;
+  background-color: $altpurple;
 
   .nav {
     float: right;
@@ -24,7 +23,7 @@
     a,
     a:visited {
       opacity: 0.75;
-      color: $purple;
+      color: $white;
     }
 
     a:hover {
@@ -35,6 +34,7 @@
 
 .banner_primary {
   background-color: $purple;
+  border-bottom: 2px solid #602481;
   padding: 2rem;
 
   .nav {
