@@ -13557,8 +13557,10 @@ a.text-dark:hover {
 /** Import theme styles */
 
 body {
-  font-size: 15px;
-  background: #f6f7f8;
+  font-size: 19px;
+  font-family: "News Cycle", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.02em;
+  background-color: #f6f7f8;
 }
 
 a,
@@ -13575,7 +13577,6 @@ a:hover {
 
 .nav > li {
   font-size: 1rem;
-  letter-spacing: -0.03em;
 }
 
 .nav > li a,
@@ -15225,18 +15226,21 @@ h4 {
   color: #f6f7f8;
 }
 
-.row-default.row-light_2 {
+.row-default.row-light_2,
+.row-default.banner_utility {
   background: #f6f7f8;
   background-image: url(/wp-content/themes/ualbany/dist/images/newbackgroundimg.jpg);
   border-top: 1px solid #f6f7f8;
 }
 
-.row-default.row-light_2:first-child {
+.row-default.row-light_2:first-child,
+.row-default.banner_utility:first-child {
   border-top: none;
   border-bottom: 1px solid #f6f7f8;
 }
 
-.row-default.row-light_2.row-image {
+.row-default.row-light_2.row-image,
+.row-default.row-image.banner_utility {
   background: #f6f7f8;
   /* The Fallback */
   background: rgba(246, 247, 248, 0.75);
@@ -15413,16 +15417,11 @@ h4 {
 }
 
 .banner_utility {
-  background-color: #fff;
   padding: 0.5rem;
 }
 
 .banner_utility .nav {
   float: right;
-}
-
-.banner_utility .nav > li {
-  font-size: 0.85rem;
 }
 
 .banner_utility .nav > li a,

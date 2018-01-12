@@ -1,6 +1,8 @@
 body {
-  font-size: 15px;
-  background: $offwhite;
+  font-size: 19px;
+  font-family: $font-sans;
+  letter-spacing: 0.02em;
+  background-color: $offwhite;
 }
 
 a,
@@ -16,7 +18,6 @@ a:hover {
 
 .nav > li {
   font-size: 1rem;
-  letter-spacing: -0.03em;
 
   a,
   a:visited {
