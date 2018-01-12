@@ -32,6 +32,15 @@
   }
 }
 
+.introduction-section {
+  background-color: $white;
+  padding: 3rem 0;
+
+  &--content {
+    padding: 15px;
+  }
+}
+
 .page-section {
   padding: 30px;
 
@@ -41,6 +50,14 @@
     .btn {
       margin: 0 20px;
     }
+  }
+}
+
+.main > article {
+  h3 {
+    @extend .h3--primary;
+
+    color: $gray;
   }
 }
 

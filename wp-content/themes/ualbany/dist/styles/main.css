@@ -13600,7 +13600,8 @@ a:hover {
 .card--faculty-and-staff h4,
 .card--faculty-and-staff h5,
 .component-wrap h3,
-.component-wysiwyg-wrap h3 {
+.component-wysiwyg-wrap h3,
+.main > article h3 {
   font-size: 1.5rem;
 }
 
@@ -15500,6 +15501,15 @@ header {
   text-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.25);
 }
 
+.introduction-section {
+  background-color: #fff;
+  padding: 3rem 0;
+}
+
+.introduction-section--content {
+  padding: 15px;
+}
+
 .page-section {
   padding: 30px;
 }
@@ -15518,6 +15528,10 @@ header {
 .page-section--buttons .component-hero-wrap .video-foreground .external-user-menu ul li a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .page-section--buttons a {
   margin: 0 20px;
+}
+
+.main > article h3 {
+  color: #97a4af;
 }
 
 .section-title {
@@ -15680,12 +15694,6 @@ body.home section.page-section--tall {
 .submenu--siblings ul > li a:hover,
 .submenu--siblings ul > li a:visited:hover {
   color: #555;
-}
-
-.submenu--siblings ul > li.active-sibling > a,
-.submenu--siblings ul > li.active-sibling > a:visited,
-.submenu--siblings ul > li.active-sibling > a:hover {
-  color: #97a4af;
 }
 
 body#tinymce {
