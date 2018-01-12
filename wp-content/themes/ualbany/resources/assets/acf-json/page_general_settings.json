@@ -1,0 +1,62 @@
+{
+    "key": "page_gs",
+    "title": "Introduction Section",
+    "fields": [
+        {
+            "key": "page_gs_page_introduction",
+            "label": "Enable Introduction Section",
+            "name": "page_introduction",
+            "type": "true_false",
+            "instructions": "If applicable, submenu will render to left of the introduction blurb. Disabled by default.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "page_gs_page_introduction_content",
+            "label": "Introduction Content",
+            "name": "page_introduction_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1515775880
+}

@@ -1,0 +1,37 @@
+#menu-primary .sub-menu {
+  display: none;
+}
+
+.submenu--siblings {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    > li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      a,
+      a:visited {
+        font-family: $font-headings;
+        text-transform: uppercase;
+        color: $purple;
+        font-size: 1.4rem;
+        border-bottom: 2px solid #d1d1d1;
+        padding: 10px 0;
+        display: block;
+
+        &:hover {
+          color: $gray-hover;
+        }
+      }
+    }
+  }
+
+  ul > li.active-sibling > a,
+  ul > li.active-sibling > a:visited,
+  ul > li.active-sibling > a:hover {
+    //color: $gray;
+  }
+}
