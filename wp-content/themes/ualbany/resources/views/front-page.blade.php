@@ -25,6 +25,7 @@
 
     <div class="front-header front-page-header">
         @if($hero_image_url)
+            <div class="single-photo-overlay"></div>
             <div class="front-photo" style="background-image: url('{{$hero_image_url}}');"></div>
         @endif
         <div class="container">

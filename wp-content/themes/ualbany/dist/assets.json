@@ -13,6 +13,7 @@
   "images/icon-arrow-left.svg": "images/icon-arrow-left_4ef4d769.svg",
   "images/icon-calendar.svg": "images/icon-calendar_d53ef25e.svg",
   "images/icon-close.svg": "images/icon-close_dd1a70ff.svg",
+  "images/isometric-cubes.png": "images/isometric-cubes_fc1db1d9.png",
   "images/main-header-image.jpg": "images/main-header-image_c1354f68.jpg",
   "images/newbackgroundimg.jpg": "images/newbackgroundimg_1c47d925.jpg",
   "images/pie-chart.svg": "images/pie-chart_8ecd35e1.svg",
@@ -30,7 +31,7 @@
   "vendor/fontawesome-webfont.ttf?v=4.7.0": "vendor/fontawesome-webfont_b06871f2.ttf",
   "vendor/fontawesome-webfont.woff2?v=4.7.0": "vendor/fontawesome-webfont_af7ae505.woff2",
   "vendor/fontawesome-webfont.woff?v=4.7.0": "vendor/fontawesome-webfont_fee66e71.woff",
-  "scripts/customizer.js": "scripts/customizer_5d159daf.js",
-  "styles/main.css": "styles/main_5d159daf.css",
-  "scripts/main.js": "scripts/main_5d159daf.js"
+  "scripts/customizer.js": "scripts/customizer_e4cf1693.js",
+  "styles/main.css": "styles/main_e4cf1693.css",
+  "scripts/main.js": "scripts/main_e4cf1693.js"
 }

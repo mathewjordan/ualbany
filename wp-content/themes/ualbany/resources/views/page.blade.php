@@ -24,7 +24,10 @@
 
 @section('content')
     <div class="single-header single-page-header">
-        @if($hero_image_url) <div class="single-photo" style="background-image: url('{{$hero_image_url}}');"></div> @endif
+        @if($hero_image_url)
+            <div class="single-photo-overlay"></div>
+            <div class="single-photo" style="background-image: url('{{$hero_image_url}}');"></div>
+        @endif
         <div class="container-fluid">
             <div class="single-header-content">
                 <h1 class="single-title">{{$title}}</h1>
