@@ -1,0 +1,25 @@
+.single-program .carousel {
+  margin-bottom: 100px;
+
+  .carousel-indicators {
+    bottom: -100px;
+
+    > li {
+      width: 75px;
+      height: 75px;
+      text-indent: 0;
+
+      img {
+        width: 75px;
+        height: auto;
+        max-width: 100%;
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+
+    > li.active img {
+      opacity: 0.25;
+    }
+  }
+}

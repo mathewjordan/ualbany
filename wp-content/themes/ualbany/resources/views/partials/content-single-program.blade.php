@@ -1,4 +1,4 @@
-<?php
+@php
 
 $render = [
   'Academics'      => 'program_academics',      // updated
@@ -15,57 +15,120 @@ $render = [
   'Overview'       => 'program_overview',
 ];
 
-?>
+@endphp
 
 <article @php(post_class())>
     <header>
-        <h1 class="entry-title">{{ get_the_title() }}</h1>
+        <div class="container">
+          <h1 class="entry-title">{{ get_the_title() }}</h1>
+        </div>
     </header>
     <section>
-        @php the_field('program_introduction') @endphp
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            @php
+            $gallery = get_field('program_photos');
+            $cnt = 0;
+            @endphp
+
+            @if ($gallery)
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+
+              <ol class="carousel-indicators">
+                @foreach ($gallery as $photo)
+                  <li data-target="#carouselExampleIndicators" data-slide-to="{{ $cnt }}" @if ($cnt == 0) class="active" @endif>
+                    <img class="" src="{{ $photo['sizes']['thumbnail'] }}" alt="{{ $photo['alt'] }}">
+                  </li>
+                  @php $cnt++ @endphp
+                @endforeach
+              </ol>
+
+              @php
+              $cnt = 0;
+              @endphp
+
+              <div class="carousel-inner">
+                @foreach ($gallery as $photo)
+                  @php
+                  $carousel_item_class = 'carousel-item';
+                  $carousel_item_class .= $cnt == 0 ? ' active' : '';
+                  @endphp
+                  <div class="{{ $carousel_item_class }}">
+                    <img class="d-block w-100" src="{{ $photo['sizes']['large'] }}" alt="{{ $photo['alt'] }}">
+                  </div>
+                  @php $cnt++ @endphp
+                @endforeach
+              </div>
+              <!--
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            -->
+            </div>
+            @endif
+           
+            
+          </div>
+          <div class="col-md-6">
+            @php the_field('program_introduction') @endphp
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
     </section>
     <div class="entry-content">
+        <div class="container">
+          <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=ProgramAdmin.BrochureEdit&Program_ID={{get_field('program_id')}}" target="_blank"><span class="fa fa-edit"></span> Edit in Terra Dotta</a>
+        </div>
 
-        <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=ProgramAdmin.BrochureEdit&Program_ID={{get_field('program_id')}}" target="_blank"><span class="fa fa-edit"></span> Edit in Terra Dotta</a>
+        <h2 class="text-center"><?php echo __('Programs'); ?></h2>
 
-        <!-- Tabs -->
-        <ul class="nav nav-tabs" role="tablist">
+        <div class="container">
+          <!-- Tabs -->
+          <ul class="nav nav-tabs" role="tablist">
             @php($cnt = 0)
-                @foreach($render as $title => $selector)
-                    @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
-                    @php
-                        if ($cnt == 0) {
-                          $first = 1;
-                        } else {
-                          $first = 0;
-                        }
-                        $cnt++;
-                    @endphp
-                    <li class="nav-item">
-                        <a class="nav-link @if($first == 1) active @endif" href="#{{strtolower($title)}}" role="tab"
-                           data-toggle="tab">{{$title}}</a>
-                    </li>
-                    @endif
-                @endforeach
-        </ul>
+            @foreach($render as $title => $selector)
+                @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
+                @php
+                    if ($cnt == 0) {
+                      $first = 1;
+                    } else {
+                      $first = 0;
+                    }
+                    $cnt++;
+                @endphp
+                <li class="nav-item">
+                    <a class="nav-link @if($first == 1) active @endif" href="#{{strtolower($title)}}" role="tab"
+                       data-toggle="tab">{{$title}}</a>
+                </li>
+                @endif
+            @endforeach
+          </ul>
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-            @php($cnt = 0)
-                @foreach($render as $title => $selector)
-                    @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
-                    @php
-                        if ($cnt == 0) {
-                          $first = 1;
-                        } else {
-                          $first = 0;
-                        }
-                        $cnt++;
-                    @endphp
-                    <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif"
-                         id="{{strtolower($title)}}">@php(the_field($selector))</div>
-                    @endif
-                @endforeach
+          <!-- Tab panes -->
+          <div class="tab-content">
+              @php($cnt = 0)
+                  @foreach($render as $title => $selector)
+                      @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
+                      @php
+                          if ($cnt == 0) {
+                            $first = 1;
+                          } else {
+                            $first = 0;
+                          }
+                          $cnt++;
+                      @endphp
+                      <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif"
+                           id="{{strtolower($title)}}">@php(the_field($selector))</div>
+                      @endif
+                  @endforeach
+          </div>
+
         </div>
 
 
