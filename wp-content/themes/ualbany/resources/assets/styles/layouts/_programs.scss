@@ -1,3 +1,17 @@
+.single-program .program-header {
+  background-color: $darkgray;
+  padding: 60px 0;
+
+  .entry-title {
+    color: $white;
+    text-align: center;
+  }
+}
+
+.single-program .program-intro {
+  margin: 30px 0;
+}
+
 .single-program .carousel {
   margin-bottom: 100px;
 

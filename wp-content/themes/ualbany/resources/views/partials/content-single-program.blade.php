@@ -18,12 +18,12 @@ $render = [
 @endphp
 
 <article @php(post_class())>
-    <header>
+    <header class="program-header">
         <div class="container">
           <h1 class="entry-title">{{ get_the_title() }}</h1>
         </div>
     </header>
-    <section>
+    <section class="program-intro">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -33,53 +33,78 @@ $render = [
             @endphp
 
             @if ($gallery)
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div id="program-slides" class="program-slides">
 
+              <!--
               <ol class="carousel-indicators">
                 @foreach ($gallery as $photo)
-                  <li data-target="#carouselExampleIndicators" data-slide-to="{{ $cnt }}" @if ($cnt == 0) class="active" @endif>
+                  <li data-target="#program-carousel" data-slide-to="{{ $cnt }}" @if ($cnt == 0) class="active" @endif>
                     <img class="" src="{{ $photo['sizes']['thumbnail'] }}" alt="{{ $photo['alt'] }}">
                   </li>
                   @php $cnt++ @endphp
                 @endforeach
               </ol>
+            -->
 
               @php
               $cnt = 0;
               @endphp
 
-              <div class="carousel-inner">
+
                 @foreach ($gallery as $photo)
                   @php
                   $carousel_item_class = 'carousel-item';
                   $carousel_item_class .= $cnt == 0 ? ' active' : '';
                   @endphp
-                  <div class="{{ $carousel_item_class }}">
+                  <div>
                     <img class="d-block w-100" src="{{ $photo['sizes']['large'] }}" alt="{{ $photo['alt'] }}">
                   </div>
                   @php $cnt++ @endphp
                 @endforeach
-              </div>
               <!--
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <a class="carousel-control-prev" href="#program-carousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
               </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <a class="carousel-control-next" href="#program-carousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>
             -->
+            
             </div>
             @endif
            
             
           </div>
           <div class="col-md-6">
+            <a href="#" target="_blank" class="btn">
+              <span class="fa fa-send"></span>
+              Apply Now!
+            </a>
+            <a href="#" target="" class="btn">
+              <span class="fa fa-user"></span>
+              Contact an Advisor
+            </a>
             @php the_field('program_introduction') @endphp
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
+    </section>
+    <section class="program-dates">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            
+          </div>
+          <div class="col-sm-4">
+            
+          </div>
+          <div class="col-sm-4">
+            
+          </div>
+        </div>
+      </div>
     </section>
     <div class="entry-content">
         <div class="container">
