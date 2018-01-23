@@ -23,6 +23,11 @@ $render = [
           <h1 class="entry-title">{{ get_the_title() }}</h1>
         </div>
     </header>
+    <div class="entry-content">
+      <div class="container">
+        <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=ProgramAdmin.BrochureEdit&Program_ID={{get_field('program_id')}}" target="_blank"><span class="fa fa-edit"></span> Edit in Terra Dotta</a>
+      </div>
+    </div>
     <section class="program-intro">
       <div class="container">
         <div class="row">
@@ -35,47 +40,20 @@ $render = [
             @if ($gallery)
             <div id="program-slides" class="program-slides">
 
-              <!--
-              <ol class="carousel-indicators">
-                @foreach ($gallery as $photo)
-                  <li data-target="#program-carousel" data-slide-to="{{ $cnt }}" @if ($cnt == 0) class="active" @endif>
-                    <img class="" src="{{ $photo['sizes']['thumbnail'] }}" alt="{{ $photo['alt'] }}">
-                  </li>
-                  @php $cnt++ @endphp
-                @endforeach
-              </ol>
-            -->
+              @foreach ($gallery as $photo)
+                @php
+                $carousel_item_class = 'carousel-item';
+                $carousel_item_class .= $cnt == 0 ? ' active' : '';
+                @endphp
+                <div>
+                  <img class="d-block w-100" src="{{ $photo['sizes']['large'] }}" alt="{{ $photo['alt'] }}">
+                </div>
+                @php $cnt++ @endphp
+              @endforeach
 
-              @php
-              $cnt = 0;
-              @endphp
-
-
-                @foreach ($gallery as $photo)
-                  @php
-                  $carousel_item_class = 'carousel-item';
-                  $carousel_item_class .= $cnt == 0 ? ' active' : '';
-                  @endphp
-                  <div>
-                    <img class="d-block w-100" src="{{ $photo['sizes']['large'] }}" alt="{{ $photo['alt'] }}">
-                  </div>
-                  @php $cnt++ @endphp
-                @endforeach
-              <!--
-              <a class="carousel-control-prev" href="#program-carousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#program-carousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            -->
-            
             </div>
             @endif
            
-            
           </div>
           <div class="col-md-6">
             <a href="#" target="_blank" class="btn">
@@ -91,25 +69,70 @@ $render = [
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section>
+
     <section class="program-dates">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4">
-            
+          <div class="col-sm-4 text-center">
+            <h2>{{ __('Application Deadline') }}</h2>
+            <div class="program-dates__date program-dates__date--app-deadline">1.08.2018</div>
           </div>
-          <div class="col-sm-4">
-            
+          <div class="col-sm-4 text-center">
+            <h2>{{ __('Program Start') }}</h2>
+            <div class="program-dates__date">1.08.2018</div>
           </div>
-          <div class="col-sm-4">
-            
+          <div class="col-sm-4 text-center">
+            <h2>{{ __('Program End') }}</h2>
+            <div class="program-dates__date">1.08.2018</div>
           </div>
         </div>
       </div>
     </section>
-    <div class="entry-content">
-        <div class="container">
-          <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=ProgramAdmin.BrochureEdit&Program_ID={{get_field('program_id')}}" target="_blank"><span class="fa fa-edit"></span> Edit in Terra Dotta</a>
+
+    <section class="program-video text-center">
+      [Video]
+    </section>
+
+    <section class="program-meta">
+      <div class="container">
+        <div class="row">
+          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-university"></span> {{ __('Partner University') }}</h2>
+          <div class="col-sm-3 program-meta__value">
+            Lorem ipsum dolor
+          </div>
+          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-graduation-cap"></span> {{ __('Faculty Led') }}</h2>
+          <div class="col-sm-3 program-meta__value">
+            Lorem ipsum dolor
+          </div>
+          <h2 class="col-sm-3 program-meta__label"><span class="fa  fa-map-marker"></span> {{ __('City') }}</h2>
+          <div class="col-sm-3 program-meta__value">
+            Lorem ipsum dolor
+          </div>
+          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-exchange"></span> {{ __('Exchange Program') }}</h2>
+          <div class="col-sm-3 program-meta__value">
+            Lorem ipsum dolor
+          </div>
+          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-calendar"></span> {{ __('Program Term') }}</h2>
+          <div class="col-sm-3 program-meta__value">
+            Lorem ipsum dolor
+          </div>
+          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-suitcase"></span> {{ __('Internship Opportunity') }}</h2>
+          <div class="col-sm-3 program-meta__value">
+            Lorem ipsum dolor
+          </div>
+          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-comments-o"></span> {{ __('Language of Instruction') }}</h2>
+          <div class="col-sm-3 program-meta__value">
+            Lorem ipsum dolor
+          </div>
+          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-flask"></span> {{ __('Research Opportunity') }}</h2>
+          <div class="col-sm-3 program-meta__value">
+            Lorem ipsum dolor
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section>
 
         <h2 class="text-center"><?php echo __('Programs'); ?></h2>
 
@@ -157,7 +180,7 @@ $render = [
         </div>
 
 
-    </div>
+    </section>
     <footer>
         {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
     </footer>
