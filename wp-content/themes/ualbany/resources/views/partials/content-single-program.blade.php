@@ -91,7 +91,11 @@ $render = [
 
     @if(get_field('program_tdvideo'))
     <section class="program-video text-center">
-      @php(the_field('program_tdvideo'))
+      <div class="container">
+        <div class="video-wrapper">
+          <iframe width="560" height="349" src="@php(the_field('program_tdvideo'))"></iframe>
+        </div>
+      </div>
     </section>
     @endif
 
