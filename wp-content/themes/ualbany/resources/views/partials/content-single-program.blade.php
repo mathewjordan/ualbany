@@ -89,9 +89,11 @@ $render = [
       </div>
     </section>
 
+    @if(get_field('program_tdvideo'))
     <section class="program-video text-center">
-      [Video]
+      @php(the_field('program_tdvideo'))
     </section>
+    @endif
 
     <section class="program-meta">
       <div class="container">
@@ -161,26 +163,48 @@ $render = [
           <!-- Tab panes -->
           <div class="tab-content">
               @php($cnt = 0)
-                  @foreach($render as $title => $selector)
-                      @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
-                      @php
-                          if ($cnt == 0) {
-                            $first = 1;
-                          } else {
-                            $first = 0;
-                          }
-                          $cnt++;
-                      @endphp
-                      <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif"
-                           id="{{strtolower($title)}}">@php(the_field($selector))</div>
-                      @endif
-                  @endforeach
+              @foreach($render as $title => $selector)
+                @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
+                @php
+                if ($cnt == 0) {
+                  $first = 1;
+                } else {
+                  $first = 0;
+                }
+                $cnt++;
+                @endphp
+                <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{strtolower($title)}}">
+                  <!--@php(the_field($selector))-->
+                </div>
+                @endif
+              @endforeach
           </div>
 
         </div>
 
-
     </section>
+
+    <section>
+      <div class="subfooter">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <h3>Meet with an Advisor</h3>
+            </div>
+            <div class="col-sm-3">
+              <h3>Find an Event to Learn More</h3>
+            </div>
+            <div class="col-sm-3">
+              <h3>Find Scholarships and Financial Aid</h3>
+            </div>
+            <div class="col-sm-3">
+              <h3>Search Frequently Asked Questions</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
         {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
     </footer>

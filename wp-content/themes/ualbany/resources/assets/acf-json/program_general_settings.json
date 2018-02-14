@@ -324,6 +324,28 @@
             "media_upload": 0,
             "delay": 0,
             "readonly": 1
+        },
+        {
+            "key": "program_tdvideo",
+            "label": "Video",
+            "name": "program_tdvideo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 1
         }
     ],
     "location": [

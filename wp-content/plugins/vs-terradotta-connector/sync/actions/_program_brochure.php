@@ -27,6 +27,7 @@ function sync_program_brochure_handler() {
     'program_location'       => 'program_location',
     'program_duration'       => 'program_duration',
     'program_overview'       => 'program_overview',
+    'program_tdvideo'        => 'tdvideo',
   ];
 
   if ($program_id == '10372') {
