@@ -1,4 +1,42 @@
 <?php
+/**  
+ * Helper, returns the innerHTML of an element
+ *
+ * @param object DOMElement
+ *
+ * @return string one element's HTML content
+ */
+
+function innerHTML( $contentdiv ) {
+  $r = '';
+  $elements = $contentdiv->childNodes;
+  foreach( $elements as $element ) { 
+    if ( $element->nodeType == XML_TEXT_NODE ) {
+      $text = $element->nodeValue;
+      // IIRC the next line was for working around a
+      // WordPress bug
+      //$text = str_replace( '<', '&lt;', $text );
+      $r .= $text;
+    }  
+    // FIXME we should return comments as well
+    elseif ( $element->nodeType == XML_COMMENT_NODE ) {
+      $r .= '';
+    }  
+    else {
+      $r .= '<';
+      $r .= $element->nodeName;
+      if ( $element->hasAttributes() ) { 
+        $attributes = $element->attributes;
+        foreach ( $attributes as $attribute )
+          $r .= " {$attribute->nodeName}='{$attribute->nodeValue}'" ;
+      }  
+      $r .= '>';
+      $r .= innerHTML( $element );
+      $r .= "</{$element->nodeName}>";
+    }  
+  }  
+  return $r;
+}
 
 function sync_program_brochure_handler() {
 
@@ -34,18 +72,22 @@ function sync_program_brochure_handler() {
     print_r ($wp_post_id);
   }
 
+  $dom = new DOMDocument();
+  $dom->loadHTML($brochure_data);
+  //$xpath = new DOMXpath($dom);
+
   preg_match("'<td id=\"tdintro\">(.*?)</td>'si", $brochure_data, $td_intro);
   if ($td_intro[1]) {
     update_field('program_introduction', $td_intro[1], $wp_post_id);
   }
 
   preg_match("'<td id=\"tdbrochure\">(.*?)</td>'si", $brochure_data, $td_match);
+
   if ($td_match[1]) {
     foreach ($mapping as $acf => $html_id) {
-      preg_match("'<td id=\"$html_id\">(.*?)</td>'si", $brochure_data, $data_match);
-      if ($data_match[1]) {
-        update_field($acf, $data_match[1], $wp_post_id);
-      }
+      $element = $dom->getElementById( $html_id );
+      $innerHTML = innerHTML( $element );
+      update_field($acf, $innerHTML, $wp_post_id);
     }
     update_field('program_td_format', 1, $wp_post_id);
   } else {

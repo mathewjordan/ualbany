@@ -174,7 +174,7 @@ $render = [
                 $cnt++;
                 @endphp
                 <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{strtolower($title)}}">
-                  <!--@php(the_field($selector))-->
+                  @php(the_field($selector))
                 </div>
                 @endif
               @endforeach
