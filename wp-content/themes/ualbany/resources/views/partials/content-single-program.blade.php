@@ -188,6 +188,13 @@ $render = [
 
     </section>
 
+    <section id="sharing">
+      <div class="container">
+        <h2 class="text-center">Share</h2>
+        @php echo do_shortcode('[addtoany]') @endphp
+      </div>
+    </section>
+
     <section>
       <div class="subfooter">
         <div class="container">
