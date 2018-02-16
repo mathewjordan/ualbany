@@ -1,4 +1,14 @@
-.addtoany_shortcode {
-  margin: 30px auto;
+.sharing {
   text-align: center;
+
+  &__title,
+  .addtoany_shortcode {
+    display: inline;
+    display: inline-block;
+  }
+
+  &__title {
+    font-size: 1rem;
+    padding: 30px 0;
+  }
 }

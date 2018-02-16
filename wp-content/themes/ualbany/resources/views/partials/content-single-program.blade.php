@@ -65,6 +65,10 @@ $render = [
               Contact an Advisor
             </a>
             @php the_field('program_introduction') @endphp
+            <div class="sharing">
+              <h2 class="sharing__title">Share Your Plan!</h2>
+              @php echo do_shortcode('[addtoany]') @endphp
+            </div>
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
@@ -188,28 +192,33 @@ $render = [
 
     </section>
 
-    <section id="sharing">
-      <div class="container">
-        <h2 class="text-center">Share</h2>
-        @php echo do_shortcode('[addtoany]') @endphp
-      </div>
-    </section>
-
     <section>
       <div class="subfooter">
         <div class="container">
           <div class="row">
-            <div class="col-sm-3">
-              <h3>Meet with an Advisor</h3>
+            <div class="col-lg-3 col-md-6">
+              <a href="#" class="subfooter__link">
+                <span class="fa fa-user" aria-hidden="true"></span>
+                <h3>Meet with an Advisor</h3>
+              </a>
             </div>
-            <div class="col-sm-3">
-              <h3>Find an Event to Learn More</h3>
+            <div class="col-lg-3 col-md-6">
+              <a href="#" class="subfooter__link">
+                <span class="fa fa-calendar" aria-hidden="true"></span>
+                <h3>Find an Event to Learn More</h3>
+              </a>
             </div>
-            <div class="col-sm-3">
-              <h3>Find Scholarships and Financial Aid</h3>
+            <div class="col-lg-3 col-md-6">
+              <a href="#" class="subfooter__link">
+                <span class="fa fa-dollar" aria-hidden="true"></span>
+                <h3>Find Scholarships and Financial Aid</h3>
+              </a>
             </div>
-            <div class="col-sm-3">
-              <h3>Search Frequently Asked Questions</h3>
+            <div class="col-lg-3 col-md-6">
+              <a href="#" class="subfooter__link">
+                <span class="fa fa-question" aria-hidden="true"></span>
+                <h3>Search Frequently Asked Questions</h3>
+              </a>
             </div>
           </div>
         </div>

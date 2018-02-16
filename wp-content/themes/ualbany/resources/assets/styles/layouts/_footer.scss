@@ -1,0 +1,35 @@
+.subfooter__link {
+  display: block;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 2px solid $lightgray;
+  text-align: center;
+
+  @media (min-width: map-get($container-max-widths, md)) {
+    min-height: 130px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .fa {
+    position: absolute;
+    top: -1em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    &::before {
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      color: $white;
+      background-color: $purple;
+      text-align: center;
+      padding-top: 0.5em;
+
+      @include border-radius(50%);
+    }
+  }
+}
