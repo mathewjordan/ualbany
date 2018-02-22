@@ -368,7 +368,7 @@
             "max": "",
             "step": "",
             "readonly": 1
-        }
+        },
         {
             "key": "program_type",
             "label": "Program Type (Hidden)",
