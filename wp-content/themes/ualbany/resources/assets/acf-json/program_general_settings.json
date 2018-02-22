@@ -372,7 +372,7 @@
         {
             "key": "program_type",
             "label": "Program Type (Hidden)",
-            "name": "program_dates",
+            "name": "program_type",
             "type": "hidden",
             "instructions": "",
             "required": 0,
