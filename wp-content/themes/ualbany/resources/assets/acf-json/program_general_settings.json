@@ -373,7 +373,7 @@
             "key": "program_type",
             "label": "Program Type (Hidden)",
             "name": "program_dates",
-            "type": "text",
+            "type": "hidden",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
