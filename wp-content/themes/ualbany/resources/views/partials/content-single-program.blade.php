@@ -15,6 +15,8 @@ $render = [
   'Overview'       => 'program_overview',
 ];
 
+$type = get_field('program_type') && get_field('program_type') == '2' ? 'incoming' : 'outgoing';
+
 @endphp
 
 <article @php(post_class())>
@@ -74,24 +76,74 @@ $render = [
       </div><!-- /.container -->
     </section>
 
+    @if(get_field('program_dates'))
     <section class="program-dates">
       <div class="container">
         <div class="row">
+          @php
+
+          $dates_data = json_decode(get_field('program_dates'));
+          $dates = [];
+          if ($dates_data->date) :
+            if (is_array($dates_data->date)) :
+              foreach($dates_data->date as $d) :
+                $app_term = strtolower($d->app_term);
+                $dates[$app_term] = [];
+                $dates[$app_term]['app_deadline'] = $d->app_deadline;
+                $dates[$app_term]['app_decision'] = $d->app_decision;
+                $dates[$app_term]['app_term_year'] = $d->app_term_year;
+                $dates[$app_term]['term_start'] = $d->term_start;
+                $dates[$app_term]['term_end'] = $d->term_end;
+
+                if ($d->override) {
+                  $dates[$app_term]['override'] = $d->override;
+                }
+
+                if ($d->override2) {
+                  $dates[$app_term]['override2'] = $d->override2;
+                }
+
+              endforeach;
+
+              //print '<pre>';
+              //var_dump($dates);
+              //print '</pre>';
+
+            else:
+
+            endif;
+          endif;
+
+          $deadline = $dates['winter']['override'] ? 
+                      $dates['winter']['override'] :
+                      $dates['winter']['app_deadline'];
+
+          $deadline_date = date('n.d.Y', strtotime($deadline));
+
+          $start = $dates['winter']['term_start'];
+          $start_date = date('n.d.Y', strtotime($start));
+
+          $end = $dates['winter']['term_end'];
+          $end_date = date('n.d.Y', strtotime($end));
+
+          @endphp
+
           <div class="col-sm-4 text-center">
             <h2>{{ __('Application Deadline') }}</h2>
-            <div class="program-dates__date program-dates__date--app-deadline">1.08.2018</div>
+            <div class="program-dates__date program-dates__date--app-deadline">{{ $deadline_date }}</div>
           </div>
           <div class="col-sm-4 text-center">
             <h2>{{ __('Program Start') }}</h2>
-            <div class="program-dates__date">1.08.2018</div>
+            <div class="program-dates__date">{{ $start_date }}</div>
           </div>
           <div class="col-sm-4 text-center">
             <h2>{{ __('Program End') }}</h2>
-            <div class="program-dates__date">1.08.2018</div>
+            <div class="program-dates__date">{{ $end_date }}</div>
           </div>
         </div>
       </div>
     </section>
+    @endif
 
     @if(get_field('program_tdvideo'))
     <section class="program-video text-center">

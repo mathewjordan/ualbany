@@ -49,8 +49,16 @@ function sync_program_brochure_handler() {
   $brochure_xml  = simplexml_load_string($brochure_curl);
   $brochure_json = json_encode($brochure_xml);
   $brochure      = json_decode($brochure_json);
-
   $brochure_data = $brochure->details->program_brochure;
+  $dates         = $brochure->details->dates;
+  $type          = $brochure->details->program_type_id;
+  $dates_json    = json_encode($dates);
+
+  // Program Dates
+  update_field('program_dates', $dates_json, $wp_post_id);
+
+  // Program Type
+  update_field('program_type', $type, $wp_post_id);
 
   $mapping = [
     'program_academics'      => 'program_academics',
@@ -67,10 +75,6 @@ function sync_program_brochure_handler() {
     'program_overview'       => 'program_overview',
     'program_tdvideo'        => 'tdvideo',
   ];
-
-  if ($program_id == '10372') {
-    print_r ($wp_post_id);
-  }
 
   $dom = new DOMDocument();
   $dom->loadHTML($brochure_data);
