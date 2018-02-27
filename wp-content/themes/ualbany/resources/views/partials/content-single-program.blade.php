@@ -1,4 +1,26 @@
 @php
+if (! function_exists('program_meta_value')) {
+  function program_meta_value($val, $list_type='comma-list') {
+    @endphp
+    @if ($val != '')
+      @php($list_class = 'program-meta__' . $list_type)
+      <ul class="{{ $list_class }}">
+        @if (is_array($val)) 
+          @php
+          foreach ($val as $v) :
+          @endphp
+          <li>{{ $v }}</li>
+          @php
+          endforeach;
+          @endphp
+        @else
+          <li>{{ $val }}</li>
+        @endif
+      </ul>
+    @endif
+    @php
+  }
+}
 
 $render = [
   'Academics'      => 'program_academics',      // updated
@@ -15,7 +37,81 @@ $render = [
   'Overview'       => 'program_overview',
 ];
 
-$type = get_field('program_type') && get_field('program_type') == '2' ? 'incoming' : 'outgoing';
+// Array keys should conform to param_id in Terra Dotta XML
+$param_ids = [
+  '10022' => 'partner', // Partner University
+  '10005' => 'lang_of_instruct', // Language of Instruction
+  '10030' => 'exchange', // Exchange Program
+  '10011' => 'internship', // Internship Opportunity
+];
+
+$program_meta = [
+  'partner' => '',
+  'lang_of_instruct' => '',
+  'exchange' => '',
+  'internship' => '',
+  'city' => '',
+  'country' => '',
+  'terms' => '',
+];
+
+// Program Type
+$is_incoming = get_field('program_type') && get_field('program_type') == '2' ? true : false;
+
+// Location Data
+if (get_field('program_location_param')) :
+  $locations = json_decode(get_field('program_location_param'));
+  if ($locations->location) :
+    $location = is_array($locations->location) ? $locations->location[0] : $locations->location;
+    $program_meta['city'] = $location->program_city;
+    $program_meta['country'] = $location->program_country;
+  endif;
+endif;
+
+// Term Data
+if (get_field('program_term')) :
+  $terms = json_decode(get_field('program_term'));
+  if ($terms->term) :
+    if (is_array($terms->term)) :
+      $program_meta['terms'] = [];
+      foreach ($terms->term as $t) :
+        $program_meta['terms'][] = $t->program_term;
+      endforeach;
+    else :
+      $program_meta['terms'] = $terms->term->program_term;
+    endif;
+  endif;
+endif;
+
+// Miscellaneous Params
+if (get_field('program_params')) :
+  $params = json_decode(get_field('program_params'));
+  if ($params->parameter) :
+    if (is_array($params->parameter)) :
+      foreach ($params->parameter as $p) :
+        if (isset($param_ids[$p->param_id])) :
+          $param_slug = $param_ids[$p->param_id];
+          $param_value = $program_meta[$param_slug];
+
+          // If a param value already exists...
+          if ($param_value != '') :
+            // If the value is an array...
+            if (is_array($param_value)) :
+              // Add to the array
+              $program_meta[$param_slug][] = $p->param_value;
+            else :
+              // Create a new array containing values
+              $program_meta[$param_slug] = [ $param_value, $p->param_value ];
+            endif;
+          else :
+            $program_meta[$param_slug] = $p->param_value;
+          endif;
+
+        endif;
+      endforeach;
+    endif;
+  endif;
+endif;
 
 @endphp
 
@@ -23,6 +119,7 @@ $type = get_field('program_type') && get_field('program_type') == '2' ? 'incomin
     <header class="program-header">
         <div class="container">
           <h1 class="entry-title">{{ get_the_title() }}</h1>
+          <h2 class="program-header__city">{{ $program_meta['city'] }}</h2>
         </div>
     </header>
     <div class="entry-content">
@@ -105,10 +202,6 @@ $type = get_field('program_type') && get_field('program_type') == '2' ? 'incomin
 
               endforeach;
 
-              //print '<pre>';
-              //var_dump($dates);
-              //print '</pre>';
-
             else:
 
             endif;
@@ -145,7 +238,7 @@ $type = get_field('program_type') && get_field('program_type') == '2' ? 'incomin
     </section>
     @endif
 
-    @if(get_field('program_tdvideo'))
+    @if (get_field('program_tdvideo'))
     <section class="program-video text-center">
       <div class="container">
         <div class="video-wrapper">
@@ -160,7 +253,7 @@ $type = get_field('program_type') && get_field('program_type') == '2' ? 'incomin
         <div class="row">
           <h2 class="col-sm-3 program-meta__label"><span class="fa fa-university"></span> {{ __('Partner University') }}</h2>
           <div class="col-sm-3 program-meta__value">
-            Lorem ipsum dolor
+            {{ $program_meta['partner'] }}
           </div>
           <h2 class="col-sm-3 program-meta__label"><span class="fa fa-graduation-cap"></span> {{ __('Faculty Led') }}</h2>
           <div class="col-sm-3 program-meta__value">
@@ -168,23 +261,23 @@ $type = get_field('program_type') && get_field('program_type') == '2' ? 'incomin
           </div>
           <h2 class="col-sm-3 program-meta__label"><span class="fa  fa-map-marker"></span> {{ __('City') }}</h2>
           <div class="col-sm-3 program-meta__value">
-            Lorem ipsum dolor
+            {{ $program_meta['city'] }}
           </div>
           <h2 class="col-sm-3 program-meta__label"><span class="fa fa-exchange"></span> {{ __('Exchange Program') }}</h2>
           <div class="col-sm-3 program-meta__value">
-            Lorem ipsum dolor
+            {{ $program_meta['exchange'] }}
           </div>
           <h2 class="col-sm-3 program-meta__label"><span class="fa fa-calendar"></span> {{ __('Program Term') }}</h2>
           <div class="col-sm-3 program-meta__value">
-            Lorem ipsum dolor
+            @php(program_meta_value($program_meta['terms'], 'comma-list'))
           </div>
           <h2 class="col-sm-3 program-meta__label"><span class="fa fa-suitcase"></span> {{ __('Internship Opportunity') }}</h2>
           <div class="col-sm-3 program-meta__value">
-            Lorem ipsum dolor
+            @php(program_meta_value($program_meta['internship'], 'break-list'))
           </div>
           <h2 class="col-sm-3 program-meta__label"><span class="fa fa-comments-o"></span> {{ __('Language of Instruction') }}</h2>
           <div class="col-sm-3 program-meta__value">
-            Lorem ipsum dolor
+            {{ $program_meta['lang_of_instruct'] }}
           </div>
           <h2 class="col-sm-3 program-meta__label"><span class="fa fa-flask"></span> {{ __('Research Opportunity') }}</h2>
           <div class="col-sm-3 program-meta__value">
@@ -194,7 +287,15 @@ $type = get_field('program_type') && get_field('program_type') == '2' ? 'incomin
       </div>
     </section>
 
+    @if ($is_incoming)
     <section>
+      <div class="container">
+        <h2 class="text-center">{{ __('Visiting Students') }}</h2>
+      </div>
+    </section>
+    @endif
+
+    <section class="page-section  ">
 
         <h2 class="text-center"><?php echo __('Programs'); ?></h2>
 

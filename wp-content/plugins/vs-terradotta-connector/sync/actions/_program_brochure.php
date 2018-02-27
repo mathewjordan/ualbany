@@ -45,20 +45,41 @@ function sync_program_brochure_handler() {
 
   $brochure_endpoint = TERRADOTTA_URL . '?callName=getProgramBrochure&Program_ID=' . $program_id . '&ResponseEncoding=XML';
 
-  $brochure_curl = terrdotta_curl($brochure_endpoint);
-  $brochure_xml  = simplexml_load_string($brochure_curl);
-  $brochure_json = json_encode($brochure_xml);
-  $brochure      = json_decode($brochure_json);
-  $brochure_data = $brochure->details->program_brochure;
-  $dates         = $brochure->details->dates;
-  $type          = $brochure->details->program_type_id;
-  $dates_json    = json_encode($dates);
+  $brochure_curl  = terrdotta_curl($brochure_endpoint);
+  $brochure_xml   = simplexml_load_string($brochure_curl);
+  $brochure_json  = json_encode($brochure_xml);
+  $brochure       = json_decode($brochure_json);
+  $brochure_data  = $brochure->details->program_brochure;
+  $dates          = $brochure->details->dates;
+  $dates_json     = json_encode($dates);
+  $type           = $brochure->details->program_type_id;
+  $location_param = $brochure->details->locations;
+  $location_param_json = json_encode($location_param);
+  $terms               = $brochure->details->terms;
+  $terms_json          = json_encode($terms);
+  $params              = $brochure->details->parameters;
+  $params_json         = json_encode($params);
+
+  //$partner
+  //$faculty_led
+  //$exchange = $brochure->details->bExchangeAvailabl;
+  //$interships
+  //$research
 
   // Program Dates
   update_field('program_dates', $dates_json, $wp_post_id);
 
   // Program Type
   update_field('program_type', $type, $wp_post_id);
+
+  // Program Locations
+  update_field('program_location_param', $location_param_json, $wp_post_id);
+
+  // Program Terms
+  update_field('program_term', $terms_json, $wp_post_id);
+
+  // Miscellaneous Params
+  update_field('program_params', $params_json, $wp_post_id);
 
   $mapping = [
     'program_academics'      => 'program_academics',
@@ -73,12 +94,11 @@ function sync_program_brochure_handler() {
     'program_location'       => 'program_location',
     'program_duration'       => 'program_duration',
     'program_overview'       => 'program_overview',
-    'program_tdvideo'        => 'tdvideo',
+    //'program_tdvideo'      => 'tdvideo',
   ];
 
   $dom = new DOMDocument();
   $dom->loadHTML($brochure_data);
-  //$xpath = new DOMXpath($dom);
 
   preg_match("'<td id=\"tdintro\">(.*?)</td>'si", $brochure_data, $td_intro);
   if ($td_intro[1]) {

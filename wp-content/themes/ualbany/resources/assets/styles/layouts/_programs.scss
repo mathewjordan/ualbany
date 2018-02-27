@@ -2,9 +2,15 @@
   background-color: $darkgray;
   padding: 60px 0;
 
-  .entry-title {
+  .entry-title,
+  &__city {
     color: $white;
     text-align: center;
+  }
+
+  &__city {
+    text-transform: none;
+    font-size: 1.5rem;
   }
 }
 
@@ -40,5 +46,46 @@
 
   &__label {
     font-size: 1.5rem;
+
+    .fa {
+      display: inline-block;
+      width: 1.5em;
+      text-align: center;
+    }
   }
+
+  &__comma-list,
+  &__break-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      line-height: 1.3em;
+      margin-bottom: 0.3em;
+    }
+  }
+
+  &__comma-list {
+    display: inline;
+
+    > li {
+      display: inline;
+      margin: 0;
+
+      &::after {
+        content: ', ';
+      }
+
+      &:last-child::after {
+        content: none;
+        display: none;
+      }
+    }
+  }
+} // .single-program .program-meta
+
+.single-program .tab-pane {
+  padding: 30px 0;
 }
+

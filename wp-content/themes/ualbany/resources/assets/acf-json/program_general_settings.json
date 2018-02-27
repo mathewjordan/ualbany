@@ -329,7 +329,7 @@
             "key": "program_tdvideo",
             "label": "Video",
             "name": "program_tdvideo",
-            "type": "text",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -345,7 +345,7 @@
             "min": "",
             "max": "",
             "step": "",
-            "readonly": 1
+            "readonly": 0
         },
         {
             "key": "program_dates",
@@ -373,6 +373,72 @@
             "key": "program_type",
             "label": "Program Type (Hidden)",
             "name": "program_type",
+            "type": "hidden",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 1
+        },
+        {
+            "key": "program_location_param",
+            "label": "Program Location Param (Hidden)",
+            "name": "program_location_param",
+            "type": "hidden",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 1
+        },
+        {
+            "key": "program_term",
+            "label": "Program Term (Hidden)",
+            "name": "program_term",
+            "type": "hidden",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 1
+        },
+        {
+            "key": "program_params",
+            "label": "Program Params (Hidden)",
+            "name": "program_params",
             "type": "hidden",
             "instructions": "",
             "required": 0,
