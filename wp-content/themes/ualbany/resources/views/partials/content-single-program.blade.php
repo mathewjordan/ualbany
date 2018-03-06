@@ -159,10 +159,11 @@ endif;
               <span class="fa fa-send"></span>
               Apply Now!
             </a>
-            <a href="#" target="" class="btn">
+            <a href="#" target="" class="btn btn--right">
               <span class="fa fa-user"></span>
               Contact an Advisor
             </a>
+            <div class="clearfix" aria-hidden="true"></div>
             @php the_field('program_introduction') @endphp
             <div class="sharing">
               <h2 class="sharing__title">Share Your Plan!</h2>
@@ -288,14 +289,15 @@ endif;
     </section>
 
     @if ($is_incoming)
-    <section>
+    <section class="page-section">
       <div class="container">
         <h2 class="text-center">{{ __('Visiting Students') }}</h2>
+        <p class="text-center"><a href="/visiting-students/" class="btn">{{ __('Learn More') }}</a></p>
       </div>
     </section>
     @endif
 
-    <section class="page-section  ">
+    <section class="page-section">
 
         <h2 class="text-center"><?php echo __('Programs'); ?></h2>
 

@@ -16,6 +16,28 @@
 
 .single-program .program-intro {
   margin: 30px 0;
+
+  .btn {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+
+    @media (min-width: map-get($container-max-widths, sm)) {
+      //font-size: 1rem;
+    }
+
+    @media (min-width: 1200px) {
+      float: left;
+      font-size: 1.25rem;
+      width: 48%;
+      margin-right: 1%;
+
+      &--right {
+        margin-left: 1%;
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .single-program .program-dates {
