@@ -3,7 +3,7 @@
 // sync data
 function terradotta_sync() {
 
-  $get_programs = TERRADOTTA_URL . '?callName=getPrograms&ResponseEncoding=JSON';
+  $get_programs = TERRADOTTA_URL . '?callName=getPrograms&ResponseEncoding=JSON&ProgramType=1,2'; // Incoming & Outgoing
 
   global $wpdb;
 
