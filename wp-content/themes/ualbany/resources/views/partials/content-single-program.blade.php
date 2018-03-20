@@ -239,7 +239,13 @@ endif;
     </section>
     @endif
 
-    @if (get_field('program_tdvideo'))
+    @php
+    $video = get_field('program_tdvideo') ? 
+             trim(get_field('program_tdvideo'), chr(0xC2).chr(0xA0)) : // Trim whitepace and non-breaking spaces (nbsp;)
+             false;
+    @endphp
+
+    @if ($video && $video != '')
     <section class="program-video text-center">
       <div class="container">
         <div class="video-wrapper">
