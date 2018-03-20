@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4c09c7b-e4af-4bc4-99f6-8216e5ded83a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/ualbany/app/post_types.php" afterPath="$PROJECT_DIR$/wp-content/themes/ualbany/app/post_types.php" />
-    </list>
+    <list default="true" id="c4c09c7b-e4af-4bc4-99f6-8216e5ded83a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -258,12 +255,12 @@
       <updated>1515151914385</updated>
       <workItem from="1515151915626" duration="5283000" />
       <workItem from="1519154210714" duration="1473000" />
-      <workItem from="1521555432368" duration="882000" />
+      <workItem from="1521555432368" duration="982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7638000" />
+    <option name="totallyTimeSpent" value="7738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
