@@ -97,6 +97,7 @@ function register_posts($post_types)
         ];
 
         register_post_type($type['machine_name'], $post_type_args);
+        add_options_menu($type['singlular'], $type['slug'], $type['machine_name']);
 
     }
 
@@ -155,3 +156,22 @@ add_action('admin_head', function () {
     <?php
 
 });
+
+
+
+/**
+ * Create a options page for all News archive settings
+ */
+function add_options_menu($post_type_singular, $post_type_slug, $post_type_machine) {
+    if( function_exists( 'acf_add_options_page' ) ) {
+
+        acf_add_options_page([
+            'parent_slug'   => 'edit.php?post_type=' . $post_type_machine,
+            'page_title' 	=> __( $post_type_singular . ' Settings', 'ualbany' ),
+            'menu_title'	=> __( $post_type_singular . ' Settings', 'ualbany' ),
+            'menu_slug' 	=> $post_type_machine . '-settings',
+            'capability'	=> 'edit_posts',
+            'redirect'		=> false
+        ]);
+    }
+}
