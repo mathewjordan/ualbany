@@ -21,7 +21,7 @@
                 <div class="col-xs-3 col-sm-9">
                     <nav class="nav-primary">
                         @if (has_nav_menu('primary_navigation'))
-                            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+                            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'walker' => new Bootstrapwp_Walker_Nav_Menu()]) !!}
                         @endif
                     </nav>
                 </div>

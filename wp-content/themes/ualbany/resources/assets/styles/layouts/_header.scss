@@ -34,10 +34,15 @@
 
 .banner_primary {
   background-color: $purple;
-  border-bottom: 2px solid #602481;
-  padding: 2rem;
+  padding: 0 2rem;
+
+  .brand {
+    padding: 24px 0;
+    display: block;
+  }
 
   .nav {
+    position: relative;
     float: right;
   }
 
@@ -46,15 +51,50 @@
     font-weight: 700;
     font-family: $font-headings;
 
-    a,
-    a:visited {
-      color: $white;
+    a {
+      padding: 2rem 0.85rem;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
+    a,
+    a:visited {
+      color: $white;
+    }
+
     a:hover {
       color: $gold;
+    }
+
+    .dropdown-menu {
+      margin: 0;
+      padding: $spacing-large;
+      border: none;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: darken($purple, 10%);
+      z-index: $z-index-dropdown-menu;
+
+      @include border-radius(0);
+
+      ul {
+        margin: 0 0 $spacing-extra-large 0;
+        padding: 0;
+      }
+
+      h2 {
+        color: $lightgray;
+        text-transform: none;
+        font-size: 1.25rem;
+      }
+
+      > li a {
+        text-transform: none;
+        padding: 0.15rem 0;
+        font-family: $font-sans;
+        font-weight: 300;
+      }
     }
   }
 }
@@ -64,3 +104,9 @@ header {
   z-index: 1;
   position: relative;
 }
+
+// Show dropdown menu on hover
+.menu-item-has-children:hover .dropdown-menu {
+  display: block;
+}
+

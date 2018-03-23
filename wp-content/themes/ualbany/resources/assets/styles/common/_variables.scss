@@ -56,8 +56,11 @@ $container-max-widths: (
 $font-dark-body-color: $gray;
 $font-body: $gray;
 
-//Spacing
+// spacing
 $spacing-small:         5px;
 $spacing-medium:        10px;
 $spacing-large:         20px;
 $spacing-extra-large:   40px;
+
+// z-index
+$z-index-dropdown-menu: 9999;
