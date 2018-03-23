@@ -53,9 +53,7 @@ function ualbany_custom_dropdown( $item_output, $item ) {
       $args = [
         'post_type'      => 'program',
         'post_status'    => 'publish',
-        'posts_per_page' => -1,
-        'orderby'        => 'title',
-        'order'          => 'ASC'
+        'posts_per_page' => -1
       ];
 
       $regions = [];
@@ -94,6 +92,8 @@ function ualbany_custom_dropdown( $item_output, $item ) {
         $max_per_column = 10;
         $prev_country_count = 0;
 
+        ksort($regions); // Sort regions alphabetically
+
         foreach ($regions as $k => $v) :
           ksort($v['countries']); // Sort countries alphabetically
 
@@ -122,6 +122,89 @@ function ualbany_custom_dropdown( $item_output, $item ) {
 
         $output .= '</div><!-- .row -->';
 
+      endif;
+
+    elseif (in_array('ualbany-custom-dropdown-subjects', $item->classes)) :
+
+      $args = [
+        'post_type'      => 'program',
+        'post_status'    => 'publish',
+        'posts_per_page' => -1
+      ];
+
+      $regions = [];
+      $output  = '';
+      $query   = new WP_Query($args);
+
+      if ($query->have_posts()) :
+
+        $program_subjects = [];
+
+        while ($query->have_posts()) : $query->the_post();
+
+          $subject_str = get_field('program_subject');
+
+          if ($subject_str) :
+
+            $exploded = explode(',', $subject_str);
+
+            if (is_array($exploded)) :
+
+              foreach ($exploded as $subject_id) :
+
+                if ($subject_id && ! in_array($subject_id, $program_subjects)) {
+                  $program_subjects[] = $subject_id;
+                }
+              endforeach;
+            endif;
+          endif;
+        endwhile;
+
+        wp_reset_postdata();
+
+        if (! empty($program_subjects)) :
+          $args  = [
+            'meta_query' => [
+              [
+                'key'     => 'subject_id',
+                'value'   => $program_subjects,
+                'compare' => 'IN'
+              ],
+            ],
+            'post_type' => 'subject',
+            'order'     => 'ASC',
+            'orderby'   => 'title',
+            'posts_per_page' => -1,
+            'offset'         => 0
+          ];
+
+          $subjects = get_posts($args);
+
+          if ($subjects) :
+            $output .= '<div class="row">';
+            $output .=   '<div class="col-md-3">';
+            $output .=     '<ul>';
+
+
+            $max_per_column = ceil(count($subjects) / 4);
+            $subject_cnt = 0;
+
+            foreach ($subjects as $s) :
+
+              if ($subject_cnt > $max_per_column) {
+                $output .= '</ul></div><div class="col-md-3"><ul>'; // New column
+                $subject_cnt = 0; // Reset the count
+              }
+
+              $output .= '<li><a href="' . get_the_permalink($s->ID) . '">' . $s->post_title . '</a></li>';
+              $subject_cnt++;
+            endforeach;
+
+            $output .=     '</ul>';
+            $output .=   '</div><!-- .col-md-3 -->';
+            $output .= '</div><!-- .row -->';
+          endif;
+        endif;
       endif;
     endif;
 
