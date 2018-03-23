@@ -38,6 +38,93 @@ function innerHTML( $contentdiv ) {
   return $r;
 }
 
+// Return an array of td params that
+// match a specific param_id
+function get_params_by_id($params, $param_id) {
+  $values = [];
+
+  foreach ($params->parameter as $p) {
+    if (isset($p->param_id) && $p->param_id == $param_id) {
+      $values[] = $p->param_value;
+    }
+  }
+
+  return $values;
+}
+
+function add_or_update_post($type, $key, $val, $name) {
+  // query for post to see if exists
+  $args  = [
+    'meta_query' => [
+      [
+        'key'   => $key,
+        'value' => $val,
+      ],
+    ],
+    'post_type'      => $type,
+    'posts_per_page' => 1,
+  ];
+
+  $posts = get_posts($args);
+
+  // if exists, update
+  if ($posts) {
+    $p = $posts[0];
+    $post_id = $p->ID;
+
+    // run update
+    $update_post = [
+      'ID'         => $post_id,
+      'post_title' => $name,
+    ];
+
+    // Update the post into the database
+    wp_update_post($update_post);
+  }
+
+  // if NOT exists, create
+  else {
+    // create new
+    $new_post = [
+      'post_type'   => $type,
+      'post_title'  => $name,
+      'post_status' => 'publish',
+    ];
+
+    $post_id = wp_insert_post($new_post);
+
+  }
+
+  // set unique val for new subject post
+  update_field($key, $val, $post_id);
+}
+
+function parse_subjects($params) {
+  $subject_params = get_params_by_id($params, 10004);
+  $subject_str    = '';
+  $ignore         = ['any-subject-area-taught-in-host-us-language'];
+
+  foreach ($subject_params as $subject) {
+    $subject = strip_tags($subject);
+    $subject_machine_name = strtolower($subject);
+    $subject_machine_name = trim($subject_machine_name); 
+    $subject_machine_name = preg_replace("/[^a-z0-9 ]/", '', $subject_machine_name); // Keep only alphanumeric and spaces
+    $subject_machine_name = preg_replace('/\s+/', '-', $subject_machine_name); // Replace occurances of 1 or more spaces
+
+    // If the subject is not in the ignore array,
+    // then add it to the string
+    if (! in_array($subject_machine_name, $ignore)) {
+      $subject_str .= $subject_machine_name . ',';
+    }
+
+    // Add or update the Subject post
+    add_or_update_post('subject', 'subject_id', $subject_machine_name, $subject);
+
+  }
+
+  return $subject_str;
+}
+
 function sync_program_brochure_handler() {
 
   $program_id = $_POST['program_id'];
@@ -60,6 +147,8 @@ function sync_program_brochure_handler() {
   $params              = $brochure->details->parameters;
   $params_json         = json_encode($params);
 
+  $params_subjects = parse_subjects($params);
+
   //$partner
   //$faculty_led
   //$exchange = $brochure->details->bExchangeAvailabl;
@@ -77,6 +166,9 @@ function sync_program_brochure_handler() {
 
   // Program Terms
   update_field('program_term', $terms_json, $wp_post_id);
+
+  // Program Subjects
+  update_field('program_subject', $params_subjects, $wp_post_id);
 
   // Miscellaneous Params
   update_field('program_params', $params_json, $wp_post_id);
