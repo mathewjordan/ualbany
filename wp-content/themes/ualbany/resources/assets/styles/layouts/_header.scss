@@ -1,9 +1,13 @@
-.banner .nav li {
-  @extend .nav-item;
-}
+.banner {
+  z-index: $z-index-banner;
 
-.banner .nav a {
-  @extend .nav-link;
+  .nav li {
+    @extend .nav-item;
+  }
+
+  .nav a {
+    @extend .nav-link;
+  }
 }
 
 .nav-utility,
@@ -74,7 +78,6 @@
       left: 0;
       width: 100%;
       background-color: darken($purple, 10%);
-      z-index: $z-index-dropdown-menu;
 
       @include border-radius(0);
 
