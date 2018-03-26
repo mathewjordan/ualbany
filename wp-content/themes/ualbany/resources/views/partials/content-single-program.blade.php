@@ -22,6 +22,15 @@ if (! function_exists('program_meta_value')) {
   }
 }
 
+if (! function_exists('program_target_string')) {
+  function program_target_string($str) {
+    $target = strtolower($str);
+    $target = preg_replace("/[^a-z0-9 ]/", '', $target); // Keep only alphanumeric and spaces
+    $target = preg_replace('/\s+/', '-', $target); // Replace occurances of 1 or more spaces
+    return $target;
+  }
+}
+
 $render = [
   'Academics'      => 'program_academics',      // updated
   'Faculty'        => 'program_faculty',        // new
@@ -294,15 +303,6 @@ endif;
       </div>
     </section>
 
-    @if ($is_incoming)
-    <section class="page-section">
-      <div class="container">
-        <h2 class="text-center">{{ __('Visiting Students') }}</h2>
-        <p class="text-center"><a href="/visiting-students/" class="btn">{{ __('Learn More') }}</a></p>
-      </div>
-    </section>
-    @endif
-
     <section class="page-section">
 
         <h2 class="text-center"><?php echo __('Programs'); ?></h2>
@@ -320,9 +320,10 @@ endif;
                       $first = 0;
                     }
                     $cnt++;
+                    $target = program_target_string($title);
                 @endphp
                 <li class="nav-item">
-                    <a class="nav-link @if($first == 1) active @endif" href="#{{strtolower($title)}}" role="tab"
+                    <a class="nav-link @if($first == 1) active @endif" href="#{{$target}}" role="tab"
                        data-toggle="tab">{{$title}}</a>
                 </li>
                 @endif
@@ -341,8 +342,9 @@ endif;
                   $first = 0;
                 }
                 $cnt++;
+                $target = program_target_string($title);
                 @endphp
-                <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{strtolower($title)}}">
+                <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{$target}}">
                   @php(the_field($selector))
                 </div>
                 @endif
@@ -352,6 +354,104 @@ endif;
         </div>
 
     </section>
+
+    @if ($is_incoming)
+
+    @php
+    $render_incoming = [
+      'Academics'                  => 'program_incoming_academics',
+      'Campus Life'                => 'program_incoming_campus',        
+      'Housing'                    => 'program_incoming_housing',
+      'Entertainment'              => 'program_incoming_entertainment',
+      'Restaurants &amp; Shopping' => 'program_incoming_restaurants'
+    ];
+    @endphp
+    <section class="page-section">
+      <div class="incoming-subfooter">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2>{{ __('About UAlbany') }}</h2>
+              @if (get_field('program_incoming_intro', 'option'))
+                @php(the_field('program_incoming_intro', 'option'))
+              @endif
+            </div>
+            <div class="col-sm-6">
+              
+              <div id="program-incoming-map" class="incoming-subfooter__map"></div>
+              <script>
+                function initMap() {
+                  var uluru = {lat: 42.6793106, lng: -73.827823};
+                  var map = new google.maps.Map(document.getElementById('program-incoming-map'), {
+                    zoom: 11,
+                    center: uluru
+                  });
+                  var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                  });
+                }
+              </script>
+              <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbFXFMdoBLZRr4tlykh9x_-ELAqTI2RpQ&callback=initMap">
+              </script>
+
+            </div>
+          </div>
+          <!-- Tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            @php($cnt = 0)
+            @foreach($render_incoming as $title => $selector)
+                @if (get_field($selector, 'option') && trim(get_field($selector, 'option')) != '<p>&nbsp;</p>')
+                @php
+                    if ($cnt == 0) {
+                      $first = 1;
+                    } else {
+                      $first = 0;
+                    }
+                    $cnt++;
+                    $target = program_target_string($title);
+                @endphp
+                <li class="nav-item">
+                    <a class="nav-link @if($first == 1) active @endif" href="#incoming-{{$target}}" role="tab"
+                       data-toggle="tab">{{$title}}</a>
+                </li>
+                @endif
+            @endforeach
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            @php
+            $incoming_bg_image = get_field('program_incoming_image', 'option');
+            $cnt = 0;
+            @endphp
+            @foreach($render_incoming as $title => $selector)
+              @if (get_field($selector, 'option') && trim(get_field($selector, 'option')) != '<p>&nbsp;</p>')
+              @php
+              if ($cnt == 0) {
+                $first = 1;
+              } else {
+                $first = 0;
+              }
+              $cnt++;
+              $target = program_target_string($title);
+              @endphp
+              <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="incoming-{{$target}}">
+                <div class="incoming-subfooter__image" style="background-image: url({{ $incoming_bg_image['sizes']['large'] }});">
+                  <div class="incoming-subfooter__content">
+                    <h3>{{ $title }}</h3>
+                    @php(the_field($selector, 'option'))
+                  </div>
+                </div>
+              </div>
+              @endif
+            @endforeach
+          </div>
+        </div>
+      </div>
+    </section>
+    @endif
 
     <section>
       <div class="subfooter">
