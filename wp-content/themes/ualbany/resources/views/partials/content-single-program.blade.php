@@ -249,8 +249,8 @@ endif;
     @endif
 
     @php
-    $video = get_field('program_tdvideo') ? 
-             trim(get_field('program_tdvideo'), chr(0xC2).chr(0xA0)) : // Trim whitepace and non-breaking spaces (nbsp;)
+    $video = get_field('program_video') ? 
+             trim(get_field('program_video'), chr(0xC2).chr(0xA0)) : // Trim whitepace and non-breaking spaces (nbsp;)
              false;
     @endphp
 
@@ -258,7 +258,12 @@ endif;
     <section class="program-video text-center">
       <div class="container">
         <div class="video-wrapper">
-          <iframe width="560" height="349" src="@php(the_field('program_tdvideo'))"></iframe>
+          <iframe width="560" height="349" src="@php(the_field('program_video'))"></iframe>
+        </div>
+        <div class="program-video__blurb">
+        @if (get_field('program_video_blurb'))
+          @php(the_field(program_video_blurb))
+        @endif
         </div>
       </div>
     </section>

@@ -326,9 +326,9 @@
             "readonly": 1
         },
         {
-            "key": "program_tdvideo",
+            "key": "program_video",
             "label": "Video",
-            "name": "program_tdvideo",
+            "name": "program_video",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -346,6 +346,26 @@
             "max": "",
             "step": "",
             "readonly": 0
+        },
+        {
+            "key": "program_video_blurb",
+            "label": "Video Blurb",
+            "name": "program_video_blurb",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "readonly": 1
         },
         {
             "key": "program_dates",
