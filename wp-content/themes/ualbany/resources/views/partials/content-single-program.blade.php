@@ -31,6 +31,9 @@ if (! function_exists('program_target_string')) {
   }
 }
 
+// Program Type
+$is_incoming = get_field('program_type') && get_field('program_type') == '2' ? true : false;
+
 $render = [
   'Academics'      => 'program_academics',      // updated
   'Faculty'        => 'program_faculty',        // new
@@ -45,6 +48,14 @@ $render = [
   'Duration'       => 'program_duration',
   'Overview'       => 'program_overview',
 ];
+
+$gallery      = $is_incoming ? get_field('incoming_program_photos', 'option') : get_field('program_photos');
+$introduction = $is_incoming ? get_field('incoming_program_introduction', 'option') : get_field('program_introduction');
+$video        = $is_incoming ? get_field('incoming_program_video', 'option') : get_field('program_video');
+$video        = $video ?
+                trim(get_field('program_video'), chr(0xC2).chr(0xA0)) : // Trim whitepace and non-breaking spaces (nbsp;)
+                false;
+$video_blurb  = $is_incoming ? get_field('incoming_program_video_blurb', 'option') : get_field('program_video_blurb');
 
 // Array keys should conform to param_id in Terra Dotta XML
 $param_ids = [
@@ -63,9 +74,6 @@ $program_meta = [
   'country' => '',
   'terms' => '',
 ];
-
-// Program Type
-$is_incoming = get_field('program_type') && get_field('program_type') == '2' ? true : false;
 
 // Location Data
 if (get_field('program_location_param')) :
@@ -140,11 +148,7 @@ endif;
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            @php
-            $gallery = get_field('program_photos');
-            $cnt = 0;
-            @endphp
-
+            @php($cnt = 0)
             @if ($gallery)
             <div id="program-slides" class="program-slides">
 
@@ -173,7 +177,9 @@ endif;
               Contact an Advisor
             </a>
             <div class="clearfix" aria-hidden="true"></div>
-            @php the_field('program_introduction') @endphp
+            @if ($introduction)
+              {!! $introduction !!}
+            @endif
             <div class="sharing">
               <h2 class="sharing__title">Share Your Plan!</h2>
               @php echo do_shortcode('[addtoany]') @endphp
@@ -248,12 +254,6 @@ endif;
     </section>
     @endif
 
-    @php
-    $video = get_field('program_video') ? 
-             trim(get_field('program_video'), chr(0xC2).chr(0xA0)) : // Trim whitepace and non-breaking spaces (nbsp;)
-             false;
-    @endphp
-
     @if ($video && $video != '')
     <section class="program-video text-center">
       <div class="container">
@@ -261,8 +261,8 @@ endif;
           <iframe width="560" height="349" src="@php(the_field('program_video'))"></iframe>
         </div>
         <div class="program-video__blurb">
-        @if (get_field('program_video_blurb'))
-          @php(the_field(program_video_blurb))
+        @if ($video_blurb)
+          {{ $video_blurb }}
         @endif
         </div>
       </div>
@@ -309,66 +309,71 @@ endif;
     </section>
 
     <section class="page-section">
+      <h2 class="text-center"><?php echo __('Programs'); ?></h2>
+      <div class="container">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          @php($cnt = 0)
+          @foreach($render as $title => $selector)
+              @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
+              @php
+                  if ($cnt == 0) {
+                    $first = 1;
+                  } else {
+                    $first = 0;
+                  }
+                  $cnt++;
+                  $target = $is_incoming ? 'incoming-' . program_target_string($title) : program_target_string($title);
+              @endphp
+              <li class="nav-item">
+                  <a class="nav-link @if($first == 1) active @endif" href="#{{$target}}" role="tab"
+                     data-toggle="tab">{{$title}}</a>
+              </li>
+              @endif
+          @endforeach
+        </ul>
 
-        <h2 class="text-center"><?php echo __('Programs'); ?></h2>
+        <!-- Tab panes -->
+        <div class="tab-content">
+        @php($cnt = 0)
+        @foreach($render as $title => $selector)
+          @php
+          // Prefix ACF field selectors for incoming programs
+          $modified_selector = $is_incoming ? 'incoming_' . $selector : $selector;
 
-        <div class="container">
-          <!-- Tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            @php($cnt = 0)
-            @foreach($render as $title => $selector)
-                @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
-                @php
-                    if ($cnt == 0) {
-                      $first = 1;
-                    } else {
-                      $first = 0;
-                    }
-                    $cnt++;
-                    $target = program_target_string($title);
-                @endphp
-                <li class="nav-item">
-                    <a class="nav-link @if($first == 1) active @endif" href="#{{$target}}" role="tab"
-                       data-toggle="tab">{{$title}}</a>
-                </li>
-                @endif
-            @endforeach
-          </ul>
+          // If incoming, use 'option' for the post ID
+          $tab_content = $is_incoming ? get_field($modified_selector, 'option') : get_field($modified_selector);
 
-          <!-- Tab panes -->
-          <div class="tab-content">
-              @php($cnt = 0)
-              @foreach($render as $title => $selector)
-                @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
-                @php
-                if ($cnt == 0) {
-                  $first = 1;
-                } else {
-                  $first = 0;
-                }
-                $cnt++;
-                $target = program_target_string($title);
-                @endphp
-                <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{$target}}">
-                  @php(the_field($selector))
-                </div>
-                @endif
-              @endforeach
-          </div>
+          @endphp
 
+          @if ($tab_content && trim($tab_content) != '<p>&nbsp;</p>')
+            @php
+            if ($cnt == 0) {
+              $first = 1;
+            } else {
+              $first = 0;
+            }
+            $cnt++;
+            $target = $is_incoming ? 'incoming-' . program_target_string($title) : program_target_string($title);
+            @endphp
+            <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{$target}}">
+              {!! $tab_content !!}
+            </div>
+          @endif
+        @endforeach
         </div>
-
+      </div>
     </section>
 
     @if ($is_incoming)
 
     @php
     $render_incoming = [
-      'Academics'                  => 'program_incoming_academics',
-      'Campus Life'                => 'program_incoming_campus',        
-      'Housing'                    => 'program_incoming_housing',
-      'Entertainment'              => 'program_incoming_entertainment',
-      'Restaurants &amp; Shopping' => 'program_incoming_restaurants'
+      'Academics'                  => 'incoming_program_subfooter_academics',
+      'Campus Life'                => 'incoming_program_subfooter_campus',        
+      'Housing'                    => 'incoming_program_subfooter_housing',
+      'Entertainment'              => 'incoming_program_subfooter_entertainment',
+      'Restaurants &amp; Shopping' => 'incoming_program_subfooter_restaurants'
     ];
     @endphp
     <section class="page-section">
@@ -377,8 +382,8 @@ endif;
           <div class="row">
             <div class="col-sm-6">
               <h2>{{ __('About UAlbany') }}</h2>
-              @if (get_field('program_incoming_intro', 'option'))
-                @php(the_field('program_incoming_intro', 'option'))
+              @if (get_field('incoming_program_subfooter_intro', 'option'))
+                @php(the_field('incoming_program_subfooter_intro', 'option'))
               @endif
             </div>
             <div class="col-sm-6">
@@ -415,10 +420,10 @@ endif;
                       $first = 0;
                     }
                     $cnt++;
-                    $target = program_target_string($title);
+                    $target = 'incoming-subfooter-' . program_target_string($title);
                 @endphp
                 <li class="nav-item">
-                    <a class="nav-link @if($first == 1) active @endif" href="#incoming-{{$target}}" role="tab"
+                    <a class="nav-link @if($first == 1) active @endif" href="#{{$target}}" role="tab"
                        data-toggle="tab">{{$title}}</a>
                 </li>
                 @endif
@@ -428,7 +433,7 @@ endif;
           <!-- Tab panes -->
           <div class="tab-content">
             @php
-            $incoming_bg_image = get_field('program_incoming_image', 'option');
+            $incoming_bg_image = get_field('incoming_program_subfooter_image', 'option');
             $cnt = 0;
             @endphp
             @foreach($render_incoming as $title => $selector)
@@ -440,9 +445,9 @@ endif;
                 $first = 0;
               }
               $cnt++;
-              $target = program_target_string($title);
+              $target = 'incoming-subfooter-' . program_target_string($title);
               @endphp
-              <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="incoming-{{$target}}">
+              <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{$target}}">
                 <div class="incoming-subfooter__image" style="background-image: url({{ $incoming_bg_image['sizes']['large'] }});">
                   <div class="incoming-subfooter__content">
                     <h3>{{ $title }}</h3>

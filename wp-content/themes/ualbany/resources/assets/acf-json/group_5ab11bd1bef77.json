@@ -3,9 +3,9 @@
     "title": "Incoming Programs Subfooter",
     "fields": [
         {
-            "key": "program_incoming_intro",
+            "key": "incoming_program_subfooter_intro",
             "label": "Introduction",
-            "name": "program_incoming_intro",
+            "name": "incoming_program_subfooter_intro",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -22,9 +22,9 @@
             "delay": 0
         },
         {
-            "key": "program_incoming_image",
+            "key": "incoming_program_subfooter_image",
             "label": "Background Image",
-            "name": "program_incoming_image",
+            "name": "incoming_program_subfooter_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -46,9 +46,9 @@
             "mime_types": ""
         },
         {
-            "key": "program_incoming_academics",
+            "key": "incoming_program_subfooter_academics",
             "label": "Academics",
-            "name": "program_incoming_academics",
+            "name": "incoming_program_subfooter_academics",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -65,9 +65,9 @@
             "delay": 0
         },
         {
-            "key": "program_incoming_campus",
+            "key": "incoming_program_subfooter_campus",
             "label": "Campus Life",
-            "name": "program_incoming_campus",
+            "name": "incoming_program_subfooter_campus",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -84,9 +84,9 @@
             "delay": 0
         },
         {
-            "key": "program_incoming_housing",
+            "key": "incoming_program_subfooter_housing",
             "label": "Housing",
-            "name": "program_incoming_housing",
+            "name": "incoming_program_subfooter_housing",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -103,9 +103,9 @@
             "delay": 0
         },
         {
-            "key": "program_incoming_entertainment",
+            "key": "incoming_program_subfooter_entertainment",
             "label": "Entertainment",
-            "name": "program_incoming_entertainment",
+            "name": "incoming_program_subfooter_entertainment",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -122,9 +122,9 @@
             "delay": 0
         },
         {
-            "key": "program_incoming_restaurants",
+            "key": "incoming_program_subfooter_restaurants",
             "label": "Restaurants &amp; Shopping",
-            "name": "program_incoming_restaurants",
+            "name": "incoming_program_subfooter_restaurants",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -150,7 +150,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
