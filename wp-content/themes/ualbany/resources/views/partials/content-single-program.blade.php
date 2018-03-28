@@ -53,7 +53,7 @@ $gallery      = $is_incoming ? get_field('incoming_program_photos', 'option') : 
 $introduction = $is_incoming ? get_field('incoming_program_introduction', 'option') : get_field('program_introduction');
 $video        = $is_incoming ? get_field('incoming_program_video', 'option') : get_field('program_video');
 $video        = $video ?
-                trim(get_field('program_video'), chr(0xC2).chr(0xA0)) : // Trim whitepace and non-breaking spaces (nbsp;)
+                trim($video, chr(0xC2).chr(0xA0)) : // Trim whitepace and non-breaking spaces (nbsp;)
                 false;
 $video_blurb  = $is_incoming ? get_field('incoming_program_video_blurb', 'option') : get_field('program_video_blurb');
 
@@ -258,11 +258,11 @@ endif;
     <section class="program-video text-center">
       <div class="container">
         <div class="video-wrapper">
-          <iframe width="560" height="349" src="@php(the_field('program_video'))"></iframe>
+          <iframe width="560" height="349" src="{{ $video }}"></iframe>
         </div>
         <div class="program-video__blurb">
         @if ($video_blurb)
-          {{ $video_blurb }}
+          {!! $video_blurb !!}
         @endif
         </div>
       </div>
