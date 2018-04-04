@@ -132,7 +132,6 @@ function ualbany_custom_dropdown( $item_output, $item ) {
         'posts_per_page' => -1
       ];
 
-      $regions = [];
       $output  = '';
       $query   = new WP_Query($args);
 

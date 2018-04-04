@@ -39,31 +39,93 @@
                         @php
                             $args = [ 'post_type'   => 'country',
                                       'post_status' => 'publish',
-                                      'order'       => 'ASC' ];
+                                      'order'       => 'ASC',
+                                      'posts_per_page' => -1 ];
 
                             $query = new WP_Query($args);
                         @endphp
                         @if ($query->have_posts())
-                            <select name="location" id="location">
-                                <option>Location</option>
-                                @while($query->have_posts()) @php($query->the_post())
-                                    <option value="">@php(the_title())</option>
-                                    @endwhile
-                                    @php(wp_reset_postdata())
-                            </select>
+                          <select name="location" id="location">
+                            <option>Location</option>
+                            @while($query->have_posts()) @php($query->the_post())
+                            <option value="{{ get_field('country_id') }}">@php(the_title())</option>
+                            @endwhile
+                            @php(wp_reset_postdata())
+                          </select>
                         @endif
                         @php
-                            $args = [ 'post_type'   => 'subject',
-                                      'post_status' => 'publish',
-                                      'order'       => 'ASC' ];
+                        $program_subjects = [];
 
-                            $query = new WP_Query($args);
+                        $args = [ 'post_type'   => 'program',
+                                  'post_status' => 'publish',
+                                  'posts_per_page' => -1 ];
+
+                        $query = new WP_Query($args);
+                        
+                        if ($query->have_posts()) :
+                          
+                        while($query->have_posts()) : $query->the_post();
+                          $subject_str = get_field('program_subject');
+
+                          if ($subject_str) :
+
+                            $exploded = explode(',', $subject_str);
+
+                            if (is_array($exploded)) :
+
+                              foreach ($exploded as $subject_id) :
+
+                                if ($subject_id && ! in_array($subject_id, $program_subjects)) {
+                                  $program_subjects[] = $subject_id;
+                                }
+                              endforeach;
+                            endif;
+                          endif;
+                        endwhile;
+                          
+                        endif;
+                        
+                        wp_reset_postdata();
+
                         @endphp
-                        <select name="area" id="area">
+
+                        @if (! empty($program_subjects))
+                          
+                          @php
+                          $args  = [
+                            'meta_query' => [
+                              [
+                                'key'     => 'subject_id',
+                                'value'   => $program_subjects,
+                                'compare' => 'IN'
+                              ],
+                            ],
+                            'post_type' => 'subject',
+                            'order'     => 'ASC',
+                            'orderby'   => 'title',
+                            'posts_per_page' => -1,
+                            'offset'         => 0
+                          ];
+
+                          $query = new WP_Query($args);
+
+                          @endphp
+                        
+                          @if ($query->have_posts())
+                  
+                          <select name="area" id="area">
                             <option>Area of Study</option>
-                        </select>
+                            @while($query->have_posts()) @php($query->the_post())
+                            <option value="{{ get_field('subject_id') }}">@php(the_title())</option>
+                            @endwhile
+                          </select>
+
+                          @endif
+                          @php(wp_reset_postdata())
+                        @endif
+
                         <select name="semester" id="semester">
-                            <option>Semester</option>
+                            <option value="">Semester</option>
                         </select>
                         <button class="btn btn-lg btn-primary">Go</button>
                     </form>
