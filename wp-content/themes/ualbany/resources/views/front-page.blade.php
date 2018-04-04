@@ -64,28 +64,28 @@
                         
                         if ($query->have_posts()) :
                           
-                        while($query->have_posts()) : $query->the_post();
-                          $subject_str = get_field('program_subject');
+                          while($query->have_posts()) : $query->the_post();
+                            $subject_str = get_field('program_subject');
 
-                          if ($subject_str) :
+                            if ($subject_str) :
 
-                            $exploded = explode(',', $subject_str);
+                              $exploded = explode(',', $subject_str);
 
-                            if (is_array($exploded)) :
+                              if (is_array($exploded)) :
 
-                              foreach ($exploded as $subject_id) :
+                                foreach ($exploded as $subject_id) :
 
-                                if ($subject_id && ! in_array($subject_id, $program_subjects)) {
-                                  $program_subjects[] = $subject_id;
-                                }
-                              endforeach;
+                                  if ($subject_id && ! in_array($subject_id, $program_subjects)) {
+                                    $program_subjects[] = $subject_id;
+                                  }
+                                endforeach;
+                              endif;
                             endif;
-                          endif;
-                        endwhile;
+                          endwhile;
+                          wp_reset_postdata();
                           
                         endif;
                         
-                        wp_reset_postdata();
 
                         @endphp
 
@@ -118,10 +118,10 @@
                             @while($query->have_posts()) @php($query->the_post())
                             <option value="{{ get_field('subject_id') }}">@php(the_title())</option>
                             @endwhile
+                            @php(wp_reset_postdata())
                           </select>
 
                           @endif
-                          @php(wp_reset_postdata())
                         @endif
 
                         <select name="semester" id="semester">

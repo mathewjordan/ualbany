@@ -1,0 +1,7 @@
+.single header {
+  @include box-shadow(none);
+}
+
+.single .entry-title {
+  margin: 2rem 0;
+}
