@@ -1,6 +1,6 @@
 <?php
 
-$post_type    = 'program';
+$post_type = 'program';
 
 ?>
 
@@ -8,8 +8,8 @@ $post_type    = 'program';
 
 @section('content')
 
-    @include('partials.archive-content-list', [
-      'post_type'     => $post_type,
-    ])
+	@include('partials.archive-content-list', [
+	  'post_type' => $post_type,
+	])
 
 @endsection

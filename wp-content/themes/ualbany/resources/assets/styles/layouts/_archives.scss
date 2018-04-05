@@ -1,0 +1,7 @@
+.archive header {
+  @include box-shadow(none);
+}
+
+.archive .entry-title {
+  margin: 2rem 0;
+}
