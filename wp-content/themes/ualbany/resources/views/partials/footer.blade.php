@@ -1,5 +1,6 @@
-<footer class="content-info">
-  <div class="container">
+<footer class="footer container-fluid" role="contentinfo">
+  <div class="region region-footer">
+    
     @php(dynamic_sidebar('sidebar-footer'))
   </div>
 </footer>
