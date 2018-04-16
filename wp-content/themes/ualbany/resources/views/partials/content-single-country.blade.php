@@ -1,3 +1,10 @@
+<div class="single-header single-page-header">
+  <div class="container-fluid">
+    <div class="single-header-content">
+      <h1 class="single-title">{{ get_the_title() }}</h1>
+    </div>
+  </div>
+</div>
 <div class="container">
   <article @php(post_class())>
     <header>
