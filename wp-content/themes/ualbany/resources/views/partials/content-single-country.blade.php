@@ -6,7 +6,9 @@
     <div class="entry-content">
       <section>
         <header>
-          <h2>Featured {{ get_the_title() }} Programs</h2>
+          <div class="text-center">
+            <h2>Featured {{ get_the_title() }} Programs</h2>
+          </div>
         </header>
         @php
 
@@ -37,7 +39,9 @@
       </section>
       <section>
         <header>
-          <h2>All {{ get_the_title() }} Programs</h2>
+          <div class="text-center">
+            <h2>All {{ get_the_title() }} Programs</h2>
+          </div>
         </header>
         @php
 
@@ -72,8 +76,5 @@
       </section>
       
     </div>
-    <footer>
-      {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-    </footer>
   </article>
 </div>

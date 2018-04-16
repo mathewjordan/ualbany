@@ -1,35 +1,4 @@
 @php
-if (! function_exists('program_meta_value')) {
-  function program_meta_value($val, $list_type='comma-list') {
-    @endphp
-    @if ($val != '')
-      @php($list_class = 'program-meta__' . $list_type)
-      <ul class="{{ $list_class }}">
-        @if (is_array($val)) 
-          @php
-          foreach ($val as $v) :
-          @endphp
-          <li>{{ $v }}</li>
-          @php
-          endforeach;
-          @endphp
-        @else
-          <li>{{ $val }}</li>
-        @endif
-      </ul>
-    @endif
-    @php
-  }
-}
-
-if (! function_exists('program_target_string')) {
-  function program_target_string($str) {
-    $target = strtolower($str);
-    $target = preg_replace("/[^a-z0-9 ]/", '', $target); // Keep only alphanumeric and spaces
-    $target = preg_replace('/\s+/', '-', $target); // Replace occurances of 1 or more spaces
-    return $target;
-  }
-}
 
 // Program Type
 $is_incoming = get_field('program_type') && get_field('program_type') == '2' ? true : false;

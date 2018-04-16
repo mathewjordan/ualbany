@@ -157,3 +157,14 @@
     }
   }
 } // .single-program .incoming-subfooter
+
+.program h3 {
+  font-size: 1.5rem;
+}
+
+.program__thumbnail {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+}
