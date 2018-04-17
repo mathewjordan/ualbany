@@ -74,19 +74,8 @@
 
         @endphp
 
-        @if ($query->have_posts())
-        <div class="table-responsive">
-          <table id="table-programs" class="table table-bordered table-striped">
-            @include('partials.thead-program')
-            <tbody>
-            @while($query->have_posts()) @php($query->the_post())
-              @include('partials.tr-program')
-            @endwhile
-            @php(wp_reset_postdata())
-            </tbody>
-          </table>
-        </div>
-        @endif
+        @include('partials.table-programs')
+        
       </section>
     </div>
   </div>
