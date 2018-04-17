@@ -1,76 +1,114 @@
-@php( $subject_id = get_field('subject_id') )
+@php
 
-<div class="container">
-  <article @php(post_class())>
-    <header>
-      <h1 class="entry-title">Programs with {{ get_the_title() }}</h1>
-    </header>
+$subject_id = get_field('subject_id');
+$subject    = get_the_title();
+
+@endphp
+
+<article @php(post_class())>
+  <div class="single-header single-page-header">
+    <div class="container-fluid">
+      <div class="single-header-content">
+        <h1 class="single-title">{{ $subject }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
     <div class="entry-content">
-      @php
+      <section>
+        <header>
+          <div class="text-center">
+            <h2>Featured {{ $subject }} Programs</h2>
+          </div>
+        </header>
+        @php
 
-      the_content();
+        if ($subject_id) :
 
-      if ($subject_id) :
-
-        // First query all the programs, so we can parse the subject field
-        $args = [
-                  'post_type' => 'program',
-                  'order'     => 'ASC',
-                  'orderby'   => 'title',
-                  'posts_per_page' => -1,
-                  'offset'    => 0
-                ];
-
-        $programs = get_posts($args);
-        $filtered_pids = []; // This holds the post ids for the filtered programs
-
-        if ($programs) :
-  
-          foreach ($programs as $prog) :
-            $subjects_str = get_field('program_subject', $prog->ID);
-
-            if ($subjects_str) :
-              $subjects = explode(',', $subjects_str);
-
-              // If the program has the subject, add it to the array
-              if (in_array($subject_id, $subjects)) {
-                $filtered_pids[] = $prog->ID;
-              }
-            endif;
-          endforeach;
-
+          // First query all the programs, so we can parse the subject field
           $args = [
                     'post_type' => 'program',
                     'order'     => 'ASC',
                     'orderby'   => 'title',
                     'posts_per_page' => -1,
-                    'post__in' => $filtered_pids
+                    'offset'    => 0
                   ];
 
-          $query = new WP_Query($args);
+          $programs = get_posts($args);
+          $filtered_pids = []; // This holds the post ids for the filtered programs
 
-          @endphp
-                          
-          @if ($query->have_posts())
-            <article @php(post_class())>
-            @while($query->have_posts()) @php($query->the_post())
-              <a href="{{ get_the_permalink() }}">
-                <h2>{{ get_the_title() }}</h2>
-              </a>
-            @endwhile
-            </article>
-            @php(wp_reset_postdata())
-          @endif
+          if ($programs) :
+    
+            foreach ($programs as $prog) :
+              $subjects_str = get_field('program_subject', $prog->ID);
 
-        @php
+              if ($subjects_str) :
+                $subjects = explode(',', $subjects_str);
+
+                // If the program has the subject, add it to the array
+                if (in_array($subject_id, $subjects)) {
+                  $filtered_pids[] = $prog->ID;
+                }
+              endif;
+            endforeach;
+
+            $args = [
+                      'post_type' => 'program',
+                      'order'     => 'ASC',
+                      'orderby'   => 'title',
+                      'posts_per_page' => -1,
+                      'post__in' => $filtered_pids
+                    ];
+
+            $query = new WP_Query($args);
+
+            @endphp
+                            
+            @if ($query->have_posts())
+              @while($query->have_posts()) @php($query->the_post())
+                @include('partials.content-program')
+              @endwhile
+              @php(wp_reset_postdata())
+            @endif
+
+          @php
+          endif;
         endif;
-      endif;
-      @endphp
+        @endphp
+      </section>
+      <section>
+        <header>
+          <div class="text-center">
+            <h2>All {{ $subject }} Programs</h2>
+          </div>
+        </header>
+        @php
 
+        $args = [
+                  'post_type' => 'program',
+                  'order'     => 'ASC',
+                  'orderby'   => 'title',
+                  'posts_per_page' => -1,
+                  'post__in' => $filtered_pids
+                ];
+
+            $query = new WP_Query($args);
+
+        @endphp
+
+        @if ($query->have_posts())
+          <table class="table table-striped">
+            @include('partials.thead-program')
+            <tbody>
+            @while($query->have_posts()) @php($query->the_post())
+              @include('partials.tr-program')
+            @endwhile
+            @php(wp_reset_postdata())
+            </tbody>
+          </table>
+        @endif
+      </section>
     </div>
-    <footer>
-      {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-    </footer>
 
-  </article>
-</div>
+  </div>
+</article>
