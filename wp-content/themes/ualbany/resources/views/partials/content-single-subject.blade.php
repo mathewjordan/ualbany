@@ -101,7 +101,8 @@ $subject    = get_the_title();
         @endphp
 
         @if ($query->have_posts())
-          <table class="table table-striped">
+        <div class="table-responsive">
+          <table id="table-programs" class="table table-bordered table-striped">
             @include('partials.thead-program')
             <tbody>
             @while($query->have_posts()) @php($query->the_post())
@@ -110,6 +111,7 @@ $subject    = get_the_title();
             @php(wp_reset_postdata())
             </tbody>
           </table>
+        </div>
         @endif
       </section>
     </div>

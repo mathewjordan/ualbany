@@ -10,6 +10,9 @@
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
+<script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script>
     $(document).ready(function(){
         $('.myths-slick').slick({
@@ -40,5 +43,7 @@
                 }
             ]
         });
+
+        $('#table-programs').DataTable();
     });
 </script>
