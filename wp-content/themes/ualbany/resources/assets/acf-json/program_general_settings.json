@@ -412,6 +412,28 @@
             "readonly": 1
         },
         {
+            "key": "program_featured",
+            "label": "Featured (Hidden)",
+            "name": "program_featured",
+            "type": "hidden",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 1
+        },
+        {
             "key": "program_location_param",
             "label": "Program Location Param (Hidden)",
             "name": "program_location_param",

@@ -57,7 +57,11 @@ $subject    = get_the_title();
                       'order'     => 'ASC',
                       'orderby'   => 'title',
                       'posts_per_page' => -1,
-                      'post__in' => $filtered_pids
+                      'post__in' => $filtered_pids,
+                      'meta_query' => [ [ 'key' => 'program_featured',
+                                          'value' => '1',
+                                          'compare' => '==' ] ]
+                      
                     ];
 
             $query = new WP_Query($args);

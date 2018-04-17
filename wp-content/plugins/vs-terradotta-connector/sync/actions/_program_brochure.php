@@ -138,6 +138,7 @@ function sync_program_brochure_handler() {
   $brochure       = json_decode($brochure_json);
   $brochure_data  = $brochure->details->program_brochure;
   $dates          = $brochure->details->dates;
+  $is_featured    = $brochure->details->IsFeatured;
   $dates_json     = json_encode($dates);
   $type           = $brochure->details->program_type_id;
   $location_param = $brochure->details->locations;
@@ -160,6 +161,9 @@ function sync_program_brochure_handler() {
 
   // Program Type
   update_field('program_type', $type, $wp_post_id);
+
+  // Featured
+  update_field('program_featured', $is_featured, $wp_post_id);
 
   // Program Locations
   update_field('program_location_param', $location_param_json, $wp_post_id);

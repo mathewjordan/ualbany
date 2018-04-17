@@ -24,9 +24,14 @@
                   'orderby'   => 'title',
                   'posts_per_page' => -1,
                   'meta_query' => [
+                    relation => 'AND',
                     [
                       'key'     => 'program_country',
                       'value'   => get_the_ID(),
+                      'compare' => '=='
+                    ],
+                    [ 'key' => 'program_featured',
+                      'value' => '1',
                       'compare' => '=='
                     ]
                   ]
