@@ -115,6 +115,23 @@
   background-color: $lightgray;
 } // .program .program-meta
 
+.program .program-meta {
+  font-size: 1rem;
+
+  &__label {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+
+  &__value {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+} // .program .program-meta
+
 .single-program .tab-pane {
   padding: 30px 0;
 }
@@ -162,8 +179,17 @@
   }
 } // .single-program .incoming-subfooter
 
-.program h3 {
-  font-size: 1.5rem;
+.program {
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 1.5rem;
+    color: $purple;
+  }
+}
+
+.main > article .program h3 {
+  color: $purple;
 }
 
 .program__thumbnail {

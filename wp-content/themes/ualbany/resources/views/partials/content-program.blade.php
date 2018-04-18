@@ -7,10 +7,11 @@
     $introduction = $is_incoming ? get_field('incoming_program_introduction', 'option') : get_field('program_introduction');
 
     $param_ids = [
-      '10022' => 'partner', // Partner University
+      '10003' => 'housing', // Housing Options
       '10005' => 'lang_of_instruct', // Language of Instruction
-      '10030' => 'exchange', // Exchange Program
       '10011' => 'internship', // Internship Opportunity
+      '10022' => 'partner', // Partner University
+      '10030' => 'exchange', // Exchange Program
     ];
 
     $program_meta = [
@@ -78,6 +79,46 @@
       endif;
     endif;
 
+    $dates_data = json_decode(get_field('program_dates'));
+    $dates = [];
+    if ($dates_data->date) :
+      if (is_array($dates_data->date)) :
+        foreach($dates_data->date as $d) :
+          $app_term = strtolower($d->app_term);
+          $dates[$app_term] = [];
+          $dates[$app_term]['app_deadline'] = $d->app_deadline;
+          $dates[$app_term]['app_decision'] = $d->app_decision;
+          $dates[$app_term]['app_term_year'] = $d->app_term_year;
+          $dates[$app_term]['term_start'] = $d->term_start;
+          $dates[$app_term]['term_end'] = $d->term_end;
+
+          if ($d->override) {
+            $dates[$app_term]['override'] = $d->override;
+          }
+
+          if ($d->override2) {
+            $dates[$app_term]['override2'] = $d->override2;
+          }
+
+        endforeach;
+
+      else:
+
+      endif;
+    endif;
+
+    $deadline = $dates['winter']['override'] ? 
+                $dates['winter']['override'] :
+                $dates['winter']['app_deadline'];
+
+    $deadline_date = date('n.d.Y', strtotime($deadline));
+
+    $start = $dates['winter']['term_start'];
+    $start_date = date('n.d.Y', strtotime($start));
+
+    $end = $dates['winter']['term_end'];
+    $end_date = date('n.d.Y', strtotime($end));
+
     $gallery = $is_incoming ? get_field('incoming_program_photos', 'option') : get_field('program_photos');
 
     @endphp
@@ -101,8 +142,20 @@
         </div>
         <h4 class="program-meta__label"><span class="fa fa-comments-o"></span> {{ __('Language of Instruction') }}</h4>
         <div class="program-meta__value">
-          <?php echo $program_meta['lang_of_instruct']; ?>
+          @php(program_meta_value($program_meta['lang_of_instruct'], 'comma-list'))
         </div>
+        <h4 class="program-meta__label"><span class="fa fa-home"></span> {{ __('Housing') }}</h4>
+        <div class="program-meta__value">
+          @php(program_meta_value($program_meta['housing'], 'comma-list'))
+        </div>
+        <h4 class="program-meta__label"><span class="fa fa-clock-o"></span> {{ __('App Deadline') }}</h4>
+        <div class="program-meta__value">
+          {{ $deadline_date }}
+        </div>
+        <a href="#" target="_blank" class="btn">
+          <span class="fa fa-send"></span>
+          Apply Now!
+        </a>
       </div>
     </div>
   </div>
