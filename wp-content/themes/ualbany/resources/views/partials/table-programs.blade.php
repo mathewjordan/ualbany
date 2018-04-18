@@ -18,43 +18,9 @@
       <tbody>
       @while($query->have_posts()) @php($query->the_post())
         @php
-        $program_meta = [
-          'partner' => '',
-          'lang_of_instruct' => '',
-          'exchange' => '',
-          'internship' => '',
-          'city' => '',
-          'country' => '',
-          'terms' => '',
-        ];
-
-        // Location Data
-        if (get_field('program_location_param')) :
-          $locations = json_decode(get_field('program_location_param'));
-          if ($locations->location) :
-            $location = is_array($locations->location) ? $locations->location[0] : $locations->location;
-            $program_meta['city'] = $location->program_city;
-            $program_meta['country'] = $location->program_country;
-          endif;
-        endif;
-
-        // Term Data
-        if (get_field('program_term')) :
-          $terms = json_decode(get_field('program_term'));
-          if ($terms->term) :
-            if (is_array($terms->term)) :
-              $program_meta['terms'] = [];
-              foreach ($terms->term as $t) :
-                $program_meta['terms'][] = $t->program_term;
-              endforeach;
-            else :
-              $program_meta['terms'] = $terms->term->program_term;
-            endif;
-          endif;
-        endif;
-
+        $program_meta  = td_program_meta();
         @endphp
-        
+
         <tr>
           <td>
             <a href="{{ get_the_permalink() }}">{{ get_the_title() }}</a>
