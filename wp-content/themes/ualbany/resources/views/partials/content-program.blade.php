@@ -42,7 +42,7 @@
         </div>
         <h4 class="program-meta__label"><span class="fa fa-clock-o"></span> {{ __('App Deadline') }}</h4>
         <div class="program-meta__value">
-          <a href="{{ get_the_permalink() }}">{{ $deadline_date }}</a>
+          <a href="{{ get_the_permalink() }}">{{ $program_dates['deadline'] }}</a>
         </div>
         <a href="#" target="_blank" class="btn">
           <span class="fa fa-send"></span>
