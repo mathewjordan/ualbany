@@ -59,6 +59,7 @@ if (! function_exists('td_program_meta')) {
         $location = is_array($locations->location) ? $locations->location[0] : $locations->location;
         $program_meta['city'] = $location->program_city;
         $program_meta['country'] = $location->program_country;
+        $program_meta['region'] = $location->program_region;
       endif;
     endif;
 

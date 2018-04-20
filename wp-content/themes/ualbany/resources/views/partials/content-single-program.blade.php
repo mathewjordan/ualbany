@@ -32,9 +32,6 @@ $program_dates = td_program_dates();
 
 @endphp
 
-
-@php(var_dump($param_ids))
-
 <article @php(post_class())>
     <header class="program-header">
         <div class="container">

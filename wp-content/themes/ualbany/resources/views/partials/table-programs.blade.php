@@ -1,10 +1,10 @@
 @if (isset($query))
   @if ($query->have_posts())
   <div class="table-responsive">
-    <table id="table-programs" class="table table-bordered table-striped">
+    <table id="table-programs" class="table table-bordered table-striped table-programs">
       <thead>
         <tr>
-          <th scope="col">Program Name</th>
+          <th scope="col" class="table-programs__programs-head">Program Name</th>
           <th scope="col">City</th>
           <th scope="col">Country</th>
           <th scope="col">Region</th>
@@ -27,17 +27,25 @@
           </td>
           <td>{{ $program_meta['city'] }}</td>
           <td>{{ $program_meta['country'] }}</td>
-          <td>Region</td>
-          <td>Program Term</td>
-          <td>Language of Instruction</td>
-          <td>Faculty Led</td>
-          <td>Internship</td>
-          <td>Research</td>
+          <td>{{ $program_meta['region'] }}</td>
+          <td>@php(program_meta_value($program_meta['terms'], 'comma-list'))</td>
+          <td>@php(program_meta_value($program_meta['lang_of_instruct'], 'comma-list'))</td>
+          <td>Lorem ipsum</td>
+          <td>@php(program_meta_value($program_meta['internship'], 'break-list'))</td>
+          <td>Lorem ipsum</td>
         </tr>
       @endwhile
       @php(wp_reset_postdata())
       </tbody>
     </table>
   </div>
+
+  <p class="text-center">
+    <a href="#" target="_blank" class="btn">
+      <span class="fa fa-user"></span>
+      Talk with an Advisor
+    </a>
+  </p>
+
   @endif
 @endif

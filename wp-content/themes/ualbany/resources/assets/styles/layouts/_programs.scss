@@ -67,7 +67,8 @@
 }
 
 .single-program .program-meta,
-.program .program-meta {
+.program .program-meta,
+.table-programs .program-meta {
   padding: 20px 0;
 
   &__label {
@@ -109,7 +110,7 @@
       }
     }
   }
-} // .single-program .program-meta, .program .program-meta
+} // .single-program .program-meta, .program .program-meta, .table-programs .program-meta
 
 .single-program .program-meta {
   background-color: $lightgray;
@@ -200,6 +201,10 @@
     font-size: 1.5rem;
     color: $purple;
   }
+} // .program
+
+.table-programs__programs-head {
+  width: 125px !important;
 }
 
 .main > article .program h3 {

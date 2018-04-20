@@ -23,7 +23,7 @@
         <h3>{{ get_the_title() }}</h3>
       </a>
       <a href="{{ get_the_permalink() }}" class="program__description">
-        Lorem ipsum dolor sit amet.
+        {!! $introduction !!}
       </a>
     </div>
     <div class="col-sm-3">
