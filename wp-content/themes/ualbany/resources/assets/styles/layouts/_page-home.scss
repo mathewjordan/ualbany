@@ -68,6 +68,12 @@ body.home {
   }
 }
 
+#homepage-social {
+  .j-paginate {
+    display: none;
+  }
+}
+
 #homepage-myths {
   background-color: $offwhite;
   background-image: url(../images/newbackgroundimg.jpg);
