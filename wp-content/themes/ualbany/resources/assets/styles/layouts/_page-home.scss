@@ -69,6 +69,16 @@ body.home {
 }
 
 #homepage-social {
+  p {
+    font-family: "News Cycle", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.25rem;
+    color: #000;
+  }
+
+  h3 {
+    color: #3a3a3a;
+  }
+
   .j-paginate {
     display: none;
   }

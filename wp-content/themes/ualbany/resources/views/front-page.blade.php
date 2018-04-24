@@ -158,7 +158,6 @@
 
     <section id="homepage-social" class="page-section page-section--tall">
         <div class="container">
-            <h3>Social Media</h3>
             <div class="row">
               <div class="col-md-12">
                 <?php juicer_feed("name=lorem_ipsumis&per=3&truncate=100"); ?>
