@@ -1,0 +1,27 @@
+.juicer-feed {
+  .j-stacker-wrapper {
+    p {
+      font-family: "News Cycle", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.25rem;
+      color: #000;
+    }
+
+    h3 {
+      color: #3a3a3a;
+    }
+
+    .j-image {
+      display: block;
+      height: 350px;
+      overflow: hidden;
+    }
+
+    .feed-item {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .j-paginate.juicer-button {
+    display: none;
+  }
+}
