@@ -82,6 +82,12 @@ body.home {
   .j-paginate {
     display: none;
   }
+
+  .j-image {
+    display: block;
+    height: 350px;
+    overflow: hidden;
+  }
 }
 
 #homepage-myths {
