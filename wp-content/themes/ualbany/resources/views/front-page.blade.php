@@ -28,7 +28,7 @@
             <div class="single-photo-overlay"></div>
             <div class="front-photo" style="background-image: url('{{$hero_image_url}}');"></div>
         @endif
-        <div class="container">
+        <div class="container-fluid">
             <div class="front-header-content">
                 <h2 class="front-title">{{$hero['homepage_hero__headline']}}</h2>
                 @if($hero['homepage_hero__cta'])
@@ -160,7 +160,13 @@
         <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <?php juicer_feed("name=lorem_ipsumis&per=3&truncate=100"); ?>
+                <div class="text-center">
+                  <h2>#DanesAbroad</h2>
+                  @php
+                    juicer_feed("name=lorem_ipsumis&per=3&truncate=100");
+                  @endphp
+                  <a href="/danesabroad" class="btn">See more</a>
+                </div>
               </div>
             </div>
         </div>
@@ -176,7 +182,7 @@
 
     <section id="homepage-info" class="page-section page-section--buttons">
         <div class="text-center">
-            <h2>Find Scholarships and Financial Aid</h2>
+            <h2>Find Scholarships and <strong>Financial Aid</strong></h2>
             @if($homepage_info['homepage_info__button'])
                 @foreach($homepage_info['homepage_info__button'] as $button)
                     @php
@@ -196,23 +202,82 @@
     <section id="homepage-discover" class="page-section discover-regions">
         <div class="container">
             <h2 class="section-title">{{$homepage_discover['homepage_discover__title']}}</h2>
-            <div class="row">
-                @php
-                    $args = [ 'post_type'   => 'region',
-                              'post_status' => 'publish',
-                              'order'       => 'ASC' ];
+            @php
+             $args = [
+                'post_type'      => 'program',
+                'post_status'    => 'publish',
+                'posts_per_page' => -1
+              ];
+                        
+              $regions = [];
+              $output  = '';
+              $query   = new WP_Query($args);
+              
+              if ($query->have_posts()) :
+        
+                while ($query->have_posts()) : $query->the_post();
+        
+                  $region_post   = get_field('program_region');
+                  $region_slug   = $region_post->post_name;
+                  $region_title  = $region_post->post_title;
+                  $country_post  = get_field('program_country');
+                  $country_slug  = $country_post->post_name;
+                  $country_title = $country_post->post_title;
+                  $discard_list  = [ NULL, 'various', 'worldwide'];
 
-                    $query = new WP_Query($args);
-                @endphp
-                @if ($query->have_posts())
-                    @while($query->have_posts()) @php($query->the_post())
-                        <div class="col-sm-4">
-                            <h3>@php(the_title())</h3>
-                        </div>
-                        @endwhile
-                        @php(wp_reset_postdata())
-                            @endif
-            </div>
+                  // Add region to the array if it does not exist
+                  if (! isset($regions[$region_slug]) && ! in_array($region_slug, $discard_list)) {
+                    $regions[$region_slug]['title'] = $region_title;
+                    $regions[$region_slug]['countries'] = [];
+                  }
+                  
+                  // Add country to the array if it does not exist
+                  if (! isset($regions[$region_slug]['countries'][$country_slug]) && ! in_array($country_slug, $discard_list)) {
+                    $regions[$region_slug]['countries'][$country_slug] = [];
+                    $regions[$region_slug]['countries'][$country_slug]['title'] = $country_title;
+                  }
+                endwhile;
+                wp_reset_postdata();
+        
+                $output .= '<div class="row">';
+                $output .=   '<div class="col-md-3">';
+                $max_per_column = 10;
+                $prev_country_count = 0;
+        
+                ksort($regions); // Sort regions alphabetically
+
+                foreach ($regions as $k => $v) :
+                  ksort($v['countries']); // Sort countries alphabetically
+        
+                  if ($prev_country_count > 0) :
+                    $total_country_count = count($regions[$k]['countries']) + $prev_country_count;
+                    if ($total_country_count > $max_per_column) {
+                      $output .= '</div><div class="col-md-3">'; // New column
+                      $prev_country_count = 0; // Reset the count
+                    }
+                  endif;
+                  
+                  $output .= '<h3>' . $v['title'] . '</h3>';
+                  $output .= '<ul>';
+                  
+                  foreach ($v['countries'] as $c_key => $c_val) :
+                    $output .= '<li><a href="/countries/' . $c_key . '">' . $c_val['title'] . '</a></li>';
+                  endforeach;
+                  
+                  $output .= '</ul>';
+        
+                  $prev_country_count = $prev_country_count + count($regions[$k]['countries']);
+        
+                endforeach;
+        
+                $output .= '</div><!-- .col-md-3 -->';
+        
+                $output .= '</div><!-- .row -->';
+                
+                echo $output;
+              endif;
+
+            @endphp
         </div>
     </section>
 

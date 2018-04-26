@@ -15561,7 +15561,7 @@ h4 {
 
 .banner_utility {
   padding: 0.5rem 3rem;
-  background-color: #602481;
+  background-color: #46166b;
 }
 
 .banner_utility .nav {
@@ -15881,12 +15881,13 @@ footer .region-footer .custom_html-3 {
   text-transform: uppercase;
   font-size: 4rem;
   line-height: 1.2em;
+  margin-bottom: 1rem;
 }
 
 .front-header h3.front-subtitle {
   font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
   font-size: 1.8rem;
-  margin: 2rem 0 1rem;
+  margin: 1rem 0;
   opacity: 0.85;
   color: #fff;
 }
@@ -15925,6 +15926,81 @@ body.home section.page-section--tall {
 #homepage-social h3 {
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+#homepage-social .btn,
+#homepage-social .comment-form input[type="submit"],
+.comment-form #homepage-social input[type="submit"],
+#homepage-social .search-form .search-submit,
+.search-form #homepage-social .search-submit,
+#homepage-social .gform_wrapper form .gform_button.button,
+.gform_wrapper form #homepage-social .gform_button.button,
+#homepage-social .component-hero-wrap .video-foreground .external-user-menu ul li a,
+.component-hero-wrap .video-foreground .external-user-menu ul li #homepage-social a {
+  color: #fff;
+  border-color: #fff;
+}
+
+#homepage-social .btn:hover,
+#homepage-social .comment-form input[type="submit"]:hover,
+.comment-form #homepage-social input[type="submit"]:hover,
+#homepage-social .search-form .search-submit:hover,
+.search-form #homepage-social .search-submit:hover,
+#homepage-social .gform_wrapper form .gform_button.button:hover,
+.gform_wrapper form #homepage-social .gform_button.button:hover,
+#homepage-social .component-hero-wrap .video-foreground .external-user-menu ul li a:hover,
+.component-hero-wrap .video-foreground .external-user-menu ul li #homepage-social a:hover {
+  color: #46166b;
+  border-color: #46166b;
+  background-color: #fff;
+}
+
+#homepage-info {
+  /*
+  h2 {
+    color: $gray;
+
+    strong {
+      color: $purple;
+    }
+  }
+  */
+}
+
+#homepage-info .btn,
+#homepage-info .comment-form input[type="submit"],
+.comment-form #homepage-info input[type="submit"],
+#homepage-info .search-form .search-submit,
+.search-form #homepage-info .search-submit,
+#homepage-info .gform_wrapper form .gform_button.button,
+.gform_wrapper form #homepage-info .gform_button.button,
+#homepage-info .component-hero-wrap .video-foreground .external-user-menu ul li a,
+.component-hero-wrap .video-foreground .external-user-menu ul li #homepage-info a {
+  border-color: #46166b;
+  background-color: #46166b;
+  color: #fff;
+}
+
+#homepage-info .btn:hover,
+#homepage-info .comment-form input[type="submit"]:hover,
+.comment-form #homepage-info input[type="submit"]:hover,
+#homepage-info .search-form .search-submit:hover,
+.search-form #homepage-info .search-submit:hover,
+#homepage-info .gform_wrapper form .gform_button.button:hover,
+.gform_wrapper form #homepage-info .gform_button.button:hover,
+#homepage-info .component-hero-wrap .video-foreground .external-user-menu ul li a:hover,
+.component-hero-wrap .video-foreground .external-user-menu ul li #homepage-info a:hover {
+  color: #46166b;
+  background-color: #fff;
+}
+
+#homepage-discover .row {
+  margin: 0 auto;
+}
+
+#homepage-discover .row ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 .single header {
