@@ -13821,6 +13821,12 @@ table.dataTable th {
   margin-right: 8px;
 }
 
+.btn-purple {
+  color: #fff;
+  background-color: #46166b;
+  border-color: #46166b;
+}
+
 .btn-xl,
 .btn-lg,
 .btn-group-lg > .btn,
@@ -15621,26 +15627,36 @@ h4 {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #2a0d41;
+  background-color: #46166b;
   border-radius: 0;
 }
 
 .banner_primary .nav > li .dropdown-menu ul {
   margin: 0 0 40px 0;
   padding: 0;
+  list-style: none;
+}
+
+.banner_primary .nav > li .dropdown-menu ul li {
+  padding: 0 0 8px;
 }
 
 .banner_primary .nav > li .dropdown-menu h2 {
-  color: #c5ccd2;
-  text-transform: none;
-  font-size: 1.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.banner_primary .nav > li .dropdown-menu > li {
+  padding: 0 0 8px;
 }
 
 .banner_primary .nav > li .dropdown-menu > li a {
   text-transform: none;
-  padding: 0.15rem 0;
+  padding: 0;
   font-family: "News Cycle", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
+  font-size: 13px;
 }
 
 header {
@@ -15918,6 +15934,34 @@ body.home section.page-section--tall {
   min-height: auto;
 }
 
+#homepage-cta .btn:first-of-type,
+#homepage-cta .comment-form input[type="submit"]:first-of-type,
+.comment-form #homepage-cta input[type="submit"]:first-of-type,
+#homepage-cta .search-form .search-submit:first-of-type,
+.search-form #homepage-cta .search-submit:first-of-type,
+#homepage-cta .gform_wrapper form .gform_button.button:first-of-type,
+.gform_wrapper form #homepage-cta .gform_button.button:first-of-type,
+#homepage-cta .component-hero-wrap .video-foreground .external-user-menu ul li a:first-of-type,
+.component-hero-wrap .video-foreground .external-user-menu ul li #homepage-cta a:first-of-type {
+  color: #fff;
+  background-color: #46166b;
+  border-color: #46166b;
+}
+
+#homepage-cta .btn:first-of-type:hover,
+#homepage-cta .comment-form input[type="submit"]:first-of-type:hover,
+.comment-form #homepage-cta input[type="submit"]:first-of-type:hover,
+#homepage-cta .search-form .search-submit:first-of-type:hover,
+.search-form #homepage-cta .search-submit:first-of-type:hover,
+#homepage-cta .gform_wrapper form .gform_button.button:first-of-type:hover,
+.gform_wrapper form #homepage-cta .gform_button.button:first-of-type:hover,
+#homepage-cta .component-hero-wrap .video-foreground .external-user-menu ul li a:first-of-type:hover,
+.component-hero-wrap .video-foreground .external-user-menu ul li #homepage-cta a:first-of-type:hover {
+  color: #97a4af;
+  background-color: #fff;
+  border-color: #97a4af;
+}
+
 #homepage-social {
   background-color: #46166b;
   color: #fff;
@@ -15955,16 +15999,12 @@ body.home section.page-section--tall {
   background-color: #fff;
 }
 
-#homepage-info {
-  /*
-  h2 {
-    color: $gray;
+#homepage-info h2 {
+  color: #666;
+}
 
-    strong {
-      color: $purple;
-    }
-  }
-  */
+#homepage-info h2 strong {
+  color: #46166b;
 }
 
 #homepage-info .btn,
@@ -15992,6 +16032,10 @@ body.home section.page-section--tall {
 .component-hero-wrap .video-foreground .external-user-menu ul li #homepage-info a:hover {
   color: #46166b;
   background-color: #fff;
+}
+
+#homepage-discover h2 {
+  color: #666;
 }
 
 #homepage-discover .row {

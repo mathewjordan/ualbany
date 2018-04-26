@@ -76,6 +76,20 @@ body.home {
   min-height: auto;
 }
 
+#homepage-cta {
+  .btn:first-of-type {
+    color: $white;
+    background-color: $purple;
+    border-color: $purple;
+
+    &:hover {
+      color: $gray;
+      background-color: $white;
+      border-color: $gray;
+    }
+  }
+}
+
 #homepage-social {
   background-color: $purple;
   color: $white;
@@ -98,15 +112,13 @@ body.home {
 }
 
 #homepage-info {
-  /*
   h2 {
-    color: $gray;
+    color: $midgray;
 
     strong {
       color: $purple;
     }
   }
-  */
 
   .btn {
     border-color: $purple;
@@ -121,6 +133,10 @@ body.home {
 }
 
 #homepage-discover {
+  h2 {
+    color: $midgray;
+  }
+
   .row {
     margin: 0 auto;
 
