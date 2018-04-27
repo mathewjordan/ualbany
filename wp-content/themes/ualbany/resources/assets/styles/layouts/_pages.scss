@@ -54,7 +54,11 @@
 }
 
 .page-section {
-  padding: 30px;
+  padding: 60px;
+
+  h2 {
+    margin-bottom: 60px;
+  }
 
   &--buttons {
     background-color: $white;

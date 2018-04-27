@@ -15672,8 +15672,7 @@ header {
 
 footer {
   background: #333 url(/wp-content/themes/ualbany/dist/images/mapimg_left.jpg) no-repeat left top;
-  padding-top: 35px;
-  padding-bottom: 36px;
+  padding: 60px 0;
   margin: 0;
   min-height: 360px;
 }
@@ -15738,7 +15737,6 @@ footer .region-footer .custom_html-3 {
   padding-top: 10px;
   clear: both;
   top: 40px;
-  padding-bottom: 20px;
 }
 
 .subfooter__link {
@@ -15833,7 +15831,11 @@ footer .region-footer .custom_html-3 {
 }
 
 .page-section {
-  padding: 30px;
+  padding: 60px;
+}
+
+.page-section h2 {
+  margin-bottom: 60px;
 }
 
 .page-section--buttons {
@@ -15861,7 +15863,7 @@ footer .region-footer .custom_html-3 {
 }
 
 .front-header {
-  padding: 20vh 0 20px;
+  padding: 20vh 0 60px;
   color: #fff;
   position: relative;
   background-color: #97a4af;
@@ -15983,6 +15985,7 @@ body.home section.page-section--tall {
 .component-hero-wrap .video-foreground .external-user-menu ul li #homepage-social a {
   color: #fff;
   border-color: #fff;
+  margin-top: 60px;
 }
 
 #homepage-social .btn:hover,

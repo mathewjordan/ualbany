@@ -1,5 +1,5 @@
 .front-header {
-  padding: 20vh 0 $spacing-large;
+  padding: 20vh 0 60px;
   color: $white;
   position: relative;
   background-color: $gray;
@@ -102,6 +102,7 @@ body.home {
   .btn {
     color: $white;
     border-color: $white;
+    margin-top: 60px;
 
     &:hover {
       color: $purple;
