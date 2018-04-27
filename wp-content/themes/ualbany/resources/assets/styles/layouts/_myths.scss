@@ -1,11 +1,11 @@
 .myths-slick {
-  padding: 2rem 0;
+  //padding: 2rem 0;
 
   .slick-slide {
     padding: 2rem;
     background-color: $offwhite;
     text-align: center;
-    margin: 2rem 0.5rem;
+    margin: 0 0.5rem;
     transform: scale(0.9);
     transition: all 300ms ease;
     border: 2px solid lighten($gray, 20);

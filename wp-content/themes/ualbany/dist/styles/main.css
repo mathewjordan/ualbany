@@ -16325,15 +16325,11 @@ body.home section.page-section--tall {
   color: #46166b;
 }
 
-.myths-slick {
-  padding: 2rem 0;
-}
-
 .myths-slick .slick-slide {
   padding: 2rem;
   background-color: #f6f7f8;
   text-align: center;
-  margin: 2rem 0.5rem;
+  margin: 0 0.5rem;
   -webkit-transform: scale(0.9);
        -o-transform: scale(0.9);
           transform: scale(0.9);
