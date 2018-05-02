@@ -12,6 +12,11 @@ footer {
       font-size: 14px;
       color: #e4e4e4;
       line-height: 22px;
+
+      a,
+      a:visited {
+        color: $yellow;
+      }
     }
 
     .widget.custom_html-2 {
