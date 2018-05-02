@@ -42,6 +42,7 @@
 
 .single-program .program-dates {
   background-color: $lightgray;
+  padding: 3rem 0;
 
   h2 {
     font-size: 1.5rem;
@@ -59,8 +60,6 @@
 }
 
 .single-program .program-video {
-  padding: 20px 0;
-
   &__blurb {
     padding: 20px 0;
   }
@@ -118,6 +117,7 @@
 
 .program .program-meta {
   font-size: 1rem;
+  padding: 3rem 0;
 
   &__label {
     font-size: 1.25rem;
@@ -132,6 +132,10 @@
     font-size: 1rem;
   }
 } // .program .program-meta
+
+.single-program .program-section {
+  background-color: $white;
+}
 
 .single-program .tab-pane {
   padding: 30px 0;
@@ -179,6 +183,16 @@
     }
   }
 } // .single-program .incoming-subfooter
+
+.featured-programs {
+  .program:nth-child(odd) {
+    background-color: $gray;
+  }
+}
+
+.all-programs {
+  padding: 3rem 0;
+}
 
 .program {
   margin-bottom: 20px;

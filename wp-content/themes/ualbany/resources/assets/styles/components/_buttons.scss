@@ -39,9 +39,18 @@ $button-seconary-color:   $brand-secondary;
 }
 
 .btn-purple {
+  @extend .btn;
+
   color: $white;
   background-color: $purple;
   border-color: $purple;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $purple;
+    background: $white;
+  }
 }
 
 .btn-xl,

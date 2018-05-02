@@ -68,7 +68,7 @@ $program_dates = td_program_dates();
            
           </div>
           <div class="col-md-6">
-            <a href="#" target="_blank" class="btn">
+            <a href="#" target="_blank" class="btn-purple">
               <span class="fa fa-send"></span>
               Apply Now!
             </a>
@@ -112,16 +112,9 @@ $program_dates = td_program_dates();
 
     @if ($video && $video != '')
     <section class="program-video text-center">
-      <div class="container">
         <div class="video-wrapper">
           <iframe width="560" height="349" src="{{ $video }}"></iframe>
         </div>
-        <div class="program-video__blurb">
-        @if ($video_blurb)
-          {!! $video_blurb !!}
-        @endif
-        </div>
-      </div>
     </section>
     @endif
 
@@ -164,8 +157,8 @@ $program_dates = td_program_dates();
       </div>
     </section>
 
-    <section class="page-section">
-      <h2 class="text-center"><?php echo __('Programs'); ?></h2>
+    <section class="program-section">
+      <h2 class="text-center"><?php echo __('Program Details'); ?></h2>
       <div class="container">
         <!-- Tabs -->
         <ul class="nav nav-tabs" role="tablist">

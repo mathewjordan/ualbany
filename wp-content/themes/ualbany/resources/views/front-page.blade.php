@@ -161,11 +161,11 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="text-center">
-                  <h2>#DanesAbroad</h2>
+                  <h2>#GreatDanesAbroad</h2>
                   @php
                     juicer_feed("name=lorem_ipsumis&per=3&truncate=30");
                   @endphp
-                  <a href="/danesabroad" class="btn">See more</a>
+                  <a href="/greatdanesabroad" class="btn">See more</a>
                 </div>
               </div>
             </div>

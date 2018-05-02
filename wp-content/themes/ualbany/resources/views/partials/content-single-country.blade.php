@@ -8,9 +8,8 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="entry-content">
-      <section>
+  <div class="container-fluid">
+      <section class="featured-programs">
         <header>
           <div class="text-center">
             <h2>Featured {{ $country }} Programs</h2>
@@ -48,7 +47,8 @@
           @php(wp_reset_postdata())
         @endif
       </section>
-      <section>
+  
+      <section class="all-programs">
         <header>
           <div class="text-center">
             <h2>All {{ $country }} Programs</h2>
@@ -77,6 +77,5 @@
         @include('partials.table-programs')
         
       </section>
-    </div>
   </div>
 </article>

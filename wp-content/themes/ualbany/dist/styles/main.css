@@ -2073,6 +2073,7 @@ select.form-control:focus::-ms-value,
 .search-form .input-group-sm > .form-control-plaintext.search-field,
 .input-group-sm > .form-control-plaintext.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-plaintext.btn,
+.input-group-sm > .input-group-btn > .form-control-plaintext.btn-purple,
 .comment-form
   .input-group-sm > .input-group-btn > input.form-control-plaintext[type="submit"],
 .search-form
@@ -2090,6 +2091,7 @@ select.form-control:focus::-ms-value,
 .search-form .input-group-lg > .form-control-plaintext.search-field,
 .input-group-lg > .form-control-plaintext.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-plaintext.btn,
+.input-group-lg > .input-group-btn > .form-control-plaintext.btn-purple,
 .comment-form
   .input-group-lg > .input-group-btn > input.form-control-plaintext[type="submit"],
 .search-form
@@ -2111,6 +2113,7 @@ select.form-control:focus::-ms-value,
 .search-form .input-group-sm > .search-field,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
+.input-group-sm > .input-group-btn > .btn-purple,
 .comment-form
 .input-group-sm > .input-group-btn > input[type="submit"],
 .search-form
@@ -2130,6 +2133,7 @@ select.form-control-sm:not([size]):not([multiple]),
 .search-form .input-group-sm > select.search-field:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.btn-purple:not([size]):not([multiple]),
 .search-form
 .input-group-sm > .input-group-btn > select.search-submit:not([size]):not([multiple]),
 .gform_wrapper form
@@ -2146,6 +2150,7 @@ select.form-control-sm:not([size]):not([multiple]),
 .search-form .input-group-lg > .search-field,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
+.input-group-lg > .input-group-btn > .btn-purple,
 .comment-form
 .input-group-lg > .input-group-btn > input[type="submit"],
 .search-form
@@ -2165,6 +2170,7 @@ select.form-control-lg:not([size]):not([multiple]),
 .search-form .input-group-lg > select.search-field:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.btn-purple:not([size]):not([multiple]),
 .search-form
 .input-group-lg > .input-group-btn > select.search-submit:not([size]):not([multiple]),
 .gform_wrapper form
@@ -2693,6 +2699,7 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn,
+.btn-purple,
 .comment-form input[type="submit"],
 .search-form .search-submit,
 .gform_wrapper form .gform_button.button,
@@ -2719,11 +2726,13 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn:focus,
+.btn-purple:focus,
 .comment-form input[type="submit"]:focus,
 .search-form .search-submit:focus,
 .gform_wrapper form .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:focus,
 .btn:hover,
+.btn-purple:hover,
 .comment-form input[type="submit"]:hover,
 .search-form .search-submit:hover,
 .gform_wrapper form .gform_button.button:hover,
@@ -2732,11 +2741,13 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn:focus,
+.btn-purple:focus,
 .comment-form input[type="submit"]:focus,
 .search-form .search-submit:focus,
 .gform_wrapper form .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:focus,
 .btn.focus,
+.focus.btn-purple,
 .comment-form input.focus[type="submit"],
 .search-form .focus.search-submit,
 .gform_wrapper form .focus.gform_button.button,
@@ -2747,11 +2758,13 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn.disabled,
+.disabled.btn-purple,
 .comment-form input.disabled[type="submit"],
 .search-form .disabled.search-submit,
 .gform_wrapper form .disabled.gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li a.disabled,
 .btn:disabled,
+.btn-purple:disabled,
 .comment-form input[type="submit"]:disabled,
 .search-form .search-submit:disabled,
 .gform_wrapper form .gform_button.button:disabled,
@@ -2760,11 +2773,13 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn:active,
+.btn-purple:active,
 .comment-form input[type="submit"]:active,
 .search-form .search-submit:active,
 .gform_wrapper form .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:active,
 .btn.active,
+.active.btn-purple,
 .comment-form input.active[type="submit"],
 .search-form .active.search-submit,
 .gform_wrapper form .active.gform_button.button,
@@ -2773,10 +2788,12 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 a.btn.disabled,
+a.disabled.btn-purple,
 .search-form a.disabled.search-submit,
 .gform_wrapper form a.disabled.gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li a.disabled,
 fieldset[disabled] a.btn,
+fieldset[disabled] a.btn-purple,
 fieldset[disabled] .search-form a.search-submit,
 .search-form
 fieldset[disabled] a.search-submit,
@@ -3392,6 +3409,7 @@ fieldset[disabled] a {
 
 .btn-lg,
 .btn-group-lg > .btn,
+.btn-group-lg > .btn-purple,
 .comment-form .btn-group-lg > input[type="submit"],
 .search-form .btn-group-lg > .search-submit,
 .gform_wrapper form .btn-group-lg > .gform_button.button,
@@ -3404,6 +3422,7 @@ fieldset[disabled] a {
 
 .btn-sm,
 .btn-group-sm > .btn,
+.btn-group-sm > .btn-purple,
 .comment-form .btn-group-sm > input[type="submit"],
 .search-form .btn-group-sm > .search-submit,
 .gform_wrapper form .btn-group-sm > .gform_button.button,
@@ -3583,11 +3602,13 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn,
+.btn-group > .btn-purple,
 .comment-form .btn-group > input[type="submit"],
 .search-form .btn-group > .search-submit,
 .gform_wrapper form .btn-group > .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a,
 .btn-group-vertical > .btn,
+.btn-group-vertical > .btn-purple,
 .comment-form
   .btn-group-vertical > input[type="submit"],
 .search-form
@@ -3604,11 +3625,13 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn:hover,
+.btn-group > .btn-purple:hover,
 .comment-form .btn-group > input[type="submit"]:hover,
 .search-form .btn-group > .search-submit:hover,
 .gform_wrapper form .btn-group > .gform_button.button:hover,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a:hover,
 .btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn-purple:hover,
 .comment-form
     .btn-group-vertical > input[type="submit"]:hover,
 .search-form
@@ -3621,21 +3644,25 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn:focus,
+.btn-group > .btn-purple:focus,
 .comment-form .btn-group > input[type="submit"]:focus,
 .search-form .btn-group > .search-submit:focus,
 .gform_wrapper form .btn-group > .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a:focus,
 .btn-group > .btn:active,
+.btn-group > .btn-purple:active,
 .comment-form .btn-group > input[type="submit"]:active,
 .search-form .btn-group > .search-submit:active,
 .gform_wrapper form .btn-group > .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a:active,
 .btn-group > .btn.active,
+.btn-group > .active.btn-purple,
 .comment-form .btn-group > input.active[type="submit"],
 .search-form .btn-group > .active.search-submit,
 .gform_wrapper form .btn-group > .active.gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a.active,
 .btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn-purple:focus,
 .comment-form
     .btn-group-vertical > input[type="submit"]:focus,
 .search-form
@@ -3645,6 +3672,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
     .btn-group-vertical > a:focus,
 .btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn-purple:active,
 .comment-form
     .btn-group-vertical > input[type="submit"]:active,
 .search-form
@@ -3654,6 +3682,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
     .btn-group-vertical > a:active,
 .btn-group-vertical > .btn.active,
+.btn-group-vertical > .active.btn-purple,
 .comment-form
     .btn-group-vertical > input.active[type="submit"],
 .search-form
@@ -3666,6 +3695,7 @@ tbody.collapse.show {
 }
 
 .btn-group .btn + .btn,
+.btn-group .btn-purple + .btn,
 .btn-group .comment-form input[type="submit"] + .btn,
 .comment-form .btn-group input[type="submit"] + .btn,
 .btn-group .search-form .search-submit + .btn,
@@ -3674,8 +3704,20 @@ tbody.collapse.show {
 .gform_wrapper form .btn-group .gform_button.button + .btn,
 .btn-group .component-hero-wrap .video-foreground .external-user-menu ul li a + .btn,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + .btn,
+.btn-group .btn + .btn-purple,
+.btn-group .btn-purple + .btn-purple,
+.btn-group .comment-form input[type="submit"] + .btn-purple,
+.comment-form .btn-group input[type="submit"] + .btn-purple,
+.btn-group .search-form .search-submit + .btn-purple,
+.search-form .btn-group .search-submit + .btn-purple,
+.btn-group .gform_wrapper form .gform_button.button + .btn-purple,
+.gform_wrapper form .btn-group .gform_button.button + .btn-purple,
+.btn-group .component-hero-wrap .video-foreground .external-user-menu ul li a + .btn-purple,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + .btn-purple,
 .btn-group .comment-form .btn + input[type="submit"],
 .comment-form .btn-group .btn + input[type="submit"],
+.btn-group .comment-form .btn-purple + input[type="submit"],
+.comment-form .btn-group .btn-purple + input[type="submit"],
 .btn-group .comment-form input[type="submit"] + input[type="submit"],
 .comment-form .btn-group input[type="submit"] + input[type="submit"],
 .btn-group .search-form .comment-form .search-submit + input[type="submit"],
@@ -3692,6 +3734,8 @@ tbody.collapse.show {
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + input[type="submit"],
 .btn-group .search-form .btn + .search-submit,
 .search-form .btn-group .btn + .search-submit,
+.btn-group .search-form .btn-purple + .search-submit,
+.search-form .btn-group .btn-purple + .search-submit,
 .btn-group .comment-form .search-form input[type="submit"] + .search-submit,
 .search-form .btn-group .comment-form input[type="submit"] + .search-submit,
 .comment-form .btn-group .search-form input[type="submit"] + .search-submit,
@@ -3708,6 +3752,8 @@ tbody.collapse.show {
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + .search-submit,
 .btn-group .gform_wrapper form .btn + .gform_button.button,
 .gform_wrapper form .btn-group .btn + .gform_button.button,
+.btn-group .gform_wrapper form .btn-purple + .gform_button.button,
+.gform_wrapper form .btn-group .btn-purple + .gform_button.button,
 .btn-group .comment-form .gform_wrapper form input[type="submit"] + .gform_button.button,
 .gform_wrapper form .btn-group .comment-form input[type="submit"] + .gform_button.button,
 .comment-form .btn-group .gform_wrapper form input[type="submit"] + .gform_button.button,
@@ -3724,6 +3770,8 @@ tbody.collapse.show {
 .gform_wrapper form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + .gform_button.button,
 .btn-group .component-hero-wrap .video-foreground .external-user-menu ul li .btn + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group .btn + a,
+.btn-group .component-hero-wrap .video-foreground .external-user-menu ul li .btn-purple + a,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group .btn-purple + a,
 .btn-group .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li input[type="submit"] + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group .comment-form input[type="submit"] + a,
 .comment-form .btn-group .component-hero-wrap .video-foreground .external-user-menu ul li input[type="submit"] + a,
@@ -3739,6 +3787,7 @@ tbody.collapse.show {
 .btn-group .component-hero-wrap .video-foreground .external-user-menu ul li a + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + a,
 .btn-group .btn + .btn-group,
+.btn-group .btn-purple + .btn-group,
 .btn-group .comment-form input[type="submit"] + .btn-group,
 .comment-form
   .btn-group input[type="submit"] + .btn-group,
@@ -3752,6 +3801,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group a + .btn-group,
 .btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-purple,
 .btn-group .comment-form .btn-group + input[type="submit"],
 .comment-form
   .btn-group .btn-group + input[type="submit"],
@@ -3766,6 +3816,7 @@ tbody.collapse.show {
   .btn-group .btn-group + a,
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
+.btn-group-vertical .btn-purple + .btn,
 .btn-group-vertical .comment-form input[type="submit"] + .btn,
 .comment-form
   .btn-group-vertical input[type="submit"] + .btn,
@@ -3778,9 +3829,26 @@ tbody.collapse.show {
 .btn-group-vertical .component-hero-wrap .video-foreground .external-user-menu ul li a + .btn,
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical a + .btn,
+.btn-group-vertical .btn + .btn-purple,
+.btn-group-vertical .btn-purple + .btn-purple,
+.btn-group-vertical .comment-form input[type="submit"] + .btn-purple,
+.comment-form
+  .btn-group-vertical input[type="submit"] + .btn-purple,
+.btn-group-vertical .search-form .search-submit + .btn-purple,
+.search-form
+  .btn-group-vertical .search-submit + .btn-purple,
+.btn-group-vertical .gform_wrapper form .gform_button.button + .btn-purple,
+.gform_wrapper form
+  .btn-group-vertical .gform_button.button + .btn-purple,
+.btn-group-vertical .component-hero-wrap .video-foreground .external-user-menu ul li a + .btn-purple,
+.component-hero-wrap .video-foreground .external-user-menu ul li
+  .btn-group-vertical a + .btn-purple,
 .btn-group-vertical .comment-form .btn + input[type="submit"],
 .comment-form
   .btn-group-vertical .btn + input[type="submit"],
+.btn-group-vertical .comment-form .btn-purple + input[type="submit"],
+.comment-form
+  .btn-group-vertical .btn-purple + input[type="submit"],
 .btn-group-vertical .comment-form input[type="submit"] + input[type="submit"],
 .comment-form
   .btn-group-vertical input[type="submit"] + input[type="submit"],
@@ -3808,6 +3876,9 @@ tbody.collapse.show {
 .btn-group-vertical .search-form .btn + .search-submit,
 .search-form
   .btn-group-vertical .btn + .search-submit,
+.btn-group-vertical .search-form .btn-purple + .search-submit,
+.search-form
+  .btn-group-vertical .btn-purple + .search-submit,
 .btn-group-vertical .comment-form .search-form input[type="submit"] + .search-submit,
 .search-form
   .btn-group-vertical .comment-form input[type="submit"] + .search-submit,
@@ -3835,6 +3906,9 @@ tbody.collapse.show {
 .btn-group-vertical .gform_wrapper form .btn + .gform_button.button,
 .gform_wrapper form
   .btn-group-vertical .btn + .gform_button.button,
+.btn-group-vertical .gform_wrapper form .btn-purple + .gform_button.button,
+.gform_wrapper form
+  .btn-group-vertical .btn-purple + .gform_button.button,
 .btn-group-vertical .comment-form .gform_wrapper form input[type="submit"] + .gform_button.button,
 .gform_wrapper form
   .btn-group-vertical .comment-form input[type="submit"] + .gform_button.button,
@@ -3862,6 +3936,9 @@ tbody.collapse.show {
 .btn-group-vertical .component-hero-wrap .video-foreground .external-user-menu ul li .btn + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical .btn + a,
+.btn-group-vertical .component-hero-wrap .video-foreground .external-user-menu ul li .btn-purple + a,
+.component-hero-wrap .video-foreground .external-user-menu ul li
+  .btn-group-vertical .btn-purple + a,
 .btn-group-vertical .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li input[type="submit"] + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical .comment-form input[type="submit"] + a,
@@ -3887,6 +3964,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical a + a,
 .btn-group-vertical .btn + .btn-group,
+.btn-group-vertical .btn-purple + .btn-group,
 .btn-group-vertical .comment-form input[type="submit"] + .btn-group,
 .comment-form
   .btn-group-vertical input[type="submit"] + .btn-group,
@@ -3900,6 +3978,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical a + .btn-group,
 .btn-group-vertical .btn-group + .btn,
+.btn-group-vertical .btn-group + .btn-purple,
 .btn-group-vertical .comment-form .btn-group + input[type="submit"],
 .comment-form
   .btn-group-vertical .btn-group + input[type="submit"],
@@ -3932,6 +4011,7 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-purple:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .comment-form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .search-form .btn-group > .search-submit:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .gform_wrapper form .btn-group > .gform_button.button:not(:first-child):not(:last-child):not(.dropdown-toggle),
@@ -3940,6 +4020,7 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn:first-child,
+.btn-group > .btn-purple:first-child,
 .comment-form .btn-group > input[type="submit"]:first-child,
 .search-form .btn-group > .search-submit:first-child,
 .gform_wrapper form .btn-group > .gform_button.button:first-child,
@@ -3948,6 +4029,7 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-purple:first-child:not(:last-child):not(.dropdown-toggle),
 .comment-form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle),
 .search-form .btn-group > .search-submit:first-child:not(:last-child):not(.dropdown-toggle),
 .gform_wrapper form .btn-group > .gform_button.button:first-child:not(:last-child):not(.dropdown-toggle),
@@ -3957,6 +4039,7 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn:last-child:not(:first-child),
+.btn-group > .btn-purple:last-child:not(:first-child),
 .comment-form .btn-group > input[type="submit"]:last-child:not(:first-child),
 .search-form .btn-group > .search-submit:last-child:not(:first-child),
 .gform_wrapper form .btn-group > .gform_button.button:last-child:not(:first-child),
@@ -3971,6 +4054,7 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn,
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-purple,
 .comment-form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"],
 .search-form .btn-group > .btn-group:not(:first-child):not(:last-child) > .search-submit,
 .gform_wrapper form .btn-group > .btn-group:not(:first-child):not(:last-child) > .gform_button.button,
@@ -3979,6 +4063,7 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn-purple:last-child,
 .comment-form .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .search-form .btn-group > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
 .gform_wrapper form .btn-group > .btn-group:first-child:not(:last-child) > .gform_button.button:last-child,
@@ -3989,6 +4074,7 @@ tbody.collapse.show {
 }
 
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.btn-group > .btn-group:last-child:not(:first-child) > .btn-purple:first-child,
 .comment-form .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child,
 .search-form .btn-group > .btn-group:last-child:not(:first-child) > .search-submit:first-child,
 .gform_wrapper form .btn-group > .btn-group:last-child:not(:first-child) > .gform_button.button:first-child,
@@ -3998,6 +4084,7 @@ tbody.collapse.show {
 }
 
 .btn + .dropdown-toggle-split,
+.btn-purple + .dropdown-toggle-split,
 .comment-form input[type="submit"] + .dropdown-toggle-split,
 .search-form .search-submit + .dropdown-toggle-split,
 .gform_wrapper form .gform_button.button + .dropdown-toggle-split,
@@ -4007,6 +4094,7 @@ tbody.collapse.show {
 }
 
 .btn + .dropdown-toggle-split::after,
+.btn-purple + .dropdown-toggle-split::after,
 .comment-form input[type="submit"] + .dropdown-toggle-split::after,
 .search-form .search-submit + .dropdown-toggle-split::after,
 .gform_wrapper form .gform_button.button + .dropdown-toggle-split::after,
@@ -4016,6 +4104,7 @@ tbody.collapse.show {
 
 .btn-sm + .dropdown-toggle-split,
 .btn-group-sm > .btn + .dropdown-toggle-split,
+.btn-group-sm > .btn-purple + .dropdown-toggle-split,
 .comment-form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split,
 .search-form .btn-group-sm > .search-submit + .dropdown-toggle-split,
 .gform_wrapper form .btn-group-sm > .gform_button.button + .dropdown-toggle-split,
@@ -4026,6 +4115,7 @@ tbody.collapse.show {
 
 .btn-lg + .dropdown-toggle-split,
 .btn-group-lg > .btn + .dropdown-toggle-split,
+.btn-group-lg > .btn-purple + .dropdown-toggle-split,
 .comment-form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split,
 .search-form .btn-group-lg > .search-submit + .dropdown-toggle-split,
 .gform_wrapper form .btn-group-lg > .gform_button.button + .dropdown-toggle-split,
@@ -4051,6 +4141,7 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical .btn,
+.btn-group-vertical .btn-purple,
 .btn-group-vertical .comment-form input[type="submit"],
 .comment-form .btn-group-vertical input[type="submit"],
 .btn-group-vertical .search-form .search-submit,
@@ -4064,11 +4155,19 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn-purple + .btn,
 .comment-form .btn-group-vertical > input[type="submit"] + .btn,
 .search-form .btn-group-vertical > .search-submit + .btn,
 .gform_wrapper form .btn-group-vertical > .gform_button.button + .btn,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .btn,
+.btn-group-vertical > .btn + .btn-purple,
+.btn-group-vertical > .btn-purple + .btn-purple,
+.comment-form .btn-group-vertical > input[type="submit"] + .btn-purple,
+.search-form .btn-group-vertical > .search-submit + .btn-purple,
+.gform_wrapper form .btn-group-vertical > .gform_button.button + .btn-purple,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .btn-purple,
 .comment-form .btn-group-vertical > .btn + input[type="submit"],
+.comment-form .btn-group-vertical > .btn-purple + input[type="submit"],
 .comment-form .btn-group-vertical > input[type="submit"] + input[type="submit"],
 .search-form .comment-form .btn-group-vertical > .search-submit + input[type="submit"],
 .comment-form .search-form .btn-group-vertical > .search-submit + input[type="submit"],
@@ -4077,6 +4176,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .comment-form .btn-group-vertical > a + input[type="submit"],
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + input[type="submit"],
 .search-form .btn-group-vertical > .btn + .search-submit,
+.search-form .btn-group-vertical > .btn-purple + .search-submit,
 .comment-form .search-form .btn-group-vertical > input[type="submit"] + .search-submit,
 .search-form .comment-form .btn-group-vertical > input[type="submit"] + .search-submit,
 .search-form .btn-group-vertical > .search-submit + .search-submit,
@@ -4085,6 +4185,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .search-form .btn-group-vertical > a + .search-submit,
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .search-submit,
 .gform_wrapper form .btn-group-vertical > .btn + .gform_button.button,
+.gform_wrapper form .btn-group-vertical > .btn-purple + .gform_button.button,
 .comment-form .gform_wrapper form .btn-group-vertical > input[type="submit"] + .gform_button.button,
 .gform_wrapper form .comment-form .btn-group-vertical > input[type="submit"] + .gform_button.button,
 .search-form .gform_wrapper form .btn-group-vertical > .search-submit + .gform_button.button,
@@ -4093,6 +4194,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .gform_wrapper form .btn-group-vertical > a + .gform_button.button,
 .gform_wrapper form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > .btn + a,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > .btn-purple + a,
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > input[type="submit"] + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .comment-form .btn-group-vertical > input[type="submit"] + a,
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > .search-submit + a,
@@ -4101,6 +4203,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .gform_wrapper form .btn-group-vertical > .gform_button.button + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + a,
 .btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > .btn-purple + .btn-group,
 .comment-form
   .btn-group-vertical > input[type="submit"] + .btn-group,
 .search-form
@@ -4110,6 +4213,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical > a + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
+.btn-group-vertical > .btn-group + .btn-purple,
 .comment-form
   .btn-group-vertical > .btn-group + input[type="submit"],
 .search-form
@@ -4124,6 +4228,7 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical > .btn:not(:first-child):not(:last-child),
+.btn-group-vertical > .btn-purple:not(:first-child):not(:last-child),
 .comment-form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child),
 .search-form .btn-group-vertical > .search-submit:not(:first-child):not(:last-child),
 .gform_wrapper form .btn-group-vertical > .gform_button.button:not(:first-child):not(:last-child),
@@ -4132,6 +4237,7 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical > .btn:first-child:not(:last-child),
+.btn-group-vertical > .btn-purple:first-child:not(:last-child),
 .comment-form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child),
 .search-form .btn-group-vertical > .search-submit:first-child:not(:last-child),
 .gform_wrapper form .btn-group-vertical > .gform_button.button:first-child:not(:last-child),
@@ -4141,6 +4247,7 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical > .btn:last-child:not(:first-child),
+.btn-group-vertical > .btn-purple:last-child:not(:first-child),
 .comment-form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child),
 .search-form .btn-group-vertical > .search-submit:last-child:not(:first-child),
 .gform_wrapper form .btn-group-vertical > .gform_button.button:last-child:not(:first-child),
@@ -4150,6 +4257,7 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn,
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-purple,
 .comment-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"],
 .search-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .search-submit,
 .gform_wrapper form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .gform_button.button,
@@ -4158,6 +4266,7 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-purple:last-child,
 .comment-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .search-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
 .gform_wrapper form .btn-group-vertical > .btn-group:first-child:not(:last-child) > .gform_button.button:last-child,
@@ -4168,6 +4277,7 @@ tbody.collapse.show {
 }
 
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-purple:first-child,
 .comment-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child,
 .search-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > .search-submit:first-child,
 .gform_wrapper form .btn-group-vertical > .btn-group:last-child:not(:first-child) > .gform_button.button:first-child,
@@ -4177,11 +4287,13 @@ tbody.collapse.show {
 }
 
 [data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn-purple input[type="radio"],
 .comment-form [data-toggle="buttons"] > input[type="submit"] input[type="radio"],
 .search-form [data-toggle="buttons"] > .search-submit input[type="radio"],
 .gform_wrapper form [data-toggle="buttons"] > .gform_button.button input[type="radio"],
 .component-hero-wrap .video-foreground .external-user-menu ul li [data-toggle="buttons"] > a input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-purple input[type="checkbox"],
 .comment-form
 [data-toggle="buttons"] > input[type="submit"] input[type="checkbox"],
 .search-form
@@ -4191,6 +4303,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
 [data-toggle="buttons"] > a input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn-purple input[type="radio"],
 .comment-form
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"],
 .search-form
@@ -4200,6 +4313,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
 [data-toggle="buttons"] > .btn-group > a input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn-purple input[type="checkbox"],
 .comment-form
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"],
 .search-form
@@ -4370,6 +4484,7 @@ tbody.collapse.show {
 .search-form .input-group-sm > .input-group-addon.search-field,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
+.input-group-sm > .input-group-btn > .input-group-addon.btn-purple,
 .comment-form
   .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"],
 .search-form
@@ -4391,6 +4506,7 @@ tbody.collapse.show {
 .search-form .input-group-lg > .input-group-addon.search-field,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
+.input-group-lg > .input-group-btn > .input-group-addon.btn-purple,
 .comment-form
   .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"],
 .search-form
@@ -4425,6 +4541,7 @@ tbody.collapse.show {
 .search-form .input-group .search-field:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-purple,
 .comment-form
 .input-group-btn:not(:last-child) > input[type="submit"],
 .search-form
@@ -4434,6 +4551,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
 .input-group-btn:not(:last-child) > a,
 .input-group-btn:not(:last-child) > .btn-group > .btn,
+.input-group-btn:not(:last-child) > .btn-group > .btn-purple,
 .comment-form
 .input-group-btn:not(:last-child) > .btn-group > input[type="submit"],
 .search-form
@@ -4444,6 +4562,7 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .btn-group > a,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .btn-purple:not(:last-child):not(.dropdown-toggle),
 .comment-form
 .input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
 .search-form
@@ -4453,6 +4572,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
 .input-group-btn:not(:first-child) > a:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn-purple,
 .comment-form
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"],
 .search-form
@@ -4485,6 +4605,7 @@ tbody.collapse.show {
 .search-form .input-group .search-field:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-purple,
 .comment-form
 .input-group-btn:not(:first-child) > input[type="submit"],
 .search-form
@@ -4494,6 +4615,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
 .input-group-btn:not(:first-child) > a,
 .input-group-btn:not(:first-child) > .btn-group > .btn,
+.input-group-btn:not(:first-child) > .btn-group > .btn-purple,
 .comment-form
 .input-group-btn:not(:first-child) > .btn-group > input[type="submit"],
 .search-form
@@ -4504,6 +4626,7 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > .btn-group > a,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
+.input-group-btn:not(:last-child) > .btn-purple:not(:first-child),
 .comment-form
 .input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child),
 .search-form
@@ -4513,6 +4636,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li
 .input-group-btn:not(:last-child) > a:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn-purple,
 .comment-form
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"],
 .search-form
@@ -4541,6 +4665,7 @@ tbody.collapse.show {
 }
 
 .input-group-btn > .btn,
+.input-group-btn > .btn-purple,
 .comment-form .input-group-btn > input[type="submit"],
 .search-form .input-group-btn > .search-submit,
 .gform_wrapper form .input-group-btn > .gform_button.button,
@@ -4551,11 +4676,19 @@ tbody.collapse.show {
 }
 
 .input-group-btn > .btn + .btn,
+.input-group-btn > .btn-purple + .btn,
 .comment-form .input-group-btn > input[type="submit"] + .btn,
 .search-form .input-group-btn > .search-submit + .btn,
 .gform_wrapper form .input-group-btn > .gform_button.button + .btn,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .btn,
+.input-group-btn > .btn + .btn-purple,
+.input-group-btn > .btn-purple + .btn-purple,
+.comment-form .input-group-btn > input[type="submit"] + .btn-purple,
+.search-form .input-group-btn > .search-submit + .btn-purple,
+.gform_wrapper form .input-group-btn > .gform_button.button + .btn-purple,
+.component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .btn-purple,
 .comment-form .input-group-btn > .btn + input[type="submit"],
+.comment-form .input-group-btn > .btn-purple + input[type="submit"],
 .comment-form .input-group-btn > input[type="submit"] + input[type="submit"],
 .search-form .comment-form .input-group-btn > .search-submit + input[type="submit"],
 .comment-form .search-form .input-group-btn > .search-submit + input[type="submit"],
@@ -4564,6 +4697,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .comment-form .input-group-btn > a + input[type="submit"],
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + input[type="submit"],
 .search-form .input-group-btn > .btn + .search-submit,
+.search-form .input-group-btn > .btn-purple + .search-submit,
 .comment-form .search-form .input-group-btn > input[type="submit"] + .search-submit,
 .search-form .comment-form .input-group-btn > input[type="submit"] + .search-submit,
 .search-form .input-group-btn > .search-submit + .search-submit,
@@ -4572,6 +4706,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .search-form .input-group-btn > a + .search-submit,
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .search-submit,
 .gform_wrapper form .input-group-btn > .btn + .gform_button.button,
+.gform_wrapper form .input-group-btn > .btn-purple + .gform_button.button,
 .comment-form .gform_wrapper form .input-group-btn > input[type="submit"] + .gform_button.button,
 .gform_wrapper form .comment-form .input-group-btn > input[type="submit"] + .gform_button.button,
 .search-form .gform_wrapper form .input-group-btn > .search-submit + .gform_button.button,
@@ -4580,6 +4715,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .gform_wrapper form .input-group-btn > a + .gform_button.button,
 .gform_wrapper form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > .btn + a,
+.component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > .btn-purple + a,
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > input[type="submit"] + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .comment-form .input-group-btn > input[type="submit"] + a,
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > .search-submit + a,
@@ -4591,16 +4727,19 @@ tbody.collapse.show {
 }
 
 .input-group-btn > .btn:focus,
+.input-group-btn > .btn-purple:focus,
 .comment-form .input-group-btn > input[type="submit"]:focus,
 .search-form .input-group-btn > .search-submit:focus,
 .gform_wrapper form .input-group-btn > .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a:focus,
 .input-group-btn > .btn:active,
+.input-group-btn > .btn-purple:active,
 .comment-form .input-group-btn > input[type="submit"]:active,
 .search-form .input-group-btn > .search-submit:active,
 .gform_wrapper form .input-group-btn > .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a:active,
 .input-group-btn > .btn:hover,
+.input-group-btn > .btn-purple:hover,
 .comment-form .input-group-btn > input[type="submit"]:hover,
 .search-form .input-group-btn > .search-submit:hover,
 .gform_wrapper form .input-group-btn > .gform_button.button:hover,
@@ -4609,6 +4748,7 @@ tbody.collapse.show {
 }
 
 .input-group-btn:not(:last-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-purple,
 .comment-form .input-group-btn:not(:last-child) > input[type="submit"],
 .search-form .input-group-btn:not(:last-child) > .search-submit,
 .gform_wrapper form .input-group-btn:not(:last-child) > .gform_button.button,
@@ -4618,6 +4758,7 @@ tbody.collapse.show {
 }
 
 .input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-purple,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"],
 .search-form .input-group-btn:not(:first-child) > .search-submit,
 .gform_wrapper form .input-group-btn:not(:first-child) > .gform_button.button,
@@ -4628,16 +4769,19 @@ tbody.collapse.show {
 }
 
 .input-group-btn:not(:first-child) > .btn:focus,
+.input-group-btn:not(:first-child) > .btn-purple:focus,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:focus,
 .search-form .input-group-btn:not(:first-child) > .search-submit:focus,
 .gform_wrapper form .input-group-btn:not(:first-child) > .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn:not(:first-child) > a:focus,
 .input-group-btn:not(:first-child) > .btn:active,
+.input-group-btn:not(:first-child) > .btn-purple:active,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:active,
 .search-form .input-group-btn:not(:first-child) > .search-submit:active,
 .gform_wrapper form .input-group-btn:not(:first-child) > .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn:not(:first-child) > a:active,
 .input-group-btn:not(:first-child) > .btn:hover,
+.input-group-btn:not(:first-child) > .btn-purple:hover,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:hover,
 .search-form .input-group-btn:not(:first-child) > .search-submit:hover,
 .gform_wrapper form .input-group-btn:not(:first-child) > .gform_button.button:hover,
@@ -5878,6 +6022,7 @@ tbody.collapse.show {
 }
 
 .btn .badge,
+.btn-purple .badge,
 .comment-form input[type="submit"] .badge,
 .search-form .search-submit .badge,
 .gform_wrapper form .gform_button.button .badge,
@@ -13652,6 +13797,7 @@ h2.single-subtitle {
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 table {
@@ -13768,6 +13914,7 @@ table.dataTable th {
 }
 
 .btn,
+.btn-purple,
 .comment-form input[type="submit"],
 .search-form .search-submit,
 .gform_wrapper form .gform_button.button,
@@ -13786,6 +13933,7 @@ table.dataTable th {
 }
 
 .btn:visited,
+.btn-purple:visited,
 .comment-form input[type="submit"]:visited,
 .search-form .search-submit:visited,
 .gform_wrapper form .gform_button.button:visited,
@@ -13794,16 +13942,19 @@ table.dataTable th {
 }
 
 .btn:hover,
+.btn-purple:hover,
 .comment-form input[type="submit"]:hover,
 .search-form .search-submit:hover,
 .gform_wrapper form .gform_button.button:hover,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:hover,
 .btn:active,
+.btn-purple:active,
 .comment-form input[type="submit"]:active,
 .search-form .search-submit:active,
 .gform_wrapper form .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:active,
 .btn:focus,
+.btn-purple:focus,
 .comment-form input[type="submit"]:focus,
 .search-form .search-submit:focus,
 .gform_wrapper form .gform_button.button:focus,
@@ -13813,6 +13964,7 @@ table.dataTable th {
 }
 
 .btn .fa,
+.btn-purple .fa,
 .comment-form input[type="submit"] .fa,
 .search-form .search-submit .fa,
 .gform_wrapper form .gform_button.button .fa,
@@ -13827,9 +13979,17 @@ table.dataTable th {
   border-color: #46166b;
 }
 
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus {
+  color: #46166b;
+  background: #fff;
+}
+
 .btn-xl,
 .btn-lg,
 .btn-group-lg > .btn,
+.btn-group-lg > .btn-purple,
 .comment-form .btn-group-lg > input[type="submit"],
 .search-form .btn-group-lg > .search-submit,
 .gform_wrapper form .btn-group-lg > .gform_button.button,
@@ -13838,6 +13998,7 @@ table.dataTable th {
 .component-hero-wrap .video-foreground .external-user-menu ul li a,
 .btn-sm,
 .btn-group-sm > .btn,
+.btn-group-sm > .btn-purple,
 .comment-form .btn-group-sm > input[type="submit"],
 .search-form .btn-group-sm > .search-submit,
 .gform_wrapper form .btn-group-sm > .gform_button.button,
@@ -13852,6 +14013,7 @@ table.dataTable th {
 
 .btn-lg,
 .btn-group-lg > .btn,
+.btn-group-lg > .btn-purple,
 .comment-form .btn-group-lg > input[type="submit"],
 .search-form .btn-group-lg > .search-submit,
 .gform_wrapper form .btn-group-lg > .gform_button.button,
@@ -13866,6 +14028,7 @@ table.dataTable th {
 
 .btn-sm,
 .btn-group-sm > .btn,
+.btn-group-sm > .btn-purple,
 .comment-form .btn-group-sm > input[type="submit"],
 .search-form .btn-group-sm > .search-submit,
 .gform_wrapper form .btn-group-sm > .gform_button.button,
@@ -14028,6 +14191,7 @@ button {
 }
 
 .card--faculty-and-staff .btn,
+.card--faculty-and-staff .btn-purple,
 .card--faculty-and-staff .comment-form input[type="submit"],
 .comment-form .card--faculty-and-staff input[type="submit"],
 .card--faculty-and-staff .search-form .search-submit,
@@ -14875,6 +15039,10 @@ h4 {
   transition: all 200ms ease;
 }
 
+.juicer-feed .referral {
+  display: none !important;
+}
+
 .juicer-feed .j-stacker-wrapper p {
   font-family: "News Cycle", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.25rem;
@@ -15279,8 +15447,8 @@ h4 {
   color: #a77d0c;
 }
 
-.row-default.row-yellow a:not(.btn):not(.comment-form input[type="submit"]):not(.search-form .search-submit):not(.gform_wrapper form .gform_button.button):not(.component-hero-wrap .video-foreground .external-user-menu ul li a),
-.row-default.row-yellow a:not(.btn):not(.comment-form input[type="submit"]):not(.search-form .search-submit):not(.gform_wrapper form .gform_button.button):not(.component-hero-wrap .video-foreground .external-user-menu ul li a):visited {
+.row-default.row-yellow a:not(.btn):not(.btn-purple):not(.comment-form input[type="submit"]):not(.search-form .search-submit):not(.gform_wrapper form .gform_button.button):not(.component-hero-wrap .video-foreground .external-user-menu ul li a),
+.row-default.row-yellow a:not(.btn):not(.btn-purple):not(.comment-form input[type="submit"]):not(.search-form .search-submit):not(.gform_wrapper form .gform_button.button):not(.component-hero-wrap .video-foreground .external-user-menu ul li a):visited {
   color: #000;
 }
 
@@ -15329,6 +15497,7 @@ h4 {
 }
 
 .row-default.row-blue a.btn.btn-primary,
+.row-default.row-blue a.btn-primary.btn-purple,
 .row-default.row-blue .search-form a.btn-primary.search-submit,
 .search-form .row-default.row-blue a.btn-primary.search-submit,
 .row-default.row-blue .gform_wrapper form a.btn-primary.gform_button.button,
@@ -15336,6 +15505,7 @@ h4 {
 .row-default.row-blue .component-hero-wrap .video-foreground .external-user-menu ul li a.btn-primary,
 .component-hero-wrap .video-foreground .external-user-menu ul li .row-default.row-blue a.btn-primary,
 .row-default.row-blue a.btn.btn-primary:visited,
+.row-default.row-blue a.btn-primary.btn-purple:visited,
 .row-default.row-blue .search-form a.btn-primary.search-submit:visited,
 .search-form
     .row-default.row-blue a.btn-primary.search-submit:visited,
@@ -15349,6 +15519,7 @@ h4 {
 }
 
 .row-default.row-blue a.btn.btn-secondary,
+.row-default.row-blue a.btn-secondary.btn-purple,
 .row-default.row-blue .search-form a.search-submit,
 .search-form .row-default.row-blue a.search-submit,
 .row-default.row-blue .gform_wrapper form a.gform_button.button,
@@ -15356,6 +15527,7 @@ h4 {
 .row-default.row-blue .component-hero-wrap .video-foreground .external-user-menu ul li a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .row-default.row-blue a,
 .row-default.row-blue a.btn.btn-secondary:visited,
+.row-default.row-blue a.btn-secondary.btn-purple:visited,
 .row-default.row-blue .search-form a.search-submit:visited,
 .search-form
     .row-default.row-blue a.search-submit:visited,
@@ -15531,6 +15703,7 @@ h4 {
 }
 
 .component-wrap .btn,
+.component-wrap .btn-purple,
 .component-wrap .comment-form input[type="submit"],
 .comment-form .component-wrap input[type="submit"],
 .component-wrap .search-form .search-submit,
@@ -15540,6 +15713,7 @@ h4 {
 .component-wrap .component-hero-wrap .video-foreground .external-user-menu ul li a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .component-wrap a,
 .component-wysiwyg-wrap .btn,
+.component-wysiwyg-wrap .btn-purple,
 .component-wysiwyg-wrap .comment-form input[type="submit"],
 .comment-form
 .component-wysiwyg-wrap input[type="submit"],
@@ -15843,6 +16017,7 @@ footer .region-footer .custom_html-3 {
 }
 
 .page-section--buttons .btn,
+.page-section--buttons .btn-purple,
 .page-section--buttons .comment-form input[type="submit"],
 .comment-form .page-section--buttons input[type="submit"],
 .page-section--buttons .search-form .search-submit,
@@ -15937,6 +16112,7 @@ body.home section.page-section--tall {
 }
 
 #homepage-cta .btn:first-of-type,
+#homepage-cta .btn-purple:first-of-type,
 #homepage-cta .comment-form input[type="submit"]:first-of-type,
 .comment-form #homepage-cta input[type="submit"]:first-of-type,
 #homepage-cta .search-form .search-submit:first-of-type,
@@ -15951,6 +16127,7 @@ body.home section.page-section--tall {
 }
 
 #homepage-cta .btn:first-of-type:hover,
+#homepage-cta .btn-purple:first-of-type:hover,
 #homepage-cta .comment-form input[type="submit"]:first-of-type:hover,
 .comment-form #homepage-cta input[type="submit"]:first-of-type:hover,
 #homepage-cta .search-form .search-submit:first-of-type:hover,
@@ -15975,6 +16152,7 @@ body.home section.page-section--tall {
 }
 
 #homepage-social .btn,
+#homepage-social .btn-purple,
 #homepage-social .comment-form input[type="submit"],
 .comment-form #homepage-social input[type="submit"],
 #homepage-social .search-form .search-submit,
@@ -15989,6 +16167,7 @@ body.home section.page-section--tall {
 }
 
 #homepage-social .btn:hover,
+#homepage-social .btn-purple:hover,
 #homepage-social .comment-form input[type="submit"]:hover,
 .comment-form #homepage-social input[type="submit"]:hover,
 #homepage-social .search-form .search-submit:hover,
@@ -16011,6 +16190,7 @@ body.home section.page-section--tall {
 }
 
 #homepage-info .btn,
+#homepage-info .btn-purple,
 #homepage-info .comment-form input[type="submit"],
 .comment-form #homepage-info input[type="submit"],
 #homepage-info .search-form .search-submit,
@@ -16025,6 +16205,7 @@ body.home section.page-section--tall {
 }
 
 #homepage-info .btn:hover,
+#homepage-info .btn-purple:hover,
 #homepage-info .comment-form input[type="submit"]:hover,
 .comment-form #homepage-info input[type="submit"]:hover,
 #homepage-info .search-form .search-submit:hover,
@@ -16089,6 +16270,7 @@ body.home section.page-section--tall {
 }
 
 .single-program .program-intro .btn,
+.single-program .program-intro .btn-purple,
 .single-program .program-intro .comment-form input[type="submit"],
 .comment-form .single-program .program-intro input[type="submit"],
 .single-program .program-intro .search-form .search-submit,
@@ -16104,6 +16286,7 @@ body.home section.page-section--tall {
 
 @media (min-width: 1200px) {
   .single-program .program-intro .btn,
+  .single-program .program-intro .btn-purple,
   .single-program .program-intro .comment-form input[type="submit"],
   .comment-form .single-program .program-intro input[type="submit"],
   .single-program .program-intro .search-form .search-submit,
@@ -16126,6 +16309,7 @@ body.home section.page-section--tall {
 
 .single-program .program-dates {
   background-color: #c5ccd2;
+  padding: 3rem 0;
 }
 
 .single-program .program-dates h2 {
@@ -16140,10 +16324,6 @@ body.home section.page-section--tall {
 
 .single-program .program-dates__date--app-deadline {
   color: #dc3545;
-}
-
-.single-program .program-video {
-  padding: 20px 0;
 }
 
 .single-program .program-video__blurb {
@@ -16223,6 +16403,7 @@ body.home section.page-section--tall {
 
 .program .program-meta {
   font-size: 1rem;
+  padding: 3rem 0;
 }
 
 .program .program-meta__label {
@@ -16235,6 +16416,7 @@ body.home section.page-section--tall {
 }
 
 .program .program-meta .btn,
+.program .program-meta .btn-purple,
 .program .program-meta .comment-form input[type="submit"],
 .comment-form .program .program-meta input[type="submit"],
 .program .program-meta .search-form .search-submit,
@@ -16244,6 +16426,10 @@ body.home section.page-section--tall {
 .program .program-meta .component-hero-wrap .video-foreground .external-user-menu ul li a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .program .program-meta a {
   font-size: 1rem;
+}
+
+.single-program .program-section {
+  background-color: #fff;
 }
 
 .single-program .tab-pane {
@@ -16294,6 +16480,14 @@ body.home section.page-section--tall {
   color: #fff;
 }
 
+.featured-programs .program:nth-child(odd) {
+  background-color: #97a4af;
+}
+
+.all-programs {
+  padding: 3rem 0;
+}
+
 .program {
   margin-bottom: 20px;
 }
@@ -16323,6 +16517,11 @@ body.home section.page-section--tall {
 
 .main > article .program h3 {
   color: #46166b;
+}
+
+.country .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .myths-slick .slick-slide {
