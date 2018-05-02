@@ -53,6 +53,20 @@ $button-seconary-color:   $brand-secondary;
   }
 }
 
+.btn-white {
+  @extend .btn;
+
+  color: $white;
+  border-color: $white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $purple;
+    background: $white;
+  }
+}
+
 .btn-xl,
 .btn-lg,
 .btn-md,

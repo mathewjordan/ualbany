@@ -28,4 +28,5 @@
             </div>
         </div>
     </section>
+    <a role="button" href="#" class="megamenu-toggle" id="megamenu-toggle"></a>
 </header>

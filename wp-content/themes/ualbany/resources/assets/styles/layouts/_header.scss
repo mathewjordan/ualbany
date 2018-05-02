@@ -8,6 +8,52 @@
   .nav a {
     @extend .nav-link;
   }
+
+  .megamenu-toggle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 100%;
+    width: 70px;
+    z-index: 2;
+    text-align: center;
+    cursor: pointer;
+    color: $white;
+    font-size: 0.9rem;
+
+    &::after {
+      margin: 0 auto;
+      display: block;
+      line-height: 12px;
+      width: 22px;
+      text-align: center;
+      text-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.3);
+      -webkit-transition: color 0.25s ease;
+      -moz-transition: color 0.25s ease;
+      -ms-transition: color 0.25s ease;
+      -o-transition: color 0.25s ease;
+      transition: color 0.25s ease;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -48px;
+    width: 159px;
+    height: 48px;
+    z-index: 1;
+    background: url(/wp-content/themes/ualbany/resources/assets/images/menu-arrow.png) no-repeat;
+    display: block;
+  }
 }
 
 .nav-utility,

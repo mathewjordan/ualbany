@@ -12,6 +12,10 @@ footer {
       font-size: 14px;
       color: #e4e4e4;
       line-height: 22px;
+
+      .logo img {
+        max-width: 100%;
+      }
     }
 
     .widget.custom_html-2 {
