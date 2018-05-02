@@ -121,6 +121,7 @@ function ualbany_custom_dropdown( $item_output, $item ) {
         $output .= '</div><!-- .col-md-3 -->';
 
         $output .= '</div><!-- .row -->';
+        $output .= '<a class="more-button" href="#">More +</a>';
 
       endif;
 
@@ -202,6 +203,7 @@ function ualbany_custom_dropdown( $item_output, $item ) {
             $output .=     '</ul>';
             $output .=   '</div><!-- .col-md-3 -->';
             $output .= '</div><!-- .row -->';
+            $output .= '<a class="more-button" href="#">More +</a>';
           endif;
         endif;
       endif;

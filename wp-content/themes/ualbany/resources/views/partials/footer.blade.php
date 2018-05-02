@@ -15,6 +15,40 @@
 
 <script>
     $(document).ready(function(){
+
+        $('#menu-item-1062').hover(function() {
+            var locationHeight = $('#menu-item-1062 > .dropdown-menu').height();
+            var locationHeightInner = $('.ualbany-custom-dropdown-locations').height();
+            if (locationHeightInner > locationHeight) {
+              $('#menu-item-1062 > .dropdown-menu .more-button').addClass('show');
+            } else {
+              $('#menu-item-1062 > .dropdown-menu .more-button').addClass('hide');
+            }
+        });
+
+        $('#menu-item-1062 > .dropdown-menu .more-button').click(function() {
+            $('#menu-item-1062 > .dropdown-menu').css('max-height', '100vh');
+            $(this).remove();
+        });
+
+
+
+        $('#menu-item-1061').hover(function() {
+            $('#menu-item-1061 > .dropdown-menu .more-button').addClass('show');
+            var subjectHeight = $('#menu-item-1061 > .dropdown-menu').height();
+            var subjectHeightInner = $('.ualbany-custom-dropdown-subjects').height();
+            if (subjectHeightInner > subjectHeight) {
+                $('#menu-item-1061 > .dropdown-menu .more-button').addClass('show');
+            } else {
+                $('#menu-item-1061 > .dropdown-menu .more-button').removeClass('show');
+            }
+        });
+
+        $('#menu-item-1061 > .dropdown-menu .more-button').click(function() {
+            $('#menu-item-1061 > .dropdown-menu').css('max-height', '100vh');
+            $(this).removeClass('show');
+        });
+
         $('.myths-slick').slick({
             centerMode: true,
             centerPadding: '60px',
