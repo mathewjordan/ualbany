@@ -119,6 +119,38 @@ if (! function_exists('td_program_meta')) {
   }
 }
 
+if (! function_exists('td_unique_terms')) {
+  function td_unique_terms() {
+    $args = [ 'post_type'      => 'program',
+              'post_status'    => 'publish',
+              'posts_per_page' => -1 ];
+
+    $query = new WP_Query($args);
+                    
+    if ($query->have_posts()) :
+      $unique = [];
+
+      while ($query->have_posts()) : $query->the_post();
+        $program_meta = td_program_meta();
+        
+        foreach ($program_meta['terms'] as $term) :
+          $term_machine_name = strip_tags($term);
+          $term_machine_name = strtolower($term_machine_name);
+          $term_machine_name = trim($term_machine_name); 
+          $term_machine_name = preg_replace("/[^a-z0-9 ]/", '', $term_machine_name); // Keep only alphanumeric and spaces
+          $term_machine_name = preg_replace('/\s+/', '-', $term_machine_name); // Replace occurances of 1 or more spaces
+          if (! array_key_exists($term_machine_name, $unique)) :
+            $unique[$term_machine_name] = $term;
+          endif;
+        endforeach;
+      endwhile;
+      wp_reset_postdata();
+    endif;
+
+    return $unique;
+  }
+}
+
 if (! function_exists('td_program_dates')) {
   function td_program_dates() {
     global $post;
