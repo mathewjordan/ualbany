@@ -29,8 +29,10 @@ if (! function_exists('program_target_string')) {
 }
 
 if (! function_exists('td_program_meta')) {
-  function td_program_meta() {
+  function td_program_meta($post_obj = NULL) {
     global $post;
+
+    $post_obj = $post_obj != NULL ? $post_obj : $post;
 
     // Array keys should conform to param_id in Terra Dotta XML
     $param_ids = [
@@ -52,8 +54,8 @@ if (! function_exists('td_program_meta')) {
     ];
 
     // Location Data
-    if (get_field('program_location_param', $post->ID)) :
-      $locations = json_decode(get_field('program_location_param', $post->ID));
+    if (get_field('program_location_param', $post_obj->ID)) :
+      $locations = json_decode(get_field('program_location_param', $post_obj->ID));
 
       if ($locations->location) :
         $location = is_array($locations->location) ? $locations->location[0] : $locations->location;
@@ -64,8 +66,8 @@ if (! function_exists('td_program_meta')) {
     endif;
 
     // Term Data
-    if (get_field('program_term', $post->ID)) :
-      $terms = json_decode(get_field('program_term', $post->ID));
+    if (get_field('program_term', $post_obj->ID)) :
+      $terms = json_decode(get_field('program_term', $post_obj->ID));
 
       if ($terms->term) :
 
@@ -82,7 +84,7 @@ if (! function_exists('td_program_meta')) {
     endif;
 
     // Miscellaneous Params
-    if (get_field('program_params', $post->ID)) :
+    if (get_field('program_params', $post_obj->ID)) :
       $params = json_decode(get_field('program_params', $post->ID));
 
       if ($params->parameter) :
@@ -119,6 +121,17 @@ if (! function_exists('td_program_meta')) {
   }
 }
 
+if (! function_exists('str_to_machine')) {
+  function str_to_machine($str) {
+    $machine_name = strip_tags($str);
+    $machine_name = strtolower($machine_name);
+    $machine_name = trim($machine_name); 
+    $machine_name = preg_replace("/[^a-z0-9 ]/", '', $machine_name); // Keep only alphanumeric and spaces
+    $machine_name = preg_replace('/\s+/', '-', $machine_name); // Replace occurances of 1 or more spaces
+    return $machine_name;
+  }
+}
+
 if (! function_exists('td_unique_terms')) {
   function td_unique_terms() {
     $args = [ 'post_type'      => 'program',
@@ -134,11 +147,8 @@ if (! function_exists('td_unique_terms')) {
         $program_meta = td_program_meta();
         
         foreach ($program_meta['terms'] as $term) :
-          $term_machine_name = strip_tags($term);
-          $term_machine_name = strtolower($term_machine_name);
-          $term_machine_name = trim($term_machine_name); 
-          $term_machine_name = preg_replace("/[^a-z0-9 ]/", '', $term_machine_name); // Keep only alphanumeric and spaces
-          $term_machine_name = preg_replace('/\s+/', '-', $term_machine_name); // Replace occurances of 1 or more spaces
+          $term_machine_name = str_to_machine($term);
+
           if (! array_key_exists($term_machine_name, $unique)) :
             $unique[$term_machine_name] = $term;
           endif;

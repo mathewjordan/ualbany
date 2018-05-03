@@ -86,3 +86,8 @@
 .section-title {
   text-align: center;
 }
+
+// Term page template
+.template-terms header {
+  @include box-shadow(none);
+}

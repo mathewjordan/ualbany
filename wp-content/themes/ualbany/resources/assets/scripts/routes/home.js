@@ -3,7 +3,7 @@
 export default {
   init() {
     // JavaScript to be fired on the home page
-    var formMenus = $('#location, #area');
+    var formMenus = $('#location, #area, #semester');
 
     // Reset all formMenus to their first option
     formMenus.each(function(){
@@ -17,8 +17,8 @@ export default {
           redirect = '';
 
       if (menu) {
-	      var archive = { location: 'countries', area: 'subjects' };
-	      redirect += origin + '/' + archive[menu] + '/' + value;
+	      var archive = { location: 'countries/', area: 'subjects/', semester: 'terms?term=' };
+	      redirect += origin + '/' + archive[menu] + value;
 	      window.location = redirect;
       }
     });
