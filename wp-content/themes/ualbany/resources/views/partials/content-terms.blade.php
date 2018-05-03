@@ -1,5 +1,10 @@
 @php
-$term_id = $_GET['term'];
+if (isset($_GET['term'])) {
+  $term_id = preg_replace("/[^a-z0-9-]/", '', $_GET['term']); // Keep only alphanumeric and dashes
+}
+else {
+  $term_id = 'academic-year';
+}
 $terms = td_unique_terms();
 @endphp
 
