@@ -127,7 +127,7 @@
                         <select name="semester" id="semester">
                             <option value="">Semester</option>
                         </select>
-                        <button class="btn btn-lg btn-primary">Go</button>
+                        <!--<button class="btn btn-lg btn-primary">Go</button>-->
                     </form>
                 </div>
             </div>
