@@ -125,6 +125,7 @@ function ualbany_custom_dropdown( $item_output, $item ) {
 
       endif;
 
+    // Subjects
     elseif (in_array('ualbany-custom-dropdown-subjects', $item->classes)) :
 
       $args = [
@@ -206,6 +207,34 @@ function ualbany_custom_dropdown( $item_output, $item ) {
             $output .= '<a class="more-button" href="#">More +</a>';
           endif;
         endif;
+      endif;
+
+    // Semester/Term
+    elseif (in_array('ualbany-custom-dropdown-terms', $item->classes)) :
+      $terms = td_unique_terms();
+
+      if (count($terms)) :
+        $max_per_column = ceil(count($terms) / 3);
+        $term_cnt       = 0;
+
+        $output .= '<div class="row">';
+        $output .=   '<div class="col-md-3">';
+        $output .=     '<ul>';
+
+        foreach ($terms as $k => $v) :
+          if ($term_cnt > $max_per_column) {
+            $output .= '</ul></div><div class="col-md-3"><ul>'; // New column
+            $term_cnt = 0; // Reset the count
+          }
+
+          $output .= '<li><a href="/terms?term=' . $k . '">' . $v . '</a></li>';
+          $term_cnt++;
+
+        endforeach;
+
+        $output .=     '</ul>';
+        $output .=   '</div><!-- .col-md-3 -->';
+        $output .= '</div><!-- .row -->';
       endif;
     endif;
 
