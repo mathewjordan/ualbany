@@ -115,6 +115,7 @@
 
 .program .program-meta {
   font-size: 1rem;
+  padding: 3rem 0;
 
   &__label {
     font-size: 1.25rem;
@@ -132,6 +133,7 @@
 
 .single-program .program-section {
   background-color: $white;
+  padding: 3rem 0;
 }
 
 .single-program .tab-pane {
@@ -208,12 +210,17 @@
     color: $darkgray;
   }
 
+  .btn {
+    margin-top: 3rem;
+  }
+
   table {
     background: $white;
     border: 1px solid darken($white, 3);
     font-size: 1rem;
     letter-spacing: 0.04em;
     color: $darkgray;
+    margin-bottom: 0;
 
     #table-programs_filter label {
       color: $darkgray;

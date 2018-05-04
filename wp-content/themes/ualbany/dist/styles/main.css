@@ -16740,6 +16740,7 @@ body.home section.page-section--tall {
 
 .program .program-meta {
   font-size: 1rem;
+  padding: 3rem 0;
 }
 
 .program .program-meta__label {
@@ -16767,6 +16768,7 @@ body.home section.page-section--tall {
 
 .single-program .program-section {
   background-color: #fff;
+  padding: 3rem 0;
 }
 
 .single-program .tab-pane {
@@ -16843,12 +16845,27 @@ body.home section.page-section--tall {
   color: #353e45;
 }
 
+.all-programs .btn,
+.all-programs .btn-purple,
+.all-programs .btn-white,
+.all-programs .comment-form input[type="submit"],
+.comment-form .all-programs input[type="submit"],
+.all-programs .search-form .search-submit,
+.search-form .all-programs .search-submit,
+.all-programs .gform_wrapper form .gform_button.button,
+.gform_wrapper form .all-programs .gform_button.button,
+.all-programs .component-hero-wrap .video-foreground .external-user-menu ul li a,
+.component-hero-wrap .video-foreground .external-user-menu ul li .all-programs a {
+  margin-top: 3rem;
+}
+
 .all-programs table {
   background: #fff;
   border: 1px solid #f7f7f7;
   font-size: 1rem;
   letter-spacing: 0.04em;
   color: #353e45;
+  margin-bottom: 0;
 }
 
 .all-programs table #table-programs_filter label {

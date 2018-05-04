@@ -78,6 +78,23 @@
             ]
         });
 
-        $('#table-programs').DataTable();
+        $('#table-programs').DataTable( {
+          "paging": false,
+          "lengthChange": false,
+          "columnDefs": [
+            {
+                "targets": [ 8 ],
+                "visible": false,
+            },
+            {
+                "targets": [ 7 ],
+                "visible": false,
+            },
+            {
+                "targets": [ 6 ],
+                "visible": false,
+            },
+          ]
+        });
     });
 </script>
