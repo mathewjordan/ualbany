@@ -145,14 +145,17 @@ if (! function_exists('td_unique_terms')) {
 
       while ($query->have_posts()) : $query->the_post();
         $program_meta = td_program_meta();
-        
-        foreach ($program_meta['terms'] as $term) :
-          $term_machine_name = str_to_machine($term);
 
-          if (! array_key_exists($term_machine_name, $unique)) :
-            $unique[$term_machine_name] = $term;
-          endif;
-        endforeach;
+        if (is_array($program_meta['terms'])) {
+            foreach ($program_meta['terms'] as $term) :
+                $term_machine_name = str_to_machine($term);
+
+                if (! array_key_exists($term_machine_name, $unique)) :
+                    $unique[$term_machine_name] = $term;
+                endif;
+            endforeach;
+        }
+
       endwhile;
       wp_reset_postdata();
     endif;

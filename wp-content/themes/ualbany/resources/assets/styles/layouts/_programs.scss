@@ -209,33 +209,31 @@
   }
 
   table {
-    background: $purple;
-    border: 1px solid darken($purple, 3);
+    background: $white;
+    border: 1px solid darken($white, 3);
     font-size: 1rem;
     letter-spacing: 0.04em;
+    color: $darkgray;
 
     #table-programs_filter label {
       color: $darkgray;
     }
 
-    th {
-      background-color: $altpurple;
-    }
-
     th,
     td {
-      border: 1px solid darken($purple, 3);
+      border: 1px solid darken($white, 3);
       padding: 1rem;
     }
 
-    a {
+    th {
+      background-color: $purple;
       color: $white;
+      border: 1px solid darken($purple, 3);
     }
-  }
 
-  .row:first-of-type {
-    .col-sm-6:first-of-type {
-      display: none;
+    a {
+      color: $purple;
+      font-weight: 700;
     }
   }
 }
