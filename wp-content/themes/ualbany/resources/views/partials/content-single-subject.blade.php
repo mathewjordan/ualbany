@@ -6,11 +6,9 @@ $subject    = get_the_title();
 @endphp
 
 <article @php(post_class())>
-  <div class="single-header single-page-header">
+  <div class="single-header--results single-page-header">
     <div class="container-fluid">
-      <div class="single-header-content">
         <h1 class="single-title">{{ $subject }}</h1>
-      </div>
     </div>
   </div>
   <div class="container-fluid">
