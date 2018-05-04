@@ -13,9 +13,13 @@ footer {
       color: #e4e4e4;
       line-height: 22px;
 
-      a,
-      a:visited {
-        color: $yellow;
+      .logo img {
+        max-width: 100%;
+
+        a,
+        a:visited {
+          color: $yellow;
+        }
       }
     }
 

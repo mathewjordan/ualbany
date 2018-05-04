@@ -6555,15 +6555,37 @@ Router.prototype.loadEvents = function loadEvents () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* eslint-disable */
+
 /* harmony default export */ __webpack_exports__["a"] = ({
   init: function init() {
     // JavaScript to be fired on the home page
+    var formMenus = $('#location, #area, #semester');
+
+    // Reset all formMenus to their first option
+    formMenus.each(function(){
+    	$(this).val($(this).find("option:first").val());
+    });
+
+    formMenus.change(function() {
+      var menu     = $(this)[0].id,
+          value    = $(this).val(),
+          origin   = window.location.origin,
+          redirect = '';
+
+      if (menu) {
+	      var archive = { location: 'countries/', area: 'subjects/', semester: 'terms?term=' };
+	      redirect += origin + '/' + archive[menu] + value;
+	      window.location = redirect;
+      }
+    });
   },
   finalize: function finalize() {
     // JavaScript to be fired on the home page, after the init JS
   },
 });
 
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 11 */

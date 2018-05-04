@@ -2,7 +2,7 @@ body {
   font-size: 19px;
   font-family: $font-sans;
   letter-spacing: 0.02em;
-  background-color: $offwhite;
+  background-color: $white;
 }
 
 a,
@@ -136,10 +136,13 @@ table.dataTable {
   }
 }
 
-.dataTables_length {
-  margin-bottom: 15px;
+.dataTables_length,
+.dataTables_info,
+.dataTables_paginate {
+  display: none;
 }
 
 .dataTables_filter {
-  float: right;
+  float: left;
+  margin-bottom: 1rem;
 }

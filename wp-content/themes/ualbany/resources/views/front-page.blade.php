@@ -124,10 +124,17 @@
                           @endif
                         @endif
 
+                        @php($terms = td_unique_terms())
+
+                        @if (count($terms))
                         <select name="semester" id="semester">
-                            <option value="">Semester</option>
+                          <option value="">Semester</option>
+                          @foreach ($terms as $k => $v)
+                          <option value="{{ $k }}">{{ $v }}</option>
+                          @endforeach
                         </select>
-                        <button class="btn btn-lg btn-primary">Go</button>
+                        @endif
+                        <!--<button class="btn btn-lg btn-primary">Go</button>-->
                     </form>
                 </div>
             </div>

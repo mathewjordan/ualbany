@@ -1,15 +1,13 @@
 @php($country = get_the_title())
 
 <article @php(post_class())>
-  <div class="single-header single-page-header">
+  <div class="single-header--results single-page-header">
     <div class="container-fluid">
-      <div class="single-header-content">
         <h1 class="single-title">{{ $country }}</h1>
-      </div>
     </div>
   </div>
   <div class="container-fluid">
-      <section class="featured-programs">
+      <section class="featured-programs ishidden">
         <header>
           <div class="text-center">
             <h2>Featured {{ $country }} Programs</h2>
@@ -37,7 +35,7 @@
                 ];
 
         $query = new WP_Query($args);
-
+        $postnum = 0;
         @endphp
 
         @if ($query->have_posts())
@@ -45,6 +43,8 @@
             @include('partials.content-program')
           @endwhile
           @php(wp_reset_postdata())
+        @else
+          <style>.ishidden { display: none; }</style>
         @endif
       </section>
   

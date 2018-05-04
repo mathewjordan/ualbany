@@ -2074,6 +2074,7 @@ select.form-control:focus::-ms-value,
 .input-group-sm > .form-control-plaintext.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-plaintext.btn,
 .input-group-sm > .input-group-btn > .form-control-plaintext.btn-purple,
+.input-group-sm > .input-group-btn > .form-control-plaintext.btn-white,
 .comment-form
   .input-group-sm > .input-group-btn > input.form-control-plaintext[type="submit"],
 .search-form
@@ -2092,6 +2093,7 @@ select.form-control:focus::-ms-value,
 .input-group-lg > .form-control-plaintext.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-plaintext.btn,
 .input-group-lg > .input-group-btn > .form-control-plaintext.btn-purple,
+.input-group-lg > .input-group-btn > .form-control-plaintext.btn-white,
 .comment-form
   .input-group-lg > .input-group-btn > input.form-control-plaintext[type="submit"],
 .search-form
@@ -2114,6 +2116,7 @@ select.form-control:focus::-ms-value,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > .btn-purple,
+.input-group-sm > .input-group-btn > .btn-white,
 .comment-form
 .input-group-sm > .input-group-btn > input[type="submit"],
 .search-form
@@ -2134,6 +2137,7 @@ select.form-control-sm:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn-purple:not([size]):not([multiple]),
+.input-group-sm > .input-group-btn > select.btn-white:not([size]):not([multiple]),
 .search-form
 .input-group-sm > .input-group-btn > select.search-submit:not([size]):not([multiple]),
 .gform_wrapper form
@@ -2151,6 +2155,7 @@ select.form-control-sm:not([size]):not([multiple]),
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > .btn-purple,
+.input-group-lg > .input-group-btn > .btn-white,
 .comment-form
 .input-group-lg > .input-group-btn > input[type="submit"],
 .search-form
@@ -2171,6 +2176,7 @@ select.form-control-lg:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn-purple:not([size]):not([multiple]),
+.input-group-lg > .input-group-btn > select.btn-white:not([size]):not([multiple]),
 .search-form
 .input-group-lg > .input-group-btn > select.search-submit:not([size]):not([multiple]),
 .gform_wrapper form
@@ -2700,6 +2706,7 @@ select.form-control-lg:not([size]):not([multiple]),
 
 .btn,
 .btn-purple,
+.btn-white,
 .comment-form input[type="submit"],
 .search-form .search-submit,
 .gform_wrapper form .gform_button.button,
@@ -2727,12 +2734,14 @@ select.form-control-lg:not([size]):not([multiple]),
 
 .btn:focus,
 .btn-purple:focus,
+.btn-white:focus,
 .comment-form input[type="submit"]:focus,
 .search-form .search-submit:focus,
 .gform_wrapper form .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:focus,
 .btn:hover,
 .btn-purple:hover,
+.btn-white:hover,
 .comment-form input[type="submit"]:hover,
 .search-form .search-submit:hover,
 .gform_wrapper form .gform_button.button:hover,
@@ -2742,12 +2751,14 @@ select.form-control-lg:not([size]):not([multiple]),
 
 .btn:focus,
 .btn-purple:focus,
+.btn-white:focus,
 .comment-form input[type="submit"]:focus,
 .search-form .search-submit:focus,
 .gform_wrapper form .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:focus,
 .btn.focus,
 .focus.btn-purple,
+.focus.btn-white,
 .comment-form input.focus[type="submit"],
 .search-form .focus.search-submit,
 .gform_wrapper form .focus.gform_button.button,
@@ -2759,12 +2770,14 @@ select.form-control-lg:not([size]):not([multiple]),
 
 .btn.disabled,
 .disabled.btn-purple,
+.disabled.btn-white,
 .comment-form input.disabled[type="submit"],
 .search-form .disabled.search-submit,
 .gform_wrapper form .disabled.gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li a.disabled,
 .btn:disabled,
 .btn-purple:disabled,
+.btn-white:disabled,
 .comment-form input[type="submit"]:disabled,
 .search-form .search-submit:disabled,
 .gform_wrapper form .gform_button.button:disabled,
@@ -2774,12 +2787,14 @@ select.form-control-lg:not([size]):not([multiple]),
 
 .btn:active,
 .btn-purple:active,
+.btn-white:active,
 .comment-form input[type="submit"]:active,
 .search-form .search-submit:active,
 .gform_wrapper form .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:active,
 .btn.active,
 .active.btn-purple,
+.active.btn-white,
 .comment-form input.active[type="submit"],
 .search-form .active.search-submit,
 .gform_wrapper form .active.gform_button.button,
@@ -2789,11 +2804,13 @@ select.form-control-lg:not([size]):not([multiple]),
 
 a.btn.disabled,
 a.disabled.btn-purple,
+a.disabled.btn-white,
 .search-form a.disabled.search-submit,
 .gform_wrapper form a.disabled.gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li a.disabled,
 fieldset[disabled] a.btn,
 fieldset[disabled] a.btn-purple,
+fieldset[disabled] a.btn-white,
 fieldset[disabled] .search-form a.search-submit,
 .search-form
 fieldset[disabled] a.search-submit,
@@ -3410,6 +3427,7 @@ fieldset[disabled] a {
 .btn-lg,
 .btn-group-lg > .btn,
 .btn-group-lg > .btn-purple,
+.btn-group-lg > .btn-white,
 .comment-form .btn-group-lg > input[type="submit"],
 .search-form .btn-group-lg > .search-submit,
 .gform_wrapper form .btn-group-lg > .gform_button.button,
@@ -3423,6 +3441,7 @@ fieldset[disabled] a {
 .btn-sm,
 .btn-group-sm > .btn,
 .btn-group-sm > .btn-purple,
+.btn-group-sm > .btn-white,
 .comment-form .btn-group-sm > input[type="submit"],
 .search-form .btn-group-sm > .search-submit,
 .gform_wrapper form .btn-group-sm > .gform_button.button,
@@ -3603,12 +3622,14 @@ tbody.collapse.show {
 
 .btn-group > .btn,
 .btn-group > .btn-purple,
+.btn-group > .btn-white,
 .comment-form .btn-group > input[type="submit"],
 .search-form .btn-group > .search-submit,
 .gform_wrapper form .btn-group > .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a,
 .btn-group-vertical > .btn,
 .btn-group-vertical > .btn-purple,
+.btn-group-vertical > .btn-white,
 .comment-form
   .btn-group-vertical > input[type="submit"],
 .search-form
@@ -3626,12 +3647,14 @@ tbody.collapse.show {
 
 .btn-group > .btn:hover,
 .btn-group > .btn-purple:hover,
+.btn-group > .btn-white:hover,
 .comment-form .btn-group > input[type="submit"]:hover,
 .search-form .btn-group > .search-submit:hover,
 .gform_wrapper form .btn-group > .gform_button.button:hover,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a:hover,
 .btn-group-vertical > .btn:hover,
 .btn-group-vertical > .btn-purple:hover,
+.btn-group-vertical > .btn-white:hover,
 .comment-form
     .btn-group-vertical > input[type="submit"]:hover,
 .search-form
@@ -3645,24 +3668,28 @@ tbody.collapse.show {
 
 .btn-group > .btn:focus,
 .btn-group > .btn-purple:focus,
+.btn-group > .btn-white:focus,
 .comment-form .btn-group > input[type="submit"]:focus,
 .search-form .btn-group > .search-submit:focus,
 .gform_wrapper form .btn-group > .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a:focus,
 .btn-group > .btn:active,
 .btn-group > .btn-purple:active,
+.btn-group > .btn-white:active,
 .comment-form .btn-group > input[type="submit"]:active,
 .search-form .btn-group > .search-submit:active,
 .gform_wrapper form .btn-group > .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a:active,
 .btn-group > .btn.active,
 .btn-group > .active.btn-purple,
+.btn-group > .active.btn-white,
 .comment-form .btn-group > input.active[type="submit"],
 .search-form .btn-group > .active.search-submit,
 .gform_wrapper form .btn-group > .active.gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group > a.active,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .btn-purple:focus,
+.btn-group-vertical > .btn-white:focus,
 .comment-form
     .btn-group-vertical > input[type="submit"]:focus,
 .search-form
@@ -3673,6 +3700,7 @@ tbody.collapse.show {
     .btn-group-vertical > a:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .btn-purple:active,
+.btn-group-vertical > .btn-white:active,
 .comment-form
     .btn-group-vertical > input[type="submit"]:active,
 .search-form
@@ -3683,6 +3711,7 @@ tbody.collapse.show {
     .btn-group-vertical > a:active,
 .btn-group-vertical > .btn.active,
 .btn-group-vertical > .active.btn-purple,
+.btn-group-vertical > .active.btn-white,
 .comment-form
     .btn-group-vertical > input.active[type="submit"],
 .search-form
@@ -3696,6 +3725,7 @@ tbody.collapse.show {
 
 .btn-group .btn + .btn,
 .btn-group .btn-purple + .btn,
+.btn-group .btn-white + .btn,
 .btn-group .comment-form input[type="submit"] + .btn,
 .comment-form .btn-group input[type="submit"] + .btn,
 .btn-group .search-form .search-submit + .btn,
@@ -3706,6 +3736,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + .btn,
 .btn-group .btn + .btn-purple,
 .btn-group .btn-purple + .btn-purple,
+.btn-group .btn-white + .btn-purple,
 .btn-group .comment-form input[type="submit"] + .btn-purple,
 .comment-form .btn-group input[type="submit"] + .btn-purple,
 .btn-group .search-form .search-submit + .btn-purple,
@@ -3714,10 +3745,23 @@ tbody.collapse.show {
 .gform_wrapper form .btn-group .gform_button.button + .btn-purple,
 .btn-group .component-hero-wrap .video-foreground .external-user-menu ul li a + .btn-purple,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + .btn-purple,
+.btn-group .btn + .btn-white,
+.btn-group .btn-purple + .btn-white,
+.btn-group .btn-white + .btn-white,
+.btn-group .comment-form input[type="submit"] + .btn-white,
+.comment-form .btn-group input[type="submit"] + .btn-white,
+.btn-group .search-form .search-submit + .btn-white,
+.search-form .btn-group .search-submit + .btn-white,
+.btn-group .gform_wrapper form .gform_button.button + .btn-white,
+.gform_wrapper form .btn-group .gform_button.button + .btn-white,
+.btn-group .component-hero-wrap .video-foreground .external-user-menu ul li a + .btn-white,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + .btn-white,
 .btn-group .comment-form .btn + input[type="submit"],
 .comment-form .btn-group .btn + input[type="submit"],
 .btn-group .comment-form .btn-purple + input[type="submit"],
 .comment-form .btn-group .btn-purple + input[type="submit"],
+.btn-group .comment-form .btn-white + input[type="submit"],
+.comment-form .btn-group .btn-white + input[type="submit"],
 .btn-group .comment-form input[type="submit"] + input[type="submit"],
 .comment-form .btn-group input[type="submit"] + input[type="submit"],
 .btn-group .search-form .comment-form .search-submit + input[type="submit"],
@@ -3736,6 +3780,8 @@ tbody.collapse.show {
 .search-form .btn-group .btn + .search-submit,
 .btn-group .search-form .btn-purple + .search-submit,
 .search-form .btn-group .btn-purple + .search-submit,
+.btn-group .search-form .btn-white + .search-submit,
+.search-form .btn-group .btn-white + .search-submit,
 .btn-group .comment-form .search-form input[type="submit"] + .search-submit,
 .search-form .btn-group .comment-form input[type="submit"] + .search-submit,
 .comment-form .btn-group .search-form input[type="submit"] + .search-submit,
@@ -3754,6 +3800,8 @@ tbody.collapse.show {
 .gform_wrapper form .btn-group .btn + .gform_button.button,
 .btn-group .gform_wrapper form .btn-purple + .gform_button.button,
 .gform_wrapper form .btn-group .btn-purple + .gform_button.button,
+.btn-group .gform_wrapper form .btn-white + .gform_button.button,
+.gform_wrapper form .btn-group .btn-white + .gform_button.button,
 .btn-group .comment-form .gform_wrapper form input[type="submit"] + .gform_button.button,
 .gform_wrapper form .btn-group .comment-form input[type="submit"] + .gform_button.button,
 .comment-form .btn-group .gform_wrapper form input[type="submit"] + .gform_button.button,
@@ -3772,6 +3820,8 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group .btn + a,
 .btn-group .component-hero-wrap .video-foreground .external-user-menu ul li .btn-purple + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group .btn-purple + a,
+.btn-group .component-hero-wrap .video-foreground .external-user-menu ul li .btn-white + a,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group .btn-white + a,
 .btn-group .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li input[type="submit"] + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group .comment-form input[type="submit"] + a,
 .comment-form .btn-group .component-hero-wrap .video-foreground .external-user-menu ul li input[type="submit"] + a,
@@ -3788,6 +3838,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group a + a,
 .btn-group .btn + .btn-group,
 .btn-group .btn-purple + .btn-group,
+.btn-group .btn-white + .btn-group,
 .btn-group .comment-form input[type="submit"] + .btn-group,
 .comment-form
   .btn-group input[type="submit"] + .btn-group,
@@ -3802,6 +3853,7 @@ tbody.collapse.show {
   .btn-group a + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .btn-purple,
+.btn-group .btn-group + .btn-white,
 .btn-group .comment-form .btn-group + input[type="submit"],
 .comment-form
   .btn-group .btn-group + input[type="submit"],
@@ -3817,6 +3869,7 @@ tbody.collapse.show {
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
 .btn-group-vertical .btn-purple + .btn,
+.btn-group-vertical .btn-white + .btn,
 .btn-group-vertical .comment-form input[type="submit"] + .btn,
 .comment-form
   .btn-group-vertical input[type="submit"] + .btn,
@@ -3831,6 +3884,7 @@ tbody.collapse.show {
   .btn-group-vertical a + .btn,
 .btn-group-vertical .btn + .btn-purple,
 .btn-group-vertical .btn-purple + .btn-purple,
+.btn-group-vertical .btn-white + .btn-purple,
 .btn-group-vertical .comment-form input[type="submit"] + .btn-purple,
 .comment-form
   .btn-group-vertical input[type="submit"] + .btn-purple,
@@ -3843,12 +3897,30 @@ tbody.collapse.show {
 .btn-group-vertical .component-hero-wrap .video-foreground .external-user-menu ul li a + .btn-purple,
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical a + .btn-purple,
+.btn-group-vertical .btn + .btn-white,
+.btn-group-vertical .btn-purple + .btn-white,
+.btn-group-vertical .btn-white + .btn-white,
+.btn-group-vertical .comment-form input[type="submit"] + .btn-white,
+.comment-form
+  .btn-group-vertical input[type="submit"] + .btn-white,
+.btn-group-vertical .search-form .search-submit + .btn-white,
+.search-form
+  .btn-group-vertical .search-submit + .btn-white,
+.btn-group-vertical .gform_wrapper form .gform_button.button + .btn-white,
+.gform_wrapper form
+  .btn-group-vertical .gform_button.button + .btn-white,
+.btn-group-vertical .component-hero-wrap .video-foreground .external-user-menu ul li a + .btn-white,
+.component-hero-wrap .video-foreground .external-user-menu ul li
+  .btn-group-vertical a + .btn-white,
 .btn-group-vertical .comment-form .btn + input[type="submit"],
 .comment-form
   .btn-group-vertical .btn + input[type="submit"],
 .btn-group-vertical .comment-form .btn-purple + input[type="submit"],
 .comment-form
   .btn-group-vertical .btn-purple + input[type="submit"],
+.btn-group-vertical .comment-form .btn-white + input[type="submit"],
+.comment-form
+  .btn-group-vertical .btn-white + input[type="submit"],
 .btn-group-vertical .comment-form input[type="submit"] + input[type="submit"],
 .comment-form
   .btn-group-vertical input[type="submit"] + input[type="submit"],
@@ -3879,6 +3951,9 @@ tbody.collapse.show {
 .btn-group-vertical .search-form .btn-purple + .search-submit,
 .search-form
   .btn-group-vertical .btn-purple + .search-submit,
+.btn-group-vertical .search-form .btn-white + .search-submit,
+.search-form
+  .btn-group-vertical .btn-white + .search-submit,
 .btn-group-vertical .comment-form .search-form input[type="submit"] + .search-submit,
 .search-form
   .btn-group-vertical .comment-form input[type="submit"] + .search-submit,
@@ -3909,6 +3984,9 @@ tbody.collapse.show {
 .btn-group-vertical .gform_wrapper form .btn-purple + .gform_button.button,
 .gform_wrapper form
   .btn-group-vertical .btn-purple + .gform_button.button,
+.btn-group-vertical .gform_wrapper form .btn-white + .gform_button.button,
+.gform_wrapper form
+  .btn-group-vertical .btn-white + .gform_button.button,
 .btn-group-vertical .comment-form .gform_wrapper form input[type="submit"] + .gform_button.button,
 .gform_wrapper form
   .btn-group-vertical .comment-form input[type="submit"] + .gform_button.button,
@@ -3939,6 +4017,9 @@ tbody.collapse.show {
 .btn-group-vertical .component-hero-wrap .video-foreground .external-user-menu ul li .btn-purple + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical .btn-purple + a,
+.btn-group-vertical .component-hero-wrap .video-foreground .external-user-menu ul li .btn-white + a,
+.component-hero-wrap .video-foreground .external-user-menu ul li
+  .btn-group-vertical .btn-white + a,
 .btn-group-vertical .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li input[type="submit"] + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li
   .btn-group-vertical .comment-form input[type="submit"] + a,
@@ -3965,6 +4046,7 @@ tbody.collapse.show {
   .btn-group-vertical a + a,
 .btn-group-vertical .btn + .btn-group,
 .btn-group-vertical .btn-purple + .btn-group,
+.btn-group-vertical .btn-white + .btn-group,
 .btn-group-vertical .comment-form input[type="submit"] + .btn-group,
 .comment-form
   .btn-group-vertical input[type="submit"] + .btn-group,
@@ -3979,6 +4061,7 @@ tbody.collapse.show {
   .btn-group-vertical a + .btn-group,
 .btn-group-vertical .btn-group + .btn,
 .btn-group-vertical .btn-group + .btn-purple,
+.btn-group-vertical .btn-group + .btn-white,
 .btn-group-vertical .comment-form .btn-group + input[type="submit"],
 .comment-form
   .btn-group-vertical .btn-group + input[type="submit"],
@@ -4012,6 +4095,7 @@ tbody.collapse.show {
 
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-purple:not(:first-child):not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-white:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .comment-form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .search-form .btn-group > .search-submit:not(:first-child):not(:last-child):not(.dropdown-toggle),
 .gform_wrapper form .btn-group > .gform_button.button:not(:first-child):not(:last-child):not(.dropdown-toggle),
@@ -4021,6 +4105,7 @@ tbody.collapse.show {
 
 .btn-group > .btn:first-child,
 .btn-group > .btn-purple:first-child,
+.btn-group > .btn-white:first-child,
 .comment-form .btn-group > input[type="submit"]:first-child,
 .search-form .btn-group > .search-submit:first-child,
 .gform_wrapper form .btn-group > .gform_button.button:first-child,
@@ -4030,6 +4115,7 @@ tbody.collapse.show {
 
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-purple:first-child:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-white:first-child:not(:last-child):not(.dropdown-toggle),
 .comment-form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle),
 .search-form .btn-group > .search-submit:first-child:not(:last-child):not(.dropdown-toggle),
 .gform_wrapper form .btn-group > .gform_button.button:first-child:not(:last-child):not(.dropdown-toggle),
@@ -4040,6 +4126,7 @@ tbody.collapse.show {
 
 .btn-group > .btn:last-child:not(:first-child),
 .btn-group > .btn-purple:last-child:not(:first-child),
+.btn-group > .btn-white:last-child:not(:first-child),
 .comment-form .btn-group > input[type="submit"]:last-child:not(:first-child),
 .search-form .btn-group > .search-submit:last-child:not(:first-child),
 .gform_wrapper form .btn-group > .gform_button.button:last-child:not(:first-child),
@@ -4055,6 +4142,7 @@ tbody.collapse.show {
 
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn,
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-purple,
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-white,
 .comment-form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"],
 .search-form .btn-group > .btn-group:not(:first-child):not(:last-child) > .search-submit,
 .gform_wrapper form .btn-group > .btn-group:not(:first-child):not(:last-child) > .gform_button.button,
@@ -4064,6 +4152,7 @@ tbody.collapse.show {
 
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .btn-purple:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn-white:last-child,
 .comment-form .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .search-form .btn-group > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
 .gform_wrapper form .btn-group > .btn-group:first-child:not(:last-child) > .gform_button.button:last-child,
@@ -4075,6 +4164,7 @@ tbody.collapse.show {
 
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
 .btn-group > .btn-group:last-child:not(:first-child) > .btn-purple:first-child,
+.btn-group > .btn-group:last-child:not(:first-child) > .btn-white:first-child,
 .comment-form .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child,
 .search-form .btn-group > .btn-group:last-child:not(:first-child) > .search-submit:first-child,
 .gform_wrapper form .btn-group > .btn-group:last-child:not(:first-child) > .gform_button.button:first-child,
@@ -4085,6 +4175,7 @@ tbody.collapse.show {
 
 .btn + .dropdown-toggle-split,
 .btn-purple + .dropdown-toggle-split,
+.btn-white + .dropdown-toggle-split,
 .comment-form input[type="submit"] + .dropdown-toggle-split,
 .search-form .search-submit + .dropdown-toggle-split,
 .gform_wrapper form .gform_button.button + .dropdown-toggle-split,
@@ -4095,6 +4186,7 @@ tbody.collapse.show {
 
 .btn + .dropdown-toggle-split::after,
 .btn-purple + .dropdown-toggle-split::after,
+.btn-white + .dropdown-toggle-split::after,
 .comment-form input[type="submit"] + .dropdown-toggle-split::after,
 .search-form .search-submit + .dropdown-toggle-split::after,
 .gform_wrapper form .gform_button.button + .dropdown-toggle-split::after,
@@ -4105,6 +4197,7 @@ tbody.collapse.show {
 .btn-sm + .dropdown-toggle-split,
 .btn-group-sm > .btn + .dropdown-toggle-split,
 .btn-group-sm > .btn-purple + .dropdown-toggle-split,
+.btn-group-sm > .btn-white + .dropdown-toggle-split,
 .comment-form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split,
 .search-form .btn-group-sm > .search-submit + .dropdown-toggle-split,
 .gform_wrapper form .btn-group-sm > .gform_button.button + .dropdown-toggle-split,
@@ -4116,6 +4209,7 @@ tbody.collapse.show {
 .btn-lg + .dropdown-toggle-split,
 .btn-group-lg > .btn + .dropdown-toggle-split,
 .btn-group-lg > .btn-purple + .dropdown-toggle-split,
+.btn-group-lg > .btn-white + .dropdown-toggle-split,
 .comment-form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split,
 .search-form .btn-group-lg > .search-submit + .dropdown-toggle-split,
 .gform_wrapper form .btn-group-lg > .gform_button.button + .dropdown-toggle-split,
@@ -4142,6 +4236,7 @@ tbody.collapse.show {
 
 .btn-group-vertical .btn,
 .btn-group-vertical .btn-purple,
+.btn-group-vertical .btn-white,
 .btn-group-vertical .comment-form input[type="submit"],
 .comment-form .btn-group-vertical input[type="submit"],
 .btn-group-vertical .search-form .search-submit,
@@ -4156,18 +4251,28 @@ tbody.collapse.show {
 
 .btn-group-vertical > .btn + .btn,
 .btn-group-vertical > .btn-purple + .btn,
+.btn-group-vertical > .btn-white + .btn,
 .comment-form .btn-group-vertical > input[type="submit"] + .btn,
 .search-form .btn-group-vertical > .search-submit + .btn,
 .gform_wrapper form .btn-group-vertical > .gform_button.button + .btn,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .btn,
 .btn-group-vertical > .btn + .btn-purple,
 .btn-group-vertical > .btn-purple + .btn-purple,
+.btn-group-vertical > .btn-white + .btn-purple,
 .comment-form .btn-group-vertical > input[type="submit"] + .btn-purple,
 .search-form .btn-group-vertical > .search-submit + .btn-purple,
 .gform_wrapper form .btn-group-vertical > .gform_button.button + .btn-purple,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .btn-purple,
+.btn-group-vertical > .btn + .btn-white,
+.btn-group-vertical > .btn-purple + .btn-white,
+.btn-group-vertical > .btn-white + .btn-white,
+.comment-form .btn-group-vertical > input[type="submit"] + .btn-white,
+.search-form .btn-group-vertical > .search-submit + .btn-white,
+.gform_wrapper form .btn-group-vertical > .gform_button.button + .btn-white,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .btn-white,
 .comment-form .btn-group-vertical > .btn + input[type="submit"],
 .comment-form .btn-group-vertical > .btn-purple + input[type="submit"],
+.comment-form .btn-group-vertical > .btn-white + input[type="submit"],
 .comment-form .btn-group-vertical > input[type="submit"] + input[type="submit"],
 .search-form .comment-form .btn-group-vertical > .search-submit + input[type="submit"],
 .comment-form .search-form .btn-group-vertical > .search-submit + input[type="submit"],
@@ -4177,6 +4282,7 @@ tbody.collapse.show {
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + input[type="submit"],
 .search-form .btn-group-vertical > .btn + .search-submit,
 .search-form .btn-group-vertical > .btn-purple + .search-submit,
+.search-form .btn-group-vertical > .btn-white + .search-submit,
 .comment-form .search-form .btn-group-vertical > input[type="submit"] + .search-submit,
 .search-form .comment-form .btn-group-vertical > input[type="submit"] + .search-submit,
 .search-form .btn-group-vertical > .search-submit + .search-submit,
@@ -4186,6 +4292,7 @@ tbody.collapse.show {
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .search-submit,
 .gform_wrapper form .btn-group-vertical > .btn + .gform_button.button,
 .gform_wrapper form .btn-group-vertical > .btn-purple + .gform_button.button,
+.gform_wrapper form .btn-group-vertical > .btn-white + .gform_button.button,
 .comment-form .gform_wrapper form .btn-group-vertical > input[type="submit"] + .gform_button.button,
 .gform_wrapper form .comment-form .btn-group-vertical > input[type="submit"] + .gform_button.button,
 .search-form .gform_wrapper form .btn-group-vertical > .search-submit + .gform_button.button,
@@ -4195,6 +4302,7 @@ tbody.collapse.show {
 .gform_wrapper form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > .btn + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > .btn-purple + a,
+.component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > .btn-white + a,
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > input[type="submit"] + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .comment-form .btn-group-vertical > input[type="submit"] + a,
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > .search-submit + a,
@@ -4204,6 +4312,7 @@ tbody.collapse.show {
 .component-hero-wrap .video-foreground .external-user-menu ul li .btn-group-vertical > a + a,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .btn-purple + .btn-group,
+.btn-group-vertical > .btn-white + .btn-group,
 .comment-form
   .btn-group-vertical > input[type="submit"] + .btn-group,
 .search-form
@@ -4214,6 +4323,7 @@ tbody.collapse.show {
   .btn-group-vertical > a + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btn-purple,
+.btn-group-vertical > .btn-group + .btn-white,
 .comment-form
   .btn-group-vertical > .btn-group + input[type="submit"],
 .search-form
@@ -4229,6 +4339,7 @@ tbody.collapse.show {
 
 .btn-group-vertical > .btn:not(:first-child):not(:last-child),
 .btn-group-vertical > .btn-purple:not(:first-child):not(:last-child),
+.btn-group-vertical > .btn-white:not(:first-child):not(:last-child),
 .comment-form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child),
 .search-form .btn-group-vertical > .search-submit:not(:first-child):not(:last-child),
 .gform_wrapper form .btn-group-vertical > .gform_button.button:not(:first-child):not(:last-child),
@@ -4238,6 +4349,7 @@ tbody.collapse.show {
 
 .btn-group-vertical > .btn:first-child:not(:last-child),
 .btn-group-vertical > .btn-purple:first-child:not(:last-child),
+.btn-group-vertical > .btn-white:first-child:not(:last-child),
 .comment-form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child),
 .search-form .btn-group-vertical > .search-submit:first-child:not(:last-child),
 .gform_wrapper form .btn-group-vertical > .gform_button.button:first-child:not(:last-child),
@@ -4248,6 +4360,7 @@ tbody.collapse.show {
 
 .btn-group-vertical > .btn:last-child:not(:first-child),
 .btn-group-vertical > .btn-purple:last-child:not(:first-child),
+.btn-group-vertical > .btn-white:last-child:not(:first-child),
 .comment-form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child),
 .search-form .btn-group-vertical > .search-submit:last-child:not(:first-child),
 .gform_wrapper form .btn-group-vertical > .gform_button.button:last-child:not(:first-child),
@@ -4258,6 +4371,7 @@ tbody.collapse.show {
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn,
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-purple,
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-white,
 .comment-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"],
 .search-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .search-submit,
 .gform_wrapper form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .gform_button.button,
@@ -4267,6 +4381,7 @@ tbody.collapse.show {
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-purple:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-white:last-child,
 .comment-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .search-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
 .gform_wrapper form .btn-group-vertical > .btn-group:first-child:not(:last-child) > .gform_button.button:last-child,
@@ -4278,6 +4393,7 @@ tbody.collapse.show {
 
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child,
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-purple:first-child,
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-white:first-child,
 .comment-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child,
 .search-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > .search-submit:first-child,
 .gform_wrapper form .btn-group-vertical > .btn-group:last-child:not(:first-child) > .gform_button.button:first-child,
@@ -4288,12 +4404,14 @@ tbody.collapse.show {
 
 [data-toggle="buttons"] > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-purple input[type="radio"],
+[data-toggle="buttons"] > .btn-white input[type="radio"],
 .comment-form [data-toggle="buttons"] > input[type="submit"] input[type="radio"],
 .search-form [data-toggle="buttons"] > .search-submit input[type="radio"],
 .gform_wrapper form [data-toggle="buttons"] > .gform_button.button input[type="radio"],
 .component-hero-wrap .video-foreground .external-user-menu ul li [data-toggle="buttons"] > a input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-purple input[type="checkbox"],
+[data-toggle="buttons"] > .btn-white input[type="checkbox"],
 .comment-form
 [data-toggle="buttons"] > input[type="submit"] input[type="checkbox"],
 .search-form
@@ -4304,6 +4422,7 @@ tbody.collapse.show {
 [data-toggle="buttons"] > a input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn-purple input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn-white input[type="radio"],
 .comment-form
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"],
 .search-form
@@ -4314,6 +4433,7 @@ tbody.collapse.show {
 [data-toggle="buttons"] > .btn-group > a input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn-purple input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn-white input[type="checkbox"],
 .comment-form
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"],
 .search-form
@@ -4485,6 +4605,7 @@ tbody.collapse.show {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > .input-group-btn > .input-group-addon.btn-purple,
+.input-group-sm > .input-group-btn > .input-group-addon.btn-white,
 .comment-form
   .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"],
 .search-form
@@ -4507,6 +4628,7 @@ tbody.collapse.show {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > .input-group-btn > .input-group-addon.btn-purple,
+.input-group-lg > .input-group-btn > .input-group-addon.btn-white,
 .comment-form
   .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"],
 .search-form
@@ -4542,6 +4664,7 @@ tbody.collapse.show {
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-purple,
+.input-group-btn:not(:last-child) > .btn-white,
 .comment-form
 .input-group-btn:not(:last-child) > input[type="submit"],
 .search-form
@@ -4552,6 +4675,7 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > a,
 .input-group-btn:not(:last-child) > .btn-group > .btn,
 .input-group-btn:not(:last-child) > .btn-group > .btn-purple,
+.input-group-btn:not(:last-child) > .btn-group > .btn-white,
 .comment-form
 .input-group-btn:not(:last-child) > .btn-group > input[type="submit"],
 .search-form
@@ -4563,6 +4687,7 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-purple:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .btn-white:not(:last-child):not(.dropdown-toggle),
 .comment-form
 .input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
 .search-form
@@ -4573,6 +4698,7 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > a:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn-purple,
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn-white,
 .comment-form
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"],
 .search-form
@@ -4606,6 +4732,7 @@ tbody.collapse.show {
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-purple,
+.input-group-btn:not(:first-child) > .btn-white,
 .comment-form
 .input-group-btn:not(:first-child) > input[type="submit"],
 .search-form
@@ -4616,6 +4743,7 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > a,
 .input-group-btn:not(:first-child) > .btn-group > .btn,
 .input-group-btn:not(:first-child) > .btn-group > .btn-purple,
+.input-group-btn:not(:first-child) > .btn-group > .btn-white,
 .comment-form
 .input-group-btn:not(:first-child) > .btn-group > input[type="submit"],
 .search-form
@@ -4627,6 +4755,7 @@ tbody.collapse.show {
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-purple:not(:first-child),
+.input-group-btn:not(:last-child) > .btn-white:not(:first-child),
 .comment-form
 .input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child),
 .search-form
@@ -4637,6 +4766,7 @@ tbody.collapse.show {
 .input-group-btn:not(:last-child) > a:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn-purple,
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn-white,
 .comment-form
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"],
 .search-form
@@ -4666,6 +4796,7 @@ tbody.collapse.show {
 
 .input-group-btn > .btn,
 .input-group-btn > .btn-purple,
+.input-group-btn > .btn-white,
 .comment-form .input-group-btn > input[type="submit"],
 .search-form .input-group-btn > .search-submit,
 .gform_wrapper form .input-group-btn > .gform_button.button,
@@ -4677,18 +4808,28 @@ tbody.collapse.show {
 
 .input-group-btn > .btn + .btn,
 .input-group-btn > .btn-purple + .btn,
+.input-group-btn > .btn-white + .btn,
 .comment-form .input-group-btn > input[type="submit"] + .btn,
 .search-form .input-group-btn > .search-submit + .btn,
 .gform_wrapper form .input-group-btn > .gform_button.button + .btn,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .btn,
 .input-group-btn > .btn + .btn-purple,
 .input-group-btn > .btn-purple + .btn-purple,
+.input-group-btn > .btn-white + .btn-purple,
 .comment-form .input-group-btn > input[type="submit"] + .btn-purple,
 .search-form .input-group-btn > .search-submit + .btn-purple,
 .gform_wrapper form .input-group-btn > .gform_button.button + .btn-purple,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .btn-purple,
+.input-group-btn > .btn + .btn-white,
+.input-group-btn > .btn-purple + .btn-white,
+.input-group-btn > .btn-white + .btn-white,
+.comment-form .input-group-btn > input[type="submit"] + .btn-white,
+.search-form .input-group-btn > .search-submit + .btn-white,
+.gform_wrapper form .input-group-btn > .gform_button.button + .btn-white,
+.component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .btn-white,
 .comment-form .input-group-btn > .btn + input[type="submit"],
 .comment-form .input-group-btn > .btn-purple + input[type="submit"],
+.comment-form .input-group-btn > .btn-white + input[type="submit"],
 .comment-form .input-group-btn > input[type="submit"] + input[type="submit"],
 .search-form .comment-form .input-group-btn > .search-submit + input[type="submit"],
 .comment-form .search-form .input-group-btn > .search-submit + input[type="submit"],
@@ -4698,6 +4839,7 @@ tbody.collapse.show {
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + input[type="submit"],
 .search-form .input-group-btn > .btn + .search-submit,
 .search-form .input-group-btn > .btn-purple + .search-submit,
+.search-form .input-group-btn > .btn-white + .search-submit,
 .comment-form .search-form .input-group-btn > input[type="submit"] + .search-submit,
 .search-form .comment-form .input-group-btn > input[type="submit"] + .search-submit,
 .search-form .input-group-btn > .search-submit + .search-submit,
@@ -4707,6 +4849,7 @@ tbody.collapse.show {
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .search-submit,
 .gform_wrapper form .input-group-btn > .btn + .gform_button.button,
 .gform_wrapper form .input-group-btn > .btn-purple + .gform_button.button,
+.gform_wrapper form .input-group-btn > .btn-white + .gform_button.button,
 .comment-form .gform_wrapper form .input-group-btn > input[type="submit"] + .gform_button.button,
 .gform_wrapper form .comment-form .input-group-btn > input[type="submit"] + .gform_button.button,
 .search-form .gform_wrapper form .input-group-btn > .search-submit + .gform_button.button,
@@ -4716,6 +4859,7 @@ tbody.collapse.show {
 .gform_wrapper form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a + .gform_button.button,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > .btn + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > .btn-purple + a,
+.component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > .btn-white + a,
 .comment-form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > input[type="submit"] + a,
 .component-hero-wrap .video-foreground .external-user-menu ul li .comment-form .input-group-btn > input[type="submit"] + a,
 .search-form .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > .search-submit + a,
@@ -4728,18 +4872,21 @@ tbody.collapse.show {
 
 .input-group-btn > .btn:focus,
 .input-group-btn > .btn-purple:focus,
+.input-group-btn > .btn-white:focus,
 .comment-form .input-group-btn > input[type="submit"]:focus,
 .search-form .input-group-btn > .search-submit:focus,
 .gform_wrapper form .input-group-btn > .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a:focus,
 .input-group-btn > .btn:active,
 .input-group-btn > .btn-purple:active,
+.input-group-btn > .btn-white:active,
 .comment-form .input-group-btn > input[type="submit"]:active,
 .search-form .input-group-btn > .search-submit:active,
 .gform_wrapper form .input-group-btn > .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn > a:active,
 .input-group-btn > .btn:hover,
 .input-group-btn > .btn-purple:hover,
+.input-group-btn > .btn-white:hover,
 .comment-form .input-group-btn > input[type="submit"]:hover,
 .search-form .input-group-btn > .search-submit:hover,
 .gform_wrapper form .input-group-btn > .gform_button.button:hover,
@@ -4749,6 +4896,7 @@ tbody.collapse.show {
 
 .input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-purple,
+.input-group-btn:not(:last-child) > .btn-white,
 .comment-form .input-group-btn:not(:last-child) > input[type="submit"],
 .search-form .input-group-btn:not(:last-child) > .search-submit,
 .gform_wrapper form .input-group-btn:not(:last-child) > .gform_button.button,
@@ -4759,6 +4907,7 @@ tbody.collapse.show {
 
 .input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-purple,
+.input-group-btn:not(:first-child) > .btn-white,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"],
 .search-form .input-group-btn:not(:first-child) > .search-submit,
 .gform_wrapper form .input-group-btn:not(:first-child) > .gform_button.button,
@@ -4770,18 +4919,21 @@ tbody.collapse.show {
 
 .input-group-btn:not(:first-child) > .btn:focus,
 .input-group-btn:not(:first-child) > .btn-purple:focus,
+.input-group-btn:not(:first-child) > .btn-white:focus,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:focus,
 .search-form .input-group-btn:not(:first-child) > .search-submit:focus,
 .gform_wrapper form .input-group-btn:not(:first-child) > .gform_button.button:focus,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn:not(:first-child) > a:focus,
 .input-group-btn:not(:first-child) > .btn:active,
 .input-group-btn:not(:first-child) > .btn-purple:active,
+.input-group-btn:not(:first-child) > .btn-white:active,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:active,
 .search-form .input-group-btn:not(:first-child) > .search-submit:active,
 .gform_wrapper form .input-group-btn:not(:first-child) > .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li .input-group-btn:not(:first-child) > a:active,
 .input-group-btn:not(:first-child) > .btn:hover,
 .input-group-btn:not(:first-child) > .btn-purple:hover,
+.input-group-btn:not(:first-child) > .btn-white:hover,
 .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:hover,
 .search-form .input-group-btn:not(:first-child) > .search-submit:hover,
 .gform_wrapper form .input-group-btn:not(:first-child) > .gform_button.button:hover,
@@ -6023,6 +6175,7 @@ tbody.collapse.show {
 
 .btn .badge,
 .btn-purple .badge,
+.btn-white .badge,
 .comment-form input[type="submit"] .badge,
 .search-form .search-submit .badge,
 .gform_wrapper form .gform_button.button .badge,
@@ -13705,7 +13858,7 @@ body {
   font-size: 19px;
   font-family: "News Cycle", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.02em;
-  background-color: #f6f7f8;
+  background-color: #fff;
 }
 
 a,
@@ -13889,12 +14042,15 @@ table.dataTable th {
   color: #c5ccd2;
 }
 
-.dataTables_length {
-  margin-bottom: 15px;
+.dataTables_length,
+.dataTables_info,
+.dataTables_paginate {
+  display: none;
 }
 
 .dataTables_filter {
-  float: right;
+  float: left;
+  margin-bottom: 1rem;
 }
 
 @font-face {
@@ -13915,6 +14071,7 @@ table.dataTable th {
 
 .btn,
 .btn-purple,
+.btn-white,
 .comment-form input[type="submit"],
 .search-form .search-submit,
 .gform_wrapper form .gform_button.button,
@@ -13934,6 +14091,7 @@ table.dataTable th {
 
 .btn:visited,
 .btn-purple:visited,
+.btn-white:visited,
 .comment-form input[type="submit"]:visited,
 .search-form .search-submit:visited,
 .gform_wrapper form .gform_button.button:visited,
@@ -13943,18 +14101,21 @@ table.dataTable th {
 
 .btn:hover,
 .btn-purple:hover,
+.btn-white:hover,
 .comment-form input[type="submit"]:hover,
 .search-form .search-submit:hover,
 .gform_wrapper form .gform_button.button:hover,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:hover,
 .btn:active,
 .btn-purple:active,
+.btn-white:active,
 .comment-form input[type="submit"]:active,
 .search-form .search-submit:active,
 .gform_wrapper form .gform_button.button:active,
 .component-hero-wrap .video-foreground .external-user-menu ul li a:active,
 .btn:focus,
 .btn-purple:focus,
+.btn-white:focus,
 .comment-form input[type="submit"]:focus,
 .search-form .search-submit:focus,
 .gform_wrapper form .gform_button.button:focus,
@@ -13965,6 +14126,7 @@ table.dataTable th {
 
 .btn .fa,
 .btn-purple .fa,
+.btn-white .fa,
 .comment-form input[type="submit"] .fa,
 .search-form .search-submit .fa,
 .gform_wrapper form .gform_button.button .fa,
@@ -13986,10 +14148,23 @@ table.dataTable th {
   background: #fff;
 }
 
+.btn-white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+  color: #46166b;
+  background: #fff;
+}
+
 .btn-xl,
 .btn-lg,
 .btn-group-lg > .btn,
 .btn-group-lg > .btn-purple,
+.btn-group-lg > .btn-white,
 .comment-form .btn-group-lg > input[type="submit"],
 .search-form .btn-group-lg > .search-submit,
 .gform_wrapper form .btn-group-lg > .gform_button.button,
@@ -13999,6 +14174,7 @@ table.dataTable th {
 .btn-sm,
 .btn-group-sm > .btn,
 .btn-group-sm > .btn-purple,
+.btn-group-sm > .btn-white,
 .comment-form .btn-group-sm > input[type="submit"],
 .search-form .btn-group-sm > .search-submit,
 .gform_wrapper form .btn-group-sm > .gform_button.button,
@@ -14014,6 +14190,7 @@ table.dataTable th {
 .btn-lg,
 .btn-group-lg > .btn,
 .btn-group-lg > .btn-purple,
+.btn-group-lg > .btn-white,
 .comment-form .btn-group-lg > input[type="submit"],
 .search-form .btn-group-lg > .search-submit,
 .gform_wrapper form .btn-group-lg > .gform_button.button,
@@ -14029,6 +14206,7 @@ table.dataTable th {
 .btn-sm,
 .btn-group-sm > .btn,
 .btn-group-sm > .btn-purple,
+.btn-group-sm > .btn-white,
 .comment-form .btn-group-sm > input[type="submit"],
 .search-form .btn-group-sm > .search-submit,
 .gform_wrapper form .btn-group-sm > .gform_button.button,
@@ -14168,7 +14346,7 @@ button {
 
 .card--faculty-and-staff figure img {
   position: absolute;
-  border: 1px solid #f6f7f8;
+  border: 1px solid #d9dee2;
   width: 100% !important;
   height: 100% !important;
   border-radius: 2px;
@@ -14192,6 +14370,7 @@ button {
 
 .card--faculty-and-staff .btn,
 .card--faculty-and-staff .btn-purple,
+.card--faculty-and-staff .btn-white,
 .card--faculty-and-staff .comment-form input[type="submit"],
 .comment-form .card--faculty-and-staff input[type="submit"],
 .card--faculty-and-staff .search-form .search-submit,
@@ -14326,7 +14505,7 @@ a.sub-field {
   font-family: #97a4af;
   font-weight: 700;
   font-size: 0.85rem;
-  color: #f6f7f8;
+  color: #d9dee2;
   text-transform: uppercase;
   border-radius: 2px;
 }
@@ -14452,7 +14631,7 @@ a.sub-field {
 
 .component-faculty-and-staff__instance figure img {
   position: absolute;
-  border: 1px solid #f6f7f8;
+  border: 1px solid #d9dee2;
   width: 100% !important;
   height: 100% !important;
   border-radius: 2px;
@@ -15425,7 +15604,7 @@ h4 {
 
 .row-default.row-dark {
   background: #46166b;
-  color: #f6f7f8;
+  color: #d9dee2;
 }
 
 .row-default.row-dark.row-image {
@@ -15439,7 +15618,7 @@ h4 {
 }
 
 .row-default.row-dark h4 {
-  color: #f6f7f8;
+  color: #d9dee2;
 }
 
 .row-default.row-yellow {
@@ -15447,8 +15626,8 @@ h4 {
   color: #a77d0c;
 }
 
-.row-default.row-yellow a:not(.btn):not(.btn-purple):not(.comment-form input[type="submit"]):not(.search-form .search-submit):not(.gform_wrapper form .gform_button.button):not(.component-hero-wrap .video-foreground .external-user-menu ul li a),
-.row-default.row-yellow a:not(.btn):not(.btn-purple):not(.comment-form input[type="submit"]):not(.search-form .search-submit):not(.gform_wrapper form .gform_button.button):not(.component-hero-wrap .video-foreground .external-user-menu ul li a):visited {
+.row-default.row-yellow a:not(.btn):not(.btn-purple):not(.btn-white):not(.comment-form input[type="submit"]):not(.search-form .search-submit):not(.gform_wrapper form .gform_button.button):not(.component-hero-wrap .video-foreground .external-user-menu ul li a),
+.row-default.row-yellow a:not(.btn):not(.btn-purple):not(.btn-white):not(.comment-form input[type="submit"]):not(.search-form .search-submit):not(.gform_wrapper form .gform_button.button):not(.component-hero-wrap .video-foreground .external-user-menu ul li a):visited {
   color: #000;
 }
 
@@ -15465,7 +15644,7 @@ h4 {
 
 .row-default.row-blue {
   background: #46166b;
-  color: #f6f7f8;
+  color: #d9dee2;
 }
 
 .row-default.row-blue.row-image {
@@ -15476,7 +15655,7 @@ h4 {
 
 .row-default.row-blue h1,
 .row-default.row-blue h2 {
-  color: #f6f7f8;
+  color: #d9dee2;
 }
 
 .row-default.row-blue h3 {
@@ -15488,7 +15667,7 @@ h4 {
 }
 
 .row-default.row-blue h5 {
-  color: #f6f7f8;
+  color: #d9dee2;
 }
 
 .row-default.row-blue a,
@@ -15498,6 +15677,7 @@ h4 {
 
 .row-default.row-blue a.btn.btn-primary,
 .row-default.row-blue a.btn-primary.btn-purple,
+.row-default.row-blue a.btn-primary.btn-white,
 .row-default.row-blue .search-form a.btn-primary.search-submit,
 .search-form .row-default.row-blue a.btn-primary.search-submit,
 .row-default.row-blue .gform_wrapper form a.btn-primary.gform_button.button,
@@ -15506,6 +15686,7 @@ h4 {
 .component-hero-wrap .video-foreground .external-user-menu ul li .row-default.row-blue a.btn-primary,
 .row-default.row-blue a.btn.btn-primary:visited,
 .row-default.row-blue a.btn-primary.btn-purple:visited,
+.row-default.row-blue a.btn-primary.btn-white:visited,
 .row-default.row-blue .search-form a.btn-primary.search-submit:visited,
 .search-form
     .row-default.row-blue a.btn-primary.search-submit:visited,
@@ -15520,6 +15701,7 @@ h4 {
 
 .row-default.row-blue a.btn.btn-secondary,
 .row-default.row-blue a.btn-secondary.btn-purple,
+.row-default.row-blue a.btn-secondary.btn-white,
 .row-default.row-blue .search-form a.search-submit,
 .search-form .row-default.row-blue a.search-submit,
 .row-default.row-blue .gform_wrapper form a.gform_button.button,
@@ -15528,6 +15710,7 @@ h4 {
 .component-hero-wrap .video-foreground .external-user-menu ul li .row-default.row-blue a,
 .row-default.row-blue a.btn.btn-secondary:visited,
 .row-default.row-blue a.btn-secondary.btn-purple:visited,
+.row-default.row-blue a.btn-secondary.btn-white:visited,
 .row-default.row-blue .search-form a.search-submit:visited,
 .search-form
     .row-default.row-blue a.search-submit:visited,
@@ -15543,24 +15726,24 @@ h4 {
 .row-default.row-blue p,
 .row-default.row-blue li,
 .row-default.row-blue blockquote {
-  color: #f6f7f8;
+  color: #d9dee2;
 }
 
 .row-default.row-light_2 {
-  background: #f6f7f8;
+  background: #d9dee2;
   background-image: url(/wp-content/themes/ualbany/dist/images/newbackgroundimg.jpg);
-  border-top: 1px solid #f6f7f8;
+  border-top: 1px solid #d9dee2;
 }
 
 .row-default.row-light_2:first-child {
   border-top: none;
-  border-bottom: 1px solid #f6f7f8;
+  border-bottom: 1px solid #d9dee2;
 }
 
 .row-default.row-light_2.row-image {
-  background: #f6f7f8;
+  background: #d9dee2;
   /* The Fallback */
-  background: rgba(246, 247, 248, 0.75);
+  background: rgba(217, 222, 226, 0.75);
 }
 
 .row-default.row-testimonial-panels {
@@ -15698,12 +15881,13 @@ h4 {
 .component-wrap img.img-thumbnail,
 .component-wysiwyg-wrap img.img-thumbnail {
   border-radius: 2px;
-  border-color: #f6f7f8;
+  border-color: #d9dee2;
   padding: 0;
 }
 
 .component-wrap .btn,
 .component-wrap .btn-purple,
+.component-wrap .btn-white,
 .component-wrap .comment-form input[type="submit"],
 .comment-form .component-wrap input[type="submit"],
 .component-wrap .search-form .search-submit,
@@ -15714,6 +15898,7 @@ h4 {
 .component-hero-wrap .video-foreground .external-user-menu ul li .component-wrap a,
 .component-wysiwyg-wrap .btn,
 .component-wysiwyg-wrap .btn-purple,
+.component-wysiwyg-wrap .btn-white,
 .component-wysiwyg-wrap .comment-form input[type="submit"],
 .comment-form
 .component-wysiwyg-wrap input[type="submit"],
@@ -15732,6 +15917,50 @@ h4 {
 
 .banner {
   z-index: 10;
+}
+
+.banner .megamenu-toggle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 100%;
+  width: 70px;
+  z-index: 2;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.banner .megamenu-toggle::after {
+  margin: 0 auto;
+  display: block;
+  line-height: 12px;
+  width: 22px;
+  text-align: center;
+  text-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: color 0.25s ease;
+  -o-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+}
+
+.banner .megamenu-toggle:hover {
+  text-decoration: none;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -48px;
+  width: 159px;
+  height: 48px;
+  z-index: 1;
+  background: url(/wp-content/themes/ualbany/resources/assets/images/menu-arrow.png) no-repeat;
+  display: block;
 }
 
 .nav-utility,
@@ -15902,8 +16131,12 @@ footer .region-footer .widget {
   line-height: 22px;
 }
 
-footer .region-footer .widget a,
-footer .region-footer .widget a:visited {
+footer .region-footer .widget .logo img {
+  max-width: 100%;
+}
+
+footer .region-footer .widget .logo img a,
+footer .region-footer .widget .logo img a:visited {
   color: #ffc107;
 }
 
@@ -15995,6 +16228,12 @@ footer .region-footer .custom_html-3 {
   border-radius: 50%;
 }
 
+.single-header--results {
+  padding: 20px 2rem;
+  background-color: #353e45;
+  color: #fff;
+}
+
 .single-header {
   padding: 10rem 0 20px;
   color: #fff;
@@ -16063,6 +16302,7 @@ footer .region-footer .custom_html-3 {
 
 .page-section--buttons .btn,
 .page-section--buttons .btn-purple,
+.page-section--buttons .btn-white,
 .page-section--buttons .comment-form input[type="submit"],
 .comment-form .page-section--buttons input[type="submit"],
 .page-section--buttons .search-form .search-submit,
@@ -16080,6 +16320,11 @@ footer .region-footer .custom_html-3 {
 
 .section-title {
   text-align: center;
+}
+
+.template-terms header {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .front-header {
@@ -16149,7 +16394,7 @@ body.home section.page-section--tall {
 }
 
 #homepage-myths {
-  background-color: #f6f7f8;
+  background-color: #d9dee2;
   background-image: url(/wp-content/themes/ualbany/dist/images/newbackgroundimg.jpg);
   background-repeat: repeat;
   color: #46166b;
@@ -16158,6 +16403,7 @@ body.home section.page-section--tall {
 
 #homepage-cta .btn:first-of-type,
 #homepage-cta .btn-purple:first-of-type,
+#homepage-cta .btn-white:first-of-type,
 #homepage-cta .comment-form input[type="submit"]:first-of-type,
 .comment-form #homepage-cta input[type="submit"]:first-of-type,
 #homepage-cta .search-form .search-submit:first-of-type,
@@ -16173,6 +16419,7 @@ body.home section.page-section--tall {
 
 #homepage-cta .btn:first-of-type:hover,
 #homepage-cta .btn-purple:first-of-type:hover,
+#homepage-cta .btn-white:first-of-type:hover,
 #homepage-cta .comment-form input[type="submit"]:first-of-type:hover,
 .comment-form #homepage-cta input[type="submit"]:first-of-type:hover,
 #homepage-cta .search-form .search-submit:first-of-type:hover,
@@ -16198,6 +16445,7 @@ body.home section.page-section--tall {
 
 #homepage-social .btn,
 #homepage-social .btn-purple,
+#homepage-social .btn-white,
 #homepage-social .comment-form input[type="submit"],
 .comment-form #homepage-social input[type="submit"],
 #homepage-social .search-form .search-submit,
@@ -16213,6 +16461,7 @@ body.home section.page-section--tall {
 
 #homepage-social .btn:hover,
 #homepage-social .btn-purple:hover,
+#homepage-social .btn-white:hover,
 #homepage-social .comment-form input[type="submit"]:hover,
 .comment-form #homepage-social input[type="submit"]:hover,
 #homepage-social .search-form .search-submit:hover,
@@ -16236,6 +16485,7 @@ body.home section.page-section--tall {
 
 #homepage-info .btn,
 #homepage-info .btn-purple,
+#homepage-info .btn-white,
 #homepage-info .comment-form input[type="submit"],
 .comment-form #homepage-info input[type="submit"],
 #homepage-info .search-form .search-submit,
@@ -16251,6 +16501,7 @@ body.home section.page-section--tall {
 
 #homepage-info .btn:hover,
 #homepage-info .btn-purple:hover,
+#homepage-info .btn-white:hover,
 #homepage-info .comment-form input[type="submit"]:hover,
 .comment-form #homepage-info input[type="submit"]:hover,
 #homepage-info .search-form .search-submit:hover,
@@ -16274,6 +16525,57 @@ body.home section.page-section--tall {
 #homepage-discover .row ul {
   list-style: none;
   padding-left: 0;
+}
+
+.single-header--results {
+  padding: 20px 2rem;
+  background-color: #353e45;
+  color: #fff;
+}
+
+.single-header {
+  padding: 10rem 0 20px;
+  color: #fff;
+  position: relative;
+  background-color: #97a4af;
+  overflow: hidden;
+}
+
+.single-header .single-photo {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.single-header .single-header-content {
+  background-color: #353e45;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: auto;
+  max-width: 50%;
+  display: inline-block;
+  padding: 20px 40px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 5;
+  text-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.single-photo-overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(/wp-content/themes/ualbany/dist/images/isometric-cubes.png);
 }
 
 .single header {
@@ -16316,6 +16618,7 @@ body.home section.page-section--tall {
 
 .single-program .program-intro .btn,
 .single-program .program-intro .btn-purple,
+.single-program .program-intro .btn-white,
 .single-program .program-intro .comment-form input[type="submit"],
 .comment-form .single-program .program-intro input[type="submit"],
 .single-program .program-intro .search-form .search-submit,
@@ -16332,6 +16635,7 @@ body.home section.page-section--tall {
 @media (min-width: 1200px) {
   .single-program .program-intro .btn,
   .single-program .program-intro .btn-purple,
+  .single-program .program-intro .btn-white,
   .single-program .program-intro .comment-form input[type="submit"],
   .comment-form .single-program .program-intro input[type="submit"],
   .single-program .program-intro .search-form .search-submit,
@@ -16372,12 +16676,6 @@ body.home section.page-section--tall {
 }
 
 .single-program .program-video__blurb {
-  padding: 20px 0;
-}
-
-.single-program .program-meta,
-.program .program-meta,
-.table-programs .program-meta {
   padding: 20px 0;
 }
 
@@ -16448,7 +16746,6 @@ body.home section.page-section--tall {
 
 .program .program-meta {
   font-size: 1rem;
-  padding: 3rem 0;
 }
 
 .program .program-meta__label {
@@ -16462,6 +16759,7 @@ body.home section.page-section--tall {
 
 .program .program-meta .btn,
 .program .program-meta .btn-purple,
+.program .program-meta .btn-white,
 .program .program-meta .comment-form input[type="submit"],
 .comment-form .program .program-meta input[type="submit"],
 .program .program-meta .search-form .search-submit,
@@ -16525,12 +16823,59 @@ body.home section.page-section--tall {
   color: #fff;
 }
 
+.featured-programs h2 {
+  margin-top: 3rem;
+}
+
+.featured-programs .program {
+  background-color: #fff;
+}
+
+.featured-programs .program .row {
+  padding: 3rem 0;
+}
+
 .featured-programs .program:nth-child(odd) {
-  background-color: #97a4af;
+  background-color: #d9dee2;
 }
 
 .all-programs {
   padding: 3rem 0;
+  background: #c5ccd2;
+  color: #fff;
+}
+
+.all-programs h2 {
+  color: #353e45;
+}
+
+.all-programs table {
+  background: #46166b;
+  border: 1px solid #3e135e;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.all-programs table #table-programs_filter label {
+  color: #353e45;
+}
+
+.all-programs table th {
+  background-color: #602481;
+}
+
+.all-programs table th,
+.all-programs table td {
+  border: 1px solid #3e135e;
+  padding: 1rem;
+}
+
+.all-programs table a {
+  color: #fff;
+}
+
+.all-programs .row:first-of-type .col-sm-6:first-of-type {
+  display: none;
 }
 
 .program {
@@ -16571,7 +16916,7 @@ body.home section.page-section--tall {
 
 .myths-slick .slick-slide {
   padding: 2rem;
-  background-color: #f6f7f8;
+  background-color: #d9dee2;
   text-align: center;
   margin: 0 0.5rem;
   -webkit-transform: scale(0.9);

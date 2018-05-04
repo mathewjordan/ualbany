@@ -68,8 +68,6 @@
 .single-program .program-meta,
 .program .program-meta,
 .table-programs .program-meta {
-  padding: 20px 0;
-
   &__label {
     font-size: 1.5rem;
 
@@ -117,7 +115,6 @@
 
 .program .program-meta {
   font-size: 1rem;
-  padding: 3rem 0;
 
   &__label {
     font-size: 1.25rem;
@@ -185,13 +182,62 @@
 } // .single-program .incoming-subfooter
 
 .featured-programs {
+  h2 {
+    margin-top: 3rem;
+  }
+
+  .program {
+    background-color: $white;
+
+    .row {
+      padding: 3rem 0;
+    }
+  }
+
   .program:nth-child(odd) {
-    background-color: $gray;
+    background-color: $offwhite;
   }
 }
 
 .all-programs {
   padding: 3rem 0;
+  background: $lightgray;
+  color: $white;
+
+  h2 {
+    color: $darkgray;
+  }
+
+  table {
+    background: $purple;
+    border: 1px solid darken($purple, 3);
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+
+    #table-programs_filter label {
+      color: $darkgray;
+    }
+
+    th {
+      background-color: $altpurple;
+    }
+
+    th,
+    td {
+      border: 1px solid darken($purple, 3);
+      padding: 1rem;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+
+  .row:first-of-type {
+    .col-sm-6:first-of-type {
+      display: none;
+    }
+  }
 }
 
 .program {
