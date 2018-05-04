@@ -14042,12 +14042,6 @@ table.dataTable th {
   color: #c5ccd2;
 }
 
-.dataTables_length,
-.dataTables_info,
-.dataTables_paginate {
-  display: none;
-}
-
 .dataTables_filter {
   float: left;
   margin-bottom: 1rem;
@@ -14346,7 +14340,7 @@ button {
 
 .card--faculty-and-staff figure img {
   position: absolute;
-  border: 1px solid #d9dee2;
+  border: 1px solid #f6f7f8;
   width: 100% !important;
   height: 100% !important;
   border-radius: 2px;
@@ -14505,7 +14499,7 @@ a.sub-field {
   font-family: #97a4af;
   font-weight: 700;
   font-size: 0.85rem;
-  color: #d9dee2;
+  color: #f6f7f8;
   text-transform: uppercase;
   border-radius: 2px;
 }
@@ -14631,7 +14625,7 @@ a.sub-field {
 
 .component-faculty-and-staff__instance figure img {
   position: absolute;
-  border: 1px solid #d9dee2;
+  border: 1px solid #f6f7f8;
   width: 100% !important;
   height: 100% !important;
   border-radius: 2px;
@@ -15604,7 +15598,7 @@ h4 {
 
 .row-default.row-dark {
   background: #46166b;
-  color: #d9dee2;
+  color: #f6f7f8;
 }
 
 .row-default.row-dark.row-image {
@@ -15618,7 +15612,7 @@ h4 {
 }
 
 .row-default.row-dark h4 {
-  color: #d9dee2;
+  color: #f6f7f8;
 }
 
 .row-default.row-yellow {
@@ -15644,7 +15638,7 @@ h4 {
 
 .row-default.row-blue {
   background: #46166b;
-  color: #d9dee2;
+  color: #f6f7f8;
 }
 
 .row-default.row-blue.row-image {
@@ -15655,7 +15649,7 @@ h4 {
 
 .row-default.row-blue h1,
 .row-default.row-blue h2 {
-  color: #d9dee2;
+  color: #f6f7f8;
 }
 
 .row-default.row-blue h3 {
@@ -15667,7 +15661,7 @@ h4 {
 }
 
 .row-default.row-blue h5 {
-  color: #d9dee2;
+  color: #f6f7f8;
 }
 
 .row-default.row-blue a,
@@ -15726,24 +15720,24 @@ h4 {
 .row-default.row-blue p,
 .row-default.row-blue li,
 .row-default.row-blue blockquote {
-  color: #d9dee2;
+  color: #f6f7f8;
 }
 
 .row-default.row-light_2 {
-  background: #d9dee2;
+  background: #f6f7f8;
   background-image: url(/wp-content/themes/ualbany/dist/images/newbackgroundimg.jpg);
-  border-top: 1px solid #d9dee2;
+  border-top: 1px solid #f6f7f8;
 }
 
 .row-default.row-light_2:first-child {
   border-top: none;
-  border-bottom: 1px solid #d9dee2;
+  border-bottom: 1px solid #f6f7f8;
 }
 
 .row-default.row-light_2.row-image {
-  background: #d9dee2;
+  background: #f6f7f8;
   /* The Fallback */
-  background: rgba(217, 222, 226, 0.75);
+  background: rgba(246, 247, 248, 0.75);
 }
 
 .row-default.row-testimonial-panels {
@@ -15881,7 +15875,7 @@ h4 {
 .component-wrap img.img-thumbnail,
 .component-wysiwyg-wrap img.img-thumbnail {
   border-radius: 2px;
-  border-color: #d9dee2;
+  border-color: #f6f7f8;
   padding: 0;
 }
 
@@ -16394,7 +16388,7 @@ body.home section.page-section--tall {
 }
 
 #homepage-myths {
-  background-color: #d9dee2;
+  background-color: #f6f7f8;
   background-image: url(/wp-content/themes/ualbany/dist/images/newbackgroundimg.jpg);
   background-repeat: repeat;
   color: #46166b;
@@ -16836,7 +16830,7 @@ body.home section.page-section--tall {
 }
 
 .featured-programs .program:nth-child(odd) {
-  background-color: #d9dee2;
+  background-color: #f6f7f8;
 }
 
 .all-programs {
@@ -16850,32 +16844,32 @@ body.home section.page-section--tall {
 }
 
 .all-programs table {
-  background: #46166b;
-  border: 1px solid #3e135e;
+  background: #fff;
+  border: 1px solid #f7f7f7;
   font-size: 1rem;
   letter-spacing: 0.04em;
+  color: #353e45;
 }
 
 .all-programs table #table-programs_filter label {
   color: #353e45;
 }
 
-.all-programs table th {
-  background-color: #602481;
-}
-
 .all-programs table th,
 .all-programs table td {
-  border: 1px solid #3e135e;
+  border: 1px solid #f7f7f7;
   padding: 1rem;
 }
 
-.all-programs table a {
+.all-programs table th {
+  background-color: #46166b;
   color: #fff;
+  border: 1px solid #3e135e;
 }
 
-.all-programs .row:first-of-type .col-sm-6:first-of-type {
-  display: none;
+.all-programs table a {
+  color: #46166b;
+  font-weight: 700;
 }
 
 .program {
@@ -16916,7 +16910,7 @@ body.home section.page-section--tall {
 
 .myths-slick .slick-slide {
   padding: 2rem;
-  background-color: #d9dee2;
+  background-color: #f6f7f8;
   text-align: center;
   margin: 0 0.5rem;
   -webkit-transform: scale(0.9);
