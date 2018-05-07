@@ -1,5 +1,6 @@
 .banner {
   z-index: $z-index-banner;
+  background-color: $purple;
 
   .nav li {
     @extend .nav-item;
@@ -63,12 +64,24 @@
 
 .nav-utility {
   position: relative;
-  padding-right: 50px;
+  padding-right: 60px;
 }
 
 .banner_utility {
-  padding: 0.5rem 3rem;
-  background-color: $purple;
+  display: none;
+
+  @media screen and (min-width: 1345px) {
+    display: block;
+    padding: 0.5rem 3rem;
+  }
+
+  .menu-utility-container {
+    display: none;
+
+    @media screen and (min-width: 1345px) {
+      display: block;
+    }
+  }
 
   .nav {
     float: right;
@@ -88,8 +101,15 @@
 }
 
 .banner_primary {
-  background-color: $purple;
   padding: 0 2rem;
+
+  .menu-primary-container {
+    display: none;
+
+    @media screen and (min-width: 1345px) {
+      display: block;
+    }
+  }
 
   .brand {
     padding: 24px 0;
@@ -211,4 +231,11 @@ header {
 .menu-item-has-children:hover .dropdown-menu {
   display: block;
 }
+
+/*
+body.home section.banner_utility,
+body.home section.banner_primary {
+  width: auto;
+}
+*/
 

@@ -71,9 +71,7 @@
                     @if (has_nav_menu('utility_navigation'))
                         {!! wp_nav_menu(['theme_location' => 'utility_navigation', 'menu_class' => 'nav']) !!}
                     @endif
-                    <div class="nav-master-trigger">
-                        <button aria-label="Menu"><em class="sr-only">Menu</em><span></span></button>
-                    </div>
+                   
                 </nav>
             </div>
         </div>
@@ -96,5 +94,8 @@
             </div>
         </div>
     </section>
-    <a role="button" href="#" class="megamenu-toggle" id="megamenu-toggle"></a>
+    <div class="nav-master-trigger">
+        <button aria-label="Menu"><em class="sr-only">Menu</em><span></span></button>
+    </div>
+    <!--<a role="button" href="#" class="megamenu-toggle" id="megamenu-toggle"></a>-->
 </header>
