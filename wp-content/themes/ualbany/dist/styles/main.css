@@ -14043,8 +14043,12 @@ table.dataTable th {
 }
 
 .dataTables_filter {
-  float: left;
+  width: 100%;
   margin-bottom: 1rem;
+}
+
+.dataTables_filter input {
+  width: 100%;
 }
 
 @font-face {

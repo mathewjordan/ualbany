@@ -137,6 +137,10 @@ table.dataTable {
 }
 
 .dataTables_filter {
-  float: left;
+  width: 100%;
   margin-bottom: 1rem;
+
+  input {
+    width: 100%;
+  }
 }

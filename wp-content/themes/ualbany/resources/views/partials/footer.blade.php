@@ -79,8 +79,10 @@
         });
 
         $('#table-programs').DataTable( {
-          "paging": false,
-          "lengthChange": false,
+          "dom": 'frti',
+          //"paging": false,
+          //"lengthChange": false,
+          //"bLengthChange": false,
           "columnDefs": [
             {
                 "targets": [ 8 ],
