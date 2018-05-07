@@ -164,6 +164,27 @@ if (! function_exists('td_unique_terms')) {
   }
 }
 
+if (! function_exists('get_app_term_dates')) {
+  function get_app_term_dates($d) {
+    $arr = [];
+    $arr['app_deadline'] = $d->app_deadline;
+    $arr['app_decision'] = $d->app_decision;
+    $arr['app_term_year'] = $d->app_term_year;
+    $arr['term_start'] = $d->term_start;
+    $arr['term_end'] = $d->term_end;
+
+    if ($d->override) {
+      $arr['override'] = $d->override;
+    }
+
+    if ($d->override2) {
+      $arr['override2'] = $d->override2;
+    }
+
+    return $arr;
+  }
+}
+
 if (! function_exists('td_program_dates')) {
   function td_program_dates() {
     global $post;
@@ -175,39 +196,30 @@ if (! function_exists('td_program_dates')) {
       if ($dates_data->date) :
 
         if (is_array($dates_data->date)) :
-
+          
           foreach($dates_data->date as $d) :
             $app_term = strtolower($d->app_term);
-            $dates[$app_term] = [];
-            $dates[$app_term]['app_deadline'] = $d->app_deadline;
-            $dates[$app_term]['app_decision'] = $d->app_decision;
-            $dates[$app_term]['app_term_year'] = $d->app_term_year;
-            $dates[$app_term]['term_start'] = $d->term_start;
-            $dates[$app_term]['term_end'] = $d->term_end;
-
-            if ($d->override) {
-              $dates[$app_term]['override'] = $d->override;
-            }
-
-            if ($d->override2) {
-              $dates[$app_term]['override2'] = $d->override2;
-            }
-
+            $dates[$app_term] = get_app_term_dates($d);
           endforeach;
+
         else:
+          $app_term = strtolower($dates_data->date->app_term);
+          $dates[$app_term] = get_app_term_dates($dates_data->date);
         endif;
       endif;
 
-      $deadline = $dates['winter']['override'] ? 
-                  $dates['winter']['override'] :
-                  $dates['winter']['app_deadline'];
+      reset($dates);
+      $first_key = key($dates);
+      $deadline  = $dates[$first_key]['override'] ? 
+                   $dates[$first_key]['override'] :
+                   $dates[$first_key]['app_deadline'];
 
       $deadline_date = date('n.d.Y', strtotime($deadline));
 
-      $start = $dates['winter']['term_start'];
+      $start = $dates[$first_key]['term_start'];
       $start_date = date('n.d.Y', strtotime($start));
 
-      $end = $dates['winter']['term_end'];
+      $end = $dates[$first_key]['term_end'];
       $end_date = date('n.d.Y', strtotime($end));
 
       $date_array = [ 'deadline' => $deadline_date,
