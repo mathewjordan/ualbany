@@ -30,8 +30,10 @@ $program_meta = td_program_meta();
 
 $program_dates = td_program_dates();
 
-@endphp
+//var_dump($program_dates);
 
+@endphp
+  
 <article @php(post_class())>
     <header class="program-header">
         <div class="container">
