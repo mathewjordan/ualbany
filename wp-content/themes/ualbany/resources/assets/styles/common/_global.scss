@@ -144,3 +144,55 @@ table.dataTable {
     width: 100%;
   }
 }
+
+ul.slickslide li img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-dots {
+  position: relative;
+
+  li {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+
+    button {
+      margin: 0;
+      height: auto;
+      width: 100%;
+      padding: 0;
+
+      &::before {
+        margin: 0;
+        padding: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 150px;
+        overflow: hidden;
+        float: none;
+        position: absolute;
+        height: 100%;
+      }
+
+      .tab {
+        clear: both;
+        display: block;
+      }
+
+      img {
+        width: 100%;
+        max-width: 80px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.slick-thumbs {
+  position: absolute;
+  left: -9999px;
+}

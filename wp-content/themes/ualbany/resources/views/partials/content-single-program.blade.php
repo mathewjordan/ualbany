@@ -64,13 +64,26 @@ $program_dates = td_program_dates();
                 </div>
                 @php $cnt++ @endphp
               @endforeach
+              
 
+                <div class="slick-thumbs">
+                  <ul>
+              @foreach ($gallery as $photo)
+
+                <li>
+                  <img src="{{ $photo['sizes']['medium'] }}" alt="{{ $photo['alt'] }}">
+                </li>      
+
+              @endforeach
+                  </ul>
+                </div>
+                
             </div>
             @endif
            
           </div>
           <div class="col-md-6">
-            <a href="#" target="_blank" class="btn-purple">
+            <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=Programs.ViewProgram&Program_ID={{get_field('program_id')}}" target="_blank" class="btn-purple">
               <span class="fa fa-send"></span>
               Apply Now!
             </a>
@@ -227,7 +240,7 @@ $program_dates = td_program_dates();
       'Restaurants &amp; Shopping' => 'incoming_program_subfooter_restaurants'
     ];
     @endphp
-    <section class="page-section">
+    <section class="program-about">
       <div class="incoming-subfooter">
         <div class="container">
           <div class="row">
@@ -314,34 +327,32 @@ $program_dates = td_program_dates();
     </section>
     @endif
 
-    <section>
-      <div class="subfooter">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <a href="#" class="subfooter__link">
-                <span class="fa fa-user" aria-hidden="true"></span>
-                <h3>Meet with an Advisor</h3>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <a href="#" class="subfooter__link">
-                <span class="fa fa-calendar" aria-hidden="true"></span>
-                <h3>Find an Event to Learn More</h3>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <a href="#" class="subfooter__link">
-                <span class="fa fa-dollar" aria-hidden="true"></span>
-                <h3>Find Scholarships and Financial Aid</h3>
-              </a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <a href="#" class="subfooter__link">
-                <span class="fa fa-question" aria-hidden="true"></span>
-                <h3>Search Frequently Asked Questions</h3>
-              </a>
-            </div>
+    <section class="subfooter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <a href="#" class="subfooter__link">
+              <span class="fa fa-user" aria-hidden="true"></span>
+              <h3>Meet with an Advisor</h3>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <a href="#" class="subfooter__link">
+              <span class="fa fa-calendar" aria-hidden="true"></span>
+              <h3>Find an Event to Learn More</h3>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <a href="#" class="subfooter__link">
+              <span class="fa fa-dollar" aria-hidden="true"></span>
+              <h3>Find Scholarships and Financial Aid</h3>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <a href="#" class="subfooter__link">
+              <span class="fa fa-question" aria-hidden="true"></span>
+              <h3>Search Frequently Asked Questions</h3>
+            </a>
           </div>
         </div>
       </div>

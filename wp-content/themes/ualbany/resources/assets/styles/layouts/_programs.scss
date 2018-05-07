@@ -136,6 +136,14 @@
   padding: 3rem 0;
 }
 
+.program-about {
+  padding: 3rem 0;
+
+  .nav {
+    margin-top: 2rem;
+  }
+}
+
 .single-program .tab-pane {
   padding: 30px 0;
 }
@@ -246,8 +254,6 @@
 }
 
 .program {
-  margin-bottom: 20px;
-
   &__thumbnail {
     display: block;
     height: 200px;
@@ -274,4 +280,9 @@
 
 .main > article .program h3 {
   color: $purple;
+}
+
+.subfooter {
+  background-color: $offwhite;
+  padding: 3rem 0;
 }

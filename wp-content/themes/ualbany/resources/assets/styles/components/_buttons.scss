@@ -45,6 +45,10 @@ $button-seconary-color:   $brand-secondary;
   background-color: $purple;
   border-color: $purple;
 
+  &:visited {
+    color: $white;
+  }
+
   &:hover,
   &:active,
   &:focus {
