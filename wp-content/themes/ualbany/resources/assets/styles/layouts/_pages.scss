@@ -91,3 +91,33 @@
 .template-terms header {
   @include box-shadow(none);
 }
+
+.section-page-main,
+.section-grid-main {
+  background-color: $offwhite;
+  border-top: 1px solid darken($offwhite, 3);
+  padding: 3rem 0;
+}
+
+.section-grid-break {
+  background-color: $purple;
+  padding: 3rem 0;
+  color: $white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  blockquote {
+    color: $white;
+  }
+}
+
+.section-grid-subfooter {
+  background-color: $white;
+  padding: 3rem 0;
+}

@@ -140,7 +140,11 @@
         </section>
         <?php endif; ?>
 
-        @include('partials.content-page')
+        <section class="section-page-main">
+            <div class="container">
+                @include('partials.content-page')
+            </div>
+        </section>
 
     </article>
     @endwhile

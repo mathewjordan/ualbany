@@ -16906,6 +16906,36 @@ footer .region-footer .custom_html-3 {
   box-shadow: none;
 }
 
+.section-page-main,
+.section-grid-main {
+  background-color: #f6f7f8;
+  border-top: 1px solid #edf0f2;
+  padding: 3rem 0;
+}
+
+.section-grid-break {
+  background-color: #46166b;
+  padding: 3rem 0;
+  color: #fff;
+}
+
+.section-grid-break h1,
+.section-grid-break h2,
+.section-grid-break h3,
+.section-grid-break h4,
+.section-grid-break h5,
+.section-grid-break h6,
+.section-grid-break p,
+.section-grid-break li,
+.section-grid-break blockquote {
+  color: #fff;
+}
+
+.section-grid-subfooter {
+  background-color: #fff;
+  padding: 3rem 0;
+}
+
 .front-header {
   padding: 20vh 0 60px;
   color: #fff;
