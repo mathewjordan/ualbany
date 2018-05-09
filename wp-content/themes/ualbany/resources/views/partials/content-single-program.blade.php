@@ -252,7 +252,7 @@ $program_dates = td_program_dates();
               
               <div id="program-incoming-map" class="incoming-subfooter__map"></div>
                 <figure>
-                    <img src="/wp-content/themes/ualbany/resources/assets/images/ualbany-map.png" class="img-fluid" />
+                    <img src="/wp-content/themes/ualbany/dist/images/ualbany-map.png" class="img-fluid" />
                 </figure>
 
             </div>
