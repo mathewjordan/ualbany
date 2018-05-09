@@ -1,3 +1,6 @@
+{{--
+  Template Name: Basic (w/ Separator)
+--}}
 @php
 
     $title              = ! empty( $title ) ? $title : get_the_title();
