@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c09c7b-e4af-4bc4-99f6-8216e5ded83a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page.blade.php" afterPath="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page.blade.php" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/content-single-program.blade.php" afterPath="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/content-single-program.blade.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/images/ualbany-map.ai" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/images/ualbany-map.png" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,55 +15,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="row.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/src/helper/row.php">
+      <file leaf-file-name="page-basic-grid.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-grid.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-756">
+            <state relative-caret-position="-770">
+              <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+              <folding>
+                <marker date="1525884853736" expanded="true" signature="58:1103" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="541:613" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="621:1102" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1123:1136" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1148:1157" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1222:1237" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1535:1541" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1569:1584" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1636:1651" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1739:1751" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1758:1768" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="1788:1800" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="6607:6629" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="6842:6864" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="6931:6954" ph="..." />
+                <marker date="1525884853736" expanded="true" signature="7130:7157" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_pages.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/layouts/_pages.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3078">
+              <caret line="114" column="14" lean-forward="false" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rows.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/rows.php">
+      <file leaf-file-name="page-basic-full.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-full.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page-basic-grid.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-grid.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="147" selection-end-column="13" />
-              <folding>
-                <element signature="e#1846#6818#0#HTML" expanded="false" />
-                <marker date="1525875328632" expanded="true" signature="51:1096" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="534:606" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="614:1095" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="1116:1125" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="1190:1205" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="1503:1509" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="1537:1552" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="1604:1619" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="1707:1719" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="1726:1736" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="1760:1772" ph="..." />
-                <marker date="1525875328632" expanded="true" signature="6869:6892" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page-basic-1col.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-1col.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="9" selection-end-column="37" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="4" />
               <folding>
                 <marker date="1525875741867" expanded="true" signature="56:69" ph="..." />
                 <marker date="1525875741867" expanded="true" signature="81:90" ph="..." />
@@ -75,28 +79,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="140" column="23" lean-forward="true" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+            <state relative-caret-position="3672">
+              <caret line="136" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="11" />
               <folding>
-                <element signature="e#1818#6414#0#HTML" expanded="false" />
-                <marker date="1525876780045" expanded="true" signature="10:1055" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="493:565" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="573:1054" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1075:1088" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1100:1109" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1174:1189" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1314:1329" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1487:1493" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1521:1536" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1588:1603" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1691:1703" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1710:1720" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="1740:1752" ph="..." />
-                <marker date="1525876780045" expanded="true" signature="6457:6480" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="10:1055" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="493:565" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="573:1054" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1075:1088" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1100:1109" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1174:1189" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1487:1493" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1521:1536" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1588:1603" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1691:1703" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1710:1720" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="1740:1752" ph="..." />
+                <marker date="1525883005139" expanded="true" signature="6545:6568" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="group_5af320d7aa8c6.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/group_5af320d7aa8c6.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,13 +159,15 @@
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/common/_global.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/app/global_functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-custom.blade.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-grid.blade.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/rows.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/general_options.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-1col.blade.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/template-terms.blade.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/content-single-program.blade.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page.blade.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/group_5af320d7aa8c6.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/layouts/_pages.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-grid.blade.php" />
       </list>
     </option>
   </component>
@@ -168,10 +182,13 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="94" />
-    <option name="y" value="23" />
-    <option name="width" value="1274" />
-    <option name="height" value="827" />
+    <option name="x" value="1444" />
+    <option name="y" value="27" />
+    <option name="width" value="954" />
+    <option name="height" value="1049" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -189,6 +206,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,178 +235,6 @@
               <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
               <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dist" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="helper" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ACF" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ACF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ACF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ACF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ACF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dist" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ACF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dist" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module-build-submenu-blocks.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vs-page-builder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="composer" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -397,14 +243,6 @@
               <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
@@ -431,74 +269,12 @@
               <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="acf-json" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scripts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ualbany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ualbany" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -507,6 +283,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/wp-content/themes/ualbany/resources/views" />
       <recent name="$PROJECT_DIR$" />
@@ -543,34 +322,36 @@
       <workItem from="1525361105655" duration="18000" />
       <workItem from="1525438442573" duration="34000" />
       <workItem from="1525438577786" duration="2259000" />
-      <workItem from="1525874395234" duration="2286000" />
+      <workItem from="1525874395234" duration="3539000" />
+      <workItem from="1525879630062" duration="2602000" />
+      <workItem from="1525889713318" duration="213000" />
+      <workItem from="1525898116964" duration="582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17272000" />
+    <option name="totallyTimeSpent" value="21922000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="23" width="1274" height="827" extended-state="0" />
-    <editor active="true" />
+    <frame x="1444" y="27" width="954" height="1049" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25039247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2735849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -587,27 +368,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/includes/myths-slick.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/head.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -773,7 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="237" column="3" lean-forward="false" selection-start-line="237" selection-start-column="3" selection-end-line="237" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,7 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="160" column="10" lean-forward="true" selection-start-line="160" selection-start-column="10" selection-end-line="160" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,9 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="55" column="27" lean-forward="false" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding>
-            <marker date="1525874509420" expanded="true" signature="110:143" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -799,7 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="136" column="1" lean-forward="false" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,7 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,23 +568,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/template-custom.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/template-custom.blade.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/src/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,9 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -857,21 +597,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="37" lean-forward="false" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding>
-            <marker date="1525875146995" expanded="true" signature="59:1104" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="542:614" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="622:1103" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1124:1145" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1157:1166" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1231:1246" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1544:1550" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1578:1593" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1645:1660" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1748:1760" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1767:1777" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="1801:1813" ph="..." />
-            <marker date="1525875146995" expanded="true" signature="6910:6933" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -879,9 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1432">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -889,128 +611,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/src/helper/row.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/group_5af303474bc4b.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/group_5af303474bc4b.json" />
     <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/page_general_settings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-722">
           <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/content-single-program.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="89" column="37" lean-forward="false" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
-          <folding>
-            <marker date="1525876467306" expanded="true" signature="6:1427" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="127:715" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="1454:1466" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="1573:1590" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="1643:1666" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="1875:1898" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2141:2149" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2168:2176" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2264:2282" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2321:2428" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2527:2553" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2564:2579" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2628:2634" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2775:2793" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2847:2874" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="2885:2900" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="3233:3256" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="3759:3772" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="3791:3806" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="3945:3976" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="4107:4121" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="4278:4306" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="4395:4423" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="4512:4533" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="4588:4613" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="4702:4721" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="4776:4799" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="4889:4911" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="5047:5055" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="5294:5320" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="5395:5421" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="5537:5556" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="5757:5769" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="5844:5867" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="5977:6001" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="6076:6103" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="6213:6233" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="6311:6367" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="6476:6506" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="6584:6645" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="6756:6787" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="6862:6897" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="7004:7032" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="7410:7418" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="7439:7469" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="7490:7559" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="7598:7871" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="7614:7665" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="7673:7724" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="7971:7982" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8008:8015" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8071:8077" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8236:8244" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8263:8293" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8320:8623" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8659:8712" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8743:8980" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8759:8798" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="8806:8845" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="9054:9065" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="9091:9098" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="9120:9134" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="9247:9259" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="9275:9700" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="9295:9698" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="9903:9924" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="9951:10006" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="10029:10084" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11066:11074" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11097:11136" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11159:11248" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11291:11539" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11307:11362" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11370:11425" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11645:11656" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11682:11689" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11747:11753" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="11940:12039" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12081:12120" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12141:12230" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12265:12477" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12281:12324" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12332:12375" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12555:12566" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12592:12599" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12690:12728" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12821:12829" ph="..." />
-            <marker date="1525876467306" expanded="true" signature="12862:12892" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,26 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="43" column="93" lean-forward="false" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
-          <folding>
-            <marker date="1525287691840" expanded="true" signature="14:26" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="123:539" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="571:579" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="594:614" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="635:656" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="862:883" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="904:921" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="961:982" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="1029:1044" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="1219:1240" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="1309:1365" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="1467:1498" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="1567:1634" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="1730:1745" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="1814:1872" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="1971:1991" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="2066:2087" ph="..." />
-            <marker date="1525287691840" expanded="true" signature="2093:2121" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,24 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <marker date="1517066098249" expanded="true" signature="678:688" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="693:707" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="712:753" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="758:774" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="795:805" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="857:869" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="959:983" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1072:1102" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1227:1255" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1291:1328" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1364:1427" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1472:1488" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1508:1516" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1564:1603" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1750:1774" ph="..." />
-            <marker date="1517066098249" expanded="true" signature="1863:1893" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,13 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding>
-            <marker date="1525875773820" expanded="true" signature="43:56" ph="..." />
-            <marker date="1525875773820" expanded="true" signature="68:77" ph="..." />
-            <marker date="1525875773820" expanded="true" signature="88:100" ph="..." />
-            <marker date="1525875773820" expanded="true" signature="107:117" ph="..." />
-            <marker date="1525875773820" expanded="true" signature="132:156" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1084,44 +647,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/partials/content-single-program.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="92" column="59" lean-forward="true" selection-start-line="92" selection-start-column="59" selection-end-line="92" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/components/layout/rows.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
+        <state relative-caret-position="612">
           <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/vs-page-builder/src/helper/row.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/acf-json/group_5af320d7aa8c6.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-grid.blade.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="147" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3672">
+          <caret line="136" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="11" />
           <folding>
-            <element signature="e#1846#6818#0#HTML" expanded="false" />
-            <marker date="1525875328632" expanded="true" signature="51:1096" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="534:606" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="614:1095" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="1116:1125" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="1190:1205" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="1503:1509" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="1537:1552" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="1604:1619" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="1707:1719" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="1726:1736" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="1760:1772" ph="..." />
-            <marker date="1525875328632" expanded="true" signature="6869:6892" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="10:1055" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="493:565" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="573:1054" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1075:1088" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1100:1109" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1174:1189" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1487:1493" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1521:1536" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1588:1603" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1691:1703" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1710:1720" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="1740:1752" ph="..." />
+            <marker date="1525883005139" expanded="true" signature="6545:6568" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-1col.blade.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/assets/styles/layouts/_pages.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="9" selection-end-column="37" />
+        <state relative-caret-position="3078">
+          <caret line="114" column="14" lean-forward="false" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-full.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="4" />
           <folding>
             <marker date="1525875741867" expanded="true" signature="56:69" ph="..." />
             <marker date="1525875741867" expanded="true" signature="81:90" ph="..." />
@@ -1133,26 +732,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page.blade.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/ualbany/resources/views/page-basic-grid.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="140" column="23" lean-forward="true" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+        <state relative-caret-position="-770">
+          <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding>
-            <element signature="e#1818#6414#0#HTML" expanded="false" />
-            <marker date="1525876780045" expanded="true" signature="10:1055" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="493:565" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="573:1054" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1075:1088" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1100:1109" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1174:1189" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1314:1329" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1487:1493" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1521:1536" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1588:1603" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1691:1703" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1710:1720" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="1740:1752" ph="..." />
-            <marker date="1525876780045" expanded="true" signature="6457:6480" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="58:1103" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="541:613" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="621:1102" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1123:1136" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1148:1157" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1222:1237" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1535:1541" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1569:1584" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1636:1651" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1739:1751" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1758:1768" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="1788:1800" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="6607:6629" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="6842:6864" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="6931:6954" ph="..." />
+            <marker date="1525884853736" expanded="true" signature="7130:7157" ph="..." />
           </folding>
         </state>
       </provider>
