@@ -64,21 +64,20 @@ $program_dates = td_program_dates();
                 </div>
                 @php $cnt++ @endphp
               @endforeach
-              
-
-                <div class="slick-thumbs">
-                  <ul>
-              @foreach ($gallery as $photo)
-
-                <li>
-                  <img src="{{ $photo['sizes']['medium'] }}" alt="{{ $photo['alt'] }}">
-                </li>      
-
-              @endforeach
-                  </ul>
-                </div>
-                
             </div>
+            
+            <div class="slick-thumbs">
+              <ul>
+          @foreach ($gallery as $photo)
+
+            <li>
+              <img src="{{ $photo['sizes']['medium'] }}" alt="{{ $photo['alt'] }}">
+            </li>      
+
+          @endforeach
+              </ul>
+            </div>
+            
             @endif
            
           </div>

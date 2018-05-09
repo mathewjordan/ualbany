@@ -8,7 +8,9 @@ export default {
       slide: 'li',
 
       customPaging: function(slider, i) {
-        return '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>';
+        var slickThumb = '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i) + ')').html() + '</button>';
+        i++;
+        return slickThumb;
       },
     });
     
