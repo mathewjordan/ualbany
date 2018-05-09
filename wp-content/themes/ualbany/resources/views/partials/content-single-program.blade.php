@@ -232,7 +232,6 @@ $program_dates = td_program_dates();
 
     @php
     $render_incoming = [
-      'Academics'                  => 'incoming_program_subfooter_academics',
       'Campus Life'                => 'incoming_program_subfooter_campus',        
       'Housing'                    => 'incoming_program_subfooter_housing',
       'Entertainment'              => 'incoming_program_subfooter_entertainment',
@@ -252,22 +251,9 @@ $program_dates = td_program_dates();
             <div class="col-sm-6">
               
               <div id="program-incoming-map" class="incoming-subfooter__map"></div>
-              <script>
-                function initMap() {
-                  var uluru = {lat: 42.6793106, lng: -73.827823};
-                  var map = new google.maps.Map(document.getElementById('program-incoming-map'), {
-                    zoom: 11,
-                    center: uluru
-                  });
-                  var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                  });
-                }
-              </script>
-              <script async defer
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbFXFMdoBLZRr4tlykh9x_-ELAqTI2RpQ&callback=initMap">
-              </script>
+                <figure>
+                    <img src="/wp-content/themes/ualbany/resources/assets/images/ualbany-map.png" class="img-fluid" />
+                </figure>
 
             </div>
           </div>
