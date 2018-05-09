@@ -87,7 +87,7 @@ $program_dates = td_program_dates();
               <span class="fa fa-send"></span>
               Apply Now!
             </a>
-            <a href="#" target="" class="btn btn--right">
+            <a href="<?php echo get_permalink(2188);?>?title=<?php echo urlencode(get_the_title()); ?>&email=advisoremail@ualbany.edu&link=<?php echo urlencode(get_permalink()); ?>" target="_blank" class="btn btn--right">
               <span class="fa fa-user"></span>
               Contact an Advisor
             </a>

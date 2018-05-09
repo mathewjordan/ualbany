@@ -33,6 +33,11 @@ return apply_filters( 'VS_PAGE_BUILDER_FILTER_ROWS', [
                 'value' => 'page',
             ],
             [
+                "param" => "post_template",
+                "operator" => "==",
+                "value" => "views\/page-custom.blade.php"
+            ],
+            [
                 "param" => "page_type",
                 "operator" => "!=",
                 "value" => "front_page"
