@@ -15964,6 +15964,13 @@ h4 {
   margin-bottom: 20px;
 }
 
+.page-basic-about .section-body,
+.page-basic-about .section-feature,
+.page-basic-about .section-contact,
+.page-basic-about .section-staff {
+  padding: 3rem 0;
+}
+
 .banner {
   z-index: 10;
   background-color: #46166b;
