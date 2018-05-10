@@ -54,31 +54,29 @@ $program_dates = td_program_dates();
             $cnt = 0;
             @endphp
             @if ($gallery)
-            <div id="program-slides" class="program-slides">
 
-              @foreach ($gallery as $photo)
-                @php
-                $carousel_item_class = 'carousel-item';
-                $carousel_item_class .= $cnt == 0 ? ' active' : '';
-                @endphp
-                <div>
-                  <img class="d-block w-100" src="{{ $photo['sizes']['large'] }}" alt="{{ $photo['alt'] }}">
-                </div>
-                @php
-                $cnt++;
-                @endphp
-              @endforeach
-            </div>
-            
-            <div class="slick-thumbs">
-              <ul>
-                @foreach ($gallery as $photo)
-                  <li>
-                    <img src="{{ $photo['sizes']['medium'] }}" alt="{{ $photo['alt'] }}">
-                  </li>      
-                @endforeach
-              </ul>
-            </div>
+              <div class="slider program-slides">
+                  @foreach ($gallery as $photo)
+                      @php
+                          $carousel_item_class = 'carousel-item';
+                          $carousel_item_class .= $cnt == 0 ? ' active' : '';
+                      @endphp
+                      <div>
+                          <img class="d-block w-100" src="{{ $photo['sizes']['slide'] }}" alt="{{ $photo['alt'] }}" />
+                      </div>
+                      @php
+                          $cnt++;
+                      @endphp
+                  @endforeach
+              </div>
+
+              <div class="slider slick-thumbs">
+                  @foreach ($gallery as $photo)
+                      <div>
+                          <img src="{{ $photo['sizes']['slide_thumb'] }}" alt="{{ $photo['alt'] }}" />
+                      </div>
+                  @endforeach
+              </div>
             
             @endif
            
