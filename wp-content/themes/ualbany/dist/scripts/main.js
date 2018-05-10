@@ -6546,12 +6546,18 @@ Router.prototype.loadEvents = function loadEvents () {
     // JavaScript to be fired on all pages
     $('.program-slides').slick({
       dots: true,
+      infinite: true,
+      speed: 500,
+      fade: false,
       slide: 'li',
-
-      customPaging: function(slider, i) {
-        var slickThumb = '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i) + ')').html() + '</button>';
-        i++;
-        return slickThumb;
+      cssEase: 'linear',
+      centerMode: true,
+      slidesToShow: 1,
+      variableWidth: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      customPaging: function (slider, i) {
+        return '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>';
       },
     });
     

@@ -50,7 +50,9 @@ $program_dates = td_program_dates();
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            @php($cnt = 0)
+            @php
+            $cnt = 0;
+            @endphp
             @if ($gallery)
             <div id="program-slides" class="program-slides">
 
@@ -62,19 +64,19 @@ $program_dates = td_program_dates();
                 <div>
                   <img class="d-block w-100" src="{{ $photo['sizes']['large'] }}" alt="{{ $photo['alt'] }}">
                 </div>
-                @php $cnt++ @endphp
+                @php
+                $cnt++;
+                @endphp
               @endforeach
             </div>
             
             <div class="slick-thumbs">
               <ul>
-          @foreach ($gallery as $photo)
-
-            <li>
-              <img src="{{ $photo['sizes']['medium'] }}" alt="{{ $photo['alt'] }}">
-            </li>      
-
-          @endforeach
+                @foreach ($gallery as $photo)
+                  <li>
+                    <img src="{{ $photo['sizes']['medium'] }}" alt="{{ $photo['alt'] }}">
+                  </li>      
+                @endforeach
               </ul>
             </div>
             
