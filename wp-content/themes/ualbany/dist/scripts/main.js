@@ -6544,22 +6544,25 @@ Router.prototype.loadEvents = function loadEvents () {
 /* harmony default export */ __webpack_exports__["a"] = ({
   init: function init() {
     // JavaScript to be fired on all pages
-    $('.program-slides').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      fade: false,
-      slide: 'li',
-      cssEase: 'linear',
-      centerMode: true,
-      slidesToShow: 1,
-      variableWidth: true,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      customPaging: function (slider, i) {
-        return '<button class="tab">' + $('.slick-thumbs li:nth-child(' + (i + 1) + ')').html() + '</button>';
-      },
-    });
+
+      $('.program-slides').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          asNavFor: '.slick-thumbs',
+      });
+
+      $('.slick-thumbs').slick({
+          slidesToShow: 3, // 3,
+          slidesToScroll: 1,
+          asNavFor: '.program-slides',
+          dots: true,
+          centerMode: true,
+          focusOnSelect: true,
+      });
     
     new __WEBPACK_IMPORTED_MODULE_0__components_MobileNav__["a" /* default */]();
   },

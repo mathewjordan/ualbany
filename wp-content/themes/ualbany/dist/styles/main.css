@@ -14098,11 +14098,6 @@ ul.slickslide li img {
   height: auto;
 }
 
-.slick-thumbs {
-  position: absolute;
-  left: -9999px;
-}
-
 @font-face {
   font-family: 'Trade Gothic LT Com Bold Cn';
   src: url(/wp-content/themes/ualbany/dist/fonts/TradeGothicLTCom-BdCn20.eot);
@@ -17653,6 +17648,39 @@ body#tinymce {
 .sharing__title {
   font-size: 1rem;
   padding: 30px 0;
+}
+
+.program-slides {
+  overflow: hidden;
+}
+
+.slick-thumbs {
+  margin-top: 0.5rem;
+}
+
+.slick-thumbs .slick-slide {
+  margin: 0.5rem;
+  background-color: #353e45;
+  overflow: hidden;
+}
+
+.slick-thumbs .slick-slide img {
+  opacity: 0.5625;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 240ms ease-in-out;
+  -o-transition: all 240ms ease-in-out;
+  transition: all 240ms ease-in-out;
+  border-bottom: 5px solid #c5ccd2;
+}
+
+.slick-thumbs .slick-slide.slick-current img,
+.slick-thumbs .slick-slide:hover img {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-filter: unset;
+  filter: unset;
+  border-bottom: 5px solid #ffc107;
 }
 
 

@@ -4,6 +4,8 @@ namespace App;
 
 add_image_size( 'banner', '1600', '1000', true);
 add_image_size( 'banner_slim', '1600', '400', true);
+add_image_size( 'slide', '1000', '563', true); // 16:9
+add_image_size( 'slide_thumb', '300', '169', true); // 16:9
 
 function block_size_class($count)
 {
