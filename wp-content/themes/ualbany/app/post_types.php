@@ -33,13 +33,6 @@ $post_types = [
         'slug' => 'subjects',
         'icon' => 'dashicons-book-alt'
     ],
-    'Faculty & Staff' => [
-        'machine_name' => 'fs',
-        'singlular' => 'Faculty & Staff',
-        'plural' => 'Faculty & Staff',
-        'slug' => 'faculty-staff',
-        'icon' => 'dashicons-id-alt'
-    ],
     'Myth' => [
         'machine_name' => 'myth',
         'singlular' => 'Myth',
