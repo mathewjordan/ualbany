@@ -102,8 +102,6 @@ $program_dates = td_program_dates();
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section>
-
-    @if($program_dates)
     <section class="program-dates">
       <div class="container">
         <div class="row">
@@ -122,7 +120,6 @@ $program_dates = td_program_dates();
         </div>
       </div>
     </section>
-    @endif
 
     @if ($video && $video != '')
     <section class="program-video text-center">

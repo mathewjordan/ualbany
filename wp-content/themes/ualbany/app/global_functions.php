@@ -188,6 +188,7 @@ if (! function_exists('get_app_term_dates')) {
 if (! function_exists('td_program_dates')) {
   function td_program_dates() {
     global $post;
+    $default = 'Forthcoming';
 
     if (get_field('program_dates', $post->ID)) :
       $dates_data = json_decode(get_field('program_dates', $post->ID));
@@ -214,22 +215,24 @@ if (! function_exists('td_program_dates')) {
                    $dates[$first_key]['override'] :
                    $dates[$first_key]['app_deadline'];
 
-      $deadline_date = date('n.d.Y', strtotime($deadline));
+      $deadline_date = $deadline ? date('n.d.Y', strtotime($deadline)) : $default;
 
       $start = $dates[$first_key]['term_start'];
-      $start_date = date('n.d.Y', strtotime($start));
+      $start_date = $start ? date('n.d.Y', strtotime($start)) : $default;
 
       $end = $dates[$first_key]['term_end'];
-      $end_date = date('n.d.Y', strtotime($end));
+      $end_date = $end ? date('n.d.Y', strtotime($end)) : $default;
 
       $date_array = [ 'deadline' => $deadline_date,
                       'start'    => $start_date,
                       'end'      => $end_date ];
 
-      return $date_array;
-
+    else:
+      $date_array = [ 'deadline' => $default,
+                      'start'    => $default,
+                      'end'      => $default ];
     endif;
-
-    return false;
+    
+    return $date_array;
   }
 }
