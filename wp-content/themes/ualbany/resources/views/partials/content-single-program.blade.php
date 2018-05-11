@@ -30,8 +30,6 @@ $program_meta = td_program_meta();
 
 $program_dates = td_program_dates();
 
-//var_dump($program_dates);
-
 @endphp
   
 <article @php(post_class())>
@@ -86,7 +84,7 @@ $program_dates = td_program_dates();
               <span class="fa fa-send"></span>
               Apply Now!
             </a>
-            <a href="<?php echo get_permalink(2188);?>?title=<?php echo urlencode(get_the_title()); ?>&email=advisoremail@ualbany.edu&link=<?php echo urlencode(get_permalink()); ?>" target="_blank" class="btn btn--right">
+            <a href="<?php echo get_permalink(2188);?>?title=<?php echo urlencode(get_the_title()); ?>&email={{ $program_meta['advisor_email'] }}&link=<?php echo urlencode(get_permalink()); ?>" target="_blank" class="btn btn--right">
               <span class="fa fa-user"></span>
               Contact an Advisor
             </a>
@@ -102,8 +100,6 @@ $program_dates = td_program_dates();
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section>
-
-    @if($program_dates)
     <section class="program-dates">
       <div class="container">
         <div class="row">
@@ -122,7 +118,6 @@ $program_dates = td_program_dates();
         </div>
       </div>
     </section>
-    @endif
 
     @if ($video && $video != '')
     <section class="program-video text-center">
