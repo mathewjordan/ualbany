@@ -15971,6 +15971,10 @@ h4 {
   padding: 3rem 0;
 }
 
+.page-basic-about .section-body h3 {
+  width: 100%;
+}
+
 .page-basic-about .section-feature {
   background: #f6f7f8;
 }
