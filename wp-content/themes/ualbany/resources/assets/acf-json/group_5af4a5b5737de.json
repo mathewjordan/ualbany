@@ -181,7 +181,7 @@
                 {
                     "key": "field_5af4a6929508d",
                     "label": "Photo",
-                    "name": "",
+                    "name": "about_staff_photo",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -191,7 +191,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "id",
                     "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
@@ -241,5 +241,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1525999339
+    "modified": 1526085401
 }

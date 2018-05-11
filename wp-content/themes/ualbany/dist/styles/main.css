@@ -15971,6 +15971,27 @@ h4 {
   padding: 3rem 0;
 }
 
+.page-basic-about .section-feature {
+  background: #f6f7f8;
+}
+
+.page-basic-about .section-contact {
+  background: #46166b;
+  color: #fff;
+}
+
+.page-basic-about .section-staff .global-academic-programs-staff {
+  padding-bottom: 3rem;
+}
+
+.page-basic-about .section-staff .row {
+  padding-bottom: 3rem;
+}
+
+.page-basic-about .section-staff .row:last-child {
+  padding-bottom: 0;
+}
+
 .banner {
   z-index: 10;
   background-color: #46166b;

@@ -76,13 +76,63 @@
         @if (have_rows('about_staff'))
           <section class="section-staff">
             <div class="container">
-          @php while (have_rows('about_staff')) : the_row() @endphp
-            <div class="staff">
-            <p class="title">@php the_sub_field('about_staff_title'); @endphp</p>
-            <p class="type">@php the_sub_field('about_staff_type'); @endphp</p>
-            <p class="description">@php the_sub_field('about_staff_description'); @endphp</p>
-            </div>
-          @php endwhile; @endphp
+              <div class="global-academic-programs-staff">
+                <h2>Global Academic Programs</h2>
+                @php while (have_rows('about_staff')) : the_row(); @endphp
+                @if (get_sub_field('about_staff_type') == 'Global Academic Programs')
+                  <div class="row">
+                        @if (get_sub_field('about_staff_photo'))
+                          @php
+                            $image = get_sub_field('about_staff_photo');
+                            $size = 'thumbnail';
+                          @endphp
+                          <div class="col-md-3">
+                            <div class="image">
+                              <?php echo wp_get_attachment_image( $image, $size); ?>
+                            </div>
+                          </div>
+                        @endif
+                        <div class="col-md-9">
+                          <p class="title">
+                            @php the_sub_field('about_staff_title'); @endphp
+                             - 
+                            @php the_sub_field('about_staff_type')['value']; @endphp
+                          </p>
+                          <p class="description">@php the_sub_field('about_staff_description'); @endphp</p>
+                        </div>              
+                      </div>
+                @endif
+                @php endwhile; @endphp
+              </div>
+              <div class="education-board-staff">
+                <h2>Education Board</h2>
+                @php while (have_rows('about_staff')) : the_row(); @endphp
+                @if (get_sub_field('about_staff_type') == 'Education Board')
+                <div class="row">
+                  <?php if (get_sub_field('about_staff_photo')) : 
+                    $image = get_sub_field('about_staff_photo');
+                    $size = 'thumbnail';
+                  ?>
+                  <div class="col-md-3">
+                    <div class="image">
+                      <?php echo wp_get_attachment_image( $image, $size); ?>
+                    </div>
+                  </div>
+                  <?php endif; ?>
+                
+                  <div class="col-md-9">
+                    <p class="title">
+                      @php the_sub_field('about_staff_title'); @endphp
+                       - 
+                      @php the_sub_field('about_staff_type'); @endphp
+                    </p>
+                    <p class="description">@php the_sub_field('about_staff_description'); @endphp</p>
+                  </div>              
+                </div>
+                @endif
+                @php endwhile; @endphp
+              </div>
+
             </div>
           </section>
         @endif

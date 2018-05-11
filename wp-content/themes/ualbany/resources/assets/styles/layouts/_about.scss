@@ -5,4 +5,27 @@
   .section-staff {
     padding: 3rem 0;
   }
+
+  .section-feature {
+    background: $offwhite;
+  }
+
+  .section-contact {
+    background: $purple;
+    color: $white;
+  }
+
+  .section-staff {
+    .global-academic-programs-staff {
+      padding-bottom: 3rem;
+    }
+
+    .row {
+      padding-bottom: 3rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
 }
