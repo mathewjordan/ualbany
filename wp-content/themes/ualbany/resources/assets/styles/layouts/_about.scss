@@ -16,16 +16,12 @@
   }
 
   .section-staff {
-    .global-academic-programs-staff {
-      padding-bottom: 3rem;
-    }
+    background: $lightgray;
 
     .row {
-      padding-bottom: 3rem;
-
-      &:last-child {
-        padding-bottom: 0;
-      }
+      margin-bottom: 3rem;
+      background: $white;
+      padding: 15px 0;
     }
   }
 }
