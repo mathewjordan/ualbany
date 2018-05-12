@@ -1,7 +1,7 @@
 $zindex-mobile-nav: 10000;
 $zindex-mobile-nav-toggle: 9999;
 $zindex-mobile-underlay: $zindex-mobile-nav - 1;
-$overlay-background: rgba($black, 0.92);
+$overlay-background: rgba($lightgray, 0.7);
 $purple-alt: darken($brand-primary, 5);
 $purple-alt-dark: darken($brand-primary, 10);
 $purple-alt-light: lighten($brand-primary, 5);
@@ -123,15 +123,6 @@ body.mobile-nav-active {
 
   .nav-mobile-wrapper-scroll {
     overflow: scroll;
-  }
-
-  //For accessibility
-  button {
-    visibility: hidden;
-
-    @include respond-to(xs) {
-      visibility: visible;
-    }
   }
 
   //For accessibility
