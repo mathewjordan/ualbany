@@ -213,7 +213,8 @@
              $args = [
                 'post_type'      => 'program',
                 'post_status'    => 'publish',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
+                'post__not_in' => array(2046)
               ];
                         
               $regions = [];
