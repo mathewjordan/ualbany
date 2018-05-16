@@ -220,10 +220,10 @@ if (! function_exists('td_program_dates')) {
       $deadline_date = $deadline ? date('n.d.Y', strtotime($deadline)) : $default;
 
       $start      = $dates[$first_key]['term_start'];
-      $start_date = $start && is_string($start) ? date('n.d.Y', strtotime($start)) : $default;
+      $start_date = ! empty($start) && is_string($start) ? date('n.d.Y', strtotime($start)) : $default;
 
       $end      = $dates[$first_key]['term_end'];
-      $end_date = $end && is_string($end) ? date('n.d.Y', strtotime($end)) : $default;
+      $end_date = ! empty($end) && is_string($end) ? date('n.d.Y', strtotime($end)) : $default;
 
       $date_array = [ 'deadline' => $deadline_date,
                       'start'    => $start_date,
