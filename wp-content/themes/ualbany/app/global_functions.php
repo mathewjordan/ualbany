@@ -42,6 +42,7 @@ if (! function_exists('td_program_meta')) {
       '10022' => 'partner', // Partner University
       '10030' => 'exchange', // Exchange Program
       '10047' => 'advisor_email',
+      '10025' => 'advisor_name',
     ];
 
     $program_meta = [

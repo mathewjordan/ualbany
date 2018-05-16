@@ -127,110 +127,213 @@ $program_dates = td_program_dates();
     </section>
     @endif
 
-    <section class="program-meta">
-      <div class="container">
-        <div class="row">
-          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-university"></span> {{ __('Partner University') }}</h2>
-          <div class="col-sm-3 program-meta__value">
-            {{ $program_meta['partner'] }}
-          </div>
-          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-graduation-cap"></span> {{ __('Faculty Led') }}</h2>
-          <div class="col-sm-3 program-meta__value">
-            Lorem ipsum dolor
-          </div>
-          <h2 class="col-sm-3 program-meta__label"><span class="fa  fa-map-marker"></span> {{ __('City') }}</h2>
-          <div class="col-sm-3 program-meta__value">
-            {{ $program_meta['city'] }}
-          </div>
-          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-exchange"></span> {{ __('Exchange Program') }}</h2>
-          <div class="col-sm-3 program-meta__value">
-            {{ $program_meta['exchange'] }}
-          </div>
-          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-calendar"></span> {{ __('Program Term') }}</h2>
-          <div class="col-sm-3 program-meta__value">
-            @php(program_meta_value($program_meta['terms'], 'comma-list'))
-          </div>
-          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-suitcase"></span> {{ __('Internship Opportunity') }}</h2>
-          <div class="col-sm-3 program-meta__value">
-            @php(program_meta_value($program_meta['internship'], 'break-list'))
-          </div>
-          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-comments-o"></span> {{ __('Language of Instruction') }}</h2>
-          <div class="col-sm-3 program-meta__value">
-            {{ $program_meta['lang_of_instruct'] }}
-          </div>
-          <h2 class="col-sm-3 program-meta__label"><span class="fa fa-flask"></span> {{ __('Research Opportunity') }}</h2>
-          <div class="col-sm-3 program-meta__value">
-            Lorem ipsum dolor
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="program-section">
-      <h2 class="text-center"><?php echo __('Program Details'); ?></h2>
-      <div class="container">
-        <!-- Tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          @php($cnt = 0)
-          @foreach($render as $title => $selector)
-              @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
-              @php
-                  if ($cnt == 0) {
-                    $first = 1;
-                  } else {
-                    $first = 0;
-                  }
-                  $cnt++;
-                  $target = $is_incoming ? 'incoming-' . program_target_string($title) : program_target_string($title);
-              @endphp
-              <li class="nav-item">
-                  <a class="nav-link @if($first == 1) active @endif" href="#{{$target}}" role="tab"
-                     data-toggle="tab">{{$title}}</a>
-              </li>
-              @endif
-          @endforeach
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-        @php($cnt = 0)
-        @foreach($render as $title => $selector)
-          @php
-          // Prefix ACF field selectors for incoming programs
-          $modified_selector = $is_incoming ? 'incoming_' . $selector : $selector;
-
-          // If incoming, use 'option' for the post ID
-          $tab_content = $is_incoming ? get_field($modified_selector, 'option') : get_field($modified_selector);
-
-          @endphp
-
-          @if ($tab_content && trim($tab_content) != '<p>&nbsp;</p>')
-            @php
-            if ($cnt == 0) {
-              $first = 1;
-            } else {
-              $first = 0;
-            }
-            $cnt++;
-            $target = $is_incoming ? 'incoming-' . program_target_string($title) : program_target_string($title);
-            @endphp
-            <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{$target}}">
-              {!! $tab_content !!}
+    @if ($is_incoming)
+        <section class="program-meta">
+            <div class="container">
+                <div class="row">
+                    <h2 class="col-sm-3 program-meta__label"><span class="fa  fa-map-marker"></span> {{ __('City') }}</h2>
+                    <div class="col-sm-3 program-meta__value">
+                        Albany, New York, United States
+                    </div>
+                    <h2 class="col-sm-3 program-meta__label"><span class="fa fa-calendar"></span> {{ __('Program Term') }}</h2>
+                    <div class="col-sm-3 program-meta__value">
+                        @php(program_meta_value($program_meta['terms'], 'comma-list'))
+                    </div>
+                    <h2 class="col-sm-3 program-meta__label"><span class="fa fa-comments-o"></span> {{ __('Language of Instruction') }}</h2>
+                    <div class="col-sm-3 program-meta__value">
+                        English
+                    </div>
+                </div>
             </div>
-          @endif
-        @endforeach
-        </div>
-      </div>
-    </section>
+        </section>
+    @else
+        <section class="program-meta">
+          <div class="container">
+            <div class="row">
+              <h2 class="col-sm-3 program-meta__label"><span class="fa fa-university"></span> {{ __('Partner University') }}</h2>
+              <div class="col-sm-3 program-meta__value">
+                {{ $program_meta['partner'] }}
+              </div>
+              <h2 class="col-sm-3 program-meta__label"><span class="fa fa-graduation-cap"></span> {{ __('Faculty Led') }}</h2>
+              <div class="col-sm-3 program-meta__value">
+                Lorem ipsum dolor
+              </div>
+              <h2 class="col-sm-3 program-meta__label"><span class="fa  fa-map-marker"></span> {{ __('City') }}</h2>
+              <div class="col-sm-3 program-meta__value">
+                {{ $program_meta['city'] }}
+              </div>
+              <h2 class="col-sm-3 program-meta__label"><span class="fa fa-exchange"></span> {{ __('Exchange Program') }}</h2>
+              <div class="col-sm-3 program-meta__value">
+                {{ $program_meta['exchange'] }}
+              </div>
+              <h2 class="col-sm-3 program-meta__label"><span class="fa fa-calendar"></span> {{ __('Program Term') }}</h2>
+              <div class="col-sm-3 program-meta__value">
+                @php(program_meta_value($program_meta['terms'], 'comma-list'))
+              </div>
+              <h2 class="col-sm-3 program-meta__label"><span class="fa fa-suitcase"></span> {{ __('Internship Opportunity') }}</h2>
+              <div class="col-sm-3 program-meta__value">
+                @php(program_meta_value($program_meta['internship'], 'break-list'))
+              </div>
+              <h2 class="col-sm-3 program-meta__label"><span class="fa fa-comments-o"></span> {{ __('Language of Instruction') }}</h2>
+              <div class="col-sm-3 program-meta__value">
+                {{ $program_meta['lang_of_instruct'] }}
+              </div>
+              <h2 class="col-sm-3 program-meta__label"><span class="fa fa-flask"></span> {{ __('Research Opportunity') }}</h2>
+              <div class="col-sm-3 program-meta__value">
+                Lorem ipsum dolor
+              </div>
+            </div>
+          </div>
+        </section>
+    @endif
+
+    @if ($is_incoming)
+        @php
+            $incoming_details = [
+                'Academics' => 'incoming_program_academics',
+                'Faculty' => 'incoming_program_faculty',
+                'Accommodations' => 'incoming_program_accommodations',
+                'Cost' => 'program_costs',
+                'Eligibility' => 'program_eligibility',
+                'Scholarships' => 'incoming_program_scholarships',
+                'Testimonials' => 'incoming_program_testimonials',
+                'Contact' => 'incoming_program_contact',
+                'Duration' => 'incoming_program_duration'
+            ];
+        @endphp
+        <section class="program-section">
+            <h2 class="text-center"><?php echo __('Program Details'); ?></h2>
+            <div class="container">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    @php($cnt = 0)
+                    @foreach($incoming_details as $title => $selector)
+                        @if(in_array($title, ['Cost', 'Eligibility']))
+                            @php $data = get_field($selector) @endphp
+                        @else
+                            @php $data = get_field($selector, 'option') @endphp
+                        @endif
+                        @if ($data != '<p>&nbsp;</p>')
+                            @php
+                                if ($cnt == 0) {
+                                  $first = 1;
+                                } else {
+                                  $first = 0;
+                                }
+                                $cnt++;
+                                $target = $is_incoming ? 'incoming-' . program_target_string($title) : program_target_string($title);
+                            @endphp
+                            <li class="nav-item">
+                                <a class="nav-link @if($first == 1) active @endif" href="#{{$target}}" role="tab"
+                                   data-toggle="tab">{{$title}}</a>
+                            </li>
+                        @endif
+                    @endforeach
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    @php($cnt = 0)
+                    @foreach($incoming_details as $title => $selector)
+
+                        @if(in_array($title, ['Cost', 'Eligibility']))
+                            @php $tab_content = get_field($selector) @endphp
+                        @else
+                            @php $tab_content = get_field($selector, 'option') @endphp
+                        @endif
+
+                        @if ($tab_content && trim($tab_content) != '<p>&nbsp;</p>')
+                            @php
+                                if ($cnt == 0) {
+                                  $first = 1;
+                                } else {
+                                  $first = 0;
+                                }
+                                $cnt++;
+                                $target = $is_incoming ? 'incoming-' . program_target_string($title) : program_target_string($title);
+                            @endphp
+                            <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{$target}}">
+                                {!! $tab_content !!}
+                                @if($title == 'Contact')
+                                    <h3 style="margin: 2rem 0 1rem">Program Advisor</h3>
+                                    <h4 style="font-size: 1.25em; text-transform: none;">@php echo $program_meta['advisor_name']; @endphp</h4>
+                                    <strong><a href="mailto:@php echo $program_meta['advisor_email']; @endphp">@php echo $program_meta['advisor_email']; @endphp</a></strong>
+                                @endif
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @else
+        <section class="program-section">
+            <h2 class="text-center"><?php echo __('Program Details'); ?></h2>
+            <div class="container">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    @php($cnt = 0)
+                    @foreach($render as $title => $selector)
+                        @if (get_field($selector) && trim(get_field($selector)) != '<p>&nbsp;</p>')
+                            @php
+                                if ($cnt == 0) {
+                                  $first = 1;
+                                } else {
+                                  $first = 0;
+                                }
+                                $cnt++;
+                                $target = $is_incoming ? 'incoming-' . program_target_string($title) : program_target_string($title);
+                            @endphp
+                            <li class="nav-item">
+                                <a class="nav-link @if($first == 1) active @endif" href="#{{$target}}" role="tab"
+                                   data-toggle="tab">{{$title}}</a>
+                            </li>
+                        @endif
+                    @endforeach
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    @php($cnt = 0)
+                    @foreach($render as $title => $selector)
+                        @php
+                            // Prefix ACF field selectors for incoming programs
+                            $modified_selector = $is_incoming ? 'incoming_' . $selector : $selector;
+
+                            // If incoming, use 'option' for the post ID
+                            $tab_content = $is_incoming ? get_field($modified_selector, 'option') : get_field($modified_selector);
+
+                        @endphp
+
+                        @if ($tab_content && trim($tab_content) != '<p>&nbsp;</p>')
+                            @php
+                                if ($cnt == 0) {
+                                  $first = 1;
+                                } else {
+                                  $first = 0;
+                                }
+                                $cnt++;
+                                $target = $is_incoming ? 'incoming-' . program_target_string($title) : program_target_string($title);
+                            @endphp
+                            <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif" id="{{$target}}">
+                                {!! $tab_content !!}
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
 
     @if ($is_incoming)
 
     @php
     $render_incoming = [
-      'Campus Life'                => 'incoming_program_subfooter_campus',        
-      'Housing'                    => 'incoming_program_subfooter_housing',
-      'Entertainment'              => 'incoming_program_subfooter_entertainment',
-      'Restaurants &amp; Shopping' => 'incoming_program_subfooter_restaurants'
+      'Campuses'                => 'incoming_program_subfooter_campus',
+      'Travel Information'      => 'incoming_program_subfooter_travel',
+      'Campus Life'             => 'incoming_program_subfooter_campus_life',
+      'Excursions'              => 'incoming_program_subfooter_excursions',
+      'Recreation'              => 'incoming_program_subfooter_entertainment',
+      'Shopping & Nightlife'    => 'incoming_program_subfooter_restaurants'
     ];
     @endphp
     <section class="program-about">
@@ -244,7 +347,7 @@ $program_dates = td_program_dates();
               @endif
             </div>
             <div class="col-sm-6">
-              
+
               <div id="program-incoming-map" class="incoming-subfooter__map"></div>
                 <figure>
                     <img src="/wp-content/themes/ualbany/dist/images/ualbany-map.png" class="img-fluid" />

@@ -1,6 +1,6 @@
 {
     "key": "incoming_program_general_settings",
-    "title": "Incoming Program - General Settings",
+    "title": "Incoming Program - Program Detail Tabs",
     "fields": [
         {
             "key": "incoming_program_photos",
@@ -104,66 +104,6 @@
             "delay": 0
         },
         {
-            "key": "incoming_program_costs",
-            "label": "Costs",
-            "name": "incoming_program_costs",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "text",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0,
-            "readonly": 1
-        },
-        {
-            "key": "incoming_program_eligibility",
-            "label": "Eligibility",
-            "name": "incoming_program_eligibility",
-            "type": "wysiwyg",
-            "instructions": "Also known as Eligibility",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "text",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0,
-            "readonly": 1
-        },
-        {
-            "key": "incoming_program_excursions",
-            "label": "Excursions",
-            "name": "incoming_program_excursions",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "text",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0,
-            "readonly": 1
-        },
-        {
             "key": "incoming_program_scholarships",
             "label": "Scholarships",
             "name": "incoming_program_scholarships",
@@ -224,49 +164,9 @@
             "readonly": 1
         },
         {
-            "key": "incoming_program_location",
-            "label": "Location",
-            "name": "incoming_program_location",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "text",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0,
-            "readonly": 1
-        },
-        {
             "key": "incoming_program_duration",
             "label": "Duration",
             "name": "incoming_program_duration",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "text",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0,
-            "readonly": 1
-        },
-        {
-            "key": "incoming_program_overview",
-            "label": "Overview",
-            "name": "incoming_program_overview",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,

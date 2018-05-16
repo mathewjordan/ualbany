@@ -1,6 +1,6 @@
 {
-    "key": "group_5ab11bd1bef77",
-    "title": "Incoming Programs Subfooter",
+    "key": "incoming_program_subfooter",
+    "title": "Incoming Programs - About UAlbany",
     "fields": [
         {
             "key": "incoming_program_subfooter_intro",
@@ -46,9 +46,9 @@
             "mime_types": ""
         },
         {
-            "key": "incoming_program_subfooter_academics",
-            "label": "Academics",
-            "name": "incoming_program_subfooter_academics",
+            "key": "incoming_program_subfooter_campus",
+            "label": "Campuses",
+            "name": "incoming_program_subfooter_campus",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -65,11 +65,106 @@
             "delay": 0
         },
         {
-            "key": "incoming_program_subfooter_campus",
-            "label": "Campus Life",
-            "name": "incoming_program_subfooter_campus",
+            "key": "incoming_program_subfooter_travel",
+            "label": "Travel Information",
+            "name": "incoming_program_subfooter_travel",
             "type": "wysiwyg",
             "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "incoming_program_subfooter_campus_life",
+            "label": "Campus Life",
+            "name": "incoming_program_subfooter_campus_life",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "incoming_program_subfooter_excursions",
+            "label": "Excursions",
+            "name": "incoming_program_subfooter_excursions",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "incoming_program_subfooter_recreation",
+            "label": "Recreation",
+            "name": "incoming_program_subfooter_recreation",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "incoming_program_subfooter_shopping_nightlife",
+            "label": "Shopping & Nightlife",
+            "name": "incoming_program_subfooter_shopping_nightlife",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "incoming_program_subfooter_academics",
+            "label": "Academics",
+            "name": "incoming_program_subfooter_academics",
+            "type": "wysiwyg",
+            "instructions": "this will be removed",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -88,7 +183,7 @@
             "label": "Housing",
             "name": "incoming_program_subfooter_housing",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "this will be removed",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -107,7 +202,7 @@
             "label": "Entertainment",
             "name": "incoming_program_subfooter_entertainment",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "this will be removed",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -126,7 +221,7 @@
             "label": "Restaurants &amp; Shopping",
             "name": "incoming_program_subfooter_restaurants",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "this will be removed",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
