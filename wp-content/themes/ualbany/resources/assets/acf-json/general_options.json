@@ -3,25 +3,6 @@
     "title": "General Options",
     "fields": [
         {
-            "key": "general_byline",
-            "label": "Hero Byline",
-            "name": "general_byline",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "general_hero_image",
             "label": "Hero Image",
             "name": "general_hero_image",

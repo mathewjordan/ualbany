@@ -6563,6 +6563,27 @@ Router.prototype.loadEvents = function loadEvents () {
           centerMode: true,
           focusOnSelect: true,
       });
+
+      var catcher = $('#anchor-catch');
+      var sticky = $('#anchor-menu');
+
+      function isScrolledTo(elem) {
+          var docViewTop = $(window).scrollTop(); //num of pixels hidden above current screen
+          var elemTop = $(elem).offset().top; //num of pixels above the elem
+          return ((elemTop <= docViewTop));
+      }
+
+      $(window).scroll(function() {
+          if(isScrolledTo(sticky)) {
+              sticky.css('position','fixed');
+              sticky.css('top','15px');
+          }
+          var stopHeight = catcher.offset().top + catcher.height();
+          if ( stopHeight > sticky.offset().top) {
+              sticky.css('position','relative');
+              sticky.css('top','0');
+          }
+      });
     
     new __WEBPACK_IMPORTED_MODULE_0__components_MobileNav__["a" /* default */]();
   },
