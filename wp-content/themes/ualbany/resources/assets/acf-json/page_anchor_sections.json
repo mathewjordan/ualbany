@@ -1,9 +1,9 @@
 {
-    "key": "group_5b057767d88a2",
+    "key": "page_anchor_sections",
     "title": "Sections",
     "fields": [
         {
-            "key": "field_5b0577799cc05",
+            "key": "anchor",
             "label": "Items",
             "name": "anchor",
             "type": "repeater",
@@ -22,7 +22,7 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5b0577d7bc490",
+                    "key": "anchor_menu_title",
                     "label": "Menu Title",
                     "name": "anchor_menu_title",
                     "type": "text",
@@ -41,7 +41,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5b05778d9cc06",
+                    "key": "anchor_section_title",
                     "label": "Section Title",
                     "name": "anchor_section_title",
                     "type": "text",
@@ -60,7 +60,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5b0577e3bc491",
+                    "key": "anchor_section_content",
                     "label": "Section Content",
                     "name": "anchor_section_content",
                     "type": "wysiwyg",
