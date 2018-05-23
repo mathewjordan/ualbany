@@ -1,0 +1,52 @@
+.page-basic-full-data {
+  main.main {
+    background-color: $lightgray;
+  }
+
+  .page-header {
+    padding-top: 5rem;
+
+    > h1 {
+      text-align: center;
+    }
+  }
+
+  .full-width {
+    padding: 2rem;
+  }
+}
+
+.juicer-feed {
+  li.feed-item {
+    box-shadow: 2px 2px 10px rgba($black, 0.07);
+
+    .j-image {
+      height: 250px;
+      background-color: $gray;
+      box-shadow: inset 1px 1px 3px rgba($black, 0.15);
+    }
+
+    h3.j-poster-meta {
+      text-transform: none !important;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0;
+
+      a,
+      a:visited {
+        text-transform: none !important;
+      }
+    }
+
+    .j-text {
+      p {
+        font-size: 1rem;
+      }
+
+      .j-read-more {
+        color: $purple;
+        text-transform: none;
+      }
+    }
+  }
+}

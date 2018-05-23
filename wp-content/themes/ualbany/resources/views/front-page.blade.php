@@ -170,7 +170,7 @@
                 <div class="text-center">
                   <h2>#GreatDanesAbroad</h2>
                   @php
-                    juicer_feed("name=lorem_ipsumis&per=3&truncate=30");
+                    juicer_feed("name=greatdanesabroad&per=3&truncate=30");
                   @endphp
                   <a href="/greatdanesabroad" class="btn">See more</a>
                 </div>
