@@ -353,20 +353,14 @@
         @endphp
         <section class="program-about">
             <div class="incoming-subfooter">
-                <div class="container-intro">
+                <div class="container-intro" style="background-image: url('/wp-content/themes/ualbany/dist/images/ualbany-map-01.svg');">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-7">
+                            <div class="col-sm-6">
                                 <h2>{{ __('About UAlbany') }}</h2>
                                 @if (get_field('incoming_program_subfooter_intro', 'option'))
                                     @php(the_field('incoming_program_subfooter_intro', 'option'))
                                 @endif
-                            </div>
-                            <div class="col-sm-4">
-                                <figure>
-                                    <img src="/wp-content/themes/ualbany/dist/images/ualbany-map.png"
-                                         class="img-fluid"/>
-                                </figure>
                             </div>
                         </div>
                     </div>
@@ -376,13 +370,11 @@
                     $banner_slim = $image['sizes']['banner_slim'];
                 @endphp
                 <div class="container-tabs">
-                    <div class="about-image" style="background-image: url('@php echo $banner_slim; @endphp');">
-                        <div class="cubes"></div>
-                    </div>
-                    <div class="container">
-                        <div class="about-tabs">
-                            <!-- Tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
+                    {{--<div class="about-image" style="background-image: url('@php echo $banner_slim; @endphp');"></div>--}}
+                    <!-- Tabs -->
+                    <ul id="about-tabs" class="nav nav-tabs" role="tablist">
+                        <div class="container">
+                            <div class="about-align">
                                 @php($cnt = 0)
                                 @foreach($render_incoming as $title => $selector)
                                     @if (get_field($selector, 'option') && trim(get_field($selector, 'option')) != '<p>&nbsp;</p>')
@@ -402,7 +394,11 @@
                                         </li>
                                     @endif
                                 @endforeach
-                            </ul>
+                            </div>
+                        </div>
+                    </ul>
+                    <div class="container">
+                        <div class="about-tabs">
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 @php
@@ -417,11 +413,13 @@
                                             } else {
                                               $first = 0;
                                             }
+                                            $incoming_bg_image_src = $incoming_bg_image[$cnt];
                                             $cnt++;
                                             $target = 'incoming-subfooter-' . program_target_string($title);
                                         @endphp
                                         <div role="tabpanel" class="tab-pane @if($first == 1) active in @endif"
                                              id="{{$target}}">
+                                            <div class="about-image" style="background-image: url('@php echo $incoming_bg_image_src['sizes']['banner']; @endphp');"></div>
                                             @php(the_field($selector, 'option'))
                                         </div>
                                     @endif

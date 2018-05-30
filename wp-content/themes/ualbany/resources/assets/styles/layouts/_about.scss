@@ -32,51 +32,79 @@
   }
 }
 
-.cubes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background-size: cover;
-  background-position: 0 0;
-  background-image: url(../images/isometric-cubes.png);
-}
-
 .program-about {
-  background-color: $purple;
+  background-color: $altpurple;
   color: $white;
 
   .container-intro {
     padding: 3rem 0;
+    background-size: contain;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 25px rgba($black, 0.35);
+    z-index: 5;
+    position: relative;
   }
 
   .container-tabs {
+    z-index: 1;
     position: relative;
     overflow: hidden;
+    background-color: $purple;
 
-    .about-image {
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-position: 0 50%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 100%;
-      width: 100%;
-      max-width: 76%;
-      z-index: 0;
-      opacity: 0.76;
+    .tab-content {
+      margin-top: 7rem;
+      padding-bottom: 1rem;
+
+      .about-image {
+        position: absolute;
+        left: -585px;
+        top: 0;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 685px;
+        width: 796px;
+        max-width: 76%;
+        z-index: 0;
+        opacity: 0.76;
+      }
     }
 
     .about-tabs {
-      padding: 2rem 0 3rem 3rem;
       position: relative;
-      z-index: 1;
-      max-width: 67%;
-      margin-left: 33%;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46166b+0,46166b+100&0.85+0,1+100 */
-      background: -moz-linear-gradient(left, rgba($purple, 0.85) 0%, rgba($purple, 1) 50%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(left, rgba($purple, 0.85) 0%, rgba($purple, 1) 50%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to right, rgba($purple, 0.85) 0%, rgba($purple, 1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      display: inline-block;
+      margin: 0;
+      background: url(../images/bg5.png) no-repeat left top;
+      height: 100%;
+      margin-left: 500px;
+      padding: 2rem 3rem;
+
+      &::after {
+        content: '';
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: url(../images/bg4.png) no-repeat left top;
+        position: absolute;
+        left: -485px;
+        top: 0;
+        width: 485px;
+        z-index: 1;
+      }
+
+      a,
+      a:visited {
+        color: $yellow;
+        font-weight: 700;
+      }
+
+      a:hover,
+      a:focus {
+        color: $yellow;
+        font-weight: 700;
+      }
     }
 
     .nav-tabs {
@@ -91,17 +119,42 @@
         }
 
         .nav-link {
-          border-radius: 0 !important;
-          font-size: 1.15rem;
-          border: 2px solid $altpurple;
+          font-size: 1.25rem;
+          background-color: $lightgray;
+          border-bottom: 4px solid $white;
+          border: none;
           padding: 0.5rem 1rem;
-          color: $white;
+          color: $darkgray;
+          font-weight: 700;
+          border-radius: 2px;
 
           &.active {
-            background-color: $altpurple !important;
+            color: $purple;
+            box-shadow: 3px 3px 10px rgba($black, 0.15);
+            background-color: $white !important;
+            border-bottom: 4px solid $yellow;
           }
         }
       }
     }
+  }
+}
+
+#about-tabs {
+  position: absolute;
+  top: 0;
+  float: right;
+  z-index: 3;
+  width: 100%;
+  margin-top: 3rem;
+
+  li {
+    display: inline-block;
+    float: none;
+  }
+
+  .about-align {
+    text-align: right;
+    margin-right: 3rem;
   }
 }

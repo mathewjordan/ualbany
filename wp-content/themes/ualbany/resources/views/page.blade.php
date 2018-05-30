@@ -30,7 +30,7 @@
         @endif
         <div class="container-fluid">
             <div class="single-header-content">
-                <h1 class="single-title">{{$title}}</h1>
+                <h1 class="single-title mb-0">{{$title}}</h1>
             </div>
         </div>
     </div>

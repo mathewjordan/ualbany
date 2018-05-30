@@ -13922,7 +13922,8 @@ h1.single-title {
   font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
   text-transform: uppercase;
   font-size: 4rem;
-  line-height: 1.2em;
+  letter-spacing: 0;
+  line-height: 4rem;
 }
 
 h2.single-subtitle {
@@ -16041,58 +16042,82 @@ h4 {
   padding: 15px 0;
 }
 
-.cubes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background-size: cover;
-  background-position: 0 0;
-  background-image: url(/wp-content/themes/ualbany/dist/images/isometric-cubes.png);
-}
-
 .program-about {
-  background-color: #46166b;
+  background-color: #602481;
   color: #fff;
 }
 
 .program-about .container-intro {
   padding: 3rem 0;
+  background-size: contain;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.35);
+          box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+  position: relative;
 }
 
 .program-about .container-tabs {
+  z-index: 1;
   position: relative;
   overflow: hidden;
+  background-color: #46166b;
 }
 
-.program-about .container-tabs .about-image {
+.program-about .container-tabs .tab-content {
+  margin-top: 7rem;
+  padding-bottom: 1rem;
+}
+
+.program-about .container-tabs .tab-content .about-image {
   position: absolute;
-  left: 0;
+  left: -585px;
   top: 0;
-  background-position: 0 50%;
+  background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
+  height: 685px;
+  width: 796px;
   max-width: 76%;
   z-index: 0;
   opacity: 0.76;
 }
 
 .program-about .container-tabs .about-tabs {
-  padding: 2rem 0 3rem 3rem;
   position: relative;
+  display: inline-block;
+  margin: 0;
+  background: url(/wp-content/themes/ualbany/dist/images/bg5.png) no-repeat left top;
+  height: 100%;
+  margin-left: 500px;
+  padding: 2rem 3rem;
+}
+
+.program-about .container-tabs .about-tabs::after {
+  content: '';
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: url(/wp-content/themes/ualbany/dist/images/bg4.png) no-repeat left top;
+  position: absolute;
+  left: -485px;
+  top: 0;
+  width: 485px;
   z-index: 1;
-  max-width: 67%;
-  margin-left: 33%;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#46166b+0,46166b+100&0.85+0,1+100 */
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(70, 22, 107, 0.85) 0%, #46166b 50%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(rgba(70, 22, 107, 0.85)), color-stop(50%, #46166b));
-  background: -o-linear-gradient(left, rgba(70, 22, 107, 0.85) 0%, #46166b 50%);
-  background: linear-gradient(to right, rgba(70, 22, 107, 0.85) 0%, #46166b 50%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.program-about .container-tabs .about-tabs a,
+.program-about .container-tabs .about-tabs a:visited {
+  color: #ffc107;
+  font-weight: 700;
+}
+
+.program-about .container-tabs .about-tabs a:hover,
+.program-about .container-tabs .about-tabs a:focus {
+  color: #ffc107;
+  font-weight: 700;
 }
 
 .program-about .container-tabs .nav-tabs {
@@ -16119,11 +16144,14 @@ h4 {
 .banner .nav .program-about .container-tabs .nav-tabs .nav-item a,
 .program-about .container-tabs .nav-tabs .banner .nav li a,
 .banner .nav .program-about .container-tabs .nav-tabs li a {
-  border-radius: 0 !important;
-  font-size: 1.15rem;
-  border: 2px solid #602481;
+  font-size: 1.25rem;
+  background-color: #c5ccd2;
+  border-bottom: 4px solid #fff;
+  border: none;
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: #353e45;
+  font-weight: 700;
+  border-radius: 2px;
 }
 
 .program-about .container-tabs .nav-tabs .nav-item .nav-link.active,
@@ -16133,7 +16161,30 @@ h4 {
 .banner .nav .program-about .container-tabs .nav-tabs .nav-item a.active,
 .program-about .container-tabs .nav-tabs .banner .nav li a.active,
 .banner .nav .program-about .container-tabs .nav-tabs li a.active {
-  background-color: #602481 !important;
+  color: #46166b;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  background-color: #fff !important;
+  border-bottom: 4px solid #ffc107;
+}
+
+#about-tabs {
+  position: absolute;
+  top: 0;
+  float: right;
+  z-index: 3;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+#about-tabs li {
+  display: inline-block;
+  float: none;
+}
+
+#about-tabs .about-align {
+  text-align: right;
+  margin-right: 3rem;
 }
 
 .anchor-section {
@@ -17062,9 +17113,10 @@ footer .region-footer .custom_html-3 {
   height: 100%;
   top: 0;
   left: 0;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-image: url(/wp-content/themes/ualbany/dist/images/isometric-cubes.png);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.35) 0%, transparent 33%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.35)), color-stop(33%, transparent));
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.35) 0%, transparent 33%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.35) 0%, transparent 33%);
 }
 
 .introduction-section {
@@ -17349,51 +17401,6 @@ body.home section.page-section--tall {
   padding: 20px 2rem;
   background-color: #353e45;
   color: #fff;
-}
-
-.single-header {
-  padding: 10rem 0 20px;
-  color: #fff;
-  position: relative;
-  background-color: #97a4af;
-  overflow: hidden;
-}
-
-.single-header .single-photo {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.single-header .single-header-content {
-  background-color: #353e45;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: auto;
-  max-width: 50%;
-  display: inline-block;
-  padding: 20px 40px;
-  margin-bottom: 0;
-  position: relative;
-  z-index: 5;
-  text-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.25);
-}
-
-.single-photo-overlay {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-image: url(/wp-content/themes/ualbany/dist/images/isometric-cubes.png);
 }
 
 .single header {

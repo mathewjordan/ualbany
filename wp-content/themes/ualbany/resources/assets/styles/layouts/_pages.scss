@@ -45,9 +45,9 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-image: url(../images/isometric-cubes.png);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 33%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 33%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 33%);
 }
 
 .introduction-section {
