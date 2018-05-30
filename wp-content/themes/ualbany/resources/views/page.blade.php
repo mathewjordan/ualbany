@@ -31,9 +31,6 @@
         <div class="container-fluid">
             <div class="single-header-content">
                 <h1 class="single-title">{{$title}}</h1>
-                @if($general_byline)
-                    <h2 class="single-subtitle">{{$general_byline}}</h2>
-                @endif
             </div>
         </div>
     </div>
