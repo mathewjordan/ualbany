@@ -14106,6 +14106,49 @@ ul.slickslide li img {
   font-style: normal;
 }
 
+.accordions .card {
+  margin-bottom: 0.25rem;
+}
+
+.accordions .card .card-header {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.accordions .card:last-child {
+  margin-bottom: 0;
+}
+
+.accordions .card h2 {
+  text-transform: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.accordions .card button {
+  border: none;
+  -webkit-box-shadow: 1px 1px 3px rgba(197, 204, 210, 0.25);
+          box-shadow: 1px 1px 3px rgba(197, 204, 210, 0.25);
+  border-radius: 3px;
+  text-transform: none;
+  text-decoration: none;
+  background-color: #46166b;
+  color: #fff;
+  width: 100%;
+  display: block;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.accordions .card button.collapsed {
+  background-color: #f6f7f8;
+  color: #353e45;
+}
+
 .btn--hover-and-active-state,
 .btn-primary:hover,
 .btn-primary:active,

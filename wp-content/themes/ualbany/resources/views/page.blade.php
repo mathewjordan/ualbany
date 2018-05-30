@@ -141,12 +141,14 @@
                     <div class="col-sm-8">
                         <div class="introduction-section--content">
                             <?php echo get_field('page_introduction_content');?>
+                            @include('partials.accordions')
                         </div>
                     </div>
                     <?php else: ?>
                     <div class="col-12">
                         <div class="introduction-section--content">
                             <?php echo get_field('page_introduction_content');?>
+                            @include('partials.accordions')
                         </div>
                     </div>
                     <?php endif; ?>
