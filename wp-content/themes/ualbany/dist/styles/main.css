@@ -16156,6 +16156,10 @@ h4 {
   padding-right: 60px;
 }
 
+.nav-utility li > ul {
+  display: none;
+}
+
 .banner_utility {
   display: none;
 }

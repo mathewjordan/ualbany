@@ -46,14 +46,14 @@
                 <div class="row">
                     <?php
                     $args = array(
-                        'post_type'      => 'page',
+                        'post_type' => 'page',
                         'posts_per_page' => -1,
-                        'post_parent'    => $post->ID,
-                        'order'          => 'ASC',
-                        'orderby'        => 'menu_order'
+                        'post_parent' => $post->ID,
+                        'order' => 'ASC',
+                        'orderby' => 'menu_order'
                     );
 
-                    $parent = new WP_Query( $args );
+                    $parent = new WP_Query($args);
                     if ( $parent->have_posts() ) :
                     $submenu = true;
 
@@ -62,9 +62,12 @@
                     <aside class="col-sm-4">
                         <div class="submenu--siblings">
                             <ul>
-                                <li class="active-sibling"> <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span class="fa fa-caret-right"></span> <?php the_title(); ?></a></li>
+                                <li class="active-sibling"><a href="<?php the_permalink(); ?>"
+                                                              title="<?php the_title(); ?>"><span
+                                                class="fa fa-caret-right"></span> <?php the_title(); ?></a></li>
                                 <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
-                                <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
+                                <li><a href="<?php the_permalink(); ?>"
+                                       title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
                                 <?php endwhile; ?>
                             </ul>
                         </div>
@@ -73,19 +76,31 @@
                     <?php endif; wp_reset_postdata(); ?>
                     <?php
 
-                    $locations  = get_nav_menu_locations();
-                    $menu       = wp_get_nav_menu_object( $locations[ 'primary_navigation' ] );
-                    $menu_items = wp_get_nav_menu_items( $menu->term_id);
+                    $locations = get_nav_menu_locations();
 
-                    $parent_id  = false;
-                    $parent     = '';
-                    $siblings   = '';
+                    if (get_field('menu')) {
+                        if (get_field('menu') == 'primary') {
+                            $menu = wp_get_nav_menu_object($locations['primary_navigation']);
+                        } else if (get_field('menu') == 'utility') {
+                            $menu = wp_get_nav_menu_object($locations['utility_navigation']);
+                        }
+                    } else {
+                        $menu = wp_get_nav_menu_object($locations['primary_navigation']);
+                    }
+
+                    $menu_items = wp_get_nav_menu_items($menu->term_id);
+                    $utility_menu = wp_get_nav_menu_items($menu->term_id);
+
+                    $parent_id = false;
+                    $parent = '';
+                    $siblings = '';
                     $page_template = get_page_template_slug();
                     $menu_post_id = $post->ID;
 
-                    if( !empty( $menu_items ) ) {
+                    if (!empty($menu_items)) {
+
                         // Find the menu item parent for this page
-                        foreach( $menu_items as $menu_item ) {
+                        foreach ($menu_items as $menu_item) {
                             if ($menu_item->object_id == $menu_post_id) {
                                 $parent_id = $menu_item->menu_item_parent;
                                 break;
@@ -105,7 +120,7 @@
                             $siblings .= '<li><a href="' . get_the_permalink($parent_item_post_id) . '">' . get_the_title($parent_item_post_id) . '</a></li>';
 
                             // render children
-                            foreach( $menu_items as $menu_item ) {
+                            foreach ($menu_items as $menu_item) {
                                 if ($menu_item->menu_item_parent == $parent_id) {
                                     if ($menu_item->object_id == $menu_post_id) {
                                         $siblings .= '<li class="active-sibling"><a href="' . $menu_item->url . '"><span class="fa fa-caret-right"></span> ' . $menu_item->title . '</a></li>';

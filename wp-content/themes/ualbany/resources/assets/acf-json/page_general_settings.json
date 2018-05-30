@@ -39,6 +39,30 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5b0ec42428b4e",
+            "label": "Menu",
+            "name": "menu",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Primary",
+                "utility": "Utility"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "primary",
+            "layout": "vertical",
+            "return_format": "value"
         }
     ],
     "location": [
