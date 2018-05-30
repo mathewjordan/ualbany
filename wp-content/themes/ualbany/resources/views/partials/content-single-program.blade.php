@@ -432,6 +432,8 @@
         </section>
     @endif
 
+
+    @if (!$is_incoming)
     <section class="subfooter">
         <div class="container">
             <div class="row">
@@ -462,4 +464,5 @@
             </div>
         </div>
     </section>
+    @endif
 </article>
