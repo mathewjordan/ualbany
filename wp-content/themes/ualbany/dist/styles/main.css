@@ -16049,13 +16049,78 @@ h4 {
 
 .program-about .container-intro {
   padding: 3rem 0;
-  background-size: contain;
-  background-position: 100% 0;
+  background-size: cover;
+  background-position: 48vw 0;
   background-repeat: no-repeat;
   -webkit-box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.35);
           box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.35);
   z-index: 5;
   position: relative;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+}
+
+@media (max-width: 767px) {
+  .program-about .container-intro {
+    background-position: 48vw 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .program-about .container-intro {
+    background-position: 48vw 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .program-about .container-intro {
+    background-position: 48vw 0;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .program-about .container-intro {
+    background-position: 48vw 0;
+  }
+}
+
+@media (min-width: 1439px) and (max-width: 4200px) {
+  .program-about .container-intro {
+    background-position: 48vw 0;
+  }
+}
+
+.program-about .container-intro .gray-ocean {
+  display: none;
+  position: absolute;
+  left: 90vw;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: #97a4af;
 }
 
 .program-about .container-tabs {
@@ -16082,7 +16147,7 @@ h4 {
   width: 796px;
   max-width: 76%;
   z-index: 0;
-  opacity: 0.76;
+  opacity: 1;
 }
 
 .program-about .container-tabs .about-tabs {

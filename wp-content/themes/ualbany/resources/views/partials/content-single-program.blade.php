@@ -354,6 +354,7 @@
         <section class="program-about">
             <div class="incoming-subfooter">
                 <div class="container-intro" style="background-image: url('/wp-content/themes/ualbany/dist/images/ualbany-map-01.svg');">
+                    <div class="gray-ocean"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6">

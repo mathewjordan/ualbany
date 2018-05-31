@@ -38,12 +38,30 @@
 
   .container-intro {
     padding: 3rem 0;
-    background-size: contain;
-    background-position: 100% 0;
+    background-size: cover;
+    background-position: 48vw 0;
     background-repeat: no-repeat;
     box-shadow: 3px 3px 25px rgba($black, 0.35);
     z-index: 5;
     position: relative;
+
+    @include respondto(xs, sm, md, lg) {
+      background-position: 48vw 0;
+    }
+
+    @include respondto(xl) {
+      background-position: 48vw 0;
+    }
+
+    .gray-ocean {
+      display: none;
+      position: absolute;
+      left: 90vw;
+      top: 0;
+      height: 100%;
+      width: 100vw;
+      background-color: $gray;
+    }
   }
 
   .container-tabs {
@@ -68,7 +86,7 @@
         width: 796px;
         max-width: 76%;
         z-index: 0;
-        opacity: 0.76;
+        opacity: 1;
       }
     }
 
