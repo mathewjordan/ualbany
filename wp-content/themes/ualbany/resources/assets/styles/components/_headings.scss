@@ -8,18 +8,37 @@ h5 {
 
 h2 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 0.75em;
+  color: $purple;
+  margin-top: 3rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 h3 {
-  color: $brand-primary;
-  text-transform: uppercase;
-  font-size: 50px;
+  text-transform: none;
+  font-size: 2.3rem;
+  color: $purple;
 }
 
 h4 {
-  color: $brand-primary;
+  color: $darkgray;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 1.6rem;
 }
+
+h5 {
+  color: $darkgray;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+h5 {
+  color: $darkgray;
+  text-transform: none;
+  font-size: 1.4rem;
+}
+

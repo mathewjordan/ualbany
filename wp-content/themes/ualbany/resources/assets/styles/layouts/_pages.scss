@@ -75,14 +75,6 @@
   }
 }
 
-.main > article {
-  h3 {
-    @extend .h3--primary;
-
-    color: $gray;
-  }
-}
-
 .section-title {
   text-align: center;
 }
