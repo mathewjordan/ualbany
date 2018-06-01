@@ -203,6 +203,7 @@
     @endif
 
     @if ($is_incoming)
+
         @php
             $incoming_details = [
                 'Academics' => 'incoming_program_academics',
@@ -215,7 +216,21 @@
                 'Contact' => 'incoming_program_contact',
                 'Duration' => 'incoming_program_duration'
             ];
+
+            $defaultContentCheck = '{defaultContent}';
+            $incoming_source = array();
+
+            foreach ($render as $k => $field ) {
+                $tdData = get_field($field);
+                if (strpos($tdData, $defaultContentCheck) !== false) {
+                    $incoming_source[$k] = 'wordpress';
+                } else {
+                    $incoming_source[$k] = 'terradotta';
+                }
+            }
+
         @endphp
+
         <section class="program-section">
             <h2 class="text-center"><?php echo __('Program Details'); ?></h2>
             <div class="container">
@@ -223,11 +238,13 @@
                 <ul class="nav nav-tabs" role="tablist">
                     @php($cnt = 0)
                     @foreach($incoming_details as $title => $selector)
-                        @if(in_array($title, ['Cost', 'Eligibility']))
-                            @php $data = get_field($selector) @endphp
+
+                        @if($incoming_source[$title] == 'terradotta')
+                            @php $data = get_field($render[$title]); @endphp
                         @else
                             @php $data = get_field($selector, 'option') @endphp
                         @endif
+
                         @if ($data != '<p>&nbsp;</p>')
                             @php
                                 if ($cnt == 0) {
@@ -251,8 +268,8 @@
                     @php($cnt = 0)
                     @foreach($incoming_details as $title => $selector)
 
-                        @if(in_array($title, ['Cost', 'Eligibility']))
-                            @php $tab_content = get_field($selector) @endphp
+                        @if($incoming_source[$title] == 'terradotta')
+                            @php $tab_content = get_field($render[$title]); @endphp
                         @else
                             @php $tab_content = get_field($selector, 'option') @endphp
                         @endif
