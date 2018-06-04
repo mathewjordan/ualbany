@@ -169,11 +169,3 @@ function add_options_menu($post_type_singular, $post_type_slug, $post_type_machi
     }
 }
 
-acf_add_options_page([
-    'parent_slug'   => 'admin.php?page=ualbany',
-    'page_title' 	=> __( 'Customizations', 'ualbany' ),
-    'menu_title'	=> __( 'Customizations', 'ualbany' ),
-    'menu_slug' 	=> 'ualbany',
-    'capability'	=> 'manage_options',
-    'redirect'		=> false
-]);
