@@ -38,10 +38,53 @@ function terradotta_admin() {
   echo '</div>';
 }
 
+function ualbany_customizations() {
+
+    echo '<h1>UAlbany Options</h1>';
+
+}
+
 add_action('admin_menu', 'vs_terradotta_connector_plugin_setup_menu');
 
 function vs_terradotta_connector_plugin_setup_menu() {
-  add_menu_page('Terra Dotta Connector', 'Terra Dotta API', 'manage_options', 'terradotta', 'terradotta_admin');
+    add_menu_page('Terra Dotta Connector', 'Terra Dotta', 'manage_options', 'terradotta', 'terradotta_admin');
+    add_menu_page('UAlbany Options', 'UAlbany Options', 'manage_options', 'ualbany', 'ualbany_customizations');
 }
+
+acf_add_options_page([
+    'parent_slug'   => 'admin.php?page=ualbany',
+    'page_title' 	=> __( 'Customizations', 'ualbany' ),
+    'menu_title'	=> __( 'Customizations', 'ualbany' ),
+    'menu_slug' 	=> 'ualbany',
+    'capability'	=> 'manage_options',
+    'redirect'		=> false
+]);
+
+function hook_css() {
+    ?>
+    <style>
+
+        #acf-sidebar_items .acf-row .acf-field {
+            padding: 1.5rem;
+        }
+
+        #acf-sidebar_items .acf-row > td {
+            border-bottom: 20px solid #EDEDED;
+            padding: 1rem;
+        }
+        #acf-sidebar_items .acf-row .acf-field-sidebar-item-type select,
+        #acf-sidebar_items .acf-row .acf-field-sidebar-item-type select option {
+            font-weight: 700;
+        }
+
+        #acf-sidebar_items .acf-repeater .acf-row-handle.order{
+            border-right: none;
+            text-shadow: none;
+            font-weight: 700;
+        }
+    </style>
+    <?php
+}
+add_action('admin_footer', 'hook_css');
 
 ?>
