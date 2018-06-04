@@ -16100,6 +16100,14 @@ h5 {
   /* desktop and large desktop */
 }
 
+.program-about .container-intro h2,
+.program-about .container-intro h3,
+.program-about .container-intro h4,
+.program-about .container-intro h5,
+.program-about .container-intro p {
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .program-about .container-intro {
     background-position: 48vw 0;

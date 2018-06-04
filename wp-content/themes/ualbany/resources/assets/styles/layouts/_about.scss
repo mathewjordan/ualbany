@@ -45,6 +45,14 @@
     z-index: 5;
     position: relative;
 
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+      color: $white;
+    }
+
     @include respondto(xs, sm, md, lg) {
       background-position: 48vw 0;
     }
