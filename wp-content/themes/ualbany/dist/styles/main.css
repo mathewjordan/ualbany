@@ -17187,7 +17187,7 @@ footer .region-footer .custom_html-3 {
 
 .single-header .single-header-content {
   background-color: #353e45;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   width: auto;
   max-width: 50%;
   display: inline-block;
@@ -17306,9 +17306,9 @@ footer .region-footer .custom_html-3 {
 
 .front-header .front-header-content {
   background-color: #353e45;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   width: auto;
-  max-width: 50%;
+  max-width: 60%;
   display: inline-block;
   padding: 40px;
   position: relative;
@@ -17321,22 +17321,86 @@ footer .region-footer .custom_html-3 {
   font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
   text-transform: uppercase;
   font-size: 4rem;
-  line-height: 1.2em;
+  line-height: 1em;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .front-header h3.front-subtitle {
-  font-family: "Trade Gothic LT Com Bold Cn", Arial, Sans-serif;
-  font-size: 1.8rem;
-  margin: 1rem 0;
+  font-family: "News Cycle", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  font-weight: 400;
   opacity: 0.85;
   color: #fff;
+}
+
+.front-header__form {
+  padding: 0 2rem;
 }
 
 .front-header__form select {
   margin-right: 1rem;
   margin-bottom: 15px;
-  max-width: 200px;
+  max-width: 160px;
+  font-weight: 700;
+}
+
+table.bracket {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+table.bracket tbody {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+table.bracket h3 {
+  margin: 0 !important;
+  padding: 0 1rem;
+  display: block;
+  white-space: nowrap;
+  margin-top: -1.5rem !important;
+  position: relative;
+}
+
+table.bracket tr,
+table.bracket td {
+  background-color: transparent !important;
+  padding: 0;
+}
+
+table.bracket .bracket-start {
+  border-left: 3px solid #97a4af;
+  border-top: 3px solid #97a4af;
+  line-height: 1rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+table.bracket .bracket-start div {
+  display: block;
+  width: 1rem;
+}
+
+table.bracket .bracket-mid {
+  border-top: none;
+  position: relative;
+}
+
+table.bracket .bracket-end {
+  width: 100%;
+  border-right: 3px solid #97a4af;
+  border-top: 3px solid #97a4af;
+  line-height: 1rem;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .discover-regions h3 {
@@ -17723,7 +17787,7 @@ body.home section.page-section--tall {
   bottom: 0;
   right: 0;
   background-color: #353e45;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   width: 100%;
   padding: 40px;
   z-index: 5;

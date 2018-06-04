@@ -32,7 +32,17 @@
             <div class="front-header-content">
                 <h2 class="front-title">{{$hero['homepage_hero__headline']}}</h2>
                 @if($hero['homepage_hero__cta'])
-                    <h3 class="front-subtitle">{{$hero['homepage_hero__cta']}}</h3>
+                    <table class="bracket">
+                        <tr>
+                            <td class="bracket-start">
+                                <div></div>
+                            </td>
+                            <td class="bracket-mid">
+                                <h3 class="front-subtitle">{{$hero['homepage_hero__cta']}}</h3>
+                            </td>
+                            <td class="bracket-end"></td>
+                        </tr>
+                    </table>
                 @endif
                 <div class="front-header__form">
                     <form action="#">
