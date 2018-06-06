@@ -27,13 +27,21 @@ $the_query = new WP_Query($args); ?>
         $country = $country_rel[0]->post_title;
         $region = $region_rel[0]->post_title;
     }
+
+        $photos = get_field('story_photos');
+        if ($photos[0]) {
+            $thumb = $photos[0]['sizes']['slide_thumb'];
+        }
     ?>
-    <div class="featured-student-story">
+    <div class="featured-student-story @if($thumb) has-thumb @endif">
         <div class="featured-student-story-wrapper">
-        <h2>Featured Student Story</h2>
-        <a href="#"><h3><?php the_title(); ?></h3></a>
-        <h4>{{$program}}</h4>
-        <h5>{{$country}}, {{$region}}</h5>
+            @if($thumb)
+                <div class="featured-student-story--thumb" style="background-image: url('{{$thumb}}');"></div>
+            @endif
+            <h2>Featured Student Story</h2>
+            <a href="#"><h3><?php the_title(); ?></h3></a>
+            <h4>{{$program}}</h4>
+            <h5>{{$country}}, {{$region}}</h5>
         </div>
     </div>
     <?php endwhile; ?>

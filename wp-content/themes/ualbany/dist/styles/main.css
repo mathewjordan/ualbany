@@ -17004,11 +17004,17 @@ body.mobile-nav-active .nav-mobile-wrapper.mobile-menu-link--level-two .menu-pri
   background-color: #f6f7f8;
   padding: 1rem;
   margin: 1rem 0;
+  position: relative;
+}
+
+.featured-student-story.has-thumb {
+  padding-left: 120px;
 }
 
 .featured-student-story h2 {
   font-size: 1rem;
   color: #97a4af;
+  margin: 0;
 }
 
 .featured-student-story h3 {
@@ -17026,6 +17032,16 @@ body.mobile-nav-active .nav-mobile-wrapper.mobile-menu-link--level-two .menu-pri
 .featured-student-story h5 {
   margin: 1rem 0 0;
   font-size: 1rem;
+}
+
+.featured-student-story .featured-student-story--thumb {
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100px;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 footer {
