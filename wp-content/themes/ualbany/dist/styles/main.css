@@ -14149,6 +14149,14 @@ ul.slickslide li img {
   color: #353e45;
 }
 
+.accordions.student-stories .card-body > .story {
+  margin-bottom: 3rem;
+}
+
+.accordions.student-stories .card-body > .story:last-child {
+  margin-bottom: 0;
+}
+
 .btn--hover-and-active-state,
 .btn-primary:hover,
 .btn-primary:active,
@@ -17042,6 +17050,12 @@ body.mobile-nav-active .nav-mobile-wrapper.mobile-menu-link--level-two .menu-pri
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.student-story-thumb {
+  float: right;
+  width: 200px;
+  margin: 0 0 3rem 2rem;
 }
 
 footer {

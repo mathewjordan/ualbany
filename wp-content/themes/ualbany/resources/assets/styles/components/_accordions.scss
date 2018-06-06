@@ -39,4 +39,16 @@
       }
     }
   }
+
+  &.student-stories {
+    .card-body {
+      > .story {
+        margin-bottom: 3rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

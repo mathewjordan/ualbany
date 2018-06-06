@@ -24,8 +24,10 @@
             <a href="{{ $item['sidebar_button_in'] }}" class="btn btn-lg btn-block">{{ $item['button_text'] }}</a>
         @endif
 
-        @if ($stype == 'student')
-            @include('partials.components.student_story')
+        @if(!is_page_template('views/page-student-stories.blade.php'))
+            @if ($stype == 'student')
+                @include('partials.components.student_story')
+            @endif
         @endif
 
         @if ($stype == 'content')
