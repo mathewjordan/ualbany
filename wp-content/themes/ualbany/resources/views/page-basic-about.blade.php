@@ -63,7 +63,7 @@
         
         @php $contact_group = get_field('about_contact'); @endphp
         @if ($contact_group)
-        <section class="section-contact">
+        <section id="contact" class="section-contact">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_office']; @endphp </div>

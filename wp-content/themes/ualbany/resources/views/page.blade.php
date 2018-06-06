@@ -37,7 +37,6 @@
 
     @while(have_posts()) @php(the_post())
     <article @php(post_class())>
-        <?php if (get_field('page_introduction')) : ?>
         <section class="introduction-section">
             <div class="container">
                 <div class="row">
@@ -68,6 +67,7 @@
                                 <?php endwhile; ?>
                             </ul>
                         </div>
+                        @include('partials.sidebar')
                     </aside>
 
                     <?php endif; wp_reset_postdata(); ?>
@@ -134,25 +134,15 @@
                         }
                     }
                     ?>
-                    <?php if ($submenu) : ?>
                     <div class="col-sm-8">
                         <div class="introduction-section--content">
                             <?php echo get_field('page_introduction_content');?>
                             @include('partials.accordions')
                         </div>
                     </div>
-                    <?php else: ?>
-                    <div class="col-12">
-                        <div class="introduction-section--content">
-                            <?php echo get_field('page_introduction_content');?>
-                            @include('partials.accordions')
-                        </div>
-                    </div>
-                    <?php endif; ?>
                 </div>
             </div>
         </section>
-        <?php endif; ?>
 
         <section class="section-page-main">
             <div class="container">
