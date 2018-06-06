@@ -30,15 +30,25 @@
 
     $program_dates = td_program_dates();
 
+    $hero_image_url = get_the_post_thumbnail_url(get_the_ID(), 'banner');
+
 @endphp
 
 <article @php(post_class())>
-    <header class="program-header">
-        <div class="container">
-            <h1 class="entry-title">{{ get_the_title() }}</h1>
-            <h2 class="program-header__city">{{ $program_meta['city'] }}</h2>
+
+    <div class="single-header single-page-header single-program">
+        @if($hero_image_url)
+            <div class="single-photo-overlay"></div>
+            <div class="single-photo" style="background-image: url('{{$hero_image_url}}');"></div>
+        @endif
+        <div class="container-fluid">
+            <div class="single-header-content">
+                <h1 class="single-title mb-lg-2">{{ get_the_title() }}</h1>
+                <p>{{ $program_meta['city'] }}, {{ $program_meta['country'] }}</p>
+            </div>
         </div>
-    </header>
+    </div>
+
     <div class="entry-content">
         <div class="container">
             <a href="https://ualbany.studioabroad.com/index.cfm?FuseAction=ProgramAdmin.BrochureEdit&Program_ID={{get_field('program_id')}}"
