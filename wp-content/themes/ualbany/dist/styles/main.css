@@ -17065,6 +17065,17 @@ footer {
   min-height: 360px;
 }
 
+footer a,
+footer a:visited {
+  color: #ffc107;
+  font-weight: 700;
+}
+
+footer a:focus,
+footer a:hover {
+  color: #ffc107;
+}
+
 footer .region-footer {
   margin-left: 360px;
   margin-top: 40px;
@@ -17340,6 +17351,17 @@ footer .region-footer .custom_html-3 {
 .section-grid-break li,
 .section-grid-break blockquote {
   color: #fff;
+}
+
+.section-grid-break a,
+.section-grid-break a:visited {
+  color: #ffc107;
+  font-weight: 700;
+}
+
+.section-grid-break a:focus,
+.section-grid-break a:hover {
+  color: #ffc107;
 }
 
 .section-grid-subfooter {
@@ -17835,7 +17857,7 @@ body.home section.page-section--tall {
 }
 
 .single-program .program-meta {
-  background-color: #c5ccd2;
+  background-color: #f6f7f8;
 }
 
 .program .program-meta {
@@ -18007,9 +18029,13 @@ body.home section.page-section--tall {
   text-decoration: none;
 }
 
-.program h3 {
-  font-size: 1.5rem;
-  color: #46166b;
+.program h1 > span,
+.program h2 > span,
+.program h3 > span,
+.program h4 > span,
+.program h5 > span,
+.program h6 > span {
+  font-size: inherit !important;
 }
 
 .table-programs__programs-head {

@@ -110,7 +110,7 @@
 } // .single-program .program-meta, .program .program-meta, .table-programs .program-meta
 
 .single-program .program-meta {
-  background-color: $lightgray;
+  background-color: $offwhite;
 } // .program .program-meta
 
 .program .program-meta {
@@ -266,9 +266,15 @@
     text-decoration: none;
   }
 
-  h3 {
-    font-size: 1.5rem;
-    color: $purple;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    > span {
+      font-size: inherit !important;
+    }
   }
 } // .program
 

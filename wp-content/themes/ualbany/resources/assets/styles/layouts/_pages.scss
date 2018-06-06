@@ -107,6 +107,17 @@
   blockquote {
     color: $white;
   }
+
+  a,
+  a:visited {
+    color: $yellow;
+    font-weight: 700;
+  }
+
+  a:focus,
+  a:hover {
+    color: $yellow;
+  }
 }
 
 .section-grid-subfooter {
