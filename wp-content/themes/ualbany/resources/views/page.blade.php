@@ -96,8 +96,6 @@
 
                     if( !empty($menu_items) ) {
 
-                    echo '<aside class="col-sm-4">';
-
                     // Find the menu item parent for this page
                     foreach ($menu_items as $menu_item) {
                         if ($menu_item->object_id == $menu_post_id) {
@@ -107,6 +105,8 @@
                     }
 
                     if ($parent_id) {
+
+                        echo '<aside class="col-sm-4">';
 
                         $submenu = true;
 
@@ -131,11 +131,11 @@
                         $siblings .= '</div>';
 
                         echo $parent . $siblings;
+                        ?>
+                        @include('partials.sidebar')
+                        <?php
+                        echo '</aside>';
                     }
-                    ?>
-                    @include('partials.sidebar')
-                    <?php
-                    echo '</aside>';
                     }
                     ?>
                     <div class="col-sm-8">
