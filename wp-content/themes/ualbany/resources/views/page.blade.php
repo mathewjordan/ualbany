@@ -94,44 +94,48 @@
                     $page_template = get_page_template_slug();
                     $menu_post_id = $post->ID;
 
-                    if (!empty($menu_items)) {
+                    if( !empty($menu_items) ) {
 
-                        // Find the menu item parent for this page
-                        foreach ($menu_items as $menu_item) {
-                            if ($menu_item->object_id == $menu_post_id) {
-                                $parent_id = $menu_item->menu_item_parent;
-                                break;
-                            }
+                    echo '<aside class="col-sm-4">';
+
+                    // Find the menu item parent for this page
+                    foreach ($menu_items as $menu_item) {
+                        if ($menu_item->object_id == $menu_post_id) {
+                            $parent_id = $menu_item->menu_item_parent;
+                            break;
                         }
+                    }
 
-                        if ($parent_id) {
+                    if ($parent_id) {
 
-                            $submenu = true;
+                        $submenu = true;
 
-                            $siblings .= '<aside class="col-sm-4">';
-                            $siblings .= '<div class="submenu--siblings">';
-                            $siblings .= '<ul>';
+                        $siblings .= '<div class="submenu--siblings">';
+                        $siblings .= '<ul>';
 
-                            // render parent item
-                            $parent_item_post_id = get_post_meta($parent_id, '_menu_item_object_id', 1);
-                            $siblings .= '<li><a href="' . get_the_permalink($parent_item_post_id) . '">' . get_the_title($parent_item_post_id) . '</a></li>';
+                        // render parent item
+                        $parent_item_post_id = get_post_meta($parent_id, '_menu_item_object_id', 1);
+                        $siblings .= '<li><a href="' . get_the_permalink($parent_item_post_id) . '">' . get_the_title($parent_item_post_id) . '</a></li>';
 
-                            // render children
-                            foreach ($menu_items as $menu_item) {
-                                if ($menu_item->menu_item_parent == $parent_id) {
-                                    if ($menu_item->object_id == $menu_post_id) {
-                                        $siblings .= '<li class="active-sibling"><a href="' . $menu_item->url . '"><span class="fa fa-caret-right"></span> ' . $menu_item->title . '</a></li>';
-                                    } else {
-                                        $siblings .= '<li><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
-                                    }
+                        // render children
+                        foreach ($menu_items as $menu_item) {
+                            if ($menu_item->menu_item_parent == $parent_id) {
+                                if ($menu_item->object_id == $menu_post_id) {
+                                    $siblings .= '<li class="active-sibling"><a href="' . $menu_item->url . '"><span class="fa fa-caret-right"></span> ' . $menu_item->title . '</a></li>';
+                                } else {
+                                    $siblings .= '<li><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
                                 }
                             }
-                            $siblings .= '</ul>';
-                            $siblings .= '</div>';
-                            $siblings .= '</aside>';
-
-                            echo $parent . $siblings;
                         }
+                        $siblings .= '</ul>';
+                        $siblings .= '</div>';
+
+                        echo $parent . $siblings;
+                    }
+                    ?>
+                    @include('partials.sidebar')
+                    <?php
+                    echo '</aside>';
                     }
                     ?>
                     <div class="col-sm-8">

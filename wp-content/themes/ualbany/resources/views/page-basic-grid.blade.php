@@ -43,7 +43,6 @@
 
     @while(have_posts()) @php(the_post())
     <article @php(post_class())>
-        <?php if (get_field('page_introduction')) : ?>
         <section class="introduction-section">
             <div class="container">
                 <div class="row">
@@ -71,6 +70,7 @@
                                 <?php endwhile; ?>
                             </ul>
                         </div>
+                        @include('partials.sidebar')
                     </aside>
 
                     <?php endif; wp_reset_postdata(); ?>
@@ -87,6 +87,9 @@
                     $menu_post_id = $post->ID;
 
                     if( !empty( $menu_items ) ) {
+
+                        echo '<aside class="col-sm-4">';
+
                         // Find the menu item parent for this page
                         foreach( $menu_items as $menu_item ) {
                             if ($menu_item->object_id == $menu_post_id) {
@@ -99,7 +102,6 @@
 
                             $submenu = true;
 
-                            $siblings .= '<aside class="col-sm-4">';
                             $siblings .= '<div class="submenu--siblings">';
                             $siblings .= '<ul>';
 
@@ -119,31 +121,24 @@
                             }
                             $siblings .= '</ul>';
                             $siblings .= '</div>';
-                            $siblings .= '</aside>';
 
                             echo $parent . $siblings;
                         }
+                        ?>
+                            @include('partials.sidebar')
+                        <?php
+                        echo '</aside>';
                     }
                     ?>
-                    <?php if ($submenu) : ?>
                     <div class="col-sm-8">
                         <div class="introduction-section--content">
                             <?php echo get_field('page_introduction_content');?>
                             @include('partials.accordions')
                         </div>
                     </div>
-                    <?php else: ?>
-                    <div class="col-12">
-                        <div class="introduction-section--content">
-                            <?php echo get_field('page_introduction_content');?>
-                            @include('partials.accordions')
-                        </div>
-                    </div>
-                    <?php endif; ?>
                 </div>
             </div>
         </section>
-        <?php endif; ?>
 
         <section class="section-page-main section-grid-main">
             <div class="container">

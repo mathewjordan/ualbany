@@ -10,8 +10,14 @@
 
         @php($stype = $item['sidebar_item_type'])
 
+        @if ($item['button_text'] == 'Apply Now')
+            @php($btnClass = 'btn-primary')
+        @else
+            @php($btnClass = 'btn-default')
+        @endif
+
         @if ($stype == 'button_ex')
-            <a href="{{ $item['sidebar_button_ex'] }}" target="_blank" class="btn btn-lg btn-block">{{ $item['button_text'] }}</a>
+            <a href="{{ $item['sidebar_button_ex'] }}" target="_blank" class="btn btn-lg btn-block {{$btnClass}}">{{ $item['button_text'] }}</a>
         @endif
 
         @if ($stype == 'button_in')

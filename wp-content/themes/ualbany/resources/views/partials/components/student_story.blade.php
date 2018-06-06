@@ -1,7 +1,42 @@
-@php
+<?php
 
-@endphp
+$args = array(
+    'post_type' => 'student',
+    'orderby' => 'rand',
+    'posts_per_page' => 1
+);
 
-<div>
-    {random student story}
-</div>
+// the query
+$the_query = new WP_Query($args); ?>
+
+<?php if ( $the_query->have_posts() ) : ?>
+
+
+<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <?php
+    $input = get_field('input_method');
+    if ($input == 'manual') {
+        $program = get_field('story_program_name');
+        $country = get_field('story_program_country');
+        $region = get_field('story_program_region');
+    } else {
+        $program_rel = get_field('story_program_name_auto');
+        $country_rel = get_field('story_program_country_auto');
+        $region_rel = get_field('story_program_region_auto');
+        $program = $program_rel[0]->post_title;
+        $country = $country_rel[0]->post_title;
+        $region = $region_rel[0]->post_title;
+    }
+    ?>
+    <div class="featured-student-story">
+        <div class="featured-student-story-wrapper">
+        <h2>Featured Student Story</h2>
+        <a href="#"><h3><?php the_title(); ?></h3></a>
+        <h4>{{$program}}</h4>
+        <h5>{{$country}}, {{$region}}</h5>
+        </div>
+    </div>
+    <?php endwhile; ?>
+
+    <?php wp_reset_postdata(); ?>
+<?php endif; ?>

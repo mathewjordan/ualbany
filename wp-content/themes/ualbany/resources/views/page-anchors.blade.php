@@ -46,17 +46,20 @@
             <div class="container">
                 <div class="row">
                     <aside class="col-sm-4">
-                        <div id="anchor-menu" class="submenu--siblings">
-                            <ul>
-                                @if( have_rows('anchor') )
-                                    @while ( have_rows('anchor') )
-                                    @php
-                                        the_row();
-                                    @endphp
-                                        <li><a href="#@php echo sanitize_html_class(get_sub_field('anchor_menu_title')); @endphp">@php the_sub_field('anchor_menu_title'); @endphp</a></li>
-                                    @endwhile
-                                @endif
-                            </ul>
+                        <div id="anchor-menu">
+                            <div class="submenu--siblings">
+                                <ul>
+                                    @if( have_rows('anchor') )
+                                        @while ( have_rows('anchor') )
+                                        @php
+                                            the_row();
+                                        @endphp
+                                            <li><a href="#@php echo sanitize_html_class(get_sub_field('anchor_menu_title')); @endphp">@php the_sub_field('anchor_menu_title'); @endphp</a></li>
+                                        @endwhile
+                                    @endif
+                                </ul>
+                            </div>
+                            @include('partials.sidebar')
                         </div>
                     </aside>
 

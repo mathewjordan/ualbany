@@ -40,6 +40,13 @@ $post_types = [
         'slug' => 'myths',
         'icon' => 'dashicons-format-status'
     ],
+    'Student Story' => [
+        'machine_name' => 'student',
+        'singlular' => 'Student Story',
+        'plural' => 'Student Stories',
+        'slug' => 'student',
+        'icon' => 'dashicons-universal-access-alt'
+    ],
 ];
 
 register_posts($post_types);

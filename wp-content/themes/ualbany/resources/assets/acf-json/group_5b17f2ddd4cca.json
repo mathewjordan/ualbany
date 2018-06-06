@@ -1,0 +1,256 @@
+{
+    "key": "group_5b17f2ddd4cca",
+    "title": "Study Story",
+    "fields": [
+        {
+            "key": "field_5b17f32404091",
+            "label": "Story Photo",
+            "name": "story_photos",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b17f5343d719",
+            "label": "Input Method",
+            "name": "input_method",
+            "type": "radio",
+            "instructions": "Dynamic should be used unless the Program, Country or Region reference no longer exists in Terra Dotta.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "dynamic": "Dynamic",
+                "manual": "Manual"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "dynamic",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b17f2e334cf3",
+            "label": "Program Name",
+            "name": "story_program_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17f5343d719",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b17f2f7bc4c0",
+            "label": "Program Country",
+            "name": "story_program_country",
+            "type": "text",
+            "instructions": "If same, this field should match exact formatting as country in Terra Dotta.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17f5343d719",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b17f309bc4c1",
+            "label": "Program Region",
+            "name": "story_program_region",
+            "type": "text",
+            "instructions": "If same, this field should match exact formatting as region in Terra Dotta.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17f5343d719",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b17f471eff7c",
+            "label": "Program Name",
+            "name": "story_program_name_auto",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17f5343d719",
+                        "operator": "==",
+                        "value": "dynamic"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "program"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "object"
+        },
+        {
+            "key": "field_5b17f458eff7b",
+            "label": "Program Country",
+            "name": "story_program_country_auto",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17f5343d719",
+                        "operator": "==",
+                        "value": "dynamic"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "country"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "object"
+        },
+        {
+            "key": "field_5b17f487eff7d",
+            "label": "Program Region",
+            "name": "story_program_region_auto",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b17f5343d719",
+                        "operator": "==",
+                        "value": "dynamic"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "region"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 18,
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "student"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "excerpt",
+        "featured_image"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1528311329
+}
