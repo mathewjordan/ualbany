@@ -162,7 +162,7 @@
             ],
             "elements": "",
             "min": "",
-            "max": 1,
+            "max": 5,
             "return_format": "object"
         },
         {
