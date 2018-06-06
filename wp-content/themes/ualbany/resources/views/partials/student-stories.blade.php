@@ -15,6 +15,7 @@ $the_query = new WP_Query($args); ?>
 <div id="accordion" class="accordions student-stories">
 
 
+
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 <?php
 $input = get_field('input_method');
@@ -32,9 +33,9 @@ if ($input == 'manual') {
 }
 
     $stories[$region][$cnt]['name'] = get_the_title();
+    $stories[$region][$cnt]['id'] = get_the_ID();
     $stories[$region][$cnt]['program'] = $program;
     $stories[$region][$cnt]['country'] = $country;
-    $stories[$region][$cnt]['body'] = get_the_content();
     $stories[$region][$cnt]['photos'] = get_field('story_photos');
 
     $cnt++;
@@ -51,12 +52,14 @@ if ($input == 'manual') {
                 </h2>
             </div>
 
-            <div id="@php echo sanitize_html_class($region) . '_c'; @endphp" class="collapse" aria-labelledby="@php echo sanitize_html_class($region); @endphp" data-parent="#accordion">
+            <div id="@php echo sanitize_html_class($region) . '_c'; @endphp" class="collapse @if ($_GET['r'] == sanitize_html_class($region)) show @endif" aria-labelledby="@php echo sanitize_html_class($region); @endphp" data-parent="#accordion">
                 <div class="card-body">
                     <?php foreach ($region_stories as $k => $story) :
                         if ($story['photos'][0]) {
                             $thumb = $story['photos'][0]['sizes']['slide_thumb'];
                         }
+                        $content_post = get_post($story['id']);
+                        $content = $content_post->post_content;
                         ?>
                         <div class="story" id="@php echo sanitize_html_class($story['name']); @endphp">
                             @if($thumb)
@@ -65,7 +68,7 @@ if ($input == 'manual') {
                             <h3>{{ $story['name'] }}</h3>
                             <h4>{{ $story['program'] }}</h4>
                             <h5>{{ $story['country'] }}</h5>
-                            <div>{{ $story['body'] }}</div>
+                            <div><?php echo $content; ?></div>
                         </div>
                     <?php endforeach; ?>
                 </div>

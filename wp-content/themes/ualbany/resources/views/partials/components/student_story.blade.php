@@ -39,7 +39,7 @@ $the_query = new WP_Query($args); ?>
                 <div class="featured-student-story--thumb" style="background-image: url('{{$thumb}}');"></div>
             @endif
             <h2>Featured Student Story</h2>
-            <a href="/student-stories#@php echo sanitize_html_class(get_the_title()); @endphp"><h3><?php the_title(); ?></h3></a>
+            <a href="/student-stories?r=@php echo sanitize_html_class($region); @endphp#@php echo sanitize_html_class(get_the_title()); @endphp"><h3><?php the_title(); ?></h3></a>
             <h4>{{$program}}</h4>
             <h5>{{$country}}, {{$region}}</h5>
         </div>
