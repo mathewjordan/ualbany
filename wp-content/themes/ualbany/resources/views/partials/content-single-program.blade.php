@@ -175,7 +175,7 @@
                     <h2 class="col-sm-3 program-meta__label"><span
                                 class="fa fa-graduation-cap"></span> {{ __('Faculty Led') }}</h2>
                     <div class="col-sm-3 program-meta__value">
-                        Lorem ipsum dolor
+                        {{ $program_meta['faculty_led'] }}
                     </div>
                     <h2 class="col-sm-3 program-meta__label"><span class="fa  fa-map-marker"></span> {{ __('City') }}
                     </h2>
@@ -205,7 +205,11 @@
                     <h2 class="col-sm-3 program-meta__label"><span
                                 class="fa fa-flask"></span> {{ __('Research Opportunity') }}</h2>
                     <div class="col-sm-3 program-meta__value">
-                        Lorem ipsum dolor
+                        @if($program_meta['research_opp'] )
+                            {{ $program_meta['research_opp'] }}
+                            @else
+                            None Specified
+                        @endif
                     </div>
                 </div>
             </div>
