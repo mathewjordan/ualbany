@@ -122,6 +122,7 @@ body.mobile-nav-active {
   z-index: $zindex-mobile-nav;
 
   .nav-mobile-wrapper-scroll {
+    height: 100%;
     overflow: scroll;
   }
 
@@ -342,7 +343,7 @@ body.mobile-nav-active {
     box-shadow: 0 0 3rem rgba($black, 0.25);
     display: block;
     height: 100%;
-    padding: 0;
+    padding: 0 0 2rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -378,6 +379,11 @@ body.mobile-nav-active {
       padding-left: 39px;
       font-size: 1rem;
       color: $white;
+      opacity: 0.72;
+    }
+
+    .more-button {
+      display: none;
     }
 
     li.parent-menu-item-cloned {
@@ -480,6 +486,26 @@ body {
         .menu-primary-container ul > li > ul > li > ul > li > a {
           visibility: visible;
         }
+      }
+    }
+  }
+}
+
+.nav-mobile-wrapper nav.nav-mobile-primary .menu-utility-container {
+  ul.nav {
+    padding: 2rem 0;
+
+    > li {
+      a,
+      a:visited,
+      a:hover,
+      a:focus {
+        font-size: 1rem;
+        opacity: 0.85;
+      }
+
+      > ul {
+        display: none;
       }
     }
   }
