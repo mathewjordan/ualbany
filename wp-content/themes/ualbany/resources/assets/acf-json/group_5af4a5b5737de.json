@@ -116,7 +116,7 @@
             ]
         },
         {
-            "key": "field_5af4a63f9508a",
+            "key": "about_staff",
             "label": "Staff",
             "name": "about_staff",
             "type": "repeater",
@@ -135,8 +135,8 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5af4a65a9508b",
-                    "label": "Title",
+                    "key": "about_staff_title",
+                    "label": "Name",
                     "name": "about_staff_title",
                     "type": "text",
                     "instructions": "",
@@ -154,10 +154,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5af4a6679508c",
-                    "label": "Type",
-                    "name": "about_staff_type",
-                    "type": "select",
+                    "key": "about_staff_title_title",
+                    "label": "Title",
+                    "name": "about_staff_title_title",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -166,17 +166,30 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "Global Academic Programs": "Global Academic Programs",
-                        "Education Board": "Education Board"
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "about_staff_title_subtitle",
+                    "label": "Subtitle",
+                    "name": "about_staff_title_subtitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
                     },
-                    "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5af4a6929508d",

@@ -30,6 +30,14 @@
     background: $purple;
     color: $white;
 
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $white;
+    }
+
     .section-contact-wrap .col-sm-6 {
       padding: 0 8rem;
     }
@@ -45,9 +53,16 @@
   .section-staff {
     background: $lightgray;
 
+    .staff-wrap {
+      padding: 0 4rem;
+    }
+
+    .staff-article {
+      background-color: $white;
+    }
+
     .row {
       margin-bottom: 3rem;
-      background: $white;
       padding: 15px 0;
     }
   }

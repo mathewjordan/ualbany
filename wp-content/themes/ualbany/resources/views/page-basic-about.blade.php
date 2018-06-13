@@ -44,95 +44,68 @@
     @while(have_posts()) @php(the_post())
     <article @php(post_class())>
         @if (get_field('about_body'))
-        <section class="section-body">
-            <div class="container">
-                @php(the_field('about_body'))
-            </div>
-        </section>
+            <section class="section-body">
+                <div class="container">
+                    @php(the_field('about_body'))
+                </div>
+            </section>
         @endif
-        
+
         @if (get_field('about_feature'))
-        <section class="section-feature">
-          <div class="container">
-              @php(the_field('about_feature'))
-          </div>
-        </section>
+            <section class="section-feature">
+                <div class="container">
+                    @php(the_field('about_feature'))
+                </div>
+            </section>
         @endif
-        
+
         @php $contact_group = get_field('about_contact'); @endphp
         @if ($contact_group)
-        <section id="contact" class="section-contact">
-            <div class="container">
-                <div class="section-contact-wrap">
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_office']; @endphp </div>
-                        <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_emergency']; @endphp </div>
+            <section id="contact" class="section-contact">
+                <div class="container">
+                    <div class="section-contact-wrap">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_office']; @endphp </div>
+                            <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_emergency']; @endphp </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         @endif
-        
-        @if (have_rows('about_staff'))
-          <section class="section-staff">
-            <div class="container">
-              <div class="global-academic-programs-staff">
-                @php while (have_rows('about_staff')) : the_row(); @endphp
-                @if (get_sub_field('about_staff_type') == 'Global Academic Programs')
-                  <div class="row">
-                        @if (get_sub_field('about_staff_photo'))
-                          @php
-                            $image = get_sub_field('about_staff_photo');
-                            $size = 'thumbnail';
-                          @endphp
-                          <div class="col-md-3">
-                            <div class="image">
-                              <?php echo wp_get_attachment_image( $image, $size); ?>
-                            </div>
-                          </div>
-                        @endif
-                        <div class="col-md-9">
-                          <p class="title">
-                            @php the_sub_field('about_staff_title'); @endphp
-                             - 
-                            @php the_sub_field('about_staff_type')['value']; @endphp
-                          </p>
-                          <p class="description">@php the_sub_field('about_staff_description'); @endphp</p>
-                        </div>              
-                      </div>
-                @endif
-                @php endwhile; @endphp
-              </div>
-              <div class="education-board-staff">
-                @php while (have_rows('about_staff')) : the_row(); @endphp
-                @if (get_sub_field('about_staff_type') == 'Education Board')
-                <div class="row">
-                  <?php if (get_sub_field('about_staff_photo')) : 
-                    $image = get_sub_field('about_staff_photo');
-                    $size = 'thumbnail';
-                  ?>
-                  <div class="col-md-3">
-                    <div class="image">
-                      <?php echo wp_get_attachment_image( $image, $size); ?>
-                    </div>
-                  </div>
-                  <?php endif; ?>
-                
-                  <div class="col-md-9">
-                    <p class="title">
-                      @php the_sub_field('about_staff_title'); @endphp
-                       - 
-                      @php the_sub_field('about_staff_type'); @endphp
-                    </p>
-                    <p class="description">@php the_sub_field('about_staff_description'); @endphp</p>
-                  </div>              
-                </div>
-                @endif
-                @php endwhile; @endphp
-              </div>
 
-            </div>
-          </section>
+        @if (have_rows('about_staff'))
+            <section class="section-staff">
+                <div class="container">
+                    <div class="staff-wrap">
+                        <h2 class="text-center">Meet the Staff</h2>
+                        @php while (have_rows('about_staff')) : the_row(); @endphp
+                        <div class="row">
+                            <div class="staff-article">
+                                @if (get_sub_field('about_staff_photo'))
+                                    @php
+                                        $image = get_sub_field('about_staff_photo');
+                                        $size = 'thumbnail';
+                                    @endphp
+                                    <div class="col-md-3">
+                                        <div class="image">
+                                            <?php echo wp_get_attachment_image($image, $size); ?>
+                                        </div>
+                                    </div>
+                                @endif
+                                <div class="col-md-9">
+                                    <p class="title">
+                                        @php if (get_sub_field('about_staff_title')): the_sub_field('about_staff_title'); endif; @endphp
+                                        @php if (get_sub_field('about_staff_title_subtitle')): the_sub_field('about_staff_title_title'); endif; @endphp
+                                        @php if (get_sub_field('about_staff_title_subtitle')): the_sub_field('about_staff_title_subtitle'); endif; @endphp
+                                    </p>
+                                    <p class="description">@php the_sub_field('about_staff_description'); @endphp</p>
+                                </div>
+                            </div>
+                        </div>
+                        @php endwhile; @endphp
+                    </div>
+                </div>
+            </section>
         @endif
 
         <section id="gift" class="section-gift">
