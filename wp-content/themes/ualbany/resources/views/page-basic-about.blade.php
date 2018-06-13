@@ -79,8 +79,8 @@
                     <div class="staff-wrap">
                         <h2 class="text-center">Meet the Staff</h2>
                         @php while (have_rows('about_staff')) : the_row(); @endphp
-                        <div class="row">
-                            <div class="staff-article">
+                        <div class="staff-article">
+                            <div class="row">
                                 @if (get_sub_field('about_staff_photo'))
                                     @php
                                         $image = get_sub_field('about_staff_photo');
