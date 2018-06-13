@@ -67,7 +67,6 @@
                                 <?php endwhile; ?>
                             </ul>
                         </div>
-                        @include('partials.sidebar')
                     </aside>
 
                     <?php endif; wp_reset_postdata(); ?>
@@ -148,9 +147,23 @@
             </div>
         </section>
 
-        <section class="section-page-main">
+        <section class="section-cta-primary">
             <div class="container">
-                @include('partials.content-page')
+                @include('partials.cta-primary')
+            </div>
+        </section>
+
+        @if (get_the_content())
+            <section class="section-page-main">
+                <div class="container">
+                    @include('partials.content-page')
+                </div>
+            </section>
+        @endif
+
+        <section class="section-cta-secondary">
+            <div class="container">
+                @include('partials.cta-secondary')
             </div>
         </section>
 

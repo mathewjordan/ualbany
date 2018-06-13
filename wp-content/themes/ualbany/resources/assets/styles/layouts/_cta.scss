@@ -1,0 +1,18 @@
+.section-cta-primary,
+.section-cta-secondary {
+  padding: 3rem 0;
+}
+
+.section-cta-primary {
+  background-color: $offwhite;
+}
+
+.section-cta-secondary {
+  background-color: $purple;
+  text-align: center;
+
+  .btn {
+    border-color: $white;
+    color: $white;
+  }
+}

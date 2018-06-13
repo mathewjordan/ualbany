@@ -1,11 +1,11 @@
 {
-    "key": "sidebar_items",
-    "title": "Primary CTA Section",
+    "key": "sidebar_items_secondary",
+    "title": "Secondary CTA Section",
     "fields": [
         {
-            "key": "sidebar_item",
+            "key": "sidebar_item_s",
             "label": "CTA Item",
-            "name": "sidebar_item",
+            "name": "sidebar_item_s",
             "type": "repeater",
             "instructions": "",
             "required": 0,

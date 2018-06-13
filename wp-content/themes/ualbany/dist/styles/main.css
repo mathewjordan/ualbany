@@ -17078,6 +17078,35 @@ body.mobile-nav-active .nav-mobile-wrapper.mobile-menu-link--level-two .menu-pri
   margin: 0 0 3rem 2rem;
 }
 
+.section-cta-primary,
+.section-cta-secondary {
+  padding: 3rem 0;
+}
+
+.section-cta-primary {
+  background-color: #f6f7f8;
+}
+
+.section-cta-secondary {
+  background-color: #46166b;
+  text-align: center;
+}
+
+.section-cta-secondary .btn,
+.section-cta-secondary .btn-purple,
+.section-cta-secondary .btn-white,
+.section-cta-secondary .comment-form input[type="submit"],
+.comment-form .section-cta-secondary input[type="submit"],
+.section-cta-secondary .search-form .search-submit,
+.search-form .section-cta-secondary .search-submit,
+.section-cta-secondary .gform_wrapper form .gform_button.button,
+.gform_wrapper form .section-cta-secondary .gform_button.button,
+.section-cta-secondary .component-hero-wrap .video-foreground .external-user-menu ul li a,
+.component-hero-wrap .video-foreground .external-user-menu ul li .section-cta-secondary a {
+  border-color: #fff;
+  color: #fff;
+}
+
 footer {
   background: #333 url(/wp-content/themes/ualbany/dist/images/mapimg_left.jpg) no-repeat left top;
   padding: 60px 0;
