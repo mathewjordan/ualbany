@@ -130,6 +130,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "views\/page-basic-about.blade.php"
             }
         ]
     ],
