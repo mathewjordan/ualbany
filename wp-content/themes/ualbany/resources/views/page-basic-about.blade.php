@@ -46,9 +46,7 @@
         @if (get_field('about_body'))
         <section class="section-body">
             <div class="container">
-              <div class="row">
                 @php(the_field('about_body'))
-              </div>
             </div>
         </section>
         @endif
@@ -65,9 +63,11 @@
         @if ($contact_group)
         <section id="contact" class="section-contact">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_office']; @endphp </div>
-                    <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_emergency']; @endphp </div>
+                <div class="section-contact-wrap">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_office']; @endphp </div>
+                        <div class="col-sm-6 col-xs-12"> @php echo $contact_group['about_contact_emergency']; @endphp </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -77,7 +77,6 @@
           <section class="section-staff">
             <div class="container">
               <div class="global-academic-programs-staff">
-                <h2>Global Academic Programs</h2>
                 @php while (have_rows('about_staff')) : the_row(); @endphp
                 @if (get_sub_field('about_staff_type') == 'Global Academic Programs')
                   <div class="row">
@@ -105,7 +104,6 @@
                 @php endwhile; @endphp
               </div>
               <div class="education-board-staff">
-                <h2>Education Board</h2>
                 @php while (have_rows('about_staff')) : the_row(); @endphp
                 @if (get_sub_field('about_staff_type') == 'Education Board')
                 <div class="row">
@@ -136,6 +134,23 @@
             </div>
           </section>
         @endif
+
+        <section id="gift" class="section-gift">
+            <div class="container">
+                <div class="section-gift-wrap">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12"> @php the_field('about_gift_one'); @endphp </div>
+                        <div class="col-sm-6 col-xs-12"> @php the_field('about_gift_two'); @endphp </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-cta-primary">
+            <div class="container">
+                @include('partials.cta-primary')
+            </div>
+        </section>
     </article>
     @endwhile
 @endsection

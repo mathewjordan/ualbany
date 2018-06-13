@@ -2,6 +2,7 @@
   .section-body,
   .section-feature,
   .section-contact,
+  .section-gift,
   .section-staff {
     padding: 3rem 0;
   }
@@ -13,12 +14,32 @@
   }
 
   .section-feature {
-    background: $offwhite;
+    background-color: $offwhite;
+    background-image: url('../images/newbackgroundimg.jpg');
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    img {
+      margin-top: 2rem;
+    }
   }
 
   .section-contact {
     background: $purple;
     color: $white;
+
+    .section-contact-wrap .col-sm-6 {
+      padding: 0 8rem;
+    }
+
+    a,
+    a:visited,
+    a:hover,
+    a:focus {
+      color: $yellow;
+    }
   }
 
   .section-staff {

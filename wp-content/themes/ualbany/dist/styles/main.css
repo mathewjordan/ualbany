@@ -16038,6 +16038,7 @@ h5 {
 .page-basic-about .section-body,
 .page-basic-about .section-feature,
 .page-basic-about .section-contact,
+.page-basic-about .section-gift,
 .page-basic-about .section-staff {
   padding: 3rem 0;
 }
@@ -16047,12 +16048,32 @@ h5 {
 }
 
 .page-basic-about .section-feature {
-  background: #f6f7f8;
+  background-color: #f6f7f8;
+  background-image: url(/wp-content/themes/ualbany/dist/images/newbackgroundimg.jpg);
+}
+
+.page-basic-about .section-feature p {
+  font-size: 1.5rem;
+}
+
+.page-basic-about .section-feature img {
+  margin-top: 2rem;
 }
 
 .page-basic-about .section-contact {
   background: #46166b;
   color: #fff;
+}
+
+.page-basic-about .section-contact .section-contact-wrap .col-sm-6 {
+  padding: 0 8rem;
+}
+
+.page-basic-about .section-contact a,
+.page-basic-about .section-contact a:visited,
+.page-basic-about .section-contact a:hover,
+.page-basic-about .section-contact a:focus {
+  color: #ffc107;
 }
 
 .page-basic-about .section-staff {
